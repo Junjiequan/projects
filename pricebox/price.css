@@ -17,7 +17,6 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    overflow: hidden;
 }
 li{
     list-style:none;
@@ -30,7 +29,7 @@ body{
 }
 main{
     max-width:312px;
-    margin:52px auto 0 auto;
+    margin:52px auto 20px auto;
 }
 .shadow{
     box-shadow:0 0 20px rgba(121, 147, 182, 0.4)
@@ -48,12 +47,12 @@ section.bg-white{
 section.bg-blue{
     background: var(--blue);
     color:var(--white);
-    border-radius:0 0 0 5px;
+    border-radius:0 0 0 0;
 }
 section.bg-lightblue{
     background: var(--lightblue);
     color:var(--white);
-    border-radius:0 0 5px 0;
+    border-radius:0 0 5px 5px;
 }
 /*text section*/
 .t-bold{
@@ -170,6 +169,9 @@ section.bg-lightblue{
 }
 /*PC version*/
 @media only screen and (min-width:980px){
+    body{
+        overflow: hidden;
+    }
     .main{
         max-width:650px;
         display:grid;
@@ -190,13 +192,19 @@ section.bg-lightblue{
     section.a{
         grid-area:a;
         padding:40px;
+        border: 5px 5px 0 0;
     }
+
     section.b{
         grid-area:b;
         padding:20px 40px;
+        border-radius:0 0 0 5px;
     }
+
     section.c{
         grid-area:c;
         padding:20px 40px;
+        border-radius:0 0 5px 0;
     }
+
 }
