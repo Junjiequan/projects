@@ -19,6 +19,9 @@
 li{
     list-style:none;
 }
+a{
+    text-decoration:none;
+}
 body{
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
@@ -26,7 +29,8 @@ body{
 }
 /*end default setup*/
 main{
-    margin:2rem;
+    max-width:312px;
+    margin:2rem auto;
 }
 /*global padding*/
 .padding{
