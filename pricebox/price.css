@@ -1,5 +1,5 @@
 .footerSign{
-    font-size:11px;
+    font-size:12px;
     text-align:center;
     margin-bottom:1rem;
 }
@@ -17,10 +17,12 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    
 }
-body h1 h2 h3 p{
+body{
     margin:0;
     padding:0;
+    overflow: hidden;
 }
 li{
     list-style:none;
@@ -33,7 +35,7 @@ body{
 }
 main{
     max-width:312px;
-    margin:102px auto 0;
+    margin:52px auto 0 auto;
 }
 .shadow{
     box-shadow:0 0 20px rgba(121, 147, 182, 0.4)
@@ -183,6 +185,7 @@ section.bg-lightblue{
             "a a"
             "b c";
         grid-template-columns: 1fr 1fr;
+        margin: 180px auto;
         }
     .main-heading{
         margin-top:0.5rem;
