@@ -24,7 +24,7 @@ li{
 body{
     font-size: 14px;
     font-family: 'Karla', sans-serif;
-    background-color:rgb(223, 237, 253);
+    background:url(./image/background.svg);
     min-height:100vh;
 }
 main{
@@ -179,7 +179,7 @@ section.bg-lightblue{
             "a a"
             "b c";
         grid-template-columns: 1fr 1fr;
-        margin: 180px auto;
+        margin: 180px auto 100px;
         }
     .main-heading{
         margin-top:0.5rem;
