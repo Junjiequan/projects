@@ -52,13 +52,18 @@ main{
     color: var(--lightblack);
 }
 .t-p{
+    font-size:0.9rem;
     font-weight:500;
+    line-height:1.5rem;
     letter-spacing:-0.01rem;
     color: var(--gray);
 }
 .t-p-small{
+    font-size:0.8rem;
+    line-height:1.2rem;
     font-weight:500;
     letter-spacing:-0.01rem;
+    color: var(--gray);
 }
 .t-thin{
     font-weight:200;
@@ -140,7 +145,14 @@ color:var(--gray);
         padding:2rem;
     }
     .t-h1{
-        font-size:2rem;
+        font-size:2.3rem;
+    }
+    .t-p{
+        font-size:1rem;
+        font-weight:500;
+        line-height:1.5rem;
+        letter-spacing:-0.01rem;
+        color: var(--gray);
     }
     .section-width{
         min-width:100%;
@@ -150,7 +162,7 @@ color:var(--gray);
         margin-bottom:4rem;
     }
     .margin-x{
-        margin:0 30%;
+        margin:0 25%;
     }
     .card{
         min-width:350px;
