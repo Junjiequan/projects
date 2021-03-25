@@ -187,8 +187,8 @@ section.bg-lightblue{
     }
     .questionmark{
         position:absolute;
-        bottom:40px;
-        right:20px;
+        bottom:35px;
+        right:40px;
     }
     section.a{
         grid-area:a;
