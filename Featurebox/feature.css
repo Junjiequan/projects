@@ -1,0 +1,27 @@
+/*default setup*/
+*{padding:0; margin:0;box-sizing:border-box}
+.footerSign{
+    font-size:12px;
+    text-align:center;
+    margin: 6rem 0 3rem;
+}
+:root{
+    --blue:#4076ae;
+    --lightblue:#5b8ec3;
+    --white:#d8edfb;
+    --lightwhite:#f5fbff;
+    --green:#76cf69;
+    --darkgreen:#1d5a13;
+    --darkblue:#1a1543;
+    --black:rgb(13, 13, 15);
+}
+li{
+    list-style:none;
+}
+body{
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    background:url(./image/background.svg);
+    min-height:100vh;
+}
+/*end default setup*/
