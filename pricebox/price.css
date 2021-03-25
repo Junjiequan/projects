@@ -17,11 +17,6 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    
-}
-body{
-    margin:0;
-    padding:0;
     overflow: hidden;
 }
 li{
@@ -40,12 +35,10 @@ main{
 .shadow{
     box-shadow:0 0 20px rgba(121, 147, 182, 0.4)
 }
-
 /*share padding*/
 .padding{
     padding:1.5rem 1.8rem;
 }
-
 /* section setting */
 section.bg-white{
     background: #fff;
@@ -175,11 +168,10 @@ section.bg-lightblue{
 .btn:focus{
     outline:2px solid var(--darkgreen);
 }
-
 /*PC version*/
 @media only screen and (min-width:980px){
     .main{
-        max-width:620px;
+        max-width:650px;
         display:grid;
         grid-template-areas:
             "a a"
@@ -201,8 +193,10 @@ section.bg-lightblue{
     }
     section.b{
         grid-area:b;
+        padding:20px 40px;
     }
     section.c{
         grid-area:c;
+        padding:20px 40px;
     }
 }
