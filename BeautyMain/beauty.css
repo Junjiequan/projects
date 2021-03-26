@@ -1,0 +1,123 @@
+/*default setup*/
+*{padding:0; margin:0;box-sizing:border-box}
+.footerSign{
+    font-size:12px;
+    text-align:center;
+    margin: 6rem 0 3rem;
+}
+:root{
+    --desaturatedRed:hsl(0, 36%, 70%);
+    --softRed:hsl(0, 93%, 68%);
+    --darkRed: hsl(0, 6%, 24%);
+    --gradientlightred:hsl(0, 80%, 86%);
+    --gradientdeepred:hsl(0, 74%, 74%);
+    --gradientlightwhite:hsl(0, 0%, 100%);
+    --gradientwhite:hsl(0, 100%, 98%);
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+body{
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    background:url(./image/background.svg);
+    min-height:100vh;
+    background:linear-gradient(135deg, var(--gradientlightwhite, var(--gradientwhite)));
+}
+/*end default setup*/
+
+section{
+    display:flex;
+}
+main{
+    min-height:100vh;
+    background:var(--gradientwhite);
+}
+button{
+    font-family: 'Josefin Sans', sans-serif;
+    opacity:0.5;
+}
+.logo-bg{
+    background: var(--gradientlightwhite);
+}
+.logo img{
+    min-width:100%;
+    height:22px;
+}
+.main-img img{
+    max-width:375px;
+    height:100%;
+}
+
+.info-bg{
+    padding-top:2rem;
+    max-width: 375px;
+    display:flex;
+    height:100%;
+}
+/*location & space*/
+.padding{
+    padding:2rem;
+}
+.flex-center{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+}
+.btn{
+    margin: 0 2rem 0 2rem;
+}
+
+/*text*/
+.t-thin{
+    font-weight:300;
+}
+.t-mid{
+    font-weight:400;
+}
+.t-bold{
+    font-weight:600;
+}
+.t-h1{
+    text-transform: uppercase;
+    font-size:2.5rem;
+    letter-spacing: 0.5rem;
+    line-height:2.5rem;
+}
+.t-p{
+    font-size:0.9rem;
+    letter-spacing:0.01rem;
+    line-height:1.4rem;
+
+}
+/*title*/
+.sub-title{
+    margin-bottom:1.5rem;
+}
+/*color*/
+.darkRed{
+    color:var(--desaturatedRed);
+}
+.blackRed{
+    color:var(--darkRed);
+}
+/*button*/
+.btn-style{
+    border-radius:50px;
+    border:1px solid;
+    text-align:left;
+    padding:1rem 1.5rem;
+    width:100%;
+    color:var(--desaturatedRed);
+    background:none;
+}
+.btn-style:hover{
+    outline:none;
+}
+.btn-style:focus{
+    outline:none;
+    border:1px solid;
+}
