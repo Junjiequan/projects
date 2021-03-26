@@ -1,4 +1,4 @@
-# Real life task challenge(3rd month)
+# Frontend Mentor challenge(3rd month)
 
 | Projects-name | Repo-link |
 | ------------- | ------------- |
