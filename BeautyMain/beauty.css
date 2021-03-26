@@ -195,14 +195,14 @@ section{
         grid-template-areas: "a b";
         grid-column-gap:5rem;
     }
-    .grid .c{
+    .grid-c{
         grid-area: a;
         margin-top:5rem;    
     }
-    .grid .a{
+    .grid-a{
         grid-area: a;
     }
-    .grid .b{
+    .grid-b{
         grid-area: b;
         
     }
