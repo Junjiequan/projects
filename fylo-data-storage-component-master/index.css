@@ -46,6 +46,7 @@ main{
     font-size:2.5rem;
     font-weight:700;
     color:var(--VeryDarkBlue);
+    transition:all 0.3s ease-in-out;
 }
 .t-p-small{
     min-width:30%;
@@ -128,10 +129,10 @@ main{
     padding-left:3px;
 }
 .progress{
-
+    transition:all 0.7s ease-in-out;
     background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
     height:12px;
-    width:60%;
+    width:0%;
     border-radius:4rem;
 }
 .space-text{
