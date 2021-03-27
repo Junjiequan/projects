@@ -1,5 +1,10 @@
-.attribution { font-family: 'Raleway', sans-serif; font-size: 11px; color: hsl(229, 100%, 97%); display:block; padding-top:20px}
-.attribution a { color: hsl(229, 100%, 97%); text-decoration:none; }
+.attribution { font-family: 'Raleway', sans-serif; font-size: 0.7rem; color: hsl(229, 100%, 97%); display:block; }
+.attribution a{ 
+    background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%)); 
+    background-clip:border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    text-decoration:none; }
 *{padding:0; margin:0; box-sizing:border-box; }
 
 :root{
@@ -12,21 +17,19 @@
 }
 html{
     background: var(--VeryDarkBlue);
-
 }
 body{
     min-height:100vh;
     background:url(./images/bg-desktop.png);
     background-repeat:no-repeat;
-    background-size:contain;
-    background-position-y:29rem;
+    background-size:100% 50%;
+    background-position-y: 100%;
     color: var(--PaleBlue);
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
     font-size:62.5%;
-    
 }
 main{
     display:flex;
@@ -43,7 +46,7 @@ main{
 }
 .t-h1{
     min-width:40%;
-    font-size:2.5rem;
+    font-size:4em;
     font-weight:700;
     color:var(--VeryDarkBlue);
     transition:all 0.3s ease-in-out;
@@ -51,7 +54,7 @@ main{
 .t-p-small{
     min-width:30%;
     padding-left:5px;
-    font-size:0.725rem;
+    font-size:1.2em;
     text-transform:uppercase;
     letter-spacing:0.1rem;
     font-weight:700;
@@ -142,4 +145,69 @@ main{
 }
 .space-text p{
     font-weight:700;
+}
+
+@media screen and (max-width:1024px){
+    body{
+        background-size:cover;
+        font-size:100%
+    }
+    main{
+        flex-direction:column;
+        align-items:center;
+    }
+    .logo-container{
+        width:360px;
+        height:200px;
+        margin-bottom:5em;
+    }
+    .loading-container{
+        width:500px;
+        height:150px;
+    }
+    .box{
+        bottom:2.5rem;
+    }
+    .arrow-down {
+        position:absolute;
+        border-left: 25px solid transparent;
+        border-top: 40px solid #fff;
+        right:0;
+        bottom:5px;
+      }
+      .t-h1{
+          font-size:2rem;
+      }
+@media screen and (max-width:475px){
+    main{
+        margin:0 0 5rem;
+    }
+    body{
+        background-size:cover;
+        font-size:100%
+    }
+    .logo-container{
+        border-radius:10px 100px 10px 10px;
+        background: var(--DarkBlue);
+        width:80%;
+        height:200px;
+        padding:2.5rem 3rem;
+        margin-right:0;
+        margin-bottom:2rem;
+    }
+    .loading-container{
+        width:80%;
+        height:200px;
+        margin:0;
+    }
+    .arrow-down {
+        border: 0;
+    }
+      .box{
+        bottom:-9rem;
+        right:10%;
+    } .attribution {
+        font-size:0.7rem;
+    }
+    }
 }
