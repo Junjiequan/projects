@@ -2,7 +2,7 @@
 const loginSection = document.querySelector('.login-bg');   // container
 const warningFont = loginSection.querySelectorAll('.warning');  // all warning font
 const intputIcon = loginSection.querySelectorAll('.icon');      // all error Icon
-const inputBorder = loginSection.querySelectorAll('.border');   // all border
+const inputBorder = loginSection.querySelectorAll('.input');   // all border
 const intputEmail = loginSection.querySelector('.Email');     //Email
 const inputFirstName = loginSection.querySelector('.NameF')        //FirstName
 const inputLastName = loginSection.querySelector('.NameL')        //LastName
@@ -12,11 +12,10 @@ const nameRegex = /^[a-z ,.'-]+$/i;
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 const passwordRegex = /^[A-Za-z0-9]{8,}$/;
 
-console.log(loginSection.querySelectorAll('.warning'));
 //function
 const checkFormat= (event) =>{
     event.preventDefault();
-    //remove erro css
+    //remove errors style
     warningFont.forEach(index=> index.classList.remove('error-font'));
     intputIcon.forEach(index=> index.classList.remove('error-icon'));
     inputBorder.forEach(index=> {
@@ -51,8 +50,20 @@ const checkFormat= (event) =>{
         inputBorder[3].classList.add('error-border');
     }
 }
-
-
+const removeError = (event) =>{
+    const target = event.target.parentElement;
+    const font = target.nextElementSibling;
+    if(target.querySelector('input').value == ''){
+        const input = target.querySelector('.input');
+        const icon = target.querySelector('.icon');
+        //remove warning styles onclick
+        input.classList.remove('error-border');
+        input.classList.add('default');
+        icon.classList.remove('error-icon');
+        font.classList.remove('error-font');
+    }
+}
 
 //eventListener
-loginSection.addEventListener('submit',checkFormat)
+loginSection.addEventListener('submit',checkFormat);
+loginSection.addEventListener('click', removeError)

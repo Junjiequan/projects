@@ -1,3 +1,14 @@
+footer{
+    position:absolute;
+    bottom:2rem;
+}
+.attribution { font-family: 'Raleway', sans-serif; font-size: 0.7rem; color: hsl(229, 100%, 97%);}
+.attribution a{ 
+    background: linear-gradient(90deg, hsl(256, 98%, 17%), hsl(197, 30%, 5%)); 
+    background-clip:border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    text-decoration:none; }
 *{
     padding:0;
     margin:0;
@@ -23,14 +34,19 @@ input:-webkit-autofill:active
     box-shadow:0 0 0 30px var(--White)  inset;
 }
 body{
+    position:relative;
+    min-height:100vh;
     font-family: 'Poppins', sans-serif;
     background:var(--Red) url(./images/bg-intro-desktop.png);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 main{
-    min-height:100vh;
+    max-width:1330px;
+    margin:auto auto;
     display:flex;
-    justify-content:center;
-    margin:0 10%;
+    justify-content:space-between;
     align-items:center;
     font-size:16px;
 }
@@ -79,10 +95,10 @@ h4{
 
 /*main*/
 .title-container{
-    max-width:600px;
+    width:600px;
 }
 .login-container{
-    max-width:600px;
+    width:600px;
 }
 .login-title{
     text-align:center;
@@ -98,7 +114,6 @@ h4{
 .login-bg{
     background:var(--White);
     border-radius:10px;
-    min-width:600px;
     min-height:500px;
     padding:2.5rem ;
 }
@@ -181,4 +196,59 @@ h4{
     right:5%;
     bottom:30%;
     opacity:1;
+}
+@media screen and (max-width:1200px){
+    main{
+        flex-direction:column;
+        max-width:800px;
+        text-align:center;
+        margin:2rem 1rem;
+    }
+    .title-container{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        margin:3rem 0;
+    }
+    .login-container{
+        margin:2rem 0;
+    }
+    h1{
+        font-size:2rem;
+        line-height:2rem;
+    }
+    h4{
+        font-size:0.9rem;
+    }
+}
+@media screen and (max-width:620px){
+    main{
+        max-width:360px;
+    }
+    .title-container{
+        max-width:360px;
+
+    }
+    .login-container{
+        max-width:360px;
+
+    }
+    .login-title{
+        text-align:center;
+        width:100%;
+        padding:1.3rem 5rem 1.3rem 5rem;
+        font-size:1.1rem;
+    }
+    .login-bg{
+        min-height:100%;
+        padding:1.1rem ;
+    }
+    h1{
+        font-size:1.5rem;
+        line-height:1.5rem;
+    }
+    h4{
+        font-size:1rem;
+    }
+    
 }
