@@ -111,14 +111,16 @@ h4{
     padding-left:2rem;
     border-radius:5px;
 }
-.border{
+
+.default{
     border:1px solid rgb(204, 204, 204);
 }
-.border:focus{
+.default:focus{
     outline: none;
     border:1px solid var(--DarkBlue);
 }
-.login-bg input[type="text"]{
+.login-bg input[type="text"],
+.login-bg input[type="password"]{
     font-family:'Poppins', sans-serif;
     font-size:1rem;
     font-weight:600;
@@ -128,6 +130,7 @@ h4{
     position:relative;
     margin-bottom:0.5rem;
     min-height:20px;
+    width:100%;
 }
 .input-button{
     width:100%;
@@ -149,6 +152,13 @@ h4{
     box-shadow: 0 -3px 0 var(--Green) inset;
     transition:0.3s ease;
 }
+.icon{
+    position:absolute;
+    opacity:0;
+}
+.warning{
+    opacity:0;
+}
 
 /*Errors*/
 .error-font{
@@ -158,6 +168,7 @@ h4{
     font-weight:600;
     font-style: italic;
     margin-bottom:1.5rem;
+    opacity:1;
 }
 .error-border{
     border:3px solid var(--DarkRed);
@@ -169,4 +180,5 @@ h4{
     position:absolute;
     right:5%;
     bottom:30%;
+    opacity:1;
 }
