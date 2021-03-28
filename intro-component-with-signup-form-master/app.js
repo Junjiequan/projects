@@ -54,7 +54,7 @@ const checkFormat= (event) =>{
         loginSection.querySelector('button').innerText = 'Success'
         setTimeout(()=>{
             window.open('https://www.youtube.com/watch?v=BW1aX0IbZOE')
-        }, 2000)
+        }, 1000)
     }
 }
 const removeError = (event) =>{
