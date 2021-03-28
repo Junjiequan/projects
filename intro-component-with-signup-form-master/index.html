@@ -22,23 +22,31 @@
       </div>
       <form class="login-bg" action="">
         <div class="input-box" >
-          <input type="text" placeholder="First Name">
-          <p></p>
+          <input class ="error-border" type="text" placeholder="First Name">
+          <img class="error-icon" src="./images/icon-error.svg" alt="error">
         </div>
+        <p class="error-font">First Name cannot be empty</p>
+
         <div class="input-box">
-          <input type="text" placeholder="Last Name">
-          <p></p>
+          <input class ="error-border" type="text" placeholder="Last Name">
+          <img class="error-icon" src="./images/icon-error.svg" alt="error">
         </div>
+        <p class="error-font">Last Name cannot be empty</p>
+
         <div class="input-box">
-          <input type="text" placeholder="Email Address">
-          <p></p>
+          <input class ="error-border" type="text" placeholder="Email Address">
+          <img class="error-icon" src="./images/icon-error.svg" alt="error">
         </div>
+        <p class="error-font">Looks like this is not an email</p>
+
         <div class="input-box">
-          <input type="text" placeholder="Password">
-          <p></p>
+          <input class ="error-border" type="text" placeholder="Password"></input>
+          <img class="error-icon" src="./images/icon-error.svg" alt="error">
         </div>
-          <button class="input-button">Claim your free trial</button>
-          <p class="term term-font">By clicking the button, you are agreeing to our <a href="#" class="term-red">Terms and Services</a></p>
+        <p class="error-font">Password cannot be empty</p>
+
+        <button type="submit" class="input-button">Claim your free trial</button>
+        <p class="term term-font">By clicking the button, you are agreeing to our <a href="#" class="term-red">Terms and Services</a></p>
       </form>
     </section>
   </main>

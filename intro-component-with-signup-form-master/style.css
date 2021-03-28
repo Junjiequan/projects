@@ -5,6 +5,7 @@
 }
 :root{
     --Red: hsl(0, 100%, 74%);
+    --DarkRed:  hsl(0, 40%, 74%);
     --LightGreen:hsl(154, 59%, 65%);
     --Green: hsl(154, 59%, 51%);
     --DarkGreen: hsl(154, 49%, 45%);
@@ -61,6 +62,11 @@ h4{
     font-weight:700;
     color:var(--Red);
     text-decoration:none;
+    transition:0.3s ease;
+}
+.term-red:hover{
+    transition:0.3s ease;
+    color:var(--DarkBlue);
 }
 /*Spacing*/
 .h1-title{
@@ -99,13 +105,16 @@ h4{
 .login-bg input{
     background:var(--White);
     text-align:left;
+    color:rgb(73, 73, 73);
     width:100%;
     padding:1.1rem;
     padding-left:2rem;
-    border:1px solid rgb(204, 204, 204);
     border-radius:5px;
 }
-.login-bg input:focus{
+.border{
+    border:1px solid rgb(204, 204, 204);
+}
+.border:focus{
     outline: none;
     border:1px solid var(--DarkBlue);
 }
@@ -115,7 +124,10 @@ h4{
     font-weight:600;
 }
 .input-box{
-    margin-bottom:1.5rem;
+    display:flex;
+    position:relative;
+    margin-bottom:0.5rem;
+    min-height:20px;
 }
 .input-button{
     width:100%;
@@ -130,14 +142,31 @@ h4{
     border-radius:5px;
     box-shadow: 0 -3px 0 var(--DarkGreen) inset;
     cursor:pointer;
+    transition:0.3s ease;
 }
 .input-button:hover{
     background:var(--LightGreen);
     box-shadow: 0 -3px 0 var(--Green) inset;
+    transition:0.3s ease;
 }
 
 /*Errors*/
-.Error-border{
-    border-color: var(--Red);
-    color:var(--Red);
+.error-font{
+    color:var(--DarkRed);
+    text-align:right;
+    font-size:0.8rem;
+    font-weight:600;
+    font-style: italic;
+    margin-bottom:1.5rem;
+}
+.error-border{
+    border:3px solid var(--DarkRed);
+}
+.error-border:focus{
+    outline-color:var(--DarkRed);
+}
+.error-icon{
+    position:absolute;
+    right:5%;
+    bottom:30%;
 }
