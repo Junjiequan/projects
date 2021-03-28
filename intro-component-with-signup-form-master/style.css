@@ -100,14 +100,14 @@ h4{
     border-radius:10px;
     min-width:600px;
     min-height:500px;
-    padding:2rem;
+    padding:2.5rem ;
 }
 .login-bg input{
     background:var(--White);
     text-align:left;
     color:rgb(73, 73, 73);
     width:100%;
-    padding:1.1rem;
+    padding:1rem;
     padding-left:2rem;
     border-radius:5px;
 }
