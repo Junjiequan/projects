@@ -30,8 +30,8 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active
 {
-    -webkit-box-shadow: 0 0 0 30px var(--White) inset !important;
-    box-shadow:0 0 0 30px var(--White)  inset;
+    -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+    box-shadow:0 0 0 30px #fff  inset;
 }
 body{
     position:relative;
@@ -112,14 +112,14 @@ h4{
     margin-bottom:2rem;
 }
 .login-bg{
-    background:var(--White);
+    background:#fff;
     border-radius:10px;
     min-height:500px;
     padding:2.5rem ;
     box-shadow: 0 10px 2px rgba(0,0,0,0.15);
 }
 .login-bg input{
-    background:var(--White);
+    background:#fff;
     text-align:left;
     color:rgb(73, 73, 73);
     width:100%;
