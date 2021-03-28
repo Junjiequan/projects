@@ -61,7 +61,6 @@ const removeError = (event) =>{
     if(target.closest('.input').value == ''){
         const input = target.closest('.input');
         const icon = input.nextElementSibling;
-        console.log(icon)
         //remove warning styles onclick
         input.classList.remove('error-border');
         input.classList.add('default');
