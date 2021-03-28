@@ -22,26 +22,26 @@ const checkFormat= (event) =>{
         index.classList.remove('error-border');
         index.classList.add('default');
     });
-    // email Check
-    if(!emailRegex.test(intputEmail.value)){
-        intputIcon[2].classList.add('error-icon');
-        warningFont[2].classList.add('error-font');
-        inputBorder[2].classList.remove('default');
-        inputBorder[2].classList.add('error-border');
-    }
     // name Check
     if(!nameRegex.test(inputFirstName.value)){
         intputIcon[0].classList.add('error-icon');
         warningFont[0].classList.add('error-font');
         inputBorder[0].classList.remove('default');
         inputBorder[0].classList.add('error-border');
-    } 
+    }     
     if(!nameRegex.test(inputLastName.value)){
         intputIcon[1].classList.add('error-icon');
         warningFont[1].classList.add('error-font');
         inputBorder[1].classList.remove('default');
         inputBorder[1].classList.add('error-border');
     } 
+     // email Check
+    if(!emailRegex.test(intputEmail.value)){
+        intputIcon[2].classList.add('error-icon');
+        warningFont[2].classList.add('error-font');
+        inputBorder[2].classList.remove('default');
+        inputBorder[2].classList.add('error-border');
+    }
     // password check
     if(!passwordRegex.test(inputPassword.value)){
         intputIcon[3].classList.add('error-icon');
