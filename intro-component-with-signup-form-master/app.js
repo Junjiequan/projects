@@ -49,7 +49,8 @@ const checkFormat= (event) =>{
         inputBorder[3].classList.remove('default');
         inputBorder[3].classList.add('error-border');
     }
-    else {
+    if(emailRegex.test(intputEmail.value) && nameRegex.test(inputFirstName.value) 
+        && nameRegex.test(inputLastName.value) && passwordRegex.test(inputPassword.value)){
         loginSection.querySelector('button').innerText = 'Success'
     }
 }
