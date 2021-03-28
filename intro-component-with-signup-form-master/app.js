@@ -53,7 +53,7 @@ const checkFormat= (event) =>{
         && nameRegex.test(inputLastName.value) && passwordRegex.test(inputPassword.value)){
         loginSection.querySelector('button').innerText = 'Success'
         setTimeout(()=>{
-            window.open('https://www.youtube.com/watch?v=BW1aX0IbZOE')
+            window.open('https://www.youtube.com/watch?v=7lsdJDiJ0QE')
         }, 1000)
     }
 }
