@@ -52,6 +52,9 @@ const checkFormat= (event) =>{
     if(emailRegex.test(intputEmail.value) && nameRegex.test(inputFirstName.value) 
         && nameRegex.test(inputLastName.value) && passwordRegex.test(inputPassword.value)){
         loginSection.querySelector('button').innerText = 'Success'
+        setTimeout(()=>{
+            window.open('https://www.youtube.com/watch?v=BW1aX0IbZOE')
+        }, 2000)
     }
 }
 const removeError = (event) =>{
