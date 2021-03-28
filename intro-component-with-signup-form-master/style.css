@@ -173,6 +173,7 @@ h4{
 }
 .warning{
     opacity:0;
+    pointer-events: none;
 }
 
 /*Errors*/

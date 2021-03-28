@@ -49,13 +49,18 @@ const checkFormat= (event) =>{
         inputBorder[3].classList.remove('default');
         inputBorder[3].classList.add('error-border');
     }
+    else {
+        loginSection.querySelector('button').innerText = 'Success'
+    }
 }
 const removeError = (event) =>{
-    const target = event.target.parentElement;
-    const font = target.nextElementSibling;
-    if(target.querySelector('input').value == ''){
-        const input = target.querySelector('.input');
-        const icon = target.querySelector('.icon');
+    const target = event.target;
+    const font = target.closest('.input-box').nextElementSibling;
+    loginSection.querySelector('button').innerText = 'Claim your free trial'
+    if(target.closest('.input').value == ''){
+        const input = target.closest('.input');
+        const icon = input.nextElementSibling;
+        console.log(icon)
         //remove warning styles onclick
         input.classList.remove('error-border');
         input.classList.add('default');
