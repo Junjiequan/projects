@@ -71,4 +71,4 @@ const removeError = (event) =>{
 
 //eventListener
 loginSection.addEventListener('submit',checkFormat);
-loginSection.addEventListener('click', removeError)
+loginSection.addEventListener('beforeinput',removeError);
