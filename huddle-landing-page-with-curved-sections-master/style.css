@@ -96,9 +96,7 @@ a{
     justify-content:space-between;
 }
 .logo img{
-    color:#000;
-    width:100%;
-    
+    min-width:150px;
 }
 .logo-btn{
     border-radius:50px;
@@ -270,8 +268,29 @@ footer{
     background-repeat:no-repeat;
 }
 .footer-content{
+    
     background: var(--VeryDarkCyan);
     height:100%;
     display:flex;
+    justify-content:space-between;
     padding:0 10rem;
+    color:#fff;
+    font-family:var(--font2);   
+    
+}
+.contact{
+    flex:1 1 50%;
+    border:1px solid;
+}
+.contact-text{
+    width:330px;
+}
+.bot-text{
+    margin-top:1rem;
+    font-size:0.9rem;
+    line-height:1.5rem;
+}
+.newsletter-container{
+    flex:1 1 50%;
+    bordeR:1px solid red;
 }
