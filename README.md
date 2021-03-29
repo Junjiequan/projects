@@ -1,4 +1,4 @@
-<p align="center">
+<center>
 # Frontend Mentor challenge(3rd month)
 
 | Projects-name | Repo-link |
@@ -13,4 +13,4 @@
 
 
 
-</p>
+</center>
