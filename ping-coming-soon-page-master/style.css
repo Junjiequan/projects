@@ -31,7 +31,6 @@ body{
     align-items:center;
     text-align:center;
 }
-
 header{
     margin:5rem auto 1rem auto;
 }
@@ -64,10 +63,13 @@ footer{
     display:flex;
     justify-content:space-between;
 }
+.emailbox{
+    flex:1 1 75%;
+}
 .email{
-    flex:1 1 65%;
-    padding:1.2rem 1.5rem;
-    margin-right:1.2rem;
+    width:95%;
+    height:60px;
+    padding:1rem 1.5rem;
     border-radius:50px;
     border: 1px solid var(--PaleBlue);
     outline:none;
@@ -84,7 +86,8 @@ input[type=email]{
 }
 .btn{
     flex: 1 1 30%;
-    padding:1.2rem 1.5rem;
+    height:60px;
+    padding:1rem 1.5rem;
     border-radius:50px;
     background:var(--Blue);
     color:#fff;
@@ -160,6 +163,15 @@ p{
     font-size:1.2rem;
     color:rgb(44, 44, 44);
 }
+.warning{
+    opacity:0;
+    padding-top:0.5rem;
+    font-size:0.8rem;
+}
+.error{
+    opacity:1;
+    color:red;
+}
 @media screen and (max-width:375px){
     header{
         margin:2rem auto 0 auto;
@@ -181,6 +193,8 @@ p{
     }
     .email{
         margin-right:0;
+        width:100%;
     }
 
 }
+
