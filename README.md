@@ -10,6 +10,6 @@
 | 5. [intro-component-with-signup-form-master](https://a331998513.github.io/projects/intro-component-with-signup-form-master/) | [Repo](https://github.com/a331998513/projects/tree/main/intro-component-with-signup-form-master)|
 | 6. [ping-coming-soon-page-master](https://a331998513.github.io/projects/ping-coming-soon-page-master) | [Repo](https://github.com/a331998513/projects/tree/main/ping-coming-soon-page-master) |
 | 7. [coding-bootcamp-testimonials-slider-master](https://a331998513.github.io/projects/coding-bootcamp-testimonials-slider-master/) | [Repo](https://github.com/a331998513/projects/tree/main/coding-bootcamp-testimonials-slider-master)|
-
+| 8. [huddle-landing-page-with-curved-sections-master]()  | [Repo]()  |
 
 
