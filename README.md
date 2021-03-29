@@ -1,5 +1,5 @@
-
-# Frontend Mentor challenge(3rd month)
+# 3rd month
+## Frontend Mentor challenge
 
 | Projects-name | Repo-link |
 | ------------- | ------------- |
