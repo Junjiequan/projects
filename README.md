@@ -9,7 +9,7 @@
 | 4. [fylo-data-storage-component-master](https://a331998513.github.io/projects/fylo-data-storage-component-master/) | [Repo](https://github.com/a331998513/projects/tree/main/fylo-data-storage-component-master) |
 | 5. [intro-component-with-signup-form-master](https://a331998513.github.io/projects/intro-component-with-signup-form-master/) | [Repo](https://github.com/a331998513/projects/tree/main/intro-component-with-signup-form-master)|
 | 6. [ping-coming-soon-page-master](https://a331998513.github.io/projects/ping-coming-soon-page-master) | [Repo](https://github.com/a331998513/projects/tree/main/ping-coming-soon-page-master) |
-| 7. [__]  | [Repo]|
+| 7. [coding-bootcamp-testimonials-slider-master]  | [Repo]|
 
 
 
