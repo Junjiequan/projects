@@ -1,9 +1,11 @@
 .attribution{
+    border:1px;
     position:absolute;
     font-size:0.8rem;
     bottom:3%;
-    left:40%;
-    right:40%;
+    left:0;
+    right:0;
+    margin:0 40%;
 }
 .attribution a{
     background: linear-gradient(180deg, hsl(310, 100%, 50%), hsl(0, 100%, 50%)); 
@@ -58,7 +60,7 @@ main{
 .container{
     position:relative;
     display:flex;
-    margin:0 auto;
+    margin:0 1rem;
     width:1100px;
     justify-content:flex-end;
     background:url(./images/pattern-quotes.svg);
@@ -99,7 +101,7 @@ main{
     transform-origin:left center;
 }
 .titleShow{
-    transform: scale(0.1);
+    transform: scale(0.4);
     transition: all 0.6s ease;
 }
 .image-container{
@@ -135,4 +137,55 @@ main{
     transform: scale(1.4);
     transition:0.2s ease-in-out;
     opacity:0.7;
+}
+@media screen and (max-width:960px){
+    
+    body{
+        background-position:52% 6%;
+        background-size:70%;
+    }
+    main{
+        align-items:flex-start;
+    }
+    .container{
+        margin-top:2rem;
+        flex-direction:column;
+        display:grid;
+        grid-template-areas: 
+        "a"
+        "b"
+    }
+    .info{
+        grid-area:b;
+        position:relative;
+        margin:2rem 2rem 0 2rem;
+        text-align:center;
+    }
+    .title{
+        flex-direction:column;
+        align-items:center;
+        
+    }
+    .info-font{
+        font-size:1rem;
+        line-height:1.5rem;
+    }
+    .image-container{
+        grid-area:a;
+        margin:3rem;
+    }
+    .buttons{
+        left:0;
+        right:0;
+        margin:0 auto;
+        width:105px;
+        height:50px;
+    }
+    .buttons > button:hover{
+        transform: none;
+    }
+    .attribution{
+        font-size:0.6rem;
+        margin:0 20%;
+    }
 }

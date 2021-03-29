@@ -46,7 +46,6 @@ const changeInfo = () =>{
 
 }
 changeInfo();
-
 //eventlistener
 prevBtn.addEventListener('click', changeInfo);
-nextBtn.addEventListener('click', changeInfo)
+nextBtn.addEventListener('click', changeInfo);
