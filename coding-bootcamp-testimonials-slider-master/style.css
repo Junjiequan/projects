@@ -24,9 +24,11 @@ body{
     font-family: 'Inter', sans-serif;
     background:url(./images/pattern-bg.svg);
     background-repeat:no-repeat;    
-    background-position:72% 46%;
+    background-position: 75%  ;
 }
 main{
+    margin:0 auto;
+    width:1440px;
     position:relative;
     min-height:100vh;
     display:flex;
@@ -141,12 +143,13 @@ main{
     outline:2px dotted rgba(105, 105, 105, 0.6);
 
 }
-@media screen and (max-width:960px){
+@media screen and (max-width:1250px){
     body{
         background-position:52% 6%;
         background-size:70%;
     }
     main{
+        width:95vw;
         align-items:flex-start;
     }
     .container{
