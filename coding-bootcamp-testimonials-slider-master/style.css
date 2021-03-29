@@ -2,10 +2,7 @@
     border:1px;
     position:absolute;
     font-size:0.8rem;
-    bottom:3%;
-    left:0;
-    right:0;
-    margin:0 40%;
+    bottom:1%;
 }
 .attribution a{
     background: linear-gradient(180deg, hsl(310, 100%, 50%), hsl(0, 100%, 50%)); 
@@ -24,13 +21,13 @@
     --GrayishBlue: hsl(240, 18%, 77%);
 }
 body{
-    position:relative;
     font-family: 'Inter', sans-serif;
     background:url(./images/pattern-bg.svg);
     background-repeat:no-repeat;    
     background-position:72% 46%;
 }
 main{
+    position:relative;
     min-height:100vh;
     display:flex;
     align-items:center;
@@ -65,7 +62,7 @@ main{
     justify-content:flex-end;
     background:url(./images/pattern-quotes.svg);
     background-repeat:no-repeat;
-    background-position:10% 26%;
+    background-position:10% 30%;
     opacity:0;
     transition:all 0.4s ease-in-out;
 }
@@ -82,6 +79,7 @@ main{
     max-width:640px;
     left:0;
     bottom:15%;
+    
 }
 .info-font{
     opacity:1;
@@ -119,27 +117,31 @@ main{
     background:#fff;
     border-radius:50px;
     display:flex;
-    box-shadow: 0 5px 10px rgba(138, 129, 255, 0.3)
+    box-shadow: 0 5px 10px rgba(138, 129, 255, 0.3);
+    
 }
 .buttons img{
-    width:14px;
-    max-height:100%;
+    max-width:15px;
+    height:100%;
 }
 .buttons > button{
     background:none;
-    outline:none;
     border:none;
     padding:1rem 0.7rem;
     margin:0 0.6rem;
     transition:0.2s ease-in-out;
+    cursor:pointer;
 }
 .buttons > button:hover{
-    transform: scale(1.4);
+
     transition:0.2s ease-in-out;
     opacity:0.7;
 }
+.buttons > button:focus{
+    outline:2px dotted rgba(105, 105, 105, 0.6);
+
+}
 @media screen and (max-width:960px){
-    
     body{
         background-position:52% 6%;
         background-size:70%;
@@ -153,7 +155,9 @@ main{
         display:grid;
         grid-template-areas: 
         "a"
-        "b"
+        "b";
+        background-position:20% 82%;
+        background-size:10%;
     }
     .info{
         grid-area:b;
@@ -186,6 +190,17 @@ main{
     }
     .attribution{
         font-size:0.6rem;
-        margin:0 20%;
+    }
+}
+@media screen and (max-width:420px){
+    .container{
+        margin-top:2rem;
+        flex-direction:column;
+        display:grid;
+        grid-template-areas: 
+        "a"
+        "b";
+        background-position:50% 58%;
+        background-size:10%;
     }
 }

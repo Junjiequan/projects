@@ -45,7 +45,7 @@ const changeInfo = () =>{
     },500)
 
 }
-changeInfo();
+
 //eventlistener
 prevBtn.addEventListener('click', changeInfo);
 nextBtn.addEventListener('click', changeInfo);
