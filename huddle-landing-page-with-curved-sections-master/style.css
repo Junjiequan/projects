@@ -6,14 +6,233 @@
     -webkit-text-fill-color: transparent; 
     text-decoration:none; 
 }
+:root{
+    --VeryDarkCyan: hsl(192, 100%, 9%);
+    --VeryPaleBlue: hsl(207, 100%, 98%);
+    --Pink: hsl(322, 100%, 66%);
+    --LightPink: hsl(321, 100%, 78%);
+    --LightRed: hsl(0, 100%, 63%);
+    --font1: 'Poppins', sans-serif;
+    --font2: 'Open Sans', sans-serif;
+}
 *{
     padding:0;
     margin:0;
     box-sizing:border-box;
 }
-
+body{
+    background:hsl(0, 0%, 100%);
+    position:relative;
+}
 main{
     min-height:100vh;
-    background:url(./images/bg-section-top-desktop-1.svg);
-    background-size:100%;
 }
+a{
+    text-decoration:none;
+}
+/*text*/
+.hero-h1{
+    font-family:var(--font1);
+    font-size:3.5rem;
+    letter-spacing:-0.05rem;
+    color:var(--VeryDarkCyan);
+}
+.hero-h3{
+    margin-top:1.6rem;
+    max-width:620px;
+    font-family:var(--font2);
+    font-size:1.4rem;
+    font-weight:300;
+    letter-spacing:-0.05rem;
+    color:var(--VeryDarkCyan);
+}
+.content-title{
+    font-family:var(--font1);
+    font-size:2.5rem;
+    color:var(--VeryDarkCyan);
+    letter-spacing: -0.05rem;;
+}
+.content-text{
+    font-family:var(--font2);
+    font-size:1.2rem;
+    font-weight:thin;
+    color:var(--VeryDarkCyan);
+    letter-spacing: -0.05rem;;
+} 
+.number{
+    font-family:var(--font2);
+    font-size:6rem;
+    line-height:9rem;
+    font-weight:bold;
+    color:var(--VeryDarkCyan);
+}
+.info{
+    font-family:var(--font2);
+    font-size:1.5rem;
+    font-weight:600;
+    color:var(--VeryDarkCyan);
+    opacity:0.5;
+}
+/*spacing*/
+.title-spacing{
+    margin-bottom:1.5rem;
+}
+.content-container{
+    height:1000px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*top section*/
+.nav{
+    margin:5rem 15rem;
+    display:flex;
+    justify-content:space-between;
+}
+.logo img{
+    color:#000;
+    width:100%;
+    
+}
+.logo-btn{
+    border-radius:50px;
+    border:2px solid var(--LightPink);
+    padding:0.5rem 2rem;
+    font-family:var(--font2);
+    font-weight:300;
+    color:var(--LightPink);
+}
+.logo-btn:hover{
+    background:var(--LightPink);
+    color:#fff;
+}
+/*hero section*/
+.hero{
+    width:100%;
+    margin-top:15rem;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.hero-btn{
+    margin:3rem 0;
+    padding:1.5rem 7rem;
+    font-family:var(--font2);
+    font-size:1.3rem;
+    font-weight:600;
+    border-radius:50px;
+    background:var(--Pink);
+    color:#fff;
+}
+.hero-img{
+    margin:4rem 0;
+    width:60%;
+}
+.hero-img img{
+    width:100%;
+}
+.data{
+    margin:5rem 25%;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    
+    justify-content:space-between;
+}
+.col1 .image{
+    text-align:left;
+
+}
+.col2 .image{
+    text-align:left;
+}
+/*middle section*/
+.grid{
+    margin:0 0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-width:100%;
+}
+.bg-top1{
+    z-index:-1;
+    width:100%;
+    min-height:200px;
+    background:url(./images/bg-section-top-desktop-1.svg);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.bg-top2{
+    z-index:-1;
+    width:100%;
+    min-height:200px;
+}
+.bg-top3{
+    z-index:-1;
+    width:100%;
+    min-height:200px;
+    background:url(./images/bg-section-top-desktop-2.svg);
+    background-repeat:no-repeat;
+    background-size:cover;
+
+}
+.content1{
+    width:100%;
+    background:var(--VeryPaleBlue);
+    padding:0 15%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.content2{
+    width:100%;
+    background:#fff;
+    padding:0 15%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.content3{
+    width:100%;
+    background:var(--VeryPaleBlue);;
+    padding:0 15%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.bg-bot1{
+    z-index:-1;
+    width:100%;
+    min-height:150px;
+    background:url(./images/bg-section-bottom-desktop-1.svg);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.bg-bot2{
+    z-index:-1;
+    width:100%;
+    min-height:150px;
+    background:white;
+}
+.bg-bot3{
+    z-index:-1;
+    width:100%;
+    min-height:150px;
+    background:url(./images/bg-section-bottom-desktop-2.svg);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+/*middle section content containers*/
+.text-col{
+    width:580px;
+}
+.image-col img{
+    width:550px;
+    max-height:100%;
+}
+/*footer section*/

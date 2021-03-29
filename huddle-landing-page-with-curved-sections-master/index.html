@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
@@ -16,33 +17,78 @@
 <body>
   <main>
     <section class="nav">
-      <div>logo</div>
-      <a href="#">Try it free</a>
+      <div class="logo"><img src="./images/logo.svg" alt="#"></div>
+      <a class="logo-btn" href="#" alt="#" target="_blank">Try it free</a>
     </section>
     <section class="hero">
-      <h1>Build The Community Your Fans Will Love</h1>
-      <h3>Huddle re-imagines the way we build communities. You have a voice, but so does 
+      <h1 class="hero-h1">Build The Community Your Fans Will Love</h1>
+      <h3 class="hero-h3">Huddle re-imagines the way we build communities. You have a voice, but so does 
         your audience. Create connections with your users as you engage in genuine discussion. </h3>
-      <a href="#">Get Started For Free</a>
-      <div><img src="#" alt=""></div>
+      <a class="hero-btn" href="#" alt="#" target="_blank">Get Started For Free</a>
+      <div class="hero-img"><img src="./images/screen-mockups.svg" alt="#"></div>
     </section>
     <section class="data">
       <div class="col1">
-        <div class="image"><img src="" alt=""></div>
-        <p class="number"></p>
-        <p class="info"></p>
+        <div class="image"><img src="./images/icon-communities.svg" alt=""></div>
+        <p class="number">1.4k+</p>
+        <p class="info"> Communities Formed</p>
       </div>
       <div class="col2">
-        <div class="image"><img src="" alt=""></div>
-        <p class="number"></p>
-        <p class="info"></p>
+        <div class="image"><img src="./images/icon-messages.svg" alt=""></div>
+        <p class="number">2.7m+</p>
+        <p class="info">Messages Sent</p>
       </div>
     </section>
-    <section class="content">
-      <div class="grid-a"></div>
-      <div class="grid-b"></div>
-      <div class="grid-c"></div>
-      <div class="grid-d"></div>
+    <section class="content-container">
+      <!--grid1-->
+      <div class="grid">
+        <div class="bg-top1"></div>
+        <div class="content1">
+          <div class="text-col">
+            <h1 class="content-title title-spacing">Grow Together</h1>
+            <p class="content-text">Generate meaningful discussions with your audience and build a strong, loyal community. 
+              Think of the insightful conversations you miss out on with a feedback form. </p>
+          </div>
+          <div class="image-col">
+            <img src="./images/illustration-grow-together.svg" alt="">
+          </div>
+        </div>
+        <div class="bg-bot1"></div>
+      </div>
+      <!--grid2-->
+      <div class="grid">
+        <div class="bg-top2"></div>
+        <div class="content2">
+          <div class="image-col">
+            <img src="./images/illustration-flowing-conversation.svg" alt="">
+          </div>
+          <div class="text-col">
+            <h1 class="content-title title-spacing">Flowing Conversations</h1>
+            <p class="content-text">You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
+              just-in-time loading for a more natural flow.</p>
+          </div>
+        </div>
+        <div class="bg-bot2"></div>
+      </div>
+      <!--grid3-->
+      <div class="grid">
+        <div class="bg-top3"></div>
+        <div class="content3">
+          <div class="text-col">
+            <h1 class="content-title title-spacing">Your Users</h1>
+            <p class="content-text">It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
+              once signed in to your app, your users can start chatting immediately.</p>
+          </div>
+          <div class="image-col">
+            <img src="./images/illustration-your-users.svg" alt="">
+          </div>
+        </div>
+        <div class="bg-bot3"></div>
+      </div>
+      <!--button-->
+      <div class="grid-d">
+
+      </div>
       <div class="advertise">
         <p></p>
         <a href="#"></a>
@@ -50,11 +96,6 @@
     </section>
   </main>
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Jay</a>.
-    </p>
-  </footer>
+  
 </body>
 </html>
