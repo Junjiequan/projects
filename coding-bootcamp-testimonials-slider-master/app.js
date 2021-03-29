@@ -36,13 +36,13 @@ const changeInfo = () =>{
     setTimeout(()=>{
         container.classList.add('show');
         textAnimation.classList.remove('textShow');
-        titleAnimation.classList.remove('titleShow')
+        titleAnimation.classList.remove('titleShow');
         text.innerText = users[slider].feedback;
         personName.innerText = users[slider].name;
         title.innerText = users[slider].title;
         picture.src = users[slider].image;
         slider++;
-    },500)
+    },400)
 
 }
 
