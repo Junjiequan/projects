@@ -15,7 +15,7 @@
   <main>
     <section class="nav">
       <div class="logo"><img src="./images/logo.svg" alt="#"></div>
-      <a class="logo-btn" href="#subscribe" alt="#" >Try it free</a>
+      <a href="#subscribe" alt="#" ><div class="logo-btn">Try it free</div></a>
     </section>
     <section class="hero">
       <h1 class="hero-h1">Build The Community Your Fans Will Love</h1>
@@ -115,20 +115,26 @@
             send you spam or pass on your email address</p>
         </div>
         <div>
-          <form class="subscribe-container" action="https://youtu.be/7lsdJDiJ0QE?t=1" target="_blank">
+          <form class="subscribe-container"   >
             <div class="input-box">
               <input type="email" id="email" name="email" onkeyup="this.setAttribute('value', this.value);" value="" required>
               <label for="email">Your Email</label>
-              <p class="error show">Check your email please.</p>
+              <p class="error">Check your email please.</p>
             </div>
             <div class="submit-button">
               <button id="subscribe" type="submit" class="button">Subscribe</button>
             </div>
           </form>
         </div>
+        <div class="design">
+          <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Jay</a>.
+          </p>
+        </div>
       </div>
     </div>
   </footer>
-
+  <script src="./app.js"></script>
 </body>
 </html>
