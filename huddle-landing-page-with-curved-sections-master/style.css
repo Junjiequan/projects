@@ -158,7 +158,8 @@ a{
     width:100%;
 }
 .data{
-    margin:5rem 25rem;
+    max-width:1000px;
+    margin:5rem auto;
     max-height:600px;
     text-align:center;
     display:flex;
