@@ -290,7 +290,7 @@ footer{
     height:100%;
     display:flex;
     justify-content:space-between;
-    padding:0 10rem 3rem 10rem;
+    padding:5rem 10rem 3rem 10rem;
     color:#fff;
     font-family:var(--font2);   
 }
