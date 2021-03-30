@@ -21,11 +21,9 @@
     --GrayishBlue: hsl(240, 18%, 77%);
 }
 body{
-
     font-family: 'Inter', sans-serif;
-    background:url(./images/pattern-bg.svg);
-    background-repeat:no-repeat;    
-    background-position: 75%  ;
+    background:no-repeat url(./images/pattern-bg.svg) 80% 45% / 40%;
+    overflow:hidden;
 }
 main{
     margin:0 auto;
