@@ -535,6 +535,9 @@ footer{
             margin-top:5rem;
             padding:0 2rem;
         }
+        .image-col{
+            margin:2rem 0;
+        }
     }
 }
 .design{
