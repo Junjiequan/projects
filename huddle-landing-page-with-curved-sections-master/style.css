@@ -226,7 +226,7 @@ a{
 }
 .content3{
     width:100%;
-    background:var(--VeryPaleBlue);;
+    background:var(--VeryPaleBlue);
     padding:0 15%;
     display:flex;
     align-items:center;
