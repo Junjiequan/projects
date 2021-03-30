@@ -531,7 +531,9 @@ footer{
             margin:0;
             min-height:100px;
         }
-
+        .hero{
+            padding:0 2rem;
+        }
     }
 }
 .design{
