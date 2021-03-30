@@ -1,0 +1,13 @@
+:root {
+  --color-base:#fff;
+  --color-text:#000;
+  --color-base2:#eee;
+  --color-text2:#111;
+}
+
+body {
+  background-color: #fff;
+  color: #ff1212;
+}
+
+/*# sourceMappingURL=style.css.map */
