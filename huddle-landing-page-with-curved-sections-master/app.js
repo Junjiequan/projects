@@ -5,9 +5,12 @@ const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+")
 
 
 
-function checkEmail(){
-    if(!emailRegex.test(emailInput.value)){
-        errorText.classList.add('show')
+function checkEmail(e){
+    e.preventDefault();
+    if(!emailRegex.test(emailInput.value)) errorText.classList.add('show');
+    if(emailRegex.test(emailInput.value)){
+        errorText.classList.remove('show');
+        window.open('https://youtu.be/7lsdJDiJ0QE?t=1','_blank')
     }
 }
 function clearEmail(){
