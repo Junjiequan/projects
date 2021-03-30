@@ -333,7 +333,7 @@ footer{
     color:rgb(41, 230, 255);
 }
 .newsletter{
-    max-width:380px;
+    max-width:90%;
     margin-bottom:2rem;
 }
 .subscribe-container{
@@ -520,6 +520,7 @@ footer{
             margin-bottom:2rem;
             width:360px;
         }
+        
         .newsletter-container{
             margin:0 1rem;
             width:360px;
