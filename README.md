@@ -11,5 +11,5 @@
 | 6. [ping-coming-soon-page-master](https://a331998513.github.io/projects/ping-coming-soon-page-master) | [Repo](https://github.com/a331998513/projects/tree/main/ping-coming-soon-page-master) |
 | 7. [coding-bootcamp-testimonials-slider-master](https://a331998513.github.io/projects/coding-bootcamp-testimonials-slider-master/) | [Repo](https://github.com/a331998513/projects/tree/main/coding-bootcamp-testimonials-slider-master)|
 | 8. [huddle-landing-page-with-curved-sections-master](https://a331998513.github.io/projects/huddle-landing-page-with-curved-sections-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/huddle-landing-page-with-curved-sections-master)  |
-
+| 9. [social-media-dashboard-with-theme-switcher-master]  | [Repo]  |
 
