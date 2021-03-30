@@ -289,7 +289,7 @@ footer{
     height:100%;
     display:flex;
     justify-content:space-between;
-    padding:0 15rem 3rem 15rem;
+    padding:0 10rem 3rem 10rem;
     color:#fff;
     font-family:var(--font2);   
 }
@@ -507,7 +507,7 @@ footer{
         margin:0 0 1rem 0;
     }
     .footer-content{
-        padding:0 5rem 3rem 5rem;
+        padding:0 3rem 3rem 3rem;
     }
     @media screen and (max-width:785px){
         .footer-content{
