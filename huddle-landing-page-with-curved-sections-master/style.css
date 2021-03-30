@@ -143,6 +143,7 @@ a{
     background:var(--Pink);
     color:#fff;
     transition:all 0.2s ease-in-out;
+    box-shadow:0 2px 5px rgba(138, 25, 113,0.4);
 }
 .hero-btn:hover{
     background:#e41988;
