@@ -22,7 +22,7 @@
 }
 body{
     font-family: 'Inter', sans-serif;
-    background:no-repeat url(./images/pattern-bg.svg) 80% 45% / 40%;
+    background:no-repeat url(./images/pattern-bg.svg) 75% 45% / 40%;
     overflow:hidden;
 }
 main{
