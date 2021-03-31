@@ -1,0 +1,15 @@
+@mixin flexCenter{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+*{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:red;
+}
+
+}
