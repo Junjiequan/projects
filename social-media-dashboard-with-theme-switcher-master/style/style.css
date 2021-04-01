@@ -7,20 +7,24 @@
 /*theme color setting*/
 .dark {
   --color-btn: #1e202a;
+  --color-mobilebtn: linear-gradient(90deg, #378fe6, #3eda82);
   --color-bodyBG: #1e202a;
   --color-headerBG: #1f212e;
   --color-cardBG: #252a41;
   --color-textDefault: #8b97c6;
   --color-textLight: white;
+  --color-footer: linear-gradient(90deg, #ffeb33, red);
 }
 
 .light {
-  --color-btn: #aeb3cb;
+  --color-btn: #f0f2fa;
+  --color-mobilebtn: #aeb3cb;
   --color-bodyBG: white;
   --color-headerBG: #f5f7ff;
   --color-cardBG: #f0f2fa;
   --color-textDefault: #63687e;
   --color-textLight: #1e202a;
+  --color-footer: linear-gradient(90deg, #2605b8, #cc00aa);
 }
 
 html {
@@ -86,8 +90,8 @@ body {
   margin-left: 1.5rem;
   background: linear-gradient(90deg, #378fe6, #3eda82);
   border-radius: 25px;
-  min-width: 50px;
-  min-height: 25px;
+  min-width: 46px;
+  min-height: 20px;
   display: flex;
   justify-content: flex-start;
   cursor: pointer;
@@ -95,8 +99,8 @@ body {
 .header-container .toggle-btn .btn .ball {
   border-radius: 50%;
   background: var(--color-btn);
-  margin: 4px;
-  padding: 1rem;
+  margin: 2px;
+  padding: 0.9rem;
   pointer-events: none;
 }
 .header-container .toggle-btn .btn:hover {
@@ -234,4 +238,45 @@ body {
 }
 .reset-layout:nth-child(2) .card2-text span, .reset-layout:nth-child(7) .card2-text span, .reset-layout:nth-child(8) .card2-text span {
   color: #dc414c;
+}
+
+@media only screen and (max-width: 765px) {
+  html p {
+    font-size: 1.4rem;
+  }
+
+  .header-container {
+    min-width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-container .toggle-btn {
+    border-top: 1px solid var(--color-textDefault);
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-container .toggle-btn .btn {
+    background: var(--color-mobilebtn);
+  }
+}
+/*start footer*/
+footer {
+  max-width: 1100px;
+  margin: 5rem auto 3rem auto;
+}
+footer .attribution {
+  border: 10px solid red;
+  border: 1px;
+  font-size: 1rem;
+  text-align: center;
+}
+footer .attribution a {
+  background: var(--color-footer);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

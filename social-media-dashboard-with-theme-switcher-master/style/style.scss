@@ -4,6 +4,8 @@
     margin:0;
     box-sizing:border-box;
 }
+
+
 /*theme color setting*/
     .dark{
         @each $name, $color in $Dark{
@@ -66,16 +68,16 @@ body{
             margin-left:1.5rem;
             background: $toggleDark;
             border-radius:25px;
-            min-width: 50px;
-            min-height:25px;
+            min-width: 46px;
+            min-height:20px;
             display:flex;
             justify-content:flex-start;
             cursor:pointer;
             .ball{
                 border-radius:50%;
                 background:getColor(btn);
-                margin:4px;
-                padding:1rem;
+                margin:2px;
+                padding:0.9rem;
                 pointer-events: none;
             }
             &:hover{
@@ -207,5 +209,47 @@ body{
     &:nth-child(7) .card2-text span,
     &:nth-child(8) .card2-text span{
         color: $brightRed;
+    }
+}
+@media only screen and (max-width:765px){
+    html{
+        p{font-size:1.4rem};
+    }
+    .header-container{
+        min-width:100%;
+        flex-direction:column;
+        align-items:flex-start;
+        .toggle-btn{
+            border-top:1px solid getColor(textDefault);
+            margin-top:2rem;
+            padding-top:1.5rem;
+            width:100%;
+            display:flex;
+            justify-content:space-between;
+            .btn{
+                background:getColor(mobilebtn);
+            }
+        }
+    }
+   
+}
+
+
+/*start footer*/
+footer{
+    max-width:1100px;
+    margin:5rem auto 3rem auto;
+    .attribution{
+        border:10px solid red;
+        border:1px;
+        font-size:1rem;
+        text-align:center;
+    }
+    .attribution a{
+        background: getColor(footer);
+        background-clip:border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        text-decoration:none; 
     }
 }

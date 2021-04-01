@@ -8,22 +8,28 @@ $toggleLight:hsl(230, 22%, 74%);
 $veryPaleBlue: hsl(225, 100%, 98%); 
 $lightGrayishBlue: hsl(227, 47%, 96%);
 $darkGrayishBlue: hsl(228, 12%, 44%);  
+$footerDark:linear-gradient(90deg, hsl(54, 100%, 60%), hsl(0, 100%, 50%));
+$footerLight:linear-gradient(90deg, hsl(251, 95%, 37%), hsl(310, 100%, 40%)); 
 //Theme
 $Dark:(
     btn: $veryDarkBlue,
+    mobilebtn: $toggleDark,
     bodyBG: $veryDarkBlue,             /*(BG)*/
     headerBG: $veryDarkBlue2,          /*(Top BG Pattern)*/
     cardBG: $darkDesaturatedBlue,      /*(Card BG)*/
     textDefault: $desaturatedBlue,     /*(Text)*/
-    textLight:$white,                  /*(Text)*/
+    textLight:$white,                   /*(Text)*/
+    footer: $footerDark              
 );
 $Light:(
-    btn: $toggleLight,
+    btn: $lightGrayishBlue,
+    mobilebtn: $toggleLight,
     bodyBG: $white,                    /*(BG)*/
     headerBG: $veryPaleBlue,           /*(Top BG Pattern)*/
     cardBG: $lightGrayishBlue,         /*(Card BG)*/
     textDefault: $darkGrayishBlue,     /*(Text)*/
     textLight:$veryDarkBlue,           /*(Text)*/
+    footer: $footerLight 
 );
 //root
 $dimeGreen: hsl(163, 72%, 41%);
