@@ -4,8 +4,6 @@
     margin:0;
     box-sizing:border-box;
 }
-
-
 /*theme color setting*/
     .dark{
         @each $name, $color in $Dark{
@@ -235,8 +233,6 @@ body{
     }
    
 }
-
-
 /*start footer*/
 footer{
     max-width:1100px;
