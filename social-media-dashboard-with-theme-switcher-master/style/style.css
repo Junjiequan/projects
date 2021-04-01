@@ -111,7 +111,7 @@ body {
   padding: 0 2rem;
   display: grid;
   flex-wrap: wrap;
-  grid-template-columns: repeat(auto-fill, 220px);
+  grid-template-columns: repeat(auto-fill, 242px);
   grid-template-rows: auto;
   grid-column-gap: 3rem;
   grid-row-gap: 2rem;
