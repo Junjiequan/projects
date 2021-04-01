@@ -111,7 +111,7 @@ body {
   padding: 0 2rem;
   display: grid;
   flex-wrap: wrap;
-  grid-template-columns: repeat(auto-fill, 242px);
+  grid-template-columns: repeat(auto-fill, calc((100% - 9rem) / 4));
   grid-template-rows: auto;
   grid-column-gap: 3rem;
   grid-row-gap: 2rem;
@@ -119,6 +119,7 @@ body {
 }
 .cards-container .col {
   padding: 3rem;
+  min-width: 220px;
   position: relative;
   border-radius: 5px;
   display: flex;
@@ -238,7 +239,7 @@ body {
   color: #dc414c;
 }
 
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 965px) {
   html p {
     font-size: 1.4rem;
   }
