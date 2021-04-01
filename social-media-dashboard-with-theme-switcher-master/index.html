@@ -3,30 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style/style.css">
+  <script defer src="./app.js"></script>
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body class="dark">
-    <header>
-      <section class="header-container">
-        <div class="dashboard-1">
-          <h1 >Social Media Dashboard</h1>
-          <p>Total Followers: 23,004</p>
-        </div>
-        <div class="toggle-btn">
-          <p>Dark Mode</p>
-          <div>
-            <a href=""></a>
-            <div class="ball"></div>
+    <main>
+      <!--deep background-->
+      <div class="top-bg"></div>
+      <!--/deep background-->
+      <section class="container">
+        <section class="header-container">
+          <!--title-->
+          <div class="dashboard-1">
+            <h1 >Social Media Dashboard</h1>
+            <p>Total Followers: 23,004</p>
           </div>
-        </div>
-      </section>
-    </header>
-    <main></main>
+          <div class="toggle-btn">
+            <p>Dark Mode</p>
+            <div class="btn">
+              <div class="ball"></div>
+            </div>
+          </div>
+        </section>
+        <!--card section-->
+        <section class="cards-container">
+          <div class="col">
+            <div class="border-bg facebook"></div>
+            <div class="info"><img src="./images/icon-facebook.svg" alt="facebook"><span>@nathanf</span></div>
+            <div class="data">1987</div>
+            <div class="follow">Followers</div>
+            <div class="today"><img src="./images/icon-up.svg" alt=""> 12 Today</div>
+          </div>
+          <div class="col">
+            <div class="border-bg twitter"></div>
+            <div class="info"><img src="./images/icon-twitter.svg" alt="facebook"><span>@nathanf</span></div>
+            <div class="data">1044</div>
+            <div class="follow">Followers</div>
+            <div class="today"><img src="./images/icon-up.svg" alt=""> 99 Today</div>
+          </div>
+          <div class="col">
+            <div class="border-bg instagram"></div>
+            <div class="info"><img src="./images/icon-instagram.svg" alt="facebook"><span>@realnathanf</span></div>
+            <div class="data">11K</div>
+            <div class="follow">Followers</div>
+            <div class="today"><img src="./images/icon-up.svg" alt=""> 1099 Today</div>
+          </div>
+          <div class="col">
+            <div class="border-bg youtube"></div>
+            <div class="info"><img src="./images/icon-youtube.svg" alt="facebook"><span>Nathan F.</span></div>
+            <div class="data">8239</div>
+            <div class="follow">Subscribers</div>
+            <div class="today"><img src="./images/icon-down.svg" alt=""> 144 Today</div>
+          </div>
+        </section>
+        <!--second part-->
+        <!--title-->
+        <section class="header-container2">
+          <div class="dashboard-2">
+            <h1 >Overview - Today</h1>
+          </div>
+        </section>
+        <!--second card section-->
+        <section class="cards-container">
+          <div class="col reset-layout">
+            <div class="card2-info">Page Views<span class="card2-icon"><img src="./images/icon-facebook.svg" alt="facebook"></span></div>
+            <div class="card2-text">87<span><img src="./images/icon-up.svg" alt="up"> 3%</span></div>
+          </div>
+          <div class="col reset-layout">
+            <div class="card2-info">Likes<span class="card2-icon"><img src="./images/icon-facebook.svg" alt="facebook"></span></div>
+            <div class="card2-text">52<span><img src="./images/icon-down.svg" alt="up"> 2%</span></div>
+          </div>
+          <div class="col reset-layout">
+            <div class="card2-info">Likes<span class="card2-icon"><img src="./images/icon-instagram.svg" alt="facebook"></span></div>
+            <div class="card2-text">5462<span><img src="./images/icon-up.svg" alt="up"> 2257%</span></div>
+          </div>
+          <div class="col reset-layout">
+            <div class="card2-info">Profile Views<span class="card2-icon"><img src="./images/icon-instagram.svg" alt="facebook"></span></div>
+            <div class="card2-text">52k<span><img src="./images/icon-up.svg" alt="up"> 1375%</span></div>
+          </div>
+          <div class="col reset-layout">
+            <div class="card2-info">Retweets<span class="card2-icon"><img src="./images/icon-twitter.svg" alt="facebook"></span></div>
+            <div class="card2-text">117<span><img src="./images/icon-up.svg" alt="up"> 303%</span></div>
+          </div>
+          <div class="col reset-layout">
+            <div class="card2-info">Likes<span class="card2-icon"><img src="./images/icon-twitter.svg" alt="facebook"></span></div>
+            <div class="card2-text">507<span><img src="./images/icon-up.svg" alt="up"> 553%</span></div>
+          </div>
+          <div class="col reset-layout">
+            <div class="card2-info">Likes<span class="card2-icon"><img src="./images/icon-youtube.svg" alt="facebook"></span></div>
+            <div class="card2-text">107<span><img src="./images/icon-down.svg" alt="up"> 19%</span></div>
+          </div>
+          <div class="col reset-layout">
+            <div class="card2-info">Total Views<span class="card2-icon"><img src="./images/icon-youtube.svg" alt="facebook"></span></div>
+            <div class="card2-text">1407<span><img src="./images/icon-down.svg" alt="up"> 12%</span></div>
+          </div>
+        </section>
+    </section>
+    </main>
     <footer></footer>
 </body>
 </html>

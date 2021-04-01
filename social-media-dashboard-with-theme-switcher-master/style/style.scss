@@ -1,12 +1,4 @@
 @use './color' as *;
-
-
-// @mixin flexCenter($direction){
-//     display:flex;
-//     flex-direction:direction;
-//     justify-content:center;
-// }
-
 *{
     padding: 0;
     margin:0;
@@ -27,34 +19,193 @@
     }
 html{
     font-size:62.5%;
+    h1{font-size:2.5rem};
+    p{font-size:1.6rem};
+    a{text-decoration:none};
 }
 body{
     font-family: 'Inter', sans-serif;
     background: getColor(bodyBG);
     min-height:100vh;
     color:getColor(textLight);
+    transition: all 0.5s ease-in-out;
 }
-header{
+.container{
+    max-width:1100px;
+    margin:0 auto;
+}
+.top-bg{
+    position:absolute;
+    top:0;
+    z-index:-1;
     background:getColor(headerBG);
-    .header-container{
-        max-width:1440px;
-        margin:3rem auto;
-        border:5px solid red;
+    width:100%;
+    height:230px;
+    border-radius: 0 0 25px 25px;
+}
+.header-container{
+    margin-bottom:4rem;
+    padding:3rem 2rem 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight:600;
+    h1{ line-height:4.5rem;}
+    p{ color:getColor(textDefault);}
+    .dashboard-2{
+        h1{
+            font-size:2.2rem;
+        }
+    }
+    .toggle-btn{
         display:flex;
-        justify-content:space-between;
         align-items:center;
-        .dashboard-1{
-            h1{
-                font-size:3rem;
-                line-height:4.5rem;
+        justify-content:space-between;
+        transition:all 0.3s ease;
+        .btn{
+            margin-left:1.5rem;
+            background: $toggleDark;
+            border-radius:25px;
+            min-width: 50px;
+            min-height:25px;
+            display:flex;
+            justify-content:flex-start;
+            cursor:pointer;
+            .ball{
+                border-radius:50%;
+                background:getColor(btn);
+                margin:4px;
+                padding:1rem;
+                pointer-events: none;
             }
-            p{
-                font-size:1.6rem;
-                color:getColor(textDefault);
-                font-weight:600;
+            &:hover{
+                transition:all 0.3s ease;
+                filter:brightness(120%);
             }
-
         }
     }
 }
-
+.cards-container{
+    padding:0 2rem;
+    display:flex;
+    flex-wrap:wrap;
+    column-gap:3rem;
+    row-gap:2rem;
+    align-items:center;
+    .col{
+        padding:3rem;
+        position:relative;
+        border-radius:5px;
+        flex:20%;
+        min-width:220px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        background:getColor(cardBG);
+        color:getColor(textDefault);
+        cursor:pointer;
+        .info{
+            display:flex;
+            align-items:center;
+            img{
+                width:18px;
+            }
+            span{
+                padding-left:0.7rem;
+                font-size:1.2rem;
+                font-weight:600;
+            }
+        }
+        .data{
+            margin-top:1.5rem;
+            font-size:5rem;
+            font-weight:700;
+            color:getColor(textLight);
+        }
+        .follow{
+            font-size:1.3rem;
+            font-weight:400;
+            text-transform:uppercase;
+            letter-spacing:.4rem;
+        }
+        .today{
+            margin-top:2.5rem;
+            font-size:1.2rem;
+            color:$dimeGreen;
+            font-weight:bold;
+            display:flex;
+            align-items:center;
+            img{
+                padding-right:3px;
+            }
+        }
+        &:hover{
+            filter: brightness(85%)
+        }
+    }
+    .col:nth-child(4) > .today{
+        color: $brightRed;
+    }
+    .border-bg{
+        position:absolute;
+        top:0;
+        border-radius:5px 5px 0 0;
+        width:100%;
+        height:4px;
+    }
+    .facebook{ background:$facebook;}
+    .twitter{ background:$twitter;}
+    .instagram{ background:$instagram;}
+    .youtube{ background:$youTube;}
+}
+.header-container2{
+    margin-top:2rem;
+    margin-bottom:2rem;
+    padding:3rem 2rem 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight:600;
+}
+.reset-layout{
+    height:110px;
+    padding:2rem 2.5rem !important;
+    .card2-info{
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        font-size:1.3rem;
+        font-weight:700;
+        .card2-icon{
+            img{
+                width:18px;
+            }
+        }
+    }
+    .card2-text{
+        margin-top:2rem;
+        width:100%;
+        display:flex;
+        align-items:flex-end;
+        justify-content:space-between;
+        font-size:2.8rem;
+        font-weight:700;
+        color:getColor(textLight);
+        span{
+            display:flex;
+            align-items:center;
+            font-size:1.1rem;
+            color:$dimeGreen;
+            font-weight:bold;
+            img{
+                padding-right:3px;
+            }
+        }
+    }
+    &:nth-child(2) .card2-text span,
+    &:nth-child(7) .card2-text span,
+    &:nth-child(8) .card2-text span{
+        color: $brightRed;
+    }
+}
