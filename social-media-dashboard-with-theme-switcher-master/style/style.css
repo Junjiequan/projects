@@ -4,6 +4,30 @@
   box-sizing: border-box;
 }
 
+/*theme color setting*/
+:root .dark {
+  --color-btn: linear-gradient(180deg #378fe6, #3eda82);
+  --color-bodyBG: #1e202a;
+  --color-headerBG: #1f212e;
+  --color-cardBG: #252a41;
+  --color-textDefault: #8b97c6;
+  --color-textLight: white;
+}
+:root .light {
+  --color-btn: #aeb3cb;
+  --color-bodyBG: white;
+  --color-headerBG: #f5f7ff;
+  --color-cardBG: #f0f2fa;
+  --color-textDefault: #63687e;
+  --color-textLight: #1e202a;
+}
+
 body {
-  background-color: red;
+  font-family: "Inter", sans-serif;
+  background: var(--color-bodyBG);
+  min-height: 100vh;
+}
+
+header {
+  background: var(--color-headerBG);
 }/*# sourceMappingURL=style.css.map */

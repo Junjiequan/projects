@@ -1,4 +1,5 @@
-@mixin flexCenter{
+@use  './color' as *;
+@mixin flexCenter(){
     display:flex;
     align-items:center;
     justify-content:center;
@@ -8,8 +9,29 @@
     margin:0;
     box-sizing:border-box;
 }
+/*theme color setting*/
+:root {
+    .dark{
+        @each $name, $color in $Dark{
+            --color-#{$name} : #{$color};
+        }
+    };
+    .light{
+        @each $name, $color in $Light{
+            --color-#{$name} : #{$color};
+        };
+    }
+}
+@function getColor($color-name){
+    @return var(--color-#{$color-name});
+}
 body{
-    background-color:red;
+    font-family: 'Inter', sans-serif;
+    background: getColor(bodyBG);
+    min-height:100vh;
+}
+header{
+    background:getColor(headerBG);
 }
 
-}
+
