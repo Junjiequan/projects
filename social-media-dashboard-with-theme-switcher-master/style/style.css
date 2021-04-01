@@ -111,7 +111,7 @@ body {
   padding: 0 2rem;
   display: grid;
   flex-wrap: wrap;
-  grid-template-columns: repeat(auto-fill, calc((100% - 9rem) / 4));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   grid-template-rows: auto;
   grid-column-gap: 3rem;
   grid-row-gap: 2rem;
@@ -239,7 +239,7 @@ body {
   color: #dc414c;
 }
 
-@media only screen and (max-width: 965px) {
+@media only screen and (max-width: 625px) {
   html p {
     font-size: 1.4rem;
   }
@@ -259,10 +259,6 @@ body {
   }
   .header-container .toggle-btn .btn {
     background: var(--color-mobilebtn);
-  }
-
-  .cards-container {
-    grid-template-columns: auto;
   }
 }
 /*start footer*/
