@@ -1,37 +1,60 @@
-@use  './color' as *;
-@mixin flexCenter(){
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
+@use './color' as *;
+
+
+// @mixin flexCenter($direction){
+//     display:flex;
+//     flex-direction:direction;
+//     justify-content:center;
+// }
+
 *{
     padding: 0;
     margin:0;
     box-sizing:border-box;
 }
 /*theme color setting*/
-:root {
     .dark{
         @each $name, $color in $Dark{
             --color-#{$name} : #{$color};
-        }
-    };
+    }}
     .light{
         @each $name, $color in $Light{
             --color-#{$name} : #{$color};
-        };
+        }
     }
-}
-@function getColor($color-name){
-    @return var(--color-#{$color-name});
+    @function getColor($colorName){
+        @return var(--color-#{$colorName});
+    }
+html{
+    font-size:62.5%;
 }
 body{
     font-family: 'Inter', sans-serif;
     background: getColor(bodyBG);
     min-height:100vh;
+    color:getColor(textLight);
 }
 header{
     background:getColor(headerBG);
-}
+    .header-container{
+        max-width:1440px;
+        margin:3rem auto;
+        border:5px solid red;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        .dashboard-1{
+            h1{
+                font-size:3rem;
+                line-height:4.5rem;
+            }
+            p{
+                font-size:1.6rem;
+                color:getColor(textDefault);
+                font-weight:600;
+            }
 
+        }
+    }
+}
 

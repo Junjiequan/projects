@@ -5,7 +5,7 @@
 }
 
 /*theme color setting*/
-:root .dark {
+.dark {
   --color-btn: linear-gradient(180deg #378fe6, #3eda82);
   --color-bodyBG: #1e202a;
   --color-headerBG: #1f212e;
@@ -13,7 +13,8 @@
   --color-textDefault: #8b97c6;
   --color-textLight: white;
 }
-:root .light {
+
+.light {
   --color-btn: #aeb3cb;
   --color-bodyBG: white;
   --color-headerBG: #f5f7ff;
@@ -22,12 +23,34 @@
   --color-textLight: #1e202a;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background: var(--color-bodyBG);
   min-height: 100vh;
+  color: var(--color-textLight);
 }
 
 header {
   background: var(--color-headerBG);
+}
+header .header-container {
+  max-width: 1440px;
+  margin: 3rem auto;
+  border: 5px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-container .dashboard-1 h1 {
+  font-size: 3rem;
+  line-height: 4.5rem;
+}
+header .header-container .dashboard-1 p {
+  font-size: 1.6rem;
+  color: var(--color-textDefault);
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
