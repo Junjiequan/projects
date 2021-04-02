@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////
-                        //Object                         
+                        //Object ES-5                    
 ///////////////////////////////////////////////////////////
 
 // const book1={
@@ -26,7 +26,7 @@
 // // console.log(Object.keys(book2));
 
 ///////////////////////////////////////////////////////////
-                    //constructor                        
+                    //constructor  ES-5                       
 ///////////////////////////////////////////////////////////
 
 // //Constructor
@@ -57,8 +57,6 @@
 //     this.revised = true;
 // }
 
-
-
 // //Initiate an object
 // const book1 = new Book('Book one', 'John Smith', '1996');
 // const book2 = new Book('Book two', 'Junjie Quan', '2010');
@@ -69,7 +67,7 @@
 
 
 ///////////////////////////////////////////////////////////
-                    //Inheritence                        
+                    //Inheritence   ES-5                      
 ///////////////////////////////////////////////////////////
 
 // //Constructor
@@ -109,7 +107,7 @@
 
 
 ///////////////////////////////////////////////////////////
-                         //Object                        
+                         //OOP   ES-5                      
 ///////////////////////////////////////////////////////////
 
 // Object of Protos
@@ -131,3 +129,13 @@ const WeightTraining = Object.create(Workout,{
 
 console.log(WeightTraining.doCardio());
 console.log(WeightTraining.doWeight());
+
+///////////////////////////////////////////////////////////
+                         //Object   ES-6                      
+///////////////////////////////////////////////////////////
+
+class Book {
+    constructor(title, author, year){
+        this.title = title
+    }
+}
