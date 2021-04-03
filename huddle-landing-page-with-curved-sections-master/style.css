@@ -33,7 +33,7 @@ a{
 
 .hero-h1{
     font-family:var(--font1);
-    font-size:3.5rem;
+    font-size:3.2rem;
     letter-spacing:-0.05rem;
     color:var(--VeryDarkCyan);
 }
@@ -60,7 +60,7 @@ a{
     font-size:1.2rem;
     font-weight:thin;
     color:var(--VeryDarkCyan);
-    letter-spacing: -0.05rem;;
+    letter-spacing: -0.05rem;
 } 
 .number{
     font-family:var(--font2);
@@ -99,7 +99,9 @@ a{
 }
 /*top section*/
 .nav{
-    margin:5rem 15rem;
+    max-width:1100px;
+    padding:0 3rem;
+    margin:5rem auto;
     display:flex;
     justify-content:space-between;
 }
@@ -111,6 +113,7 @@ a{
 }
 .logo-btn{
     min-width:150px;
+    text-align:center;
     border-radius:50px;
     border:2px solid var(--LightPink);
     padding:0.5rem 2rem;
@@ -126,8 +129,9 @@ a{
 }
 /*hero section*/
 .hero{
-    width:100%;
+    max-width:1100px;
     margin-top:15rem;
+    margin:15rem auto 0;
     text-align:center;
     display:flex;
     flex-direction:column;
@@ -161,6 +165,7 @@ a{
 .data{
     max-width:1000px;
     margin:5rem auto;
+    padding:0 1rem;
     max-height:600px;
     text-align:center;
     display:flex;
@@ -257,7 +262,9 @@ a{
 }
 /*middle section content containers*/
 .text-col{
-    width:580px;
+    width:540px;
+    text-align:justify;
+    padding:0 3rem;
 }
 .image-col img{
     width:550px;
@@ -279,7 +286,7 @@ footer{
 }
 .top-bg{
     margin-top:10rem;
-    min-height:210px;
+    min-height:224px;
     background: url(./images/bg-footer-top-desktop.svg);
     background-size:100%;
     background-repeat:no-repeat;
@@ -412,16 +419,19 @@ footer{
 .show{
     opacity:1;
 }
-@media screen and (max-width:1400px){
+@media screen and (max-width:1100px){
+
+    .nav{
+        max-width:90%;
+    }
+    .hero{
+        max-width:90%;
+    }
     .data{
-        margin:2rem 1rem;
+        margin:0 5rem 10rem ;
         text-align:center;
         display:flex;
-        flex-direction:column;
-        align-items:center;;
-    }
-    .col1{
-        margin-bottom:2rem;
+
     }
 }
 @media screen and (max-width:1075px){
@@ -449,12 +459,13 @@ footer{
     }
     /*end font*/
     .nav{
-        margin:5rem 2rem;
+        width:100%;
+        margin:5rem auto;
         display:flex;
         align-items:center;
     }
     .logo img{
-        min-width:100px;
+        min-width:120px;
     }
     .hero-btn{
         min-width:300px;
@@ -487,6 +498,7 @@ footer{
     }
     /*middle col*/
     .text-col{
+        text-align:center;
         width:100%;
         max-width:500px;
         margin-bottom:2rem;
@@ -500,7 +512,7 @@ footer{
         margin-bottom:2rem;
     }
     .subscribe-container{
-        width:320px;
+        max-width:320px;
         flex-direction:column;
         align-items:flex-end;
     }
@@ -508,20 +520,30 @@ footer{
         margin:0 0 1rem 0;
     }
     .footer-content{
-        padding:0 3rem 3rem 3rem;
+        padding:5rem 3rem 3rem 3rem;
     }
-    @media screen and (max-width:785px){
+    @media screen and (max-width:765px){
         .footer-content{
             flex-direction:column;
             justify-content:center;
-            padding:1rem;
+            align-items:center;
+            padding:5rem 2rem 2rem;
         }
         .contact{
             margin:0 1rem;
             margin-bottom:2rem;
             width:340px;
         }
-        
+        .data{
+            margin:2rem 1rem;
+            text-align:center;
+            display:flex;
+            flex-direction:column;
+            align-items:center;;
+        }
+        .col1{
+            margin-bottom:2rem;
+        }
         .newsletter-container{
             margin:0 1rem;
             width:340px;
@@ -534,8 +556,27 @@ footer{
             margin-top:5rem;
             padding:0 2rem;
         }
+        .nav{
+            max-width:375px;
+            margin:3rem 0;
+            padding:0 3rem;
+        }
+        .logo-btn{
+            font-size:0.8rem;
+            min-width:100px;
+            padding:0.2rem 0.2rem;
+        }
+        .logo-img{
+            min-width:150px;
+        }
         .image-col{
             margin:2rem 0;
+        }
+        .text-col{
+            max-width:500px;
+        }
+        .image-col img{
+            max-width:500px;
         }
     }
 }
