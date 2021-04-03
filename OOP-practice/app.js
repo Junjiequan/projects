@@ -143,8 +143,8 @@ class Book {
             const years = new Date().getFullYear() - this.year
             return  `${this.title} is ${years} old`
         }
-        revise = (newYear)=>{
-            this.year = newYear;
+        revise = (resetYear)=>{
+            this.year = resetYear;
             this.revised = true;
         }
         static BestBook = () =>{
@@ -152,6 +152,16 @@ class Book {
         }
 }
 const book1 = new Book('book one', 'junjie', '2019')
-book1.revise('2050')
 
-console.log(Book.BestBook());
+//Magazine subclass
+class Magazine extends Book {
+    constructor(title, author, year, month){
+        super(title,author,year);
+        this.month = month;
+    }
+}
+
+// Instantiate Magazine
+const mag1 = new Magazine ('Mag one', 'Jay', '2015','February');
+mag1.revise('2000')
+console.log(mag1.getAge())
