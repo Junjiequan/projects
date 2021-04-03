@@ -75,10 +75,6 @@
 //     this.title = title;
 //     this.author = author;
 //     this.year = year;
-
-//     // this.getSummary = function(){
-//     //     return`${this.title} was written by ${this.author} in ${this.year}`
-//     // }
 // }
 
 // //getSummary
@@ -97,7 +93,7 @@
 // Magazine.prototype = Object.create(Book.prototype);
 
 // //Instantiate Magazine Object
-// const mag1 = new Magazine('Magazine One', 'Junjie', '2020', 'January');
+// const mag1 = new Magazine('Book one','Junjie','2021','February');
 
 // //Use Magazine Constructor
 // Magazine.prototype.constructor = Magazine;
@@ -110,25 +106,25 @@
                          //OOP   ES-5                      
 ///////////////////////////////////////////////////////////
 
-// Object of Protos
-const Workout = {
-    doWeight: function(){
-        return `${this.exercise} do 50 reps in ${this.duration} mins.`
-    },
-    doCardio: function(){
-       return `run on ${this.cardio} for ${this.duration} mins, then take ${this.rest} hours break.`
-    }
-} 
+// // Object of Protos
+// const Workout = {
+//     doWeight: function(){
+//         return `${this.exercise} do 50 reps in ${this.duration} mins.`
+//     },
+//     doCardio: function(){
+//        return `run on ${this.cardio} for ${this.duration} mins, then take ${this.rest} hours break.`
+//     }
+// } 
 
-const WeightTraining = Object.create(Workout,{
-    exercise: {value: 'bench press'},
-    duration: {value: '50'},
-    cardio : {value: 'treadmill'},
-    rest: {value: '2'}
-})
+// const WeightTraining = Object.create(Workout,{
+//     exercise: {value: 'bench press'},
+//     duration: {value: '50'},
+//     cardio : {value: 'treadmill'},
+//     rest: {value: '2'}
+// })
 
-console.log(WeightTraining.doCardio());
-console.log(WeightTraining.doWeight());
+// console.log(WeightTraining.doCardio());
+// console.log(WeightTraining.doWeight());
 
 ///////////////////////////////////////////////////////////
                          //Object   ES-6                      
@@ -136,6 +132,26 @@ console.log(WeightTraining.doWeight());
 
 class Book {
     constructor(title, author, year){
-        this.title = title
-    }
+        this.title =  title;
+        this.author = author;
+        this.year = year
+        }
+        getPrice = () =>{
+            return `${this.title} is expensive because it was written by ${this.author} in ${this.year}`
+        }   
+        getAge = () =>{
+            const years = new Date().getFullYear() - this.year
+            return  `${this.title} is ${years} old`
+        }
+        revise = (newYear)=>{
+            this.year = newYear;
+            this.revised = true;
+        }
+        static BestBook = () =>{
+            return 'Charisma & Charming technics'
+        }
 }
+const book1 = new Book('book one', 'junjie', '2019')
+book1.revise('2050')
+
+console.log(Book.BestBook());
