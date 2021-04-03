@@ -45,7 +45,7 @@ function createPost(post){
     return new Promise((resolve,reject) => {
         setTimeout(()=>{
             posts.push(post);
-            const error = true;
+            const error = false;
             if(!error){
                 resolve();
             } else {
@@ -54,8 +54,17 @@ function createPost(post){
         },1500)
     })
 }
-createPost({ title: 'Post Three', body: 'This is three'})
-    .then(getPosts)
-    .catch((err)=> {
-        document.body.innerHTML = `<h1 style="opacity:0.5; boder:1px solid red; color:purple">${err}</h1>`
-    });
+// createPost({ title: 'Post Three', body: 'This is three'})
+//     .then(getPosts)
+//     .catch((err)=> {
+//         document.body.innerHTML = `<h1 style="opacity:0.5; boder:1px solid red; color:purple">${err}</h1>`
+//     });
+
+const promise1 = Promise.resolve('Okay Boomer');
+const promise2 = 'Don\'t kill me Boomer';
+const promise3 = new Promise((resolve,reject)=>{
+    setTimeout(resolve, 1500, 'Bye Boomer')
+})
+
+Promise.all([promise1, promise2, promise3])
+    .then(values => console.log(values));
