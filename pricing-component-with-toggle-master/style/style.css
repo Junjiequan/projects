@@ -6,6 +6,7 @@
   --color-grayishBlue: #6d708d;
   --color-darkGrayishBlue: #494c5f;
   --color-fontBlue: #696fdd;
+  --color-sign: linear-gradient(150deg, #a6178e, #ff8a05);
 }
 
 * {
@@ -175,6 +176,15 @@ footer {
   margin: 5rem auto;
   display: flex;
   justify-content: center;
+}
+footer .attribution {
+  color: #6d708d;
+}
+footer .attribution a {
+  background: var(--color-sign);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media screen and (max-width: 1075px) {

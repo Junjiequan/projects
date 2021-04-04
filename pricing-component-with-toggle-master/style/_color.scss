@@ -8,6 +8,7 @@ $LightGrayishBlue: hsl(234, 14%, 74%);
 $GrayishBlue: hsl(233, 13%, 49%);
 $DarkGrayishBlue: hsl(232, 13%, 33%);
 $lightBlue: hsl(237, 63%, 64%);
+$signJay : linear-gradient(150deg,hsl(310, 76%, 37%) , hsl(32, 100%, 51%));
 
 $default:(
     bluish: $bluish-gradient,
@@ -16,5 +17,6 @@ $default:(
     lightGrayishBlue: $LightGrayishBlue,
     grayishBlue: $GrayishBlue,
     darkGrayishBlue: $DarkGrayishBlue,
-    fontBlue: $lightBlue
+    fontBlue: $lightBlue,
+    sign:$signJay
 )
