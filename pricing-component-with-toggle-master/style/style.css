@@ -1,5 +1,21 @@
+:root {
+  --color-bluish: linear-gradient(90deg, #a3a8f0, #696fdd);
+  --color-lightBlue: #f6f6fe;
+  --color-lightGrayishBlue: #b3b5c6;
+  --color-grayishBlue: #6d708d;
+  --color-darkGrayishBlue: #494c5f;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+html a, html li {
+  text-decoration: none;
+  list-style: none;
 }/*# sourceMappingURL=style.css.map */

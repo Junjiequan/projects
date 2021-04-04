@@ -1,7 +1,26 @@
-@use './color.scss' as *;
+@use './color' as *;
 
+//basic color settings
+:root{
+    @each $name, $color in $default{
+        --color-#{$name}: #{$color};
+    };
+}
+@function getColor($colors){
+    @return var(--color-#{$colors})
+};
+
+//basic settings
 * {
     padding:0;
     margin:0;
     box-sizing:border-box;
 }
+html{
+    font-size:62.5%;
+    a,li{
+        text-decoration:none;
+        list-style:none;
+    }
+}
+//Mobile 375px, Desktop 1440px;
