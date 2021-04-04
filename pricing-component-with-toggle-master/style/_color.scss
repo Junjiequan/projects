@@ -1,0 +1,12 @@
+//actually I don't have to create a color function here, but I just want to practice.
+//so that, I feel comfortable with creating dark & light color theme.
+
+$bluish-gradient : linear-gradient(90deg,hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+
+
+
+
+
+$default(
+    bluish : $bluish-gradient;
+)
