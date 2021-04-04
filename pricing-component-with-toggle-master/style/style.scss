@@ -24,3 +24,48 @@ html{
     }
 }
 //Mobile 375px, Desktop 1440px;
+body{
+    font-family: 'Montserrat', sans-serif;
+    min-height:100vh;
+    background:url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-color:getColor(lightBlue);
+    background-repeat:no-repeat;
+    background-position:top right, bottom left;
+    overflow:hidden;
+}
+header{
+    margin:6rem auto;
+    padding:0 3rem;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    h1{ font-size: 3.5rem; color:getColor(grayishBlue)};
+    p{ font-size:1.5rem; color: getColor(lightGrayishBlue)}
+    .btn-wrapper{
+        margin-top:4rem;
+        width:240px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        .toggle-btn{
+            margin:0 2rem;
+            border-radius:25px;
+            background:getColor(bluish);
+            width:60px;
+            height:30px;
+            display:flex;
+            justify-content:flex-start;
+            cursor:pointer;
+            .ball{
+                background:white;
+                border-radius:50%;
+                margin:3px;
+                padding:1.2rem;
+                pointer-events:none;
+            }
+        }
+    }
+}
+main{
+    margin:0;
+}
