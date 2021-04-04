@@ -2,15 +2,19 @@
 //so that, I feel comfortable with creating dark & light color theme.
 
 $bluish-gradient : linear-gradient(90deg,hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+$bluish-gradient2 : linear-gradient(140deg,hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
 $VeryLightGrayishBlue: hsl(240, 78%, 98%);
 $LightGrayishBlue: hsl(234, 14%, 74%);
 $GrayishBlue: hsl(233, 13%, 49%);
 $DarkGrayishBlue: hsl(232, 13%, 33%);
+$lightBlue: hsl(237, 63%, 64%);
 
 $default:(
     bluish: $bluish-gradient,
+    bluishlean:$bluish-gradient2,
     lightBlue: $VeryLightGrayishBlue,
     lightGrayishBlue: $LightGrayishBlue,
     grayishBlue: $GrayishBlue,
-    darkGrayishBlue: $DarkGrayishBlue
+    darkGrayishBlue: $DarkGrayishBlue,
+    fontBlue: $lightBlue
 )
