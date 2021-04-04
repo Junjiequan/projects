@@ -41,30 +41,66 @@ function getPosts(){
     }, 1000);
 }
 
-function createPost(post){
-    return new Promise((resolve,reject) => {
-        setTimeout(()=>{
-            posts.push(post);
-            const error = false;
-            if(!error){
-                resolve();
-            } else {
-                reject(`Error: something went wrong~~~!`)
-            }
-        },1500)
-    })
-}
+// function createPost(post,callback){
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             posts.push(post)
+//             const error = false;
+//             if(!error){
+//                 resolve();
+//             } else {
+//                 reject('WARNING: Your laptop will be exploaded in counting 3')
+//             }
+//         }, 2000)
+        
+//     })
+// }
+// createPost({title: 'Post three', body: 'This is post three'})
+    // .then(getPosts)
+    // .catch(err => document.body.innerHTML = `<span style="color:red">THIS IS AN ${err}`)
+
+
+
+
+// async function init(){
+//     await createPost({ title: 'post Junjie', body:'This it post three'});
+// }
+
+
+
+
+// //////////////////////////////////////////////
+//                 //Promise 
+// //////////////////////////////////////////////
 // createPost({ title: 'Post Three', body: 'This is three'})
 //     .then(getPosts)
 //     .catch((err)=> {
 //         document.body.innerHTML = `<h1 style="opacity:0.5; boder:1px solid red; color:purple">${err}</h1>`
 //     });
 
-const promise1 = Promise.resolve('Okay Boomer');
-const promise2 = 'Don\'t kill me Boomer';
-const promise3 = new Promise((resolve,reject)=>{
-    setTimeout(resolve, 1500, 'Bye Boomer')
-})
+const promise1 = Promise.resolve('Hello you are jay');
+const promise2 = ('niceeeeee');
+const promise3 = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        const error = false;
+        if(!error){
+            resolve('OKKKKKKAY');
+        } else {
+            reject(`Error: it is not working`)
+        }
+    },1000)
+});
+const promise4 = fetch('https://jsonplaceholder.typicode.com/users')
+                .then(resp => resp.json())
+                .then(data => data.map((index)=>{
+                    return document.body.innerHTML = `<li>${index.email}</li>`
+                }))
 
-Promise.all([promise1, promise2, promise3])
-    .then(values => console.log(values));
+
+
+Promise.all([promise1, promise2, promise3,promise4])
+    .then(value=> 
+        console.log(value))
+    .catch(re => console.log(re));
+
+
