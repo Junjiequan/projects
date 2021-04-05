@@ -287,7 +287,7 @@ h4{
     margin:auto auto;
     top:25vh;
     bottom:25vh;
-    pointer-events:none;
+    
 }
 .opacity{
     transition:all 0.5s ease-in-out;
@@ -295,10 +295,11 @@ h4{
 }
 
 .no-show{
-    opacity:0
+    opacity:0;
+    pointer-events:none;
 }
 .show{
     transition:all 0.5s ease-in-out;
     opacity:1;
     pointer-events:auto;
-}
+}   
