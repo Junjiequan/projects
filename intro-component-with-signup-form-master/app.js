@@ -52,9 +52,18 @@ const checkFormat= (event) =>{
     if(emailRegex.test(intputEmail.value) && nameRegex.test(inputFirstName.value) 
         && nameRegex.test(inputLastName.value) && passwordRegex.test(inputPassword.value)){
         loginSection.querySelector('button').innerText = 'Success'
+        document.querySelector('.success-box').classList.add('loged-in')
+
         setTimeout(()=>{
-            window.open('https://www.youtube.com/watch?v=7lsdJDiJ0QE')
-        }, 1000)
+            document.querySelector('.success-box').classList.add('fade')
+            setTimeout(()=>{
+                document.querySelector('.success-box').classList.remove('fade');
+                document.querySelector('.success-box').classList.remove('loged-in');
+                document.querySelector('main').classList.add('opacity');
+                document.querySelector('.video').classList.add('show');
+                document.querySelector('iframe').src= 'https://www.youtube.com/embed/7lsdJDiJ0QE?modestbranding=1&showinfo=0&fs=0&autoplay=1&loop=1&controls=0'
+            },2500)
+        },2000)
     }
 }
 const removeError = (event) =>{

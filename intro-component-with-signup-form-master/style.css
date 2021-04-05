@@ -254,3 +254,50 @@ h4{
     }
     
 }
+
+/*success-box*/
+.success-box{
+    position:absolute;
+    top:-5rem;
+    right:40vw;
+    left:40vw;
+    width:260px;
+    height:60px;
+    background: var(--Green);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    border-radius:10px;
+    font-weight:bold;
+    letter-spacing:0.05rem;
+}
+.loged-in{
+    transform:translateY(7rem);
+    transition: all 0.6s ease-in-out;
+}
+.fade{
+    transform:translateY(-7rem);
+    transition: all 1s ease-in-out;
+}
+.video{
+    position:absolute;
+    display:flex;
+    align-items:center;
+    margin:auto auto;
+    top:25vh;
+    bottom:25vh;
+    pointer-events:none;
+}
+.opacity{
+    transition:all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.no-show{
+    opacity:0
+}
+.show{
+    transition:all 0.5s ease-in-out;
+    opacity:1
+}
