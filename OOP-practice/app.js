@@ -6,8 +6,8 @@
 //     title:'Book one',
 //     author:'John Doe',
 //     year:'2013',
-//     getSummary:function(){
-//         return `${this.title} written by ${this.author} in ${this.year}`;
+//     getSummary:function(shit){
+//         return `${this.title} written by ${this.author} in ${this.year}, ${shit}`;
 //     }
 // };
 // // console.log(book1.getSummary());
@@ -21,9 +21,11 @@
 //         return `${this.title} written by ${this.author} in ${this.year}`;
 //     }
 // };
-// // console.log(book2.getSummary())
-// // console.log(Object.values(book2));
-// // console.log(Object.keys(book2));
+// book1.getSummary.prototype = book1;
+// const newOBJ = new book1.getSummary('holy')
+// console.log(book1.getSummary.prototype)
+// console.log(Object.values(book2));
+// console.log(Object.keys(book2));
 
 ///////////////////////////////////////////////////////////
                     //constructor  ES-5                       
@@ -165,3 +167,5 @@ class Magazine extends Book {
 const mag1 = new Magazine ('Mag one', 'Jay', '2015','February');
 mag1.revise('2000')
 console.log(mag1.getAge())
+let divs = document.createElement('div');
+
