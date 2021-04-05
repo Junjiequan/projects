@@ -259,8 +259,9 @@ h4{
 .success-box{
     position:absolute;
     top:-5rem;
-    right:40vw;
-    left:40vw;
+    right:0;
+    left:0;
+    margin:0 auto;
     width:260px;
     height:60px;
     background: var(--Green);
@@ -284,9 +285,9 @@ h4{
     position:absolute;
     display:flex;
     align-items:center;
-    margin:auto auto;
-    top:25vh;
-    bottom:25vh;
+    justify-content:center;
+    margin:auto;
+    top:0; bottom:0; left:0; right:0;
     
 }
 .opacity{
