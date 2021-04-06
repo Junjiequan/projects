@@ -58,6 +58,7 @@ header{
             font-weight:700;
             font-size:2rem;
             text-transform:uppercase;
+            box-shadow: 0 0 10px rgba($color: #b2b8c4, $alpha: 0.5);
             a{
                 color:getColor(veryDarkBlue);
                 padding:1rem;

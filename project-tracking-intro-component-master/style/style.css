@@ -69,6 +69,7 @@ header aside .navlink {
   font-weight: 700;
   font-size: 2rem;
   text-transform: uppercase;
+  box-shadow: 0 0 10px rgba(178, 184, 196, 0.5);
 }
 header aside .navlink a {
   color: var(--color-veryDarkBlue);
