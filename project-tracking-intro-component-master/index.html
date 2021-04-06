@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script defer src="./app.js"></script>
   <title>Frontend Mentor | Project tracking intro component</title>
 
@@ -35,7 +36,7 @@
     </aside>
   </header>
   <main>
-      <div class="heroIMG"><img src="./images/illustration-devices.svg" alt=""></div>
+      <div class="heroIMG"  data-aos="fade-left" data-aos-duration="1500"><img src="./images/illustration-devices.svg" alt=""></div>
       <section>
         <div class="title"><span class="box">NEW</span>Monograph Dashboard</div>
         <h2>Powerful insights into your team</h2>
@@ -46,13 +47,15 @@
         </div>
       </section>
   </main>
- 
-  
-  <!-- <footer>
+  <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/a331998513">Jay</a>.
+      Coded by <a href="https://github.com/a331998513">Jay</a>
     </p>
-  </footer> -->
+  </footer>
+  <script  src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

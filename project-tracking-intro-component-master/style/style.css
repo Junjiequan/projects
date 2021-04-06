@@ -157,14 +157,27 @@ main section .btn-section span {
   letter-spacing: 0.1rem;
 }
 
+footer {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 5rem auto;
+}
+footer a {
+  color: var(--color-btnRed);
+}
+
 @media screen and (min-width: 1030px) {
+  body {
+    min-height: 100vh;
+  }
+
   .bg {
     z-index: -1;
     border-radius: 50px;
     position: absolute;
     height: 82%;
     width: 70%;
-    top: -50vh;
+    top: -40vh;
     right: -25vw;
     background: var(--color-bluGray);
   }
@@ -200,7 +213,6 @@ main section .btn-section span {
   }
 
   main {
-    min-height: 100vh;
     position: relative;
   }
   main .heroIMG {
