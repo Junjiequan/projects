@@ -13,5 +13,5 @@
 | 8. [huddle-landing-page-with-curved-sections-master](https://a331998513.github.io/projects/huddle-landing-page-with-curved-sections-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/huddle-landing-page-with-curved-sections-master)  |
 | 9. [social-media-dashboard-with-theme-switcher-master](https://a331998513.github.io/projects/social-media-dashboard-with-theme-switcher-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/social-media-dashboard-with-theme-switcher-master) |
 | 10. [pricing-component-with-toggle-master](https://a331998513.github.io/projects/pricing-component-with-toggle-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/pricing-component-with-toggle-master)  |
-| 11. [project-tracking-intro-component-master]()  | [Repo]()  |
+| 11. [project-tracking-intro-component-master](https://a331998513.github.io/projects/project-tracking-intro-component-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/project-tracking-intro-component-master)  |
 | 99. []()  | [Repo]()  |
