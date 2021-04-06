@@ -1,0 +1,13 @@
+@use "./color" as *;
+@use "./global";
+
+.dark{
+    @each $name , $color in $dark{
+        --color-#{$name} : #{$color};
+    };
+};
+@function getColor($colorName){
+    @return var(--color-#{$colorName});
+};
+  
+
