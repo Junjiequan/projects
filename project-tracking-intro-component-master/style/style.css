@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  overflow: hidden;
 }
 html a, html li {
   text-decoration: none;
@@ -18,4 +19,224 @@ html a, html li {
   --color-lightblueGray: #a0a1ac;
   --color-bluGray: #eef3f6;
   --color-btnRed: #ff5c5c;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg {
+  z-index: -1;
+  border-radius: 50px;
+  position: absolute;
+  height: 82%;
+  width: 70%;
+  top: -20vh;
+  right: -20vw;
+  background: var(--color-bluGray);
+}
+
+header {
+  margin: 5rem 3rem 8rem;
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header nav {
+  display: none;
+}
+header aside .sidenav {
+  cursor: pointer;
+}
+header aside .navlink {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  background: white;
+  width: 90%;
+  padding: 2rem;
+  flex-direction: column;
+  border-radius: 5px;
+  top: 10vh;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+header aside .navlink a {
+  color: var(--color-veryDarkBlue);
+  padding: 1rem;
+  width: 100%;
+}
+header aside .navlink a:hover {
+  color: var(--color-btnRed);
+}
+header aside .navlink .login {
+  color: var(--color-lightblueGray);
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-lightblueGray);
+}
+
+main {
+  overflow: hidden;
+  margin: 0 auto;
+}
+main .heroIMG {
+  width: 500px;
+}
+main .heroIMG img {
+  width: 100%;
+}
+main section {
+  margin: 5rem 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+main section .title {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5rem;
+  color: var(--color-lightblueGray);
+}
+main section .title .box {
+  letter-spacing: 0.1rem;
+  border-radius: 25px;
+  font-weight: 700;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding: 0.25rem 1.2rem;
+  background: var(--color-veryDarkBlue);
+  color: white;
+  margin-right: 1.5rem;
+}
+main section h2 {
+  margin-top: 2rem;
+  font-size: 4.2rem;
+  line-height: 4.2rem;
+  color: var(--color-veryDarkBlue);
+}
+main section h5 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: var(--color-darkGray);
+}
+main section .btn-section {
+  margin-top: 4rem;
+}
+main section .btn-section .btn {
+  padding: 1rem 1.6rem;
+  background: var(--color-btnRed);
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+main section .btn-section .btn:hover {
+  filter: brightness(130%);
+}
+main section .btn-section span {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  color: var(--color-lightblueGray);
+  letter-spacing: 0.1rem;
+}
+
+@media screen and (min-width: 1030px) {
+  .bg {
+    z-index: -1;
+    border-radius: 50px;
+    position: absolute;
+    height: 82%;
+    width: 70%;
+    top: -50vh;
+    right: -25vw;
+    background: var(--color-bluGray);
+  }
+
+  header {
+    margin: 5rem 20rem;
+  }
+  header nav {
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+  }
+  header nav a {
+    color: var(--color-veryDarkBlue);
+    font-weight: 700;
+    margin: 0 2rem;
+  }
+  header nav a:hover {
+    border-bottom: 1px solid;
+  }
+  header nav .desc-login {
+    color: var(--color-lightblueGray);
+  }
+  header nav .dot {
+    align-self: center;
+    border-radius: 50%;
+    background: var(--color-lightblueGray);
+    padding: 0.4rem;
+    opacity: 0.7;
+  }
+  header aside {
+    display: none;
+  }
+
+  main {
+    min-height: 100vh;
+    position: relative;
+  }
+  main .heroIMG {
+    z-index: -1;
+    position: absolute;
+    top: 8vh;
+    right: -15vw;
+    width: 1000px;
+  }
+  main .heroIMG img {
+    width: 100%;
+  }
+  main section {
+    margin: 15rem 20rem;
+  }
+  main section .title .box {
+    align-self: center;
+    padding-bottom: 0.5rem;
+  }
+  main section h2 {
+    font-size: 7rem;
+    line-height: 7rem;
+    max-width: 540px;
+  }
+  main section h5 {
+    margin-top: 4rem;
+    font-size: 2.1rem;
+    max-width: 340px;
+  }
+  main section .btn-section {
+    margin-top: 8rem;
+  }
+  main section .btn-section .btn {
+    padding: 1.5rem 3.5rem;
+    margin-right: 2rem;
+  }
+  main section .btn-section span {
+    letter-spacing: 0.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,4 @@
-const desktopNAV = document.querySelector('.sidebarIMG');
-const sideNav = document.querySelector('.wrapper')
+const sideNav = document.querySelector('.navlink')
 const sideNavIcon = document.getElementById('navIcon')
 const toggleMenu = () =>{
     const disPlay = getComputedStyle(sideNav)
@@ -11,6 +10,10 @@ const toggleMenu = () =>{
         sideNavIcon.src= "./images/icon-hamburger.svg";
     }
 }
-desktopNAV.addEventListener('click',toggleMenu)
-
+const closeMenu = () =>{
+    sideNav.style.display = "none";
+    sideNavIcon.src= "./images/icon-hamburger.svg";
+}
+sideNavIcon.addEventListener('click',toggleMenu)
+sideNav.addEventListener('click', closeMenu)
 
