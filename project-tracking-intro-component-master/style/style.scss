@@ -1,13 +1,14 @@
 @use "./color" as *;
 @use "./global";
 
-.dark{
-    @each $name , $color in $dark{
+:root{
+    @each $name , $color in $default{
         --color-#{$name} : #{$color};
     };
 };
 @function getColor($colorName){
     @return var(--color-#{$colorName});
 };
-  
+$font1: 'Barlow Condensed', sans-serif;     //400, 700
+$font2: 'Barlow', sans-serif;;      //400
 

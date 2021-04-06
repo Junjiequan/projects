@@ -12,9 +12,10 @@ html a, html li {
   list-style: none;
 }
 
-.dark {
-  --color-darkBlue: #242942;
+:root {
+  --color-veryDarkBlue: #242942;
   --color-darkGray: #5b5f71;
+  --color-lightblueGray: #a0a1ac;
   --color-bluGray: #eef3f6;
   --color-btnRed: #ff5c5c;
 }/*# sourceMappingURL=style.css.map */
