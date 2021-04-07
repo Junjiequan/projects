@@ -68,7 +68,7 @@ body{
             min-width: 46px;
             min-height:20px;
             display:flex;
-            justify-content:flex-start;
+            transition:all 0.3s ease;
             cursor:pointer;
             .ball{
                 border-radius:50%;
@@ -76,6 +76,7 @@ body{
                 margin:2px;
                 padding:0.9rem;
                 pointer-events: none;
+                transition:transform 0.3s ease;
             }
             &:hover{
                 transition:all 0.3s ease;
