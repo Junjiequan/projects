@@ -277,6 +277,11 @@ footer{
         }
         .container{
             text-align:center;
+            .disc-wrapper{
+                .disc{
+                    p{text-align:center;}
+                }
+            }
         }
     }
     .global-btn{

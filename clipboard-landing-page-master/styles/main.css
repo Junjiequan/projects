@@ -286,6 +286,9 @@ footer .footer-wrapper a:hover {
   .content-laptop .container, .container-device .container, .description .container, .last-section .container {
     text-align: center;
   }
+  .content-laptop .container .disc-wrapper .disc p, .container-device .container .disc-wrapper .disc p, .description .container .disc-wrapper .disc p, .last-section .container .disc-wrapper .disc p {
+    text-align: center;
+  }
 
   .global-btn .btn {
     width: 100%;
