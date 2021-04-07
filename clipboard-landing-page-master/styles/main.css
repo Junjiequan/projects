@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+a, li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.light {
+  --color-white: #fff;
+  --color-green: #26baa4;
+  --color-blue: #6173ff;
+  --color-darkBlue: #4c545d;
+  --color-gray: #9fabb2;
+}
+
+body {
+  min-height: 100vh;
+}/*# sourceMappingURL=main.css.map */

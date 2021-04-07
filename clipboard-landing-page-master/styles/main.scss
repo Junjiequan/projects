@@ -1,0 +1,18 @@
+@use '../styles' as *;
+///////////////////////
+    //color theme
+///////////////////////
+.light{
+    @each $name, $color in $Light{
+        --color-#{$name} : #{$color};
+    }
+};
+@function color($colorName){
+    @return var(--color-#{$colorName})
+};
+
+
+//desktop 1440px;
+body{
+    min-height:100vh;
+}
