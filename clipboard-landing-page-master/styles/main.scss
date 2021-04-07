@@ -26,7 +26,6 @@ body{
     background:color(white);
 }
 .logo{
-    border:1px solid;
     margin:13rem 5rem 6rem;
     @include flexCenter();
     &::before{
@@ -41,7 +40,6 @@ body{
     }
 }
 .title{
-    border:1px solid;
     margin:0 5rem;
     @include flexCenter();
     flex-direction:column;
@@ -219,6 +217,7 @@ footer{
     background:rgb(243, 246, 248);
     display:flex;
     flex-direction:column;
+    width:100%;
     align-items:center;
     .footer-wrapper{
         margin-top:5rem;
@@ -235,7 +234,7 @@ footer{
             }
         }
         .footer-links{
-            margin:0 20rem;
+            padding:0 200px;
             font-size:1.8rem;
             .links-wrap{
                 max-width:480px;
@@ -264,24 +263,56 @@ footer{
         }
     }
 }
-
-@media screen and (max-width:1024px){
+@media screen and (max-width:1025px){
     .title{
         h2{
-            font-size:4rem;
+            font-size:3.5rem;
+            text-align:center;
         }
     }
-    .footer{
-        .footer-wrapper{
+    .content-laptop{
+        h2{
+            text-align:center;
+            font-size:2.5rem;
+        }
+        .container{
+            text-align:center;
+        }
+    }
+    .global-btn{
+        .btn{
             width:100%;
-            margin:0;
+            min-width:280px;
+            text-align:center;
+        }
+    }
+    .row-textbox{
+        justify-content:center;
+    }
+    .row-logos{
+        justify-content:center;
+    }
+    footer{
+        .footer-wrapper{
+            flex-direction:column;
+            align-items:center;
             .footer-links{
-                justify-content:center;
-                
+                padding:0;
             }
+        
         }
     }
 }
+@media screen and (max-width:725px){
+    .footer-links{
+        text-align:center;
+        .links-wrap{
+            flex-direction:column;
+            flex-wrap:none;
+        }
+    }
+}
+
 
 .attribution{
     margin:2rem 0;

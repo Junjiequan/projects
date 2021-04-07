@@ -30,7 +30,6 @@ body {
 }
 
 .logo {
-  border: 1px solid;
   margin: 13rem 5rem 6rem;
   display: flex;
   justify-content: center;
@@ -47,7 +46,6 @@ body {
 }
 
 .title {
-  border: 1px solid;
   margin: 0 5rem;
   display: flex;
   justify-content: center;
@@ -228,6 +226,7 @@ footer {
   background: #f3f6f8;
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: center;
 }
 footer .footer-wrapper {
@@ -246,7 +245,7 @@ footer .footer-wrapper .footer-logo img {
   width: 100%;
 }
 footer .footer-wrapper .footer-links {
-  margin: 0 20rem;
+  padding: 0 200px;
   font-size: 1.8rem;
 }
 footer .footer-wrapper .footer-links .links-wrap {
@@ -274,17 +273,49 @@ footer .footer-wrapper a:hover {
   transition: color 0.2s ease-in-out;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .title h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    text-align: center;
   }
 
-  .footer .footer-wrapper {
-    width: 100%;
-    margin: 0;
+  .content-laptop h2, .container-device h2, .description h2, .last-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
   }
-  .footer .footer-wrapper .footer-links {
+  .content-laptop .container, .container-device .container, .description .container, .last-section .container {
+    text-align: center;
+  }
+
+  .global-btn .btn {
+    width: 100%;
+    min-width: 280px;
+    text-align: center;
+  }
+
+  .row-textbox {
     justify-content: center;
+  }
+
+  .row-logos {
+    justify-content: center;
+  }
+
+  footer .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-wrapper .footer-links {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 725px) {
+  .footer-links {
+    text-align: center;
+  }
+  .footer-links .links-wrap {
+    flex-direction: column;
+    flex-wrap: none;
   }
 }
 .attribution {
