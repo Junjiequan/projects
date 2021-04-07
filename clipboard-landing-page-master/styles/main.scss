@@ -15,7 +15,8 @@
     justify-content:center;
 }
 //desktop 1440px; mobile 375px;
-$tablet: 1024px;
+$tabletPro: 1025px;
+$tablet: 725px;
 
 //font-weight 400,600; font-family Bai Jamjuree;
 
@@ -263,7 +264,7 @@ footer{
         }
     }
 }
-@media screen and (max-width:1025px){
+@media screen and (max-width:$tabletPro){
     .title{
         h2{
             font-size:3.5rem;
@@ -308,7 +309,7 @@ footer{
         }
     }
 }
-@media screen and (max-width:725px){
+@media screen and (max-width:$tablet){
     .footer-links{
         text-align:center;
         .links-wrap{
