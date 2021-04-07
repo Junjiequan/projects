@@ -323,7 +323,7 @@ footer .footer-wrapper a:hover {
   }
 }
 .attribution {
-  margin: 2rem 0;
+  margin: 5rem 0 2rem;
   display: flex;
   justify-content: center;
   color: #166b6b;
@@ -331,7 +331,7 @@ footer .footer-wrapper a:hover {
 }
 .attribution a {
   padding-left: 0.5rem;
-  background: linear-gradient(to right, #0f2027, #ff3232, #2c5364);
+  background: black;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

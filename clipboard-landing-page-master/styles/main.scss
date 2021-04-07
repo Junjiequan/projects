@@ -305,14 +305,14 @@ footer{
     }
 }
 .attribution{
-    margin:2rem 0;
+    margin:5rem 0 2rem;
     display:flex;
     justify-content:center;
     color: rgb(22, 107, 107);
     font-weight:bold;
     a{
         padding-left:0.5rem;
-        background:$linear;
+        background:black;
         background-clip:border-box;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; 
