@@ -3,14 +3,16 @@ $StrongCyan: hsl(171, 66%, 44%);
 $LightBlue: hsl(233, 100%, 69%);
 $DarkGrayishBlue: hsl(210, 10%, 33%);
 $GrayishBlue: hsl(201, 11%, 66%);
-
+$lightGray: hsl(0, 0%, 96%);
+$linear: linear-gradient(to right, #0f2027, #ff3232, #2c5364);
 //color theme
 $Light:(
     white:$white,
-    green:$StrongCyan,
+    cyan:$StrongCyan,
     blue:$LightBlue,
     darkBlue:$DarkGrayishBlue,
     gray:$GrayishBlue,
+    lightGray:$lightGray
 )
 
 

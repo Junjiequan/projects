@@ -7,30 +7,122 @@
   <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="./styles/main.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>Frontend Mentor | Clipboard landing page</title>
 
 </head>
 <body class="light">
-    <div></div>
-    <!-- logo -->
-    <section>
-      <img src="./images/logo-vector-graphics.png" alt="">
+    <!-- logo width background-->
+    <section class="logo">
+      <img src="./images/logo.svg" alt="logo">
     </section>
     <!-- hero button -->
-    <section></section>
+    <section class="title">
+      <h2>A history of everything you copy</h2>
+      <p>Clipboard allows you to track and organize everything you 
+        copy. Instantly access your clipboard on all your devices.</p>
+      <div class="global-btn">
+        <a class="btn cyan" href="#">Download for iOS</a>
+        <a class="btn blue" href="#">Download for Mac</a>
+      </div>
+    </section>
     <!-- content laptop -->
-    <section></section>
+    <section class="content-laptop" >
+      <h2>Keep track of your snippets</h2>
+      <p>Clipboard instantly stores any item you copy in the cloud, 
+        meaning you can access your snippets immediately on all your 
+        devices. Our Mac and iOS apps will help you organize everything.</p>
+      <div class="container" >
+        <div class="image-laptop" data-aos="fade-right" data-aos-easing="linear"data-aos-duration="1000"><img src="./images/image-computer.png" alt="laptop"></div>
+        <div class="disc-wrapper">
+          <div class="disc">
+            <h4>Quick Search</h4>
+            <p>Easily search your snippets by content, category, web address, application, and more.</p>
+          </div>
+          <div class="disc">
+            <h4>iCloud Sync</h4>
+            <p>Instantly saves and syncs snippets across all your devices.</p>
+          </div>
+          <div class="disc">
+            <h4>Complete History</h4>
+            <p>Retrieve any snippets from the first moment you started using the app.</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- content mobile -->
-    <section></section>
+    <section class="container-device">
+      <h2>Access Clipboard anywhere</h2>
+      <p>Whether you’re on the go, or at your computer, you can access all your Clipboard 
+        snippets in a few simple clicks.</p>
+      <div class="image-device"  data-aos="zoom-in-up" data-aos-easing="linear"data-aos-duration="800"><img src="./images/image-devices.png" alt="device"></div>
+    </section>
     <!-- content logos -->
-    <section></section>
+    <section class="description">
+      <h2>Supercharge your workflow</h2>
+      <p> We’ve got the tools to boost your productivity.</p>
+      <div class="row-textbox">
+        <div class="col">
+          <div class="disc-image"><img src="./images/icon-blacklist.svg" alt="blacklist"></div>
+          <h5>Create blacklists</h5>
+          <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+        </div>
+        <div class="col">
+          <div class="disc-image"><img src="./images/icon-text.svg" alt="text"></div>
+          <h5>Plain text snippets</h5>
+          <p>Remove unwanted formatting from copied text for a consistent look.</p>
+        </div>
+        <div class="col">
+          <div class="disc-image"><img src="./images/icon-preview.svg" alt="preview"></div>
+          <h5>Sneak preview</h5>
+          <p>Quick preview of all snippets on your Clipboard for easy access.</p>
+        </div>
+      </div>
+      <div class="row-logos">
+        <div class="image" data-aos="zoom-in-down" data-aos-delay="0"><img src="./images/logo-google.png" alt="google"></div>
+        <div class="image" data-aos="zoom-in-down" data-aos-delay="200"><img src="./images/logo-ibm.png" alt="ibm"></div>
+        <div class="image" data-aos="zoom-in-down" data-aos-delay="400"><img src="./images/logo-microsoft.png" alt="ms"></div>
+        <div class="image" data-aos="zoom-in-down" data-aos-delay="600"><img src="./images/logo-hp.png" alt="hp"></div>
+        <div class="image" data-aos="zoom-in-down" data-aos-delay="800"><img src="./images/logo-vector-graphics.png" alt="vector"></div>
+      </div>
+    </section>
     <!-- content button -->
-    <section></section>
+    <section class="last-section">
+      <h2>Clipboard for iOS and Mac OS</h2>
+      <p>Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+        and you’re ready to start adding to your clipboard.</p>
+        <div class="global-btn">
+          <a class="btn cyan" href="#">Download for iOS</a>
+          <a class="btn blue" href="#">Download for Mac</a>
+        </div>
+    </section>
     <!-- footer -->
     <footer>
-
+      <section class="footer-wrapper">
+        <div class="footer-logo"><img src="./images/logo.svg" alt=""></div>
+        <div class="footer-links">
+          <div class="links-wrap">
+            <a href="#">FAQs</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Press Kit</a>
+            <a href="#">Install Guide</a>
+          </div>
+        </div>
+        <div class="footer-icons">
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </section>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/a331998513">Jay</a>.
+      </div>
     </footer>
-
-
 </body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </html>
