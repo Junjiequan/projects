@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Commissioner", sans-serif;
+}
+html a, html li {
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --color-cyan: #3cb4ac;
+  --color-darkCyan: #147b74;
+  --color-black: black;
+  --color-gray: #7a7a7a;
+}/*# sourceMappingURL=main.css.map */
