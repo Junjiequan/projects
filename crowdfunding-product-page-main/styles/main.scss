@@ -1,9 +1,8 @@
 @use '../styles/' as *;
 
 /////////////////////////////////////////////////////
-    //always get prepared for color theme variation
+            //some settings here
 /////////////////////////////////////////////////////
-
 
 @mixin flexCenter(){
     display:flex;
@@ -29,7 +28,9 @@ body{
     background:color(white);
     position:relative;
 }
-
+/////////////////////////////////////////////
+                //header
+/////////////////////////////////////////////
 header{
     background: linear-gradient(to bottom, rgba(0,0,0,0.6),rgb(0, 0, 0, 0) 40%), url(../images/image-hero-desktop.jpg) no-repeat;
     background-size:100%;
@@ -56,7 +57,7 @@ header{
             display:block;
             content:'';
             padding-top:4px;
-            border-bottom: 2px solid color(cyan);
+            border-bottom: 3px solid color(cyan);
             transform:scaleX(0);
             transform-origin: 100% 50%;
             transition: transform 0.2s ease-in-out;
@@ -66,6 +67,9 @@ header{
             transform-origin: 0 50%;
             transition: transform 0.2s ease-in-out;
         }
+        & a:focus:after{
+            transform:scaleX(1);
+        }
     }
     .menu-icon{
         display:none;
@@ -74,15 +78,20 @@ header{
 .side-links{
     display:none;
 }
+
+/////////////////////////////////////////////
+                //main
+/////////////////////////////////////////////
 main{
     position:relative;
+    display:none;
 }
 .section-container{
     @include flexCenter();
     flex-direction:column;
     width:60%;
     min-width:330px;
-    max-width:800px;
+    max-width:880px;
     left:0; right:0;
     top:-54vh;
     margin:0 auto;
@@ -90,7 +99,7 @@ main{
     .project-title{
         position:relative;
         border:1px solid color(lightgray);
-        padding:5rem;
+        padding:5rem 8rem;
         margin:1rem 1rem;
         transform: translateY(20vw);
         max-width:100%;
@@ -128,7 +137,7 @@ main{
             }
             .bookmark{
                 position:relative;
-                background: rgb(245, 252, 251);
+                background: rgb(248, 248, 248);
                 color:color(gray);
                 width:200px;
                 transition: all 0.3s ease-in-out;
@@ -253,6 +262,7 @@ main{
             .stock{
                 display:flex;
                 flex-wrap:wrap;
+                gap:2rem 0;
                 justify-content:space-between;
                 p{
                     display:flex;
@@ -272,11 +282,113 @@ main{
                 }
             }
         }
+        .out-of-stock{
+            pointer-events:none;
+            opacity:0.5;
+            .stock{
+                .btn{
+                    filter:grayscale(1);
+                }
+            }
+        }
+    }
+}
+/////////////////////////////////////////////
+                //pop up
+/////////////////////////////////////////////
+.popup{
+    z-index:999;
+    position:absolute;
+    top:0;bottom:0;left:0;right:0;
+    margin:auto;
+    min-width:330px;
+    max-width:880px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+.popup-project{
+    position:relative;
+    border:1px solid color(lightgray);
+    padding:5rem;
+    margin:1rem 1rem;
+    max-width:100%;
+    background:white;
+    border-radius:10px;
+    text-align:left;
+    img{
+        cursor:pointer;
+        position:absolute;
+        right:3rem;
+        top:3rem;
+        transform:scale(1.2);
+        opacity:.4;
+        transition:0.2s ease-in-out;
+        &:hover{
+            opacity:1;
+            transition:0.2s ease-in-out;
+        }
+    }
+    h2{
+        margin-bottom:2rem;
+    }
+    .popup-box{
+        display:flex;
+        margin-top:3rem;
+        border-radius:10px;
+        border:1px solid color(lightgray);
+        padding:3rem;
+        input[type='radio']{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            display:block;
+            width:30px;
+            height:30px;
+            padding:5px;
+            background-clip: content-box;
+            outline:0;
+            border:1px solid color(cyan);
+            background-color:white;
+            border-radius:50%;
+            &:checked{
+                background-color:color(cyan);
+            }
+        }
+        .radio{
+            padding-right:3rem;
+        }
+        .text-box{
+            p{
+                font-size:1.8rem;
+                color:color(gray);
+            }
+           .title{
+                h5{
+                    font-size:1.8rem;
+                    color:color(cyan);
+                }
+                span{
+                    cursor:pointer;
+                    color:color(black);
+                    padding-right:2rem;
+                    &:hover{
+                        color:color(cyan);
+                    }
+                }
+           }
+        }
     }
 }
 
 
-//media query
+
+
+
+/////////////////////////////////////////////
+                //media query
+/////////////////////////////////////////////
 @media screen and (max-width:$tabletPro){
     header{
         background:linear-gradient(to bottom, rgba(0,0,0,0.6),rgb(0, 0, 0, 0) 40%),url(../images/image-hero-mobile.jpg) no-repeat center;

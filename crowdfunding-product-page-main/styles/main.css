@@ -87,7 +87,7 @@ header {
   display: block;
   content: "";
   padding-top: 4px;
-  border-bottom: 2px solid var(--color-cyan);
+  border-bottom: 3px solid var(--color-cyan);
   transform: scaleX(0);
   transform-origin: 100% 50%;
   transition: transform 0.2s ease-in-out;
@@ -96,6 +96,9 @@ header {
   transform: scaleX(1);
   transform-origin: 0 50%;
   transition: transform 0.2s ease-in-out;
+}
+.header-container .links a:focus:after {
+  transform: scaleX(1);
 }
 .header-container .menu-icon {
   display: none;
@@ -107,6 +110,7 @@ header {
 
 main {
   position: relative;
+  display: none;
 }
 
 .section-container {
@@ -115,7 +119,7 @@ main {
   flex-direction: column;
   width: 60%;
   min-width: 330px;
-  max-width: 800px;
+  max-width: 880px;
   left: 0;
   right: 0;
   top: -54vh;
@@ -125,7 +129,7 @@ main {
 .section-container .project-title, .section-container .about, .section-container .data {
   position: relative;
   border: 1px solid var(--color-lightgray);
-  padding: 5rem;
+  padding: 5rem 8rem;
   margin: 1rem 1rem;
   transform: translateY(20vw);
   max-width: 100%;
@@ -164,7 +168,7 @@ main {
 }
 .section-container .project-title .button-section .bookmark, .section-container .about .button-section .bookmark, .section-container .data .button-section .bookmark, .section-container .project-title .button-section .bookmarked, .section-container .about .button-section .bookmarked, .section-container .data .button-section .bookmarked {
   position: relative;
-  background: #f5fcfb;
+  background: #f8f8f8;
   color: var(--color-gray);
   width: 200px;
   transition: all 0.3s ease-in-out;
@@ -287,6 +291,7 @@ main {
 .section-container .about .inner-box .stock {
   display: flex;
   flex-wrap: wrap;
+  gap: 2rem 0;
   justify-content: space-between;
 }
 .section-container .about .inner-box .stock p {
@@ -301,6 +306,98 @@ main {
 }
 .section-container .about .inner-box .stock .btn {
   padding: 1.5rem 3rem;
+}
+.section-container .about .out-of-stock {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.section-container .about .out-of-stock .stock .btn {
+  filter: grayscale(1);
+}
+
+.popup {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  min-width: 330px;
+  max-width: 880px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-project {
+  position: relative;
+  border: 1px solid var(--color-lightgray);
+  padding: 5rem;
+  margin: 1rem 1rem;
+  max-width: 100%;
+  background: white;
+  border-radius: 10px;
+  text-align: left;
+}
+.popup-project img {
+  cursor: pointer;
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  transform: scale(1.2);
+  opacity: 0.4;
+  transition: 0.2s ease-in-out;
+}
+.popup-project img:hover {
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+}
+.popup-project h2 {
+  margin-bottom: 2rem;
+}
+.popup-project .popup-box {
+  display: flex;
+  margin-top: 3rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-lightgray);
+  padding: 3rem;
+}
+.popup-project .popup-box input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-clip: content-box;
+  outline: 0;
+  border: 1px solid var(--color-cyan);
+  background-color: white;
+  border-radius: 50%;
+}
+.popup-project .popup-box input[type=radio]:checked {
+  background-color: var(--color-cyan);
+}
+.popup-project .popup-box .radio {
+  padding-right: 3rem;
+}
+.popup-project .popup-box .text-box p {
+  font-size: 1.8rem;
+  color: var(--color-gray);
+}
+.popup-project .popup-box .text-box .title h5 {
+  font-size: 1.8rem;
+  color: var(--color-cyan);
+}
+.popup-project .popup-box .text-box .title span {
+  cursor: pointer;
+  color: var(--color-black);
+  padding-right: 2rem;
+}
+.popup-project .popup-box .text-box .title span:hover {
+  color: var(--color-cyan);
 }
 
 @media screen and (max-width: 1025px) {
