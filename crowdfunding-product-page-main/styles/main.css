@@ -236,4 +236,7 @@ main .section-container .about {
   background: white;
   border-radius: 10px;
   text-align: center;
+}
+main .section-container .about h4 {
+  font-size: 2rem;
 }/*# sourceMappingURL=main.css.map */
