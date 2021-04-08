@@ -19,6 +19,7 @@ html a, html li {
   --color-darkCyan: #147b74;
   --color-black: black;
   --color-gray: #7a7a7a;
+  --color-lightgray: #ededed;
   --color-white: whitesmoke;
 }
 
@@ -107,9 +108,9 @@ main .section-container {
 }
 main .section-container .project-title, main .section-container .data {
   position: relative;
-  border: 1px solid;
+  border: 1px solid var(--color-lightgray);
   padding: 5rem;
-  margin: 0 1rem;
+  margin: 1rem 1rem;
   transform: translateY(20vw);
   width: 100%;
   background: white;
@@ -172,6 +173,67 @@ main .section-container .project-title .button-section .bookmarked:before, main 
   background: url('data:image/svg+xml;utf8,<svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="darkcyan " cx="28" cy="28" r="28"/><path fill="white" d="M23 19v18l5-5.058L33 37V19z"/></g></svg>') no-repeat;
   background-size: contain;
 }
+main .section-container .data h2, main .section-container .data p {
+  margin-bottom: 0;
+}
 main .section-container .data::before {
   content: "";
+}
+main .section-container .data .data-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 0;
+  text-align: left;
+  justify-content: flex-start;
+  margin-bottom: 3rem;
+}
+main .section-container .data .data-wrapper h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+main .section-container .data .data-wrapper p {
+  font-size: 1.5rem;
+}
+main .section-container .data .data-wrapper .col {
+  position: relative;
+}
+main .section-container .data .data-wrapper .col:nth-child(1) {
+  margin-right: 4rem;
+}
+main .section-container .data .data-wrapper .col:nth-child(2) {
+  margin-right: 6rem;
+}
+main .section-container .data .data-wrapper .ver-line {
+  padding: 0 5rem;
+}
+main .section-container .data .data-wrapper .ver-line:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  border-left: 1px solid var(--color-gray);
+  opacity: 0.5;
+  height: 100%;
+}
+main .section-container .data .bar {
+  height: 15px;
+  width: 100%;
+  background: var(--color-white);
+  border-radius: 50px;
+}
+main .section-container .data .bar .bar-progress {
+  background: var(--color-cyan);
+  border-radius: 50px;
+  height: 100%;
+  width: 73%;
+}
+main .section-container .about {
+  position: relative;
+  border: 1px solid var(--color-lightgray);
+  padding: 5rem;
+  margin: 1rem 1rem;
+  transform: translateY(20vw);
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

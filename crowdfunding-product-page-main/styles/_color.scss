@@ -7,6 +7,7 @@ $Darkcyan: hsl(176, 72%, 28%);
 
 $Black: hsl(0, 0%, 0%);
 $Darkgray: hsl(0, 0%, 48%);
+$LightGray:   hsl(0, 0%, 93%);
 $Bgwhite:   hsl(0, 0%, 96%);
 
 $light:(
@@ -14,5 +15,6 @@ $light:(
     darkCyan:$Darkcyan,
     black:$Black,
     gray:$Darkgray,
+    lightgray:$LightGray,
     white:$Bgwhite,
 )
