@@ -24,7 +24,7 @@ html a, html li {
   --color-white: whitesmoke;
 }
 
-.section-container .project-title .button-section .btn, .section-container .data .button-section .btn, .section-container .about .button-section .btn, .section-container .about .inner-box .stock .btn {
+.section-container .project-title .button-section .btn, .section-container .data .button-section .btn, .section-container .about .button-section .btn, .section-container .about .inner-box .stock .btn, .popup-project .input-box .check .forDollar input, .popup-project .input-box .check button {
   padding: 2rem 4rem;
   background: var(--color-cyan);
   border-radius: 50px;
@@ -34,7 +34,7 @@ html a, html li {
   font-weight: 700;
   letter-spacing: 0.03rem;
 }
-.section-container .project-title .button-section .btn:not(.no-hover):hover, .section-container .data .button-section .btn:not(.no-hover):hover, .section-container .about .button-section .btn:not(.no-hover):hover, .section-container .about .inner-box .stock .btn:not(.no-hover):hover {
+.section-container .project-title .button-section .btn:not(.no-hover):hover, .section-container .data .button-section .btn:not(.no-hover):hover, .section-container .about .button-section .btn:not(.no-hover):hover, .section-container .about .inner-box .stock .btn:not(.no-hover):hover, .popup-project .input-box .check .forDollar input:not(.no-hover):hover, .popup-project .input-box .check button:not(.no-hover):hover {
   background: var(--color-darkCyan);
   transition: all 0.3s ease-in-out;
 }
@@ -47,12 +47,12 @@ html a, html li {
   font-weight: 500;
 }
 
-.section-container .project-title h2, .section-container .data h2, .section-container .about h2, .section-container .about .inner-box .stock p span {
+.section-container .project-title h2, .section-container .data h2, .section-container .about h2, .section-container .about .inner-box .stock p span, .popup-project .popup-box .wrapper .text-box .title p span {
   font-weight: 700;
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   font-size: 1.6rem;
   background: var(--color-white);
   position: relative;
@@ -78,7 +78,7 @@ header {
   width: 100%;
 }
 .header-container .links {
-  z-index: 9;
+  z-index: 10;
   min-width: 280px;
   display: flex;
   justify-content: space-between;
@@ -110,7 +110,7 @@ header {
 
 main {
   position: relative;
-  display: none;
+  background: var(--color-white);
 }
 
 .section-container {
@@ -315,8 +315,32 @@ main {
   filter: grayscale(1);
 }
 
+.selected {
+  border: 3px solid var(--color-cyan);
+}
+
+.border {
+  border: 1px solid var(--color-lightgray);
+}
+
+.show {
+  opacity: 1;
+  margin: 3rem 0 3rem 0;
+  padding: 3rem 0 0 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.block {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 20;
+}
+
 .popup {
-  z-index: 999;
+  z-index: 30;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -356,14 +380,21 @@ main {
 .popup-project h2 {
   margin-bottom: 2rem;
 }
+.popup-project p {
+  font-size: 1.8rem;
+  color: var(--color-gray);
+  line-height: 3rem;
+  letter-spacing: -0.01rem;
+}
 .popup-project .popup-box {
   display: flex;
+  flex-direction: column;
   margin-top: 3rem;
   border-radius: 10px;
-  border: 1px solid var(--color-lightgray);
-  padding: 3rem;
+  padding: 4rem 3rem 0;
 }
 .popup-project .popup-box input[type=radio] {
+  cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -380,24 +411,89 @@ main {
 .popup-project .popup-box input[type=radio]:checked {
   background-color: var(--color-cyan);
 }
-.popup-project .popup-box .radio {
+.popup-project .popup-box .wrapper {
+  display: flex;
+}
+.popup-project .popup-box .wrapper .radio {
   padding-right: 3rem;
 }
-.popup-project .popup-box .text-box p {
-  font-size: 1.8rem;
-  color: var(--color-gray);
+.popup-project .popup-box .wrapper .text-box .title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
-.popup-project .popup-box .text-box .title h5 {
-  font-size: 1.8rem;
+.popup-project .popup-box .wrapper .text-box .title h5 {
+  font-size: 2rem;
   color: var(--color-cyan);
 }
-.popup-project .popup-box .text-box .title span {
+.popup-project .popup-box .wrapper .text-box .title h5 span {
   cursor: pointer;
   color: var(--color-black);
   padding-right: 2rem;
 }
-.popup-project .popup-box .text-box .title span:hover {
+.popup-project .popup-box .wrapper .text-box .title h5 span:hover {
   color: var(--color-cyan);
+}
+.popup-project .popup-box .wrapper .text-box .title p span {
+  padding-right: 1rem;
+  font-size: 2.2rem;
+  color: var(--color-black);
+}
+.popup-project .input-box {
+  border-top: 1px solid var(--color-lightgray);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+.popup-project .input-box .check {
+  display: flex;
+}
+.popup-project .input-box .check .forDollar {
+  position: relative;
+}
+.popup-project .input-box .check .forDollar:before {
+  z-index: 2;
+  position: absolute;
+  content: "$";
+  color: var(--color-gray);
+  top: 13px;
+  left: 23px;
+  font-weight: 700;
+}
+.popup-project .input-box .check .forDollar input {
+  background: transparent;
+  padding: 1.5rem;
+  border: 2px solid var(--color-cyan);
+}
+.popup-project .input-box .check .forDollar input:focus {
+  outline: 2px dotted var(--color-cyan);
+}
+.popup-project .input-box .check .forDollar input[type=number] {
+  font-size: 1.5rem;
+  padding-left: 4rem;
+  -moz-appearance: textfield;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+.popup-project .input-box .check .forDollar input::-webkit-outer-spin-button,
+.popup-project .input-box .check .forDollar input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.popup-project .input-box .check button {
+  border: 0;
+  margin-left: 2rem;
+  padding: 1.5rem 2.5rem;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.popup-project .input-box .check button:focus {
+  outline: 2px dotted var(--color-cyan);
 }
 
 @media screen and (max-width: 1025px) {

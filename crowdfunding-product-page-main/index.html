@@ -10,7 +10,8 @@
   <title>Frontend Mentor | Crowdfunding product page</title>
 </head>
 <body>
-    <header>
+  <div class="block"></div>
+    <header >
       <div class="header-container">
         <div class="logo"><img src="./images/logo.svg" alt="logo"></div>
         <nav class="links">
@@ -37,32 +38,44 @@
     </section>
     <!-- //popup// backproject -->
     <div class="popup">
-      <section class="popup-project">
-        <img src="./images/icon-close-modal.svg" alt="close">
+      <section class="popup-project ">
+        <img id ="close" src="./images/icon-close-modal.svg" alt="close">
         <h2>Back this project</h2>
         <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
-        <form class="popup-box" action="">
-          <div class="radio"><input type="radio" aria-label="select"></div>
-          <div class="text-box">
-            <div class="title">
-              <h5><span>Bamboo Stand</span>Pledge $25 or more</h5>
-              <p><span>101</span> left</p>
+        
+        <form class="popup-box selected" action="">
+          <div class="wrapper ">
+            <div class="radio"><input type="radio" id="select" aria-label="select"></div>
+            <div class="text-box">
+              <div class="title">
+                <h5><span>Bamboo Stand</span>Pledge $25 or more</h5>
+                <p><span>101</span> left</p>
+              </div>
+              <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+                you’ll be added to a special Backer member list.</p>
             </div>
-            <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-              you’ll be added to a special Backer member list.</p>
+          </div>
+          <div class="input-box ">
+            <p>Enter your pledge</p>
+            <div class="check">
+              <div class="forDollar">
+                <input type="number" aria-label="price" name="price" id="price" min="1" max="201" maxLength="4"value = "" class="btn no-hover">
+              </div>
+              <button type="submit" class="btn">Continue</button>
+            </div>
           </div>
         </form>
       </section>
     </div>
 
-    <main>
+    <main >
       <div class="section-container">
         <!-- project section -->
         <section class="project-title">
           <h2>Mastercraft Bamboo Monitor Riser</h2>
           <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
           <div class="button-section">
-            <a class="btn" href="#">Back this project</a>
+            <a class="btn" id="project" href="#">Back this project</a>
             <div class="btn bookmark no-hover">
               Bookmark
             </div>
