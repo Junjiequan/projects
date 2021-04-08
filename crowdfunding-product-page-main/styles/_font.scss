@@ -1,0 +1,21 @@
+@mixin font-weight($weight){
+    $weights: (
+        thin:400,
+        normal:500,
+        bold:700
+    );
+    $output: $weight;
+    @if map-has-key($weights, $weight){
+        $output: map-get($weights, $weight);
+    }
+    font-weight:$output;
+}
+%bold1{
+    @include font-weight(thin)
+}
+%bold2{
+    @include font-weight(normal)
+}
+%bold3{
+    @include font-weight(bold)
+}
