@@ -10,6 +10,7 @@ html{
     font-size:62.5%;
     font-family: 'Commissioner', sans-serif;
 }
+//color function
 :root{
     @each $name, $color in $light{
         --color-#{$name} : #{$color};
@@ -18,6 +19,7 @@ html{
 @function color($colorName){
     @return var(--color-#{$colorName})
 };
+//global button
 %global-btn{
     padding: 2rem 4rem;
     background:color(cyan);
