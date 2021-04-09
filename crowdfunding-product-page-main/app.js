@@ -7,7 +7,8 @@ const isProject = document.querySelector('#project');
 const textWarning = document.querySelector('.check');
 const block = document.querySelector('.block')
 const success = document.querySelector('.success-container')
-//bookmark
+
+
 const getMark = () =>{
     if(bookMark.innerText == 'Bookmark'){
         bookMark.classList.toggle('bookmarked');
@@ -80,17 +81,17 @@ const getNumberbox = (e) =>{
 
     if(target.type == 'button'){
         const amount=target.parentElement.querySelector('input[type=number]')
-        if(amount.value <= 201 && amount.value != ''){
+        if(amount.value != ''){
             success.style.display = "flex";
             block.style.zIndex = "50"
             block.style.display = "flex";
             amount.value = '';
-            e.preventDefault();
         } else if(amount.value ==''){
             target.parentElement.setAttribute('data-before', 'give me money')
             setTimeout(()=>{
                 target.parentElement.setAttribute('data-before', '')
-            },2000)
+            },2000);
+            return false;
         }
     }
 
