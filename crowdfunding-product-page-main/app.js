@@ -88,6 +88,9 @@ const getNumberbox = (e) =>{
             e.preventDefault();
         } else if(amount.value ==''){
             target.parentElement.setAttribute('data-before', 'give me money')
+            setTimeout(()=>{
+                target.parentElement.setAttribute('data-before', '')
+            },2000)
         }
     }
 
