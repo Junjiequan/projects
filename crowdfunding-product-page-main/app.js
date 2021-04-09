@@ -82,6 +82,7 @@ const getNumberbox = (e) =>{
         const containerParent = target.closest('.popup-box');
         const amount=containerParent.querySelector('input[type=number]');
         const minimumSign = containerParent.querySelector('#anima')
+        const getLeft = Number(containerParent.querySelector('#left').innerText)
         const minimum = Number(containerParent.querySelector('h5').id)
         if(amount.value >= minimum && amount.value != ''){
             success.style.display = "flex";
@@ -90,6 +91,7 @@ const getNumberbox = (e) =>{
             },100)
             block.style.zIndex = "50"
             block.style.display = "flex";
+            containerParent.querySelector('#left').innerText = getLeft - 1;
             amount.value = '';
         } else if(amount.value < minimum){
             minimumSign.classList.add('animated')
