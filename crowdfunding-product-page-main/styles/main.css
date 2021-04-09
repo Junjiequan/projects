@@ -144,6 +144,8 @@ main {
 .section-container .project-title::before, .section-container .about::before, .section-container .footer::before, .section-container .data::before {
   content: url(../images/logo-mastercraft.svg);
   position: absolute;
+  max-width: 56px;
+  max-height: 56px;
   top: 0;
   bottom: 0;
   left: 0;
