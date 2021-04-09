@@ -113,13 +113,13 @@ main{
         text-align:center;
         &::before{
             content:url(../images/logo-mastercraft.svg);
+            animation:bounce-top 0.9s both;
             position:absolute;
             max-width:56px;
             max-height:56px;
-            top:0;bottom:0; left:0; right:0;
+            top:-2.5rem ;bottom:0; left:0; right:0;
             pointer-events:none;
             @include flexCenter;
-            transform:translateY(-2.5rem);
             margin:0 auto;
         }
         h2{
@@ -364,43 +364,7 @@ main{
         }
     }
 };
-///////////////////////////////////////////////////////////
-                    //animations
-///////////////////////////////////////////////////////////
-.animated{
-    animation: bounce-in-bck 0.8s both;
-}
-@keyframes bounce-in-bck {
-    0% {
-        -webkit-transform: scale3d(1, 1, 1);
-                transform: scale3d(1, 1, 1);
-      }
-      30% {
-        -webkit-transform: scale3d(1.25, 0.75, 1);
-                transform: scale3d(1.25, 0.75, 1);
-      }
-      40% {
-        -webkit-transform: scale3d(0.75, 1.25, 1);
-                transform: scale3d(0.75, 1.25, 1);
-      }
-      50% {
-        -webkit-transform: scale3d(1.15, 0.85, 1);
-                transform: scale3d(1.15, 0.85, 1);
-      }
-      65% {
-        -webkit-transform: scale3d(0.95, 1.05, 1);
-                transform: scale3d(0.95, 1.05, 1);
-      }
-      75% {
-        -webkit-transform: scale3d(1.05, 0.95, 1);
-                transform: scale3d(1.05, 0.95, 1);
-      }
-      100% {
-        -webkit-transform: scale3d(1, 1, 1);
-                transform: scale3d(1, 1, 1);
-      }
-  }
-  
+
 ///////////////////////////////////////////////////////////
                     //popup section
 ///////////////////////////////////////////////////////////
@@ -671,6 +635,10 @@ main{
         padding:5rem 2rem;
         .button-section{
             justify-content:center;
+            flex-direction:column;
+            .bookmark{
+                margin-top:1rem;
+            }
         }
     }
     .data{
@@ -723,7 +691,6 @@ main{
 }
 
 .popup-project{
-    
     padding:5rem 2rem;
     h2{
         font-size:2rem;
@@ -782,5 +749,98 @@ main{
 .show{
     margin:4rem 0;
     padding:1rem;
+}
+}
+
+///////////////////////////////////////////////////////////
+                    //animations
+///////////////////////////////////////////////////////////
+.animated{
+    animation: bounce-in-bck 0.8s both;
+}
+.bounce{
+    animation:bounce-top 0.9s both;
+}
+@keyframes bounce-in-bck {
+0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    }
+    30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes bounce-top {
+0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+}
+24% {
+    opacity: 1;
+}
+40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+25%,
+55%,
+75%,
+87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+}
+100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
 }
 }
