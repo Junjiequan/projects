@@ -78,7 +78,7 @@ const getNumberbox = (e) =>{
         };
     };
 
-    if(target.type == 'submit'){
+    if(target.type == 'button'){
         const amount=target.parentElement.querySelector('input[type=number]')
         if(amount.value <= 201 && amount.value != ''){
             success.style.display = "flex";
