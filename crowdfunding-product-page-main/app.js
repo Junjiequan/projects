@@ -16,7 +16,7 @@ const getMark = () =>{
     }  else {
         bookMark.classList.remove('bookmarked');
         bookMark.innerText = 'Bookmark';
-        localStorage.clear('Mark','');
+        localStorage.setItem('Mark','');
     }
 }
 const checkMark = () => {
