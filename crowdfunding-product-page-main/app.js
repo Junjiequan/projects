@@ -84,7 +84,6 @@ const getNumberbox = (e) =>{
         if(amount.value != ''){
             success.style.display = "flex";
             setTimeout(()=>{
-                success.style.opacity = "1";
                 success.style.transform = "scale(1)";
             },100)
             block.style.zIndex = "50"
@@ -134,7 +133,6 @@ success.addEventListener('click',(e)=>{
     if(e.target.classList.contains('btn')){
         block.style.zIndex = "20"
         success.style.display = "none";
-        success.style.opacity = "0";
         success.style.transform = "scale(0)";
     }
     }
