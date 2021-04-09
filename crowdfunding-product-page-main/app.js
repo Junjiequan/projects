@@ -83,6 +83,10 @@ const getNumberbox = (e) =>{
         const amount=target.parentElement.querySelector('input[type=number]')
         if(amount.value != ''){
             success.style.display = "flex";
+            setTimeout(()=>{
+                success.style.opacity = "1";
+                success.style.transform = "scale(1)";
+            },100)
             block.style.zIndex = "50"
             block.style.display = "flex";
             amount.value = '';
@@ -91,7 +95,6 @@ const getNumberbox = (e) =>{
             setTimeout(()=>{
                 target.parentElement.setAttribute('data-before', '')
             },2000);
-            return false;
         }
     }
 
@@ -99,6 +102,8 @@ const getNumberbox = (e) =>{
         const popup = target.closest('.popup');
         block.style.display = "none";
         popup.style.display = "none";
+        popup.style.opacity= "0";
+        popup.classList.toggle('animation')
     }
   
 }
@@ -108,6 +113,10 @@ const openProject = () =>{
     popup.style.display= "block";
     block.style.zIndex = "20"
     block.style.display = "flex"
+    setTimeout(()=>{
+        popup.style.opacity= "1";
+        popup.classList.add('animation')
+    },100 )
 }
 
 const removeWarning = () =>{
@@ -125,6 +134,8 @@ success.addEventListener('click',(e)=>{
     if(e.target.classList.contains('btn')){
         block.style.zIndex = "20"
         success.style.display = "none";
+        success.style.opacity = "0";
+        success.style.transform = "scale(0)";
     }
     }
 )

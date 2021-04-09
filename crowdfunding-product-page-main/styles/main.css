@@ -344,7 +344,6 @@ main {
 }
 
 .show {
-  opacity: 0;
   margin: 3rem 0 3rem 0;
   padding: 3rem 0 0 0;
   transition: all 0.5s ease-in-out;
@@ -372,6 +371,9 @@ main {
   max-width: 400px;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
 }
 .success-container .popup-success {
   position: relative;
@@ -390,6 +392,7 @@ main {
 }
 .popup {
   display: none;
+  opacity: 0;
   z-index: 30;
   position: absolute;
   top: -20vh;
@@ -401,6 +404,12 @@ main {
   max-width: 880px;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(40%);
+}
+
+.animation {
+  transform: translateY(0);
 }
 
 .popup-project {
