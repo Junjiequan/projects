@@ -91,15 +91,18 @@ const getNumberbox = (e) =>{
             },100)
             block.style.zIndex = "50"
             block.style.display = "flex";
-            containerParent.querySelector('#left').innerText = getLeft - 1;
             amount.value = '';
+            if(containerParent.querySelector('#left').innerText != ''){
+                containerParent.querySelector('#left').innerText = getLeft - 1;
+            } 
         } else if(amount.value < minimum){
-            minimumSign.classList.add('animated')
-            setTimeout(()=>{
-                minimumSign.classList.remove('animated')
-            },1000);
+            if( minimumSign != null){
+                minimumSign.classList.add('animated')
+                setTimeout(()=>{
+                    minimumSign.classList.remove('animated')
+                },1000);
+            }
         } else return;
-        
     }
 
     if(target.id == 'close'){
