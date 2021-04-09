@@ -39,15 +39,17 @@ const getNumberbox = (e) =>{
     const target = e.target;
     const parent = target.closest('.popup-project');
     const radio = parent.querySelectorAll('input[type=radio]');
-    if(target.type == 'radio'){
+    const radioText = target.classList
+    if(target.type == 'radio' || target.id == 'radiotxt'){   ///////////
         const popupBox = target.closest('.popup-box');
+        console.log(target.classList.contains('radio-text1'))
         parent.querySelectorAll('.input-box').forEach((index)=> index.classList.remove('show'));
         parent.querySelectorAll('.input-box').forEach((index)=> index.style.opacity = 0);
         popupBox.parentElement.querySelectorAll('.popup-box').forEach(index=>{
             index.classList.remove('selected');
             index.classList.add('border');
         })
-        if(target.id == 'radio1'  ){
+        if(target.id == 'radio1' || target.classList.contains('radio-text1')){
             radio[0].checked = true;
             radio[1].checked = false;
             radio[2].checked = false;
@@ -57,7 +59,7 @@ const getNumberbox = (e) =>{
             popupBox.classList.add('selected');
             
         };
-        if(target.id == 'radio2'){
+        if(target.id == 'radio2' || target.classList.contains('radio-text2')){
             radio[0].checked = false;
             radio[1].checked = true;
             radio[2].checked = false;
@@ -66,7 +68,7 @@ const getNumberbox = (e) =>{
             popupBox.classList.remove('border');
             popupBox.classList.add('selected');
         };
-        if(target.id == 'radio3'){
+        if(target.id == 'radio3' || target.classList.contains('radio-text3')){
             radio[0].checked = false;
             radio[1].checked = false;
             radio[2].checked = true;
