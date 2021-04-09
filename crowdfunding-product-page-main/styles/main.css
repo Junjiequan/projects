@@ -390,97 +390,55 @@ main {
   color: var(--color-gray);
 }
 .animated {
-  -webkit-animation: bounce-in-bck 1s 1 both;
-          animation: bounce-in-bck 1s 1 both;
+  -webkit-animation: bounce-in-bck 0.8s both;
+          animation: bounce-in-bck 0.8s both;
 }
 
 @-webkit-keyframes bounce-in-bck {
   0% {
-    transform: scale(7);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 0;
+    transform: scale3d(1, 1, 1);
   }
-  38% {
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    opacity: 1;
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
   }
-  55% {
-    transform: scale(1.5);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
   }
-  72% {
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
   }
-  81% {
-    transform: scale(1.24);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
   }
-  89% {
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  95% {
-    transform: scale(1.04);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
   }
   100% {
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+    transform: scale3d(1, 1, 1);
   }
 }
 
 @keyframes bounce-in-bck {
   0% {
-    transform: scale(7);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 0;
+    transform: scale3d(1, 1, 1);
   }
-  38% {
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    opacity: 1;
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
   }
-  55% {
-    transform: scale(1.5);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
   }
-  72% {
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
   }
-  81% {
-    transform: scale(1.24);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
   }
-  89% {
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  95% {
-    transform: scale(1.04);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
   }
   100% {
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+    transform: scale3d(1, 1, 1);
   }
 }
 .popup {

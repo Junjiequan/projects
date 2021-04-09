@@ -100,7 +100,7 @@ const getNumberbox = (e) =>{
                 minimumSign.classList.add('animated')
                 setTimeout(()=>{
                     minimumSign.classList.remove('animated')
-                },1000);
+                },900);
             }
         } else return;
     }
