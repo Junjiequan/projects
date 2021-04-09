@@ -79,8 +79,11 @@ const getNumberbox = (e) =>{
     };
 
     if(target.type == 'button'){
-        const amount=target.parentElement.querySelector('input[type=number]')
-        if(amount.value != ''){
+        const containerParent = target.closest('.popup-box');
+        const amount=containerParent.querySelector('input[type=number]');
+        const minimumSign = containerParent.querySelector('#anima')
+        const minimum = Number(containerParent.querySelector('h5').id)
+        if(amount.value >= minimum && amount.value != ''){
             success.style.display = "flex";
             setTimeout(()=>{
                 success.style.transform = "scale(1)";
@@ -88,12 +91,13 @@ const getNumberbox = (e) =>{
             block.style.zIndex = "50"
             block.style.display = "flex";
             amount.value = '';
-        } else if(amount.value ==''){
-            target.parentElement.setAttribute('data-before', 'give me money')
+        } else if(amount.value < minimum){
+            minimumSign.classList.add('animated')
             setTimeout(()=>{
-                target.parentElement.setAttribute('data-before', '')
-            },2000);
-        }
+                minimumSign.classList.remove('animated')
+            },1000);
+        } else return;
+        
     }
 
     if(target.id == 'close'){

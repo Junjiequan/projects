@@ -389,6 +389,100 @@ main {
   line-height: 2.5rem;
   color: var(--color-gray);
 }
+.animated {
+  -webkit-animation: bounce-in-bck 1.1s 1 both;
+          animation: bounce-in-bck 1.1s 1 both;
+}
+
+@-webkit-keyframes bounce-in-bck {
+  0% {
+    transform: scale(7);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: scale(1.5);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: scale(1.24);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  89% {
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: scale(1.04);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes bounce-in-bck {
+  0% {
+    transform: scale(7);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: scale(1.5);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: scale(1.24);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  89% {
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: scale(1.04);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
 .popup {
   display: none;
   opacity: 0;
@@ -480,6 +574,11 @@ main {
   margin-bottom: 2rem;
 }
 .popup-project .popup-box .wrapper .text-box .title h5 {
+  display: flex;
+  font-size: 2rem;
+  color: var(--color-cyan);
+}
+.popup-project .popup-box .wrapper .text-box .title h5 p {
   font-size: 2rem;
   color: var(--color-cyan);
 }
@@ -544,9 +643,19 @@ main {
 .popup-project .input-box .check .forDollar input[type=number] {
   font-size: 1.5rem;
   padding-left: 4rem;
+  width: 86px;
   -moz-appearance: textfield;
   font-weight: 700;
   letter-spacing: 0.05rem;
+}
+.popup-project .input-box .check .forDollar input[type=number]::-moz-placeholder {
+  opacity: 0.3;
+}
+.popup-project .input-box .check .forDollar input[type=number]:-ms-input-placeholder {
+  opacity: 0.3;
+}
+.popup-project .input-box .check .forDollar input[type=number]::placeholder {
+  opacity: 0.3;
 }
 .popup-project .input-box .check .forDollar input::-webkit-outer-spin-button,
 .popup-project .input-box .check .forDollar input::-webkit-inner-spin-button {

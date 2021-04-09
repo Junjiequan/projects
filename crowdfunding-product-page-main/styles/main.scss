@@ -305,11 +305,11 @@ main{
         }
     }
 };
-/////////////////////////////////////////////
-                //pop up
-/////////////////////////////////////////////
 
-/////some JS effects/////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+        //pop up and JS effects
+/////////////////////////////////////////////////////////
 .out-of-stock{
     pointer-events:none;
     opacity:0.5;
@@ -368,6 +368,67 @@ main{
         }
     }
 };
+///////////////////////////////////////////////////////////
+                    //animations
+///////////////////////////////////////////////////////////
+.animated{
+    animation: bounce-in-bck 1.1s 1 both;
+}
+@keyframes bounce-in-bck {
+    0% {
+      -webkit-transform: scale(7);
+              transform: scale(7);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    72% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    81% {
+      -webkit-transform: scale(1.24);
+              transform: scale(1.24);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    89% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    95% {
+      -webkit-transform: scale(1.04);
+              transform: scale(1.04);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
+///////////////////////////////////////////////////////////
+                    //popup section
 ///////////////////////////////////////////////////////////
 .popup{
     display:none;
@@ -452,8 +513,13 @@ main{
                    justify-content:space-between;
                    margin-bottom:2rem;
                     h5{
+                        display:flex;
                         font-size:2rem;
                         color:color(cyan);
+                        p{
+                            font-size:2rem;
+                            color:color(cyan);
+                        }
                         span{
                             cursor:pointer;
                             color:color(black);
@@ -524,9 +590,14 @@ main{
                 input[type=number]{
                     font-size:1.5rem;
                     padding-left:4rem;
+                    width:86px;
                     -moz-appearance: textfield;
                     font-weight:700;
                     letter-spacing:0.05rem;
+                    &::placeholder{
+                        
+                        opacity:0.3;
+                    }
                 }
                 input::-webkit-outer-spin-button,
                 input::-webkit-inner-spin-button {
