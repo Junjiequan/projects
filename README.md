@@ -1,4 +1,4 @@
-# 3rd month
+# 3rd month of self teaching front end :)
 ## Frontend Mentor challenge
 
 | Projects-name | Repo-link |
