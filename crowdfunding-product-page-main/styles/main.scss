@@ -28,14 +28,18 @@ body{
     background:color(white);
     position:relative;
 }
+
 /////////////////////////////////////////////
                 //header
 /////////////////////////////////////////////
 header{
     background: linear-gradient(to bottom, rgba(0,0,0,0.6),rgb(0, 0, 0, 0) 40%), url(../images/image-hero-desktop.jpg) no-repeat;
     background-size:100%;
-    height:54rem;
     position:relative;
+    display:block;
+    div{
+        height:54rem;
+    }
 }
 .header-container{
     max-width:1340px;
@@ -43,6 +47,7 @@ header{
     padding:7rem 5rem 0;
     margin:0 auto;
     justify-content:space-between;
+    height:50px;
     .logo > img{
         cursor:pointer;
         width:100%;
@@ -85,6 +90,7 @@ header{
 main{
     position:relative;
     background:color(white);
+    height:100%;
 }
 .section-container{
     @include flexCenter();
@@ -92,15 +98,15 @@ main{
     min-width:330px;
     max-width:880px;
     left:0; right:0;
-    top:-54vh;
+    top:-16vh;
     margin:0 auto;
     position:absolute;
     .project-title{
+        display:block;
         position:relative;
         border:1px solid color(lightgray);
         padding:5rem 8rem;
         margin:1rem 1rem;
-        transform: translateY(20vw);
         max-width:100%;
         background:white;
         border-radius:10px;
@@ -281,14 +287,19 @@ main{
                 }
             }
         }
-        .out-of-stock{
-            pointer-events:none;
-            opacity:0.5;
-            .stock{
-                .btn{
-                    filter:grayscale(1);
-                }
-            }
+    }
+    .footer{
+        @extend .about;
+        border:0;
+        background:transparent;
+        margin:0;
+        text-align:center;
+        p{
+            font-size:1.5rem;
+        }
+        a{
+            color:color(cyan);
+            @extend %bold3
         }
     }
 }
@@ -297,6 +308,13 @@ main{
 /////////////////////////////////////////////
 
 /////some JS effects/////////////////////////////////////
+.out-of-stock{
+    pointer-events:none;
+    opacity:0.5;
+    a, input{
+        filter:grayscale(1);
+    }
+}
 .selected{
     border:3px solid color(cyan);
 }
@@ -317,18 +335,46 @@ main{
     background:rgba(0,0,0,0.4);
     z-index:20;
 }
-///////////////////////////////////////////////////////////
-.popup{
-    z-index:30;
+.success-container{
+    display:none;
+    z-index:100;
     position:absolute;
-    top:300px;bottom:0;left:0;right:0;
+    top:0;bottom:0;left:0;right:0;
     margin:auto auto;
-    min-width:330px;
-    max-width:880px;
-    display:block;
+    min-width:300px;
+    max-width:400px;
     justify-content:center;
     align-items:center;
-
+    .popup-success{
+        position:relative;
+        border:1px solid color(lightgray);
+        padding:5rem;
+        margin:1rem 1rem;
+        background:white;
+        border-radius:10px;
+        text-align:center;
+        p{
+            margin:2rem 0 4rem;
+            font-size:1.7rem;
+            line-height:2.5rem;
+            color:color(gray)
+        }
+        .btn{
+            @extend %global-btn
+        }
+    }
+};
+///////////////////////////////////////////////////////////
+.popup{
+    display:none;
+    z-index:30;
+    position:absolute;
+    top:-20vh;bottom:0;left:0;right:0;
+    margin:0 auto;
+    min-width:330px;
+    max-width:880px;
+    justify-content:center;
+    align-items:center;
 }
 .popup-project{
     position:relative;
@@ -402,8 +448,10 @@ main{
                             cursor:pointer;
                             color:color(black);
                             padding-right:2rem;
+                            transition:all 0.3s ease-in-out;
                             &:hover{
                                 color:color(cyan);
+                                transition:all 0.3s ease-in-out;
                             }
                         }
                     }
@@ -504,9 +552,11 @@ main{
         height:30rem;
     }
     .section-container{
-        top:-20vh;
+        top:-10vh;
     }
-
+    .popup{
+        top:-10vh;
+    }
 }
 @media screen and (max-width:650px){
     .header-container{
@@ -558,20 +608,10 @@ main{
             }
        }
     }
-    .section-container{
-        top:-19vh;
-    }
-    .popup{
-        bottom:8px;
-    }
-    .popup-project{
-        margin-top:-12rem;
-    }
-}
-
-@media screen and (max-width:$mobile){
-    .section-container{
-        top:-15vh;
-    }
 
 }
+
+// @media screen and (max-width:$mobile){
+
+
+// }

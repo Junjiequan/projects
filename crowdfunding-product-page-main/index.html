@@ -10,16 +10,31 @@
   <title>Frontend Mentor | Crowdfunding product page</title>
 </head>
 <body>
+    <!-- popup windows -->
+  <!-- //popup// success -->
+  <div class="success-container">
+    <section class="popup-success">
+      <div class="icon-wrapper">
+        <img src="./images/icon-check.svg" alt="success">
+      </div>
+      <h2>Thanks for your support!</h2>
+      <p>Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+        an email once our campaign is completed.</p>
+      <a class="btn" href="#">Got it!</a>
+    </section>
+  </div>
   <div class="block"></div>
     <header >
-      <div class="header-container">
-        <div class="logo"><img src="./images/logo.svg" alt="logo"></div>
-        <nav class="links">
-          <a href="#">About</a>
-          <a href="#">Discover</a>
-          <a href="#">Get Started</a>
-        </nav>
-        <div class="menu-icon"><img src="./images/icon-hamburger.svg" alt=""></div>
+      <div>
+        <div class="header-container">
+          <div class="logo"><img src="./images/logo.svg" alt="logo"></div>
+          <nav class="links">
+            <a href="#">About</a>
+            <a href="#">Discover</a>
+            <a href="#">Get Started</a>
+          </nav>
+          <div class="menu-icon"><img src="./images/icon-hamburger.svg" alt=""></div>
+        </div>
       </div>
     </header>
 
@@ -31,93 +46,111 @@
         <a href="#">Get Started</a>
       </div>
     </aside>
-    <!-- popup windows -->
-    <!-- //popup// success -->
-    <section class="popup-success">
-  
-    </section>
-    <!-- //popup// backproject -->
-    <div class="popup">
-      <section class="popup-project">
-        <img id ="close" src="./images/icon-close-modal.svg" alt="close">
-        <h2>Back this project</h2>
-        <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
-        <form class="popup-box border" >
-          <div class="wrapper ">
-            <div class="radio">
-              <input type="radio" name="options" id="radio" value="1" aria-label="radio1" />
-            </div>
-            <div class="text-box">
-              <div class="title">
-                <h5><span>Bamboo Stand</span>Pledge $25 or more</h5>
-                <p><span>101</span> left</p>
-              </div>
-              <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-                you’ll be added to a special Backer member list.</p>
-            </div>
-          </div>
-          <div class="input-box ">
-            <p>Enter your pledge</p>
-            <div class="check">
-              <div class="forDollar">
-                <input type="number" aria-label="price" id="price" min="1" max="201" maxLength="4" value = "" class="btn no-hover">
-              </div>
-              <button type="submit" class="btn">Continue</button>
-            </div>
-          </div>
-        </form>
-        <form class="popup-box border" >
-          <div class="wrapper ">
-            <div class="radio">
-              <input type="radio" name="options" id="radio" value="2" aria-label="radio2" />
-            </div>
-            <div class="text-box">
-              <div class="title">
-                <h5><span>Bamboo Stand</span>Pledge $25 or more</h5>
-                <p><span>101</span> left</p>
-              </div>
-              <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-                you’ll be added to a special Backer member list.</p>
-            </div>
-          </div>
-          <div class="input-box ">
-            <p>Enter your pledge</p>
-            <div class="check">
-              <div class="forDollar">
-                <input type="number" aria-label="price" id="price" min="1" max="201" maxLength="4" value = "" class="btn no-hover">
-              </div>
-              <button type="submit" class="btn">Continue</button>
-            </div>
-          </div>
-        </form>
-        <form class="popup-box border" >
-          <div class="wrapper ">
-            <div class="radio">
-              <input type="radio" name="options" id="radio" value="3" aria-label="radio3"/>
-            </div>
-            <div class="text-box">
-              <div class="title">
-                <h5><span>Bamboo Stand</span>Pledge $25 or more</h5>
-                <p><span>101</span> left</p>
-              </div>
-              <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-                you’ll be added to a special Backer member list.</p>
-            </div>
-          </div>
-          <div class="input-box ">
-            <p>Enter your pledge</p>
-            <div class="check">
-              <div class="forDollar">
-                <input type="number" aria-label="price" id="price" min="1" max="201" maxLength="4" value = "" class="btn no-hover">
-              </div>
-              <button type="submit" class="btn">Continue</button>
-            </div>
-          </div>
-        </form>
-      </section>
-    </div>
-
     <main >
+       <!-- //popup// backproject -->
+      <div class="popup">
+        <section class="popup-project">
+          <img id ="close" src="./images/icon-close-modal.svg" alt="close">
+          <h2>Back this project</h2>
+          <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+          <form class="popup-box border" >
+            <div class="wrapper ">
+              <div class="radio">
+                <input type="radio" name="options" id="radio1" value="" aria-label="radio1" />
+              </div>
+              <div class="text-box">
+                <div class="title">
+                  <h5><span>Pledge with no reward</span></h5>
+                  <p><span> </span> </p>
+                </div>
+                <p> Choose to support us without a reward if you simply believe in our project. As a backer, 
+                  you will be signed up to receive product updates via email.</p>
+              </div>
+            </div>
+            <div class="input-box ">
+              <p>Enter your pledge</p>
+              <div class="check">
+                <div class="forDollar">
+                  <input type="number" aria-label="price" id="price" min="1" max="201" maxLength="4" value = "" class="btn no-hover">
+                </div>
+                <button type="submit" class="btn">Continue</button>
+              </div>
+            </div>
+          </form>
+          <form class="popup-box border" >
+            <div class="wrapper ">
+              <div class="radio">
+                <input type="radio" name="options" id="radio2" value="" aria-label="radio2" />
+              </div>
+              <div class="text-box">
+                <div class="title">
+                  <h5><span>Bamboo Stand</span>Pledge $25 or more</h5>
+                  <p><span>101</span> left</p>
+                </div>
+                <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+                  you’ll be added to a special Backer member list.</p>
+              </div>
+            </div>
+            <div class="input-box ">
+              <p>Enter your pledge</p>
+              <div class="check">
+                <div class="forDollar">
+                  <input type="number" aria-label="price" id="price" min="1" max="201" maxLength="4" value = "" class="btn no-hover">
+                </div>
+                <button type="submit" class="btn">Continue</button>
+              </div>
+            </div>
+          </form>
+          <form class="popup-box border" >
+            <div class="wrapper ">
+              <div class="radio">
+                <input type="radio" name="options" id="radio3" value="" aria-label="radio3"/>
+              </div>
+              <div class="text-box">
+                <div class="title">
+                  <h5><span>Black Edition Stand</span>Pledge $75 or more</h5>
+                  <p><span>64</span> left</p>
+                </div>
+                <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+                  member list. Shipping is included.</p>
+              </div>
+            </div>
+            <div class="input-box ">
+              <p>Enter your pledge</p>
+              <div class="check">
+                <div class="forDollar">
+                  <input type="number" aria-label="price" id="price" min="1" max="201" maxLength="4" value = "" class="btn no-hover" >
+                </div>
+                <button type="submit" class="btn">Continue</button>
+              </div>
+            </div>
+          </form>
+          <form class="popup-box border out-of-stock" >
+            <div class="wrapper ">
+              <div class="radio">
+                <input type="radio" name="options" id="radio4" value="" aria-label="radio3" disabled/>
+              </div>
+              <div class="text-box">
+                <div class="title">
+                  <h5><span>Mahogany Special Edition</span>Pledge $200 or more</h5>
+                  <p><span>0</span> left</p>
+                </div>
+                <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+                  to our Backer member list. Shipping is included.</p>
+              </div>
+            </div>
+            <div class="input-box ">
+              <p>Enter your pledge</p>
+              <div class="check">
+                <div class="forDollar">
+                  <input type="number" aria-label="price" id="price" min="1" max="201" maxLength="4" value = "" class="btn no-hover" disabled/>
+                </div>
+                <button type="submit" class="btn">Continue</button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
       <div class="section-container">
         <!-- project section -->
         <section class="project-title">
@@ -156,7 +189,7 @@
           <p>The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
             to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve 
             your posture and make you more comfortable while at work, helping you stay focused on the task at hand.
-            <br><br>
+            <br><br>  
             Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
             to allow notepads, pens, and USB sticks to be stored under the stand.</p>
             <div class="inner-box">
@@ -202,6 +235,10 @@
               </div>
             </div>
         </section>
+        <section class="footer"> <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://github.com/a331998513/projects">Jay</a>.
+        </p></section>
       </div>
     </main>
 </body>

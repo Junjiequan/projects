@@ -24,7 +24,7 @@ html a, html li {
   --color-white: whitesmoke;
 }
 
-.section-container .project-title .button-section .btn, .section-container .data .button-section .btn, .section-container .about .button-section .btn, .section-container .about .inner-box .stock .btn, .popup-project .input-box .check .forDollar input, .popup-project .input-box .check button {
+.section-container .project-title .button-section .btn, .section-container .data .button-section .btn, .section-container .about .button-section .btn, .section-container .about .inner-box .stock .btn, .section-container .footer .button-section .btn, .section-container .footer .inner-box .stock .btn, .success-container .popup-success .btn, .popup-project .input-box .check .forDollar input, .popup-project .input-box .check button {
   padding: 2rem 4rem;
   background: var(--color-cyan);
   border-radius: 50px;
@@ -34,20 +34,20 @@ html a, html li {
   font-weight: 700;
   letter-spacing: 0.03rem;
 }
-.section-container .project-title .button-section .btn:not(.no-hover):hover, .section-container .data .button-section .btn:not(.no-hover):hover, .section-container .about .button-section .btn:not(.no-hover):hover, .section-container .about .inner-box .stock .btn:not(.no-hover):hover, .popup-project .input-box .check .forDollar input:not(.no-hover):hover, .popup-project .input-box .check button:not(.no-hover):hover {
+.section-container .project-title .button-section .btn:not(.no-hover):hover, .section-container .data .button-section .btn:not(.no-hover):hover, .section-container .about .button-section .btn:not(.no-hover):hover, .section-container .about .inner-box .stock .btn:not(.no-hover):hover, .section-container .footer .button-section .btn:not(.no-hover):hover, .section-container .footer .inner-box .stock .btn:not(.no-hover):hover, .success-container .popup-success .btn:not(.no-hover):hover, .popup-project .input-box .check .forDollar input:not(.no-hover):hover, .popup-project .input-box .check button:not(.no-hover):hover {
   background: var(--color-darkCyan);
   transition: all 0.3s ease-in-out;
 }
 
-.header-container .links, .section-container .project-title p, .section-container .data p, .section-container .about p {
+.header-container .links, .section-container .project-title p, .section-container .data p, .section-container .about p, .section-container .footer p {
   font-weight: 400;
 }
 
-.section-container .about .inner-box .title p, .section-container .about .inner-box .stock .btn {
+.section-container .about .inner-box .title p, .section-container .about .inner-box .stock .btn, .section-container .footer .inner-box .title p, .section-container .footer .inner-box .stock .btn {
   font-weight: 500;
 }
 
-.section-container .project-title h2, .section-container .data h2, .section-container .about h2, .section-container .about .inner-box .stock p span, .popup-project .popup-box .wrapper .text-box .title p span {
+.section-container .project-title h2, .section-container .data h2, .section-container .about h2, .section-container .about .inner-box .stock p span, .section-container .footer h2, .section-container .footer .inner-box .stock p span, .section-container .footer a, .popup-project .popup-box .wrapper .text-box .title p span {
   font-weight: 700;
 }
 
@@ -61,8 +61,11 @@ body {
 header {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 40%), url(../images/image-hero-desktop.jpg) no-repeat;
   background-size: 100%;
-  height: 54rem;
   position: relative;
+  display: block;
+}
+header div {
+  height: 54rem;
 }
 
 .header-container {
@@ -72,6 +75,7 @@ header {
   padding: 7rem 5rem 0;
   margin: 0 auto;
   justify-content: space-between;
+  height: 50px;
 }
 .header-container .logo > img {
   cursor: pointer;
@@ -111,6 +115,7 @@ header {
 main {
   position: relative;
   background: var(--color-white);
+  height: 100%;
 }
 
 .section-container {
@@ -121,22 +126,22 @@ main {
   max-width: 880px;
   left: 0;
   right: 0;
-  top: -54vh;
+  top: -16vh;
   margin: 0 auto;
   position: absolute;
 }
-.section-container .project-title, .section-container .about, .section-container .data {
+.section-container .project-title, .section-container .about, .section-container .footer, .section-container .data {
+  display: block;
   position: relative;
   border: 1px solid var(--color-lightgray);
   padding: 5rem 8rem;
   margin: 1rem 1rem;
-  transform: translateY(20vw);
   max-width: 100%;
   background: white;
   border-radius: 10px;
   text-align: center;
 }
-.section-container .project-title::before, .section-container .about::before, .section-container .data::before {
+.section-container .project-title::before, .section-container .about::before, .section-container .footer::before, .section-container .data::before {
   content: url(../images/logo-mastercraft.svg);
   position: absolute;
   top: 0;
@@ -149,23 +154,23 @@ main {
   transform: translateY(-2.5rem);
   margin: 0 auto;
 }
-.section-container .project-title h2, .section-container .about h2, .section-container .data h2 {
+.section-container .project-title h2, .section-container .about h2, .section-container .footer h2, .section-container .data h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
-.section-container .project-title p, .section-container .about p, .section-container .data p {
+.section-container .project-title p, .section-container .about p, .section-container .footer p, .section-container .data p {
   font-size: 1.7rem;
   color: var(--color-gray);
   margin-bottom: 3rem;
 }
-.section-container .project-title .button-section, .section-container .about .button-section, .section-container .data .button-section {
+.section-container .project-title .button-section, .section-container .about .button-section, .section-container .footer .button-section, .section-container .data .button-section {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: space-between;
   align-items: center;
 }
-.section-container .project-title .button-section .bookmark, .section-container .about .button-section .bookmark, .section-container .data .button-section .bookmark, .section-container .project-title .button-section .bookmarked, .section-container .about .button-section .bookmarked, .section-container .data .button-section .bookmarked {
+.section-container .project-title .button-section .bookmark, .section-container .about .button-section .bookmark, .section-container .footer .button-section .bookmark, .section-container .data .button-section .bookmark, .section-container .project-title .button-section .bookmarked, .section-container .about .button-section .bookmarked, .section-container .footer .button-section .bookmarked, .section-container .data .button-section .bookmarked {
   position: relative;
   background: #f8f8f8;
   color: var(--color-gray);
@@ -173,7 +178,7 @@ main {
   transition: all 0.3s ease-in-out;
   text-align: right;
 }
-.section-container .project-title .button-section .bookmark:before, .section-container .about .button-section .bookmark:before, .section-container .data .button-section .bookmark:before, .section-container .project-title .button-section .bookmarked:before, .section-container .about .button-section .bookmarked:before, .section-container .data .button-section .bookmarked:before {
+.section-container .project-title .button-section .bookmark:before, .section-container .about .button-section .bookmark:before, .section-container .footer .button-section .bookmark:before, .section-container .data .button-section .bookmark:before, .section-container .project-title .button-section .bookmarked:before, .section-container .about .button-section .bookmarked:before, .section-container .footer .button-section .bookmarked:before, .section-container .data .button-section .bookmarked:before {
   content: "";
   position: absolute;
   background: url(../images/icon-bookmark2.svg) no-repeat;
@@ -184,11 +189,11 @@ main {
   top: 0;
   left: 0;
 }
-.section-container .project-title .button-section .bookmarked, .section-container .about .button-section .bookmarked, .section-container .data .button-section .bookmarked {
+.section-container .project-title .button-section .bookmarked, .section-container .about .button-section .bookmarked, .section-container .footer .button-section .bookmarked, .section-container .data .button-section .bookmarked {
   color: var(--color-darkCyan);
   width: 220px;
 }
-.section-container .project-title .button-section .bookmarked:before, .section-container .about .button-section .bookmarked:before, .section-container .data .button-section .bookmarked:before {
+.section-container .project-title .button-section .bookmarked:before, .section-container .about .button-section .bookmarked:before, .section-container .footer .button-section .bookmarked:before, .section-container .data .button-section .bookmarked:before {
   background: url('data:image/svg+xml;utf8,<svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="darkcyan " cx="28" cy="28" r="28"/><path fill="white" d="M23 19v18l5-5.058L33 37V19z"/></g></svg>') no-repeat;
   background-size: contain;
 }
@@ -245,25 +250,25 @@ main {
   height: 100%;
   width: 73%;
 }
-.section-container .about {
+.section-container .about, .section-container .footer {
   text-align: left;
 }
-.section-container .about h2, .section-container .about p {
+.section-container .about h2, .section-container .footer h2, .section-container .about p, .section-container .footer p {
   margin-bottom: 0;
 }
-.section-container .about::before {
+.section-container .about::before, .section-container .footer::before {
   content: "";
 }
-.section-container .about h4 {
+.section-container .about h4, .section-container .footer h4 {
   font-size: 2rem;
   margin-bottom: 4rem;
 }
-.section-container .about p {
+.section-container .about p, .section-container .footer p {
   font-size: 1.7rem;
   color: var(--color-gray);
   line-height: 3rem;
 }
-.section-container .about .inner-box {
+.section-container .about .inner-box, .section-container .footer .inner-box {
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
@@ -271,46 +276,59 @@ main {
   border-radius: 10px;
   border: 1px solid var(--color-midgray);
 }
-.section-container .about .inner-box .title {
+.section-container .about .inner-box .title, .section-container .footer .inner-box .title {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
-.section-container .about .inner-box .title p {
+.section-container .about .inner-box .title p, .section-container .footer .inner-box .title p {
   font-size: 1.6rem;
   color: var(--color-cyan);
 }
-.section-container .about .inner-box .desc {
+.section-container .about .inner-box .desc, .section-container .footer .inner-box .desc {
   margin-bottom: 3rem;
 }
-.section-container .about .inner-box .desc p {
+.section-container .about .inner-box .desc p, .section-container .footer .inner-box .desc p {
   text-align: justify;
 }
-.section-container .about .inner-box .stock {
+.section-container .about .inner-box .stock, .section-container .footer .inner-box .stock {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem 0;
   justify-content: space-between;
 }
-.section-container .about .inner-box .stock p {
+.section-container .about .inner-box .stock p, .section-container .footer .inner-box .stock p {
   display: flex;
   align-items: center;
   letter-spacing: -0.07rem;
 }
-.section-container .about .inner-box .stock p span {
+.section-container .about .inner-box .stock p span, .section-container .footer .inner-box .stock p span {
   font-size: 3.5rem;
   color: var(--color-black);
   padding-right: 1rem;
 }
-.section-container .about .inner-box .stock .btn {
+.section-container .about .inner-box .stock .btn, .section-container .footer .inner-box .stock .btn {
   padding: 1.5rem 3rem;
 }
-.section-container .about .out-of-stock {
+.section-container .footer {
+  border: 0;
+  background: transparent;
+  margin: 0;
+  text-align: center;
+}
+.section-container .footer p {
+  font-size: 1.5rem;
+}
+.section-container .footer a {
+  color: var(--color-cyan);
+}
+
+.out-of-stock {
   pointer-events: none;
   opacity: 0.5;
 }
-.section-container .about .out-of-stock .stock .btn {
+.out-of-stock a, .out-of-stock input {
   filter: grayscale(1);
 }
 
@@ -338,17 +356,46 @@ main {
   z-index: 20;
 }
 
-.popup {
-  z-index: 30;
+.success-container {
+  display: none;
+  z-index: 100;
   position: absolute;
-  top: 300px;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto auto;
+  min-width: 300px;
+  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+}
+.success-container .popup-success {
+  position: relative;
+  border: 1px solid var(--color-lightgray);
+  padding: 5rem;
+  margin: 1rem 1rem;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+}
+.success-container .popup-success p {
+  margin: 2rem 0 4rem;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  color: var(--color-gray);
+}
+.popup {
+  display: none;
+  z-index: 30;
+  position: absolute;
+  top: -20vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   min-width: 330px;
   max-width: 880px;
-  display: block;
   justify-content: center;
   align-items: center;
 }
@@ -429,9 +476,11 @@ main {
   cursor: pointer;
   color: var(--color-black);
   padding-right: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 .popup-project .popup-box .wrapper .text-box .title h5 span:hover {
   color: var(--color-cyan);
+  transition: all 0.3s ease-in-out;
 }
 .popup-project .popup-box .wrapper .text-box .title p span {
   padding-right: 1rem;
@@ -513,7 +562,11 @@ main {
   }
 
   .section-container {
-    top: -20vh;
+    top: -10vh;
+  }
+
+  .popup {
+    top: -10vh;
   }
 }
 @media screen and (max-width: 650px) {
@@ -570,22 +623,5 @@ main {
   }
   .side-links .menu-wrapper a:hover {
     color: var(--color-cyan);
-  }
-
-  .section-container {
-    top: -19vh;
-  }
-
-  .popup {
-    bottom: 8px;
-  }
-
-  .popup-project {
-    margin-top: -12rem;
-  }
-}
-@media screen and (max-width: 375px) {
-  .section-container {
-    top: -15vh;
   }
 }/*# sourceMappingURL=main.css.map */

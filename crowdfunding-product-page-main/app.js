@@ -4,7 +4,9 @@ const menuIcon = document.querySelector('.menu-icon');
 const iconIMG = menuIcon.childNodes[0];
 const selectBox = document.querySelector('.popup');
 const isProject = document.querySelector('#project');
-const textWarning = document.querySelector('.check')
+const textWarning = document.querySelector('.check');
+const block = document.querySelector('.block')
+const success = document.querySelector('.success-container')
 //bookmark
 const getMark = () =>{
     if(bookMark.innerText == 'Bookmark'){
@@ -36,14 +38,8 @@ const closeMenu = () => {
 const getNumberbox = (e) =>{
     const target = e.target;
     const parent = target.closest('.popup-project');
-    const radio = parent.querySelectorAll('input[type=radio]')
-//     if(target.checked == false){
-//         target.value = true
-//     } else target.checked = false
-   
-//    console.log(target.value)
-//    console.log(target.checked)
-    if(target.id == 'radio'){
+    const radio = parent.querySelectorAll('input[type=radio]');
+    if(target.type == 'radio'){
         const popupBox = target.closest('.popup-box');
         parent.querySelectorAll('.input-box').forEach((index)=> index.classList.remove('show'));
         parent.querySelectorAll('.input-box').forEach((index)=> index.style.opacity = 0);
@@ -51,7 +47,7 @@ const getNumberbox = (e) =>{
             index.classList.remove('selected');
             index.classList.add('border');
         })
-        if(target.value == '1'){
+        if(target.id == 'radio1'  ){
             radio[0].checked = true;
             radio[1].checked = false;
             radio[2].checked = false;
@@ -61,7 +57,7 @@ const getNumberbox = (e) =>{
             popupBox.classList.add('selected');
             
         };
-        if(target.value == '2'){
+        if(target.id == 'radio2'){
             radio[0].checked = false;
             radio[1].checked = true;
             radio[2].checked = false;
@@ -70,7 +66,7 @@ const getNumberbox = (e) =>{
             popupBox.classList.remove('border');
             popupBox.classList.add('selected');
         };
-        if(target.value == '3'){
+        if(target.id == 'radio3'){
             radio[0].checked = false;
             radio[1].checked = false;
             radio[2].checked = true;
@@ -79,12 +75,23 @@ const getNumberbox = (e) =>{
             popupBox.classList.remove('border');
             popupBox.classList.add('selected');
         };
-    }
+    };
 
+    if(target.type == 'submit'){
+        const amount=target.parentElement.querySelector('input[type=number]')
+        if(amount.value <= 201 && amount.value != ''){
+            success.style.display = "flex";
+            block.style.zIndex = "50"
+            block.style.display = "flex";
+            amount.value = '';
+            e.preventDefault();
+        } else if(amount.value ==''){
+            target.parentElement.setAttribute('data-before', 'give me money')
+        }
+    }
 
     if(target.id == 'close'){
         const popup = target.closest('.popup');
-        const block = document.querySelector('.block')
         block.style.display = "none";
         popup.style.display = "none";
     }
@@ -93,7 +100,8 @@ const getNumberbox = (e) =>{
 const openProject = () =>{
     const popup = document.querySelector('.popup');
     const block = document.querySelector('.block');
-    popup.style.display= "flex";
+    popup.style.display= "block";
+    block.style.zIndex = "20"
     block.style.display = "flex"
 }
 
@@ -108,3 +116,10 @@ menuIcon.addEventListener('click', getMenu);
 selectBox.addEventListener('click',getNumberbox);
 isProject.addEventListener('click', openProject)
 textWarning.querySelector('#price').addEventListener('click', removeWarning);
+success.addEventListener('click',(e)=>{
+    if(e.target.classList.contains('btn')){
+        block.style.zIndex = "20"
+        success.style.display = "none";
+    }
+    }
+)
