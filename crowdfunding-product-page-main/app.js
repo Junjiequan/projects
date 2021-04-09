@@ -115,7 +115,7 @@ mobileMenu.addEventListener('click', closeMenu);
 menuIcon.addEventListener('click', getMenu);
 selectBox.addEventListener('click',getNumberbox);
 isProject.addEventListener('click', openProject)
-textWarning.querySelector('#price').addEventListener('click', removeWarning);
+textWarning.querySelector('input[type=number]').addEventListener('click', removeWarning);
 success.addEventListener('click',(e)=>{
     if(e.target.classList.contains('btn')){
         block.style.zIndex = "20"
