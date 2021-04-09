@@ -142,7 +142,7 @@ success.addEventListener('click',(e)=>{
         block.style.zIndex = "20"
         success.style.display = "none";
         success.style.transform = "scale(0)";
-    }
+        }
     }
 )
 
