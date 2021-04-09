@@ -390,8 +390,8 @@ main {
   color: var(--color-gray);
 }
 .animated {
-  -webkit-animation: bounce-in-bck 1.1s 1 both;
-          animation: bounce-in-bck 1.1s 1 both;
+  -webkit-animation: bounce-in-bck 1s 1 both;
+          animation: bounce-in-bck 1s 1 both;
 }
 
 @-webkit-keyframes bounce-in-bck {
