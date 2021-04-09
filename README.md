@@ -16,4 +16,6 @@
 | 11. [project-tracking-intro-component-master](https://a331998513.github.io/projects/project-tracking-intro-component-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/project-tracking-intro-component-master)  |
 | 12. [clipboard-landing-page-master](https://a331998513.github.io/projects/clipboard-landing-page-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/clipboard-landing-page-master)  |
 | 13. [crowdfunding-product-page-main](https://a331998513.github.io/projects/crowdfunding-product-page-main/)  | [Repo](https://github.com/a331998513/projects/tree/main/crowdfunding-product-page-main)  |
+| WIP. [Room homepage](https://a331998513.github.io/projects/room-homepage-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/room-homepage-master)  |
+| WIP. [Shortly URL shortening API Challenge](https://a331998513.github.io/projects/url-shortening-api-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/url-shortening-api-master)  |
 | 99. []()  | [Repo]()  |
