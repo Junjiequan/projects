@@ -30,14 +30,17 @@ html a, html li {
   background: var(--color-cyan);
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   box-shadow: 0 5px 5px rgba(207, 207, 207, 0.4);
   font-weight: 700;
   letter-spacing: 0.03rem;
 }
 .section-container .project-title .button-section .btn:not(.no-hover):hover, .section-container .data .button-section .btn:not(.no-hover):hover, .section-container .about .button-section .btn:not(.no-hover):hover, .section-container .about .inner-box .stock .btn:not(.no-hover):hover, .section-container .footer .button-section .btn:not(.no-hover):hover, .section-container .footer .inner-box .stock .btn:not(.no-hover):hover, .success-container .popup-success .btn:not(.no-hover):hover, .popup-project .input-box .check .forDollar input:not(.no-hover):hover, .popup-project .input-box .check button:not(.no-hover):hover {
-  background: var(--color-darkCyan);
-  transition: all 0.3s ease-in-out;
+  background-color: var(--color-darkCyan);
+  transition: background-color 0.3s ease-in-out;
+}
+.section-container .project-title .button-section .btn:not(.no-hover):hover:not(.no-hover):active, .section-container .data .button-section .btn:not(.no-hover):hover:not(.no-hover):active, .section-container .about .button-section .btn:not(.no-hover):hover:not(.no-hover):active, .section-container .about .inner-box .stock .btn:not(.no-hover):hover:not(.no-hover):active, .section-container .footer .button-section .btn:not(.no-hover):hover:not(.no-hover):active, .section-container .footer .inner-box .stock .btn:not(.no-hover):hover:not(.no-hover):active, .success-container .popup-success .btn:not(.no-hover):hover:not(.no-hover):active, .popup-project .input-box .check .forDollar input:not(.no-hover):hover:not(.no-hover):active, .popup-project .input-box .check button:not(.no-hover):hover:not(.no-hover):active {
+  transform: translateY(2px);
 }
 
 .header-container .links, .section-container .project-title p, .section-container .data p, .section-container .about p, .section-container .footer p {

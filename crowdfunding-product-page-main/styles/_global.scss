@@ -26,12 +26,15 @@ html{
     background:color(cyan);
     border-radius:50px;
     cursor:pointer;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
     box-shadow:0 5px 5px rgba($color: #cfcfcf, $alpha: 0.4);
     font-weight:700;
     letter-spacing:0.03rem;
     &:not(.no-hover):hover{
-        background:color(darkCyan);
-        transition: all 0.3s ease-in-out;
+        background-color:color(darkCyan);
+        transition: background-color 0.3s ease-in-out;
+    &:not(.no-hover):active{
+        transform:translateY(2px);
+    }
     }
 }
