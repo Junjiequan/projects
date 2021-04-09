@@ -100,9 +100,9 @@ const getNumberbox = (e) =>{
     if(target.id == 'close'){
         const popup = target.closest('.popup');
         block.style.display = "none";
-        popup.style.display = "none";
         popup.style.opacity= "0";
-        popup.classList.toggle('animation')
+        popup.style.display = "none";
+        popup.classList.remove('animation')
     }
   
 }
