@@ -106,7 +106,7 @@ main{
         position:relative;
         border:1px solid color(lightgray);
         padding:5rem 8rem;
-        margin:1rem 1rem;
+        margin:1rem;
         max-width:100%;
         background:white;
         border-radius:10px;
@@ -194,12 +194,8 @@ main{
             }
             .col{
                 position:relative;
-            }
-            .col:nth-child(1){
-                margin-right:4rem;
-            }
-            .col:nth-child(2){
-                margin-right:6rem;
+                &:nth-child(1){margin-right:4rem;}
+                &:nth-child(2){margin-right:6rem;}
             }
             .ver-line{
                 padding:0 5rem;
@@ -353,7 +349,7 @@ main{
         position:relative;
         border:1px solid color(lightgray);
         padding:5rem;
-        margin:1rem 1rem;
+        margin:1rem;
         background:white;
         border-radius:10px;
         text-align:center;
@@ -451,7 +447,7 @@ main{
     position:relative;
     border:1px solid color(lightgray);
     padding:5rem;
-    margin:1rem 1rem;
+    margin:1rem;
     max-width:100%;
     background:white;
     border-radius:10px;
@@ -492,7 +488,7 @@ main{
             display:inline-block;
             width:30px;
             height:30px;
-            padding:3px;
+            padding:5px;
             background-clip: content-box;
             outline:0;
             border:1px solid color(cyan);
@@ -689,10 +685,124 @@ main{
             }
        }
     }
+};
 
+@media screen and (max-width:450px){
+.section-container{
+    .project-title{
+        padding:5rem 2rem;
+        .button-section{
+            justify-content:center;
+        }
+    }
+    .data{
+        .data-wrapper{
+            display:block;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            .col{
+                margin:0;
+                &:nth-child(1){
+                    margin:0;
+                }
+                &:nth-child(2){
+                    margin:2rem 0 0 0;
+                }
+            }
+            .ver-line{
+                padding:2rem 0;
+                &:before{
+                    border-left:none;
+                    border-top:1px solid color(gray);
+                    left:0;right:0;top:0;bottom:0;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    margin:auto;
+                    width:40%;
+                }
+            }
+        }
+    }
+    .about{
+       .inner-box{
+           .desc{
+               p{
+                   font-size:1.4rem;
+                   text-align:left;
+               }
+           }
+           .stock{
+               flex-direction:column;
+               .btn{
+                   text-align:center;
+                   max-width:180px;
+               }
+           }
+       }
+    }
 }
 
-// @media screen and (max-width:$mobile){
+.popup-project{
+    
+    padding:5rem 2rem;
+    h2{
+        font-size:2rem;
+    }
+    p{
+        font-size:1.4rem;
+    }
+    .popup-box{
+        padding:4rem 2rem 0; 
+        input[type=radio]{
 
-
-// }
+            width:20px;
+            height:20px;
+        }
+        .wrapper{
+            .radio{
+                padding-right:1rem;
+            }
+            .text-box{
+                position:relative;
+                .title{
+                    flex-direction:column;
+                    margin-bottom:1.1rem;
+                    h5{
+                        justify-content:center;
+                        flex-direction:column;
+                        font-size:1.6rem;
+                        p{
+                            font-size:1.6rem;
+                        }
+                    }
+                    .relocate{
+                        position:absolute;
+                        bottom:-3.2rem;
+                    }
+                }
+            }
+        }
+    }
+    .input-box{
+        text-align:center;
+        flex-direction:column;
+        .check{
+            .forDollar{
+                input{
+                    padding:1rem;
+                }
+            }
+            .btn{
+                padding:1rem 2rem;
+                font-size:1.3rem;
+            }
+        }
+    }
+}
+.show{
+    margin:4rem 0;
+    padding:1rem;
+}
+}
