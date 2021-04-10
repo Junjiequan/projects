@@ -28,7 +28,7 @@ p{
     margin:10rem;
     display:flex;
     align-items:center;
-    z-index:2;
+    z-index:999;
 }
 .logo{
     margin-top:-3px;
@@ -74,28 +74,53 @@ p{
         //main section
 ////////////////////////////////////////
 .main-container{
-    z-index:1;
     position:absolute;
     @include absolute();
-    display:flex;   
-    border:1px solid;
+    display:flex; 
 }
-.hero-wrapper{
+.hero-container{
     width:100%;
     display:flex;
     max-height:640px;
 }
-.hero-image{
-    flex: 1 1 60%;
+.hero-wrapper{
+    flex: 1 1 55%;
     min-width:300px;
     position:relative;
-    .image1{
-        background:#fff url(../images/desktop-image-hero-1.jpg) no-repeat center center;
-        background-size:cover;
-        height:100%;
+    .hero-image-slider{
+        z-index:2;
+        position:relative;
         width:100%;
+        height:100%;
+        transition:all 0.5s ease-in-out;
+        .image1{
+            position:absolute;
+            background: url(../images/desktop-image-hero-3.jpg) no-repeat center center;
+            background-size:cover;
+            height:100%;
+            width:100%;
+        }
+        .image2{
+            position:absolute;
+            background: url(../images/desktop-image-hero-2.jpg) no-repeat center center;
+            background-size:cover;
+            height:100%;
+            width:100%;
+        }
+        .image3{
+            position:absolute;
+            background: url(../images/desktop-image-hero-1.jpg) no-repeat center center;
+            background-size:cover;
+            height:100%;
+            width:100%;
+            &:hover{
+                transition:all 0.5s ease-in-out;
+                transform:translateX(-100%);
+            }
+        }
     }
     .hero-control{
+        z-index:10;
         position:absolute;
         right:-180px;
         bottom:0;
@@ -122,27 +147,37 @@ p{
         }
     }
 }
+
 .hero-text{
+    border:1px solid;
+    z-index:1;
     position:relative;
-    flex: 1 1 40%;
-    margin:17rem 10rem 5rem;
+    flex: 1 1 45%;
+    padding:7% 5%;
+    transition:all 0.5s ease-in-out;
+    &:hover{
+        transition:all 0.5s ease-in-out;
+        transform:translateX(-100%);
+    }
     h2{
         margin-bottom:3rem;
     }
     .hero-button{
         margin-top:4rem;
         display:flex;
+        flex-wrap:wrap;
+        gap:2rem;
         align-items:center;
         cursor:pointer;
         transition:all .3s ease-in-out;
         p{
+            padding-right:2rem;
             letter-spacing:1.2rem;
             font-size:1.6rem;
             text-transform:uppercase;
             transition:all .3s ease-in-out;
         }
         .arrow{
-            padding-left:2rem;
             transition:all .3s ease-in-out;
             opacity:0.4;
             img{
@@ -161,9 +196,18 @@ p{
     }
 }
 
-@media screen and (max-width:1475px){
+@media screen and (max-width:1245px){
     h2{
-        font-size:3rem;
-        line-height:4rem;
+        font-weight:700;
+        font-size:4rem;
+        line-height:4.2rem;
+    }
+}
+@media screen and (max-width:1000px){
+
+    .hero-wrapper{
+        .hero-control{
+            right:0;
+        }
     }
 }
