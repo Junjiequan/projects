@@ -37,6 +37,7 @@ const closeMenu = () => {
     iconIMG.src = './images/icon-hamburger.svg';
 }
 const getNumberbox = (e) =>{
+    
     const target = e.target;
     const parent = target.closest('.popup-project');
     const radio = parent.querySelectorAll('input[type=radio]');
@@ -78,7 +79,7 @@ const getNumberbox = (e) =>{
         };
     };
 
-    if(target.type == 'button'){
+    if(target.type == 'submit'){
         const containerParent = target.closest('.popup-box');
         const amount=containerParent.querySelector('input[type=number]');
         const minimumSign = containerParent.querySelector('.anima')
