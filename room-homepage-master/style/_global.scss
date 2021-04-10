@@ -1,0 +1,91 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+html{
+    a,li{
+        text-decoration:none;
+        list-style:none;
+    }
+    font-size:62.5%;
+    scroll-behavior:smooth;
+}
+////////////////////////////////////////
+                //color
+////////////////////////////////////////
+$DarkGray: hsl(0, 0%, 63%);
+$Black: hsl(0, 0%, 0%);
+$White: hsl(0, 0%, 100%);
+$VeryDarkGray: hsl(0, 0%, 27%);
+$dark: (
+    gray:$DarkGray,
+    darkGray:$VeryDarkGray,
+    black:$Black,
+    white:$White
+);
+////////////////////////////////////////
+            //theme function
+////////////////////////////////////////
+:root{
+    @each $name, $color in $dark{
+        --color-#{$name}: #{$color};
+    }
+};
+@function color($colorName){
+    @return var(--color-#{$colorName})
+};
+@mixin flexCenter(){
+    display:flex;
+    justify-content:center;
+}
+@mixin absolute(){
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+////////////////////////////////////////
+            //animations
+////////////////////////////////////////
+@keyframes bounce-in-bck {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    }
+    30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes bounce-vertical{
+    0% {
+        transform:translateX(0rem);
+    }
+    50% {
+        transform:translateX(2rem);
+    }
+    100% {
+        transform:translateX(0rem);
+    }
+}

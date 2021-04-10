@@ -1,0 +1,169 @@
+@use '../style/' as *;
+//design font-size:12px;
+body{
+    font-family: 'Spartan', sans-serif;
+    font-size:1.6rem;
+    min-height:100vh;
+    position:relative;
+}
+h2{
+    font-size:5rem;
+    line-height:5.5rem;
+    font-weight:600;
+}
+p{
+    font-size:1.4rem;
+    color:color(gray);
+    line-height:2.5rem;
+}
+////////////////////////////////////////
+        //nav section
+////////////////////////////////////////
+.header-container{
+    display:flex;
+    justify-content:flex-start;
+    margin:0 auto;
+}
+.header-wrapper{
+    margin:10rem;
+    display:flex;
+    align-items:center;
+    z-index:2;
+}
+.logo{
+    margin-top:-3px;
+    min-width:120px;
+    img{
+        width:100%;
+        &:hover{
+            animation: bounce-in-bck 0.8s both;
+        }
+    }
+}
+.navigator{
+    padding-left:5rem;
+    font-size:1.7rem;
+    font-weight:600;
+    display:flex;
+    height:100%;
+    a{
+        padding:0 2rem;
+        color:color(white);
+        &:hover{
+            animation: bounce-in-bck 0.8s both;
+        }
+        &::after{
+            display:block;
+            content:'';
+            width:100%;
+            border-bottom: 2px solid color(black);
+            transform:scaleX(0);
+            transform-origin:0 50%;
+            transition:all 0.3s ease-in-out;
+        }
+        &:focus:after{
+            border-bottom: 2px solid color(black);
+            transform-origin:0 50%;
+            transition:all 0.3s ease-in-out;
+            transform:scaleX(1);
+        }
+    }
+}
+
+////////////////////////////////////////
+        //main section
+////////////////////////////////////////
+.main-container{
+    z-index:1;
+    position:absolute;
+    @include absolute();
+    display:flex;   
+    border:1px solid;
+}
+.hero-wrapper{
+    width:100%;
+    display:flex;
+    max-height:640px;
+}
+.hero-image{
+    flex: 1 1 60%;
+    min-width:300px;
+    position:relative;
+    .image1{
+        background:#fff url(../images/desktop-image-hero-1.jpg) no-repeat center center;
+        background-size:cover;
+        height:100%;
+        width:100%;
+    }
+    .hero-control{
+        position:absolute;
+        right:-180px;
+        bottom:0;
+        display:flex;
+        .icon-left{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:color(black);
+            height:90px;
+            width:90px;
+            transition:all 0.2s ease;
+            cursor:pointer;
+            img{
+                transform:scale(1.2);
+            }
+            &:hover{
+                transition:all 0.2s ease;
+                background:color(darkGray);
+            }
+        }
+        .icon-right{
+            @extend .icon-left;
+        }
+    }
+}
+.hero-text{
+    position:relative;
+    flex: 1 1 40%;
+    margin:17rem 10rem 5rem;
+    h2{
+        margin-bottom:3rem;
+    }
+    .hero-button{
+        margin-top:4rem;
+        display:flex;
+        align-items:center;
+        cursor:pointer;
+        transition:all .3s ease-in-out;
+        p{
+            letter-spacing:1.2rem;
+            font-size:1.6rem;
+            text-transform:uppercase;
+            transition:all .3s ease-in-out;
+        }
+        .arrow{
+            padding-left:2rem;
+            transition:all .3s ease-in-out;
+            opacity:0.4;
+            img{
+                transform:scale(1.3);
+            }
+        }
+        &:hover p{
+            color:color(black);
+            transition:all .3s ease-in-out;
+        }
+        &:hover .arrow{
+            opacity:1;
+            animation:bounce-vertical 0.7s infinite both;
+            transition:all .3s ease-in-out;
+        }
+    }
+}
+
+@media screen and (max-width:1475px){
+    h2{
+        font-size:3rem;
+        line-height:4rem;
+    }
+}
