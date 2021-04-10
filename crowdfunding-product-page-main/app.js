@@ -81,8 +81,8 @@ const getNumberbox = (e) =>{
     if(target.type == 'button'){
         const containerParent = target.closest('.popup-box');
         const amount=containerParent.querySelector('input[type=number]');
-        const minimumSign = containerParent.querySelector('#anima')
-        const getLeft = Number(containerParent.querySelector('#left').innerText)
+        const minimumSign = containerParent.querySelector('.anima')
+        const getLeft = Number(containerParent.querySelector('.left').innerText)
         const minimum = Number(containerParent.querySelector('h5').id)
         if(amount.value >= minimum && amount.value != ''){
             success.style.display = "flex";
@@ -92,8 +92,8 @@ const getNumberbox = (e) =>{
             block.style.zIndex = "50"
             block.style.display = "flex";
             amount.value = '';
-            if(containerParent.querySelector('#left').innerText != ''){
-                containerParent.querySelector('#left').innerText = getLeft - 1;
+            if(containerParent.querySelector('.left').innerText != ''){
+                containerParent.querySelector('.left').innerText = getLeft - 1;
             } 
         } else if(amount.value < minimum){
             if( minimumSign != null){
@@ -112,7 +112,6 @@ const getNumberbox = (e) =>{
         popup.style.display = "none";
         popup.classList.remove('animation')
     }
-  
 }
 const openProject = () =>{
     const popup = document.querySelector('.popup');
