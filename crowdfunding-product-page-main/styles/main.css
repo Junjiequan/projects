@@ -486,21 +486,23 @@ main {
 .popup-project .popup-box .wrapper .text-box .title h5 {
   display: flex;
   font-size: 2rem;
-  color: var(--color-cyan);
 }
-.popup-project .popup-box .wrapper .text-box .title h5 p {
-  font-size: 2rem;
-  color: var(--color-cyan);
-}
-.popup-project .popup-box .wrapper .text-box .title h5 span {
+.popup-project .popup-box .wrapper .text-box .title h5 .radiotxt {
   cursor: pointer;
   color: var(--color-black);
   padding-right: 2rem;
   transition: all 0.3s ease-in-out;
 }
-.popup-project .popup-box .wrapper .text-box .title h5 span:hover {
+.popup-project .popup-box .wrapper .text-box .title h5 .radiotxt:hover {
   color: var(--color-cyan);
   transition: all 0.3s ease-in-out;
+}
+.popup-project .popup-box .wrapper .text-box .title h5 .anima {
+  color: var(--color-cyan);
+}
+.popup-project .popup-box .wrapper .text-box .title h5 p {
+  font-size: 2rem;
+  color: var(--color-cyan);
 }
 .popup-project .popup-box .wrapper .text-box .title p span {
   padding-right: 1rem;

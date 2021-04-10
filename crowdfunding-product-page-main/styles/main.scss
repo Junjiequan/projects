@@ -453,12 +453,7 @@ main{
                     h5{
                         display:flex;
                         font-size:2rem;
-                        color:color(cyan);
-                        p{
-                            font-size:2rem;
-                            color:color(cyan);
-                        }
-                        span{
+                        .radiotxt{
                             cursor:pointer;
                             color:color(black);
                             padding-right:2rem;
@@ -467,6 +462,13 @@ main{
                                 color:color(cyan);
                                 transition:all 0.3s ease-in-out;
                             }
+                        }
+                        .anima{
+                            color:color(cyan);
+                        }
+                        p{
+                            font-size:2rem;
+                            color:color(cyan);
                         }
                     }
                     p{

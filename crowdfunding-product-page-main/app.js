@@ -41,7 +41,7 @@ const getNumberbox = (e) =>{
     const target = e.target;
     const parent = target.closest('.popup-project');
     const radio = parent.querySelectorAll('input[type=radio]');
-    if(target.type == 'radio' || target.id == 'radiotxt'){   
+    if(target.type == 'radio' || target.classList.contains('radiotxt')){   
         const popupBox = target.closest('.popup-box');
         parent.querySelectorAll('.input-box').forEach((index)=> index.classList.remove('show'));
         parent.querySelectorAll('.input-box').forEach((index)=> index.style.opacity = 0);
