@@ -788,9 +788,11 @@ main {
   }
   50% {
     transform: scale3d(1.15, 0.85, 1);
+    color: #e42f47;
   }
   65% {
     transform: scale3d(0.95, 1.05, 1);
+    color: #e42f47;
   }
   75% {
     transform: scale3d(1.05, 0.95, 1);
@@ -812,9 +814,11 @@ main {
   }
   50% {
     transform: scale3d(1.15, 0.85, 1);
+    color: #e42f47;
   }
   65% {
     transform: scale3d(0.95, 1.05, 1);
+    color: #e42f47;
   }
   75% {
     transform: scale3d(1.05, 0.95, 1);

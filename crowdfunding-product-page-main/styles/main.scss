@@ -764,7 +764,7 @@ main{
     animation:bounce-top 0.9s both;
 }
 @keyframes bounce-in-bck {
-0% {
+    0% {
     -webkit-transform: scale3d(1, 1, 1);
             transform: scale3d(1, 1, 1);
     }
@@ -779,10 +779,12 @@ main{
     50% {
     -webkit-transform: scale3d(1.15, 0.85, 1);
             transform: scale3d(1.15, 0.85, 1);
+            color:(rgb(228, 47, 71));
     }
     65% {
     -webkit-transform: scale3d(0.95, 1.05, 1);
             transform: scale3d(0.95, 1.05, 1);
+            color:(rgb(228, 47, 71));
     }
     75% {
     -webkit-transform: scale3d(1.05, 0.95, 1);
