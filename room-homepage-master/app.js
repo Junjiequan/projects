@@ -71,6 +71,3 @@ const isStopPointerEvent = (currentImage) =>{
         slideText[currentImage].style.display = "none";
     },500)
 }
-
-console.log(document.querySelector('.hero-container').clientWidth)
-console.log(document.querySelector('.content-wrapper').clientWidth)
