@@ -154,7 +154,11 @@ $dark: (
             letter-spacing:1.2rem;
             font-size:1.6rem;
             text-transform:uppercase;
-            transition:color .3s ease-in-out;
+            
+            a{
+                transition:color .3s ease-in-out;
+                color:color(gray);
+            }
         }
         .arrow{
             transition:all .3s ease-in-out;
@@ -163,7 +167,7 @@ $dark: (
                 transform:scale(1.3);
             }
         }
-        &:hover p{
+        &:hover p a{
             color:color(black);
             transition:color .3s ease-in-out;
         }

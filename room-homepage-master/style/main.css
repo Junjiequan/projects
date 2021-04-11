@@ -166,7 +166,10 @@ html a, html li {
   letter-spacing: 1.2rem;
   font-size: 1.6rem;
   text-transform: uppercase;
+}
+.global-hero-text .hero-button p a, .hero-text-wrapper .hero-text1 .hero-button p a, .hero-text-wrapper .hero-text2 .hero-button p a, .hero-text-wrapper .hero-text3 .hero-button p a {
   transition: color 0.3s ease-in-out;
+  color: var(--color-gray);
 }
 .global-hero-text .hero-button .arrow, .hero-text-wrapper .hero-text1 .hero-button .arrow, .hero-text-wrapper .hero-text2 .hero-button .arrow, .hero-text-wrapper .hero-text3 .hero-button .arrow {
   transition: all 0.3s ease-in-out;
@@ -175,7 +178,7 @@ html a, html li {
 .global-hero-text .hero-button .arrow img, .hero-text-wrapper .hero-text1 .hero-button .arrow img, .hero-text-wrapper .hero-text2 .hero-button .arrow img, .hero-text-wrapper .hero-text3 .hero-button .arrow img {
   transform: scale(1.3);
 }
-.global-hero-text .hero-button:hover p, .hero-text-wrapper .hero-text1 .hero-button:hover p, .hero-text-wrapper .hero-text2 .hero-button:hover p, .hero-text-wrapper .hero-text3 .hero-button:hover p {
+.global-hero-text .hero-button:hover p a, .hero-text-wrapper .hero-text1 .hero-button:hover p a, .hero-text-wrapper .hero-text2 .hero-button:hover p a, .hero-text-wrapper .hero-text3 .hero-button:hover p a {
   color: var(--color-black);
   transition: color 0.3s ease-in-out;
 }
