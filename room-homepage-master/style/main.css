@@ -297,7 +297,7 @@ p {
 .main-container .main-wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
 }
 
 .hero-container {
@@ -576,7 +576,6 @@ p {
 
   .hero-text-wrapper {
     position: relative;
-    max-height: 100vh;
     min-height: 430px;
     width: 100%;
   }
@@ -598,7 +597,7 @@ p {
 
   .content-wrapper {
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
   }
   .content-wrapper .content-image-dark, .content-wrapper .content-image-light {
     width: 100%;
