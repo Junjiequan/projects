@@ -213,7 +213,20 @@ p{
         }
     }
 }
-
+.footer{
+    z-index:99;
+    position:absolute;
+    left:0;
+    bottom:0;
+    .attribution{
+        font-size:1.0rem;
+        font-weight:500;
+        color:white;
+        a{
+            animation:fontAnimation 5s ease-in-out infinite;
+        }
+    }
+}
 @media screen and (max-width:1245px){
     h2{
         font-weight:700;
@@ -379,18 +392,20 @@ p{
             width:100%;
         }
     }
-}
-.footer{
-    z-index:99;
-    position:absolute;
-    left:0;
-    bottom:0;
-    .attribution{
-        font-size:1.0rem;
-        font-weight:500;
-        color:white;
-        a{
-            animation:fontAnimation 5s ease-in-out infinite;
+    .footer{
+        z-index:99;
+        position:absolute;
+        left:0;
+        bottom:0;
+        padding:0 0.7rem;
+        background: rgba($color: #000000, $alpha: 0.4);
+        .attribution{
+            font-size:0.9rem;
+            font-weight:500;
+            color:white;
+            a{
+                animation:fontAnimation 5s ease-in-out infinite;
+            }
         }
     }
 }
