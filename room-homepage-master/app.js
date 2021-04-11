@@ -72,3 +72,5 @@ const isStopPointerEvent = (currentImage) =>{
     },500)
 }
 
+console.log(document.querySelector('.hero-container').clientWidth)
+console.log(document.querySelector('.content-wrapper').clientWidth)
