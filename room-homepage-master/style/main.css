@@ -297,6 +297,7 @@ p {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  height: -webkit-fill-available;
 }
 
 .hero-container {
@@ -570,6 +571,7 @@ p {
   .hero-text-wrapper {
     position: relative;
     min-height: 55vh;
+    height: -webkit-fill-available;
     width: 100%;
   }
 
@@ -591,19 +593,23 @@ p {
   .content-wrapper {
     flex-direction: column;
     height: 100vh;
+    height: -webkit-fill-available;
   }
   .content-wrapper .content-image-dark, .content-wrapper .content-image-light {
     width: 100%;
     height: 30vh;
+    height: -webkit-fill-available;
   }
   .content-wrapper .content-text {
     width: 100%;
     padding: 5rem 3rem;
     height: 40vh;
+    height: -webkit-fill-available;
   }
   .content-wrapper .content-image-light {
     width: 100%;
     height: 30vh;
+    height: -webkit-fill-available;
   }
 
   .footer {
