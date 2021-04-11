@@ -75,7 +75,7 @@ const isStopPointerEvent = (currentImage) =>{
 }
 
 // mobile navigator button;
-const navOpenicon = document.querySelector('.nav-icon-open');
+const navOpenicon = document.querySelector('.header-wrapper');
 const navCloseicon = document.querySelector('.nav-icon-close');
 const navBar = document.querySelector('.navigator-mobile-container');
 

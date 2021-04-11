@@ -466,7 +466,6 @@ p {
     cursor: pointer;
   }
   .navigator-mobile-container .navigator-mobile .nav-bar {
-    z-index: 99;
     display: flex;
   }
   .navigator-mobile-container .navigator-mobile .nav-bar a {
@@ -497,6 +496,7 @@ p {
     margin: 5rem 3rem;
     justify-content: center;
     flex-direction: row-reverse;
+    min-height: 50px;
   }
 
   .navigator {
