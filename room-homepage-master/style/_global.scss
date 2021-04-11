@@ -18,7 +18,7 @@ $DarkGray: hsl(0, 0%, 63%);
 $Black: hsl(0, 0%, 0%);
 $White: hsl(0, 0%, 100%);
 $VeryDarkGray: hsl(0, 0%, 27%);
-$nav: hsl(108, 100%, 92%);
+$nav: hsl(50, 100%, 86%);
 $dark: (
     gray:$DarkGray,
     lightGray:$nav,
@@ -108,6 +108,17 @@ $dark: (
     }
 }
 
+@keyframes fontAnimation{
+    0%{
+        color:rgb(255, 255, 255) ;
+    }
+    50%{
+        color:rgb(235, 191, 109);
+    }
+    100%{
+        color:#fff;
+    }
+}
 ////////////////////////////////////////
         //global slider default values
 ////////////////////////////////////////

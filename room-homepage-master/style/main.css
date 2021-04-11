@@ -15,7 +15,7 @@ html a, html li {
 
 :root {
   --color-gray: #a1a1a1;
-  --color-lightGray: #deffd6;
+  --color-lightGray: #fff3b8;
   --color-darkGray: #454545;
   --color-black: black;
   --color-white: white;
@@ -110,6 +110,28 @@ html a, html li {
     transform: rotate(-360deg);
   }
 }
+@-webkit-keyframes fontAnimation {
+  0% {
+    color: white;
+  }
+  50% {
+    color: #ebbf6d;
+  }
+  100% {
+    color: #fff;
+  }
+}
+@keyframes fontAnimation {
+  0% {
+    color: white;
+  }
+  50% {
+    color: #ebbf6d;
+  }
+  100% {
+    color: #fff;
+  }
+}
 .global-hero-image, .hero-image-wrapper .hero-image-slider .image1, .hero-image-wrapper .hero-image-slider .image2, .hero-image-wrapper .hero-image-slider .image3 {
   position: absolute;
   height: 100%;
@@ -169,7 +191,8 @@ body {
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 4.5rem;
+  letter-spacing: -0.3rem;
   line-height: 5.5rem;
   font-weight: 600;
 }
@@ -226,13 +249,13 @@ p {
   padding-top: 3px;
   content: "";
   width: 100%;
-  border-bottom: 3px solid var(--color-lightGray);
+  border-bottom: 2px solid var(--color-lightGray);
   transform: scaleX(0);
   transform-origin: 0 50%;
   transition: all 0.3s ease-in-out;
 }
 .navigator a:focus:after {
-  border-bottom: 3px solid var(--color-lightGray);
+  border-bottom: 2px solid var(--color-lightGray);
   transform-origin: 0 50%;
   transition: all 0.3s ease-in-out;
   transform: scaleX(1);
@@ -379,4 +402,19 @@ p {
   .hero-image-wrapper .hero-control {
     right: 0;
   }
+}
+.footer {
+  z-index: 99;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.footer .attribution {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+.footer .attribution a {
+  -webkit-animation: fontAnimation 5s ease-in-out infinite;
+          animation: fontAnimation 5s ease-in-out infinite;
 }/*# sourceMappingURL=main.css.map */

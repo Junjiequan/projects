@@ -7,7 +7,8 @@ body{
     position:relative;
 }
 h2{
-    font-size:5rem;
+    font-size:4.5rem;
+    letter-spacing:-.3rem;
     line-height:5.5rem;
     font-weight:600;
 }
@@ -58,13 +59,13 @@ p{
             padding-top:3px;
             content:'';
             width:100%;
-            border-bottom: 3px solid color(lightGray);
+            border-bottom: 2px solid color(lightGray);
             transform:scaleX(0);
             transform-origin:0 50%;
             transition:all 0.3s ease-in-out;
         }
         &:focus:after{
-            border-bottom: 3px solid color(lightGray);
+            border-bottom: 2px solid color(lightGray);
             transform-origin:0 50%;
             transition:all 0.3s ease-in-out;
             transform:scaleX(1);
@@ -219,4 +220,17 @@ p{
         }
     }
 }
-
+.footer{
+    z-index:99;
+    position:absolute;
+    left:0;
+    bottom:0;
+    .attribution{
+        font-size:1.0rem;
+        font-weight:500;
+        color:white;
+        a{
+            animation:fontAnimation 5s ease-in-out infinite;
+        }
+    }
+}
