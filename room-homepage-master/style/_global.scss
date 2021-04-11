@@ -164,7 +164,7 @@ $dark: (
 
     cursor:pointer;
     &:hover{
-        filter:sepia(0.1);
+        filter:sepia(0.3);
         transition: all .3s ease-in-out;
     }
 }
@@ -174,13 +174,14 @@ $dark: (
     opacity:0;
     position:absolute;
     transition:all .5s ease-in-out;
-    h2{
-        margin-bottom:3rem;
-        cursor:pointer;
-        span{
-            transition:all .5s ease-in-out;
+    .text-hover{
+        h2{
+            margin-bottom:3rem;
+            span{
+                transition:all .5s ease-in-out;
+            }
         }
-        &:hover span{
+        &:hover h2 span{
             color:rgb(165, 133, 46);
             transition:all .5s ease-in-out;
         }

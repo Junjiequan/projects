@@ -186,7 +186,7 @@ html a, html li {
   cursor: pointer;
 }
 .global-hero-image:hover, .hero-image-wrapper .hero-image-slider .image1:hover, .hero-image-wrapper .hero-image-slider .image2:hover, .hero-image-wrapper .hero-image-slider .image3:hover {
-  filter: sepia(0.1);
+  filter: sepia(0.3);
   transition: all 0.3s ease-in-out;
 }
 
@@ -197,14 +197,13 @@ html a, html li {
   position: absolute;
   transition: all 0.5s ease-in-out;
 }
-.global-hero-text h2, .hero-text-wrapper .hero-text1 h2, .hero-text-wrapper .hero-text2 h2, .hero-text-wrapper .hero-text3 h2 {
+.global-hero-text .text-hover h2, .hero-text-wrapper .hero-text1 .text-hover h2, .hero-text-wrapper .hero-text2 .text-hover h2, .hero-text-wrapper .hero-text3 .text-hover h2 {
   margin-bottom: 3rem;
-  cursor: pointer;
 }
-.global-hero-text h2 span, .hero-text-wrapper .hero-text1 h2 span, .hero-text-wrapper .hero-text2 h2 span, .hero-text-wrapper .hero-text3 h2 span {
+.global-hero-text .text-hover h2 span, .hero-text-wrapper .hero-text1 .text-hover h2 span, .hero-text-wrapper .hero-text2 .text-hover h2 span, .hero-text-wrapper .hero-text3 .text-hover h2 span {
   transition: all 0.5s ease-in-out;
 }
-.global-hero-text h2:hover span, .hero-text-wrapper .hero-text1 h2:hover span, .hero-text-wrapper .hero-text2 h2:hover span, .hero-text-wrapper .hero-text3 h2:hover span {
+.global-hero-text .text-hover:hover h2 span, .hero-text-wrapper .hero-text1 .text-hover:hover h2 span, .hero-text-wrapper .hero-text2 .text-hover:hover h2 span, .hero-text-wrapper .hero-text3 .text-hover:hover h2 span {
   color: #a5852e;
   transition: all 0.5s ease-in-out;
 }
