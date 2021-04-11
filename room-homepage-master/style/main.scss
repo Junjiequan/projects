@@ -26,7 +26,7 @@ p{
     margin:0 auto;
 }
 .header-wrapper{
-    margin:8rem 10rem;
+    margin:5rem 7rem;
     display:flex;
     align-items:center;
     z-index:99;
@@ -36,20 +36,21 @@ p{
     margin-top:-3px;
     min-width:120px;
     img{
-        width:100%;
+        width:110px;
+        height:100%;
         &:hover{
             animation: bounce-in-bck 0.8s both;
         }
     }
 }
 .navigator{
-    padding-left:5rem;
-    font-size:1.7rem;
+    padding-left:3rem;
+    font-size:1.4rem;
     font-weight:600;
     display:flex;
     height:100%;
     a{
-        padding:1rem 2rem;
+        padding:1rem 1.5rem;
         color:color(white);
         &:hover{
             animation: bounce-in-bck 0.8s both;
