@@ -119,6 +119,39 @@ $dark: (
         color:#fff;
     }
 }
+@keyframes jello-vertical {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(0.85, 1.15, 1);
+              transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  
+  
 ////////////////////////////////////////
         //global slider default values
 ////////////////////////////////////////
@@ -128,6 +161,12 @@ $dark: (
     height:100%;
     width:100%;
     transition:all 0.5s ease-in-out;
+
+    cursor:pointer;
+    &:hover{
+        filter:sepia(0.1);
+        transition: all .3s ease-in-out;
+    }
 }
 .global-hero-text{
     margin:17% 12%;
@@ -137,6 +176,14 @@ $dark: (
     transition:all .5s ease-in-out;
     h2{
         margin-bottom:3rem;
+        cursor:pointer;
+        span{
+            transition:all .5s ease-in-out;
+        }
+        &:hover span{
+            color:rgb(165, 133, 46);
+            transition:all .5s ease-in-out;
+        }
     }
     .hero-button{
         margin-top:4rem;

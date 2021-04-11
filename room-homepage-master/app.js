@@ -21,6 +21,8 @@ const init = () =>{
     slideText[0].style.transform = "scaleX(1)"
 }
 init();
+
+// slider button
 rightBtn.addEventListener('click', ()=>{
     if(isClick){
         isClick = false;
@@ -71,3 +73,15 @@ const isStopPointerEvent = (currentImage) =>{
         slideText[currentImage].style.display = "none";
     },500)
 }
+
+// mobile navigator button;
+const navOpenicon = document.querySelector('.nav-icon-open');
+const navCloseicon = document.querySelector('.nav-icon-close');
+const navBar = document.querySelector('.navigator-mobile-container');
+
+navOpenicon.addEventListener('click', (e)=>{
+    navBar.style.transform = "translateY(0)";
+});
+navCloseicon.addEventListener('click', ()=>{
+    navBar.style.transform = "translateY(-20rem)";
+})
