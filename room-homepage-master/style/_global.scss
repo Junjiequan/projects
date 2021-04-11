@@ -145,13 +145,16 @@ $dark: (
         gap:2rem;
         align-items:center;
         cursor:pointer;
-        transition:all .3s ease-in-out;
+        transition:opacity .3s ease-in-out;
+        &:active p{
+            transform:scaleY(0.9)
+        }
         p{
             padding-right:2rem;
             letter-spacing:1.2rem;
             font-size:1.6rem;
             text-transform:uppercase;
-            transition:all .3s ease-in-out;
+            transition:color .3s ease-in-out;
         }
         .arrow{
             transition:all .3s ease-in-out;
@@ -162,7 +165,7 @@ $dark: (
         }
         &:hover p{
             color:color(black);
-            transition:all .3s ease-in-out;
+            transition:color .3s ease-in-out;
         }
         &:hover .arrow{
             opacity:1;

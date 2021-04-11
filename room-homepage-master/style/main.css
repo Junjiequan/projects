@@ -156,14 +156,17 @@ html a, html li {
   gap: 2rem;
   align-items: center;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.global-hero-text .hero-button:active p, .hero-text-wrapper .hero-text1 .hero-button:active p, .hero-text-wrapper .hero-text2 .hero-button:active p, .hero-text-wrapper .hero-text3 .hero-button:active p {
+  transform: scaleY(0.9);
 }
 .global-hero-text .hero-button p, .hero-text-wrapper .hero-text1 .hero-button p, .hero-text-wrapper .hero-text2 .hero-button p, .hero-text-wrapper .hero-text3 .hero-button p {
   padding-right: 2rem;
   letter-spacing: 1.2rem;
   font-size: 1.6rem;
   text-transform: uppercase;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 .global-hero-text .hero-button .arrow, .hero-text-wrapper .hero-text1 .hero-button .arrow, .hero-text-wrapper .hero-text2 .hero-button .arrow, .hero-text-wrapper .hero-text3 .hero-button .arrow {
   transition: all 0.3s ease-in-out;
@@ -174,7 +177,7 @@ html a, html li {
 }
 .global-hero-text .hero-button:hover p, .hero-text-wrapper .hero-text1 .hero-button:hover p, .hero-text-wrapper .hero-text2 .hero-button:hover p, .hero-text-wrapper .hero-text3 .hero-button:hover p {
   color: var(--color-black);
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 .global-hero-text .hero-button:hover .arrow, .hero-text-wrapper .hero-text1 .hero-button:hover .arrow, .hero-text-wrapper .hero-text2 .hero-button:hover .arrow, .hero-text-wrapper .hero-text3 .hero-button:hover .arrow {
   opacity: 1;
