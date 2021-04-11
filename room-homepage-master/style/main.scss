@@ -181,7 +181,10 @@ p{
         }
     }
     .content-text{
-        width:calc((100% - 40%)/2);
+        width:calc((100% - 33%)/2);
+        padding:2rem 0;
+        display:flex;
+        flex-direction:column;
         h5{
             font-size:1.5rem;
             font-weight:bold;

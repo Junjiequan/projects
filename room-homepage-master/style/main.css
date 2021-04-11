@@ -118,7 +118,7 @@ html a, html li {
 }
 
 .global-hero-text, .hero-text-wrapper .hero-text1, .hero-text-wrapper .hero-text2, .hero-text-wrapper .hero-text3 {
-  margin: 17% 10%;
+  margin: 17% 12%;
   transform: scaleX(0);
   opacity: 0;
   position: absolute;
@@ -345,7 +345,10 @@ p {
   width: 100%;
 }
 .content-wrapper .content-text {
-  width: calc((100% - 40%)/2);
+  width: calc((100% - 33%)/2);
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
 }
 .content-wrapper .content-text h5 {
   font-size: 1.5rem;
