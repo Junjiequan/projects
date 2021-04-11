@@ -442,15 +442,15 @@ p {
 }
 @media screen and (max-width: 1010px) {
   .navigator-mobile-container {
+    z-index: 999;
     position: fixed;
     display: flex;
     top: 0;
     left: 0;
-    z-index: 999;
     width: 100%;
     height: 120px;
     background: var(--color-white);
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     padding: 5rem 2rem;
     transform: translateY(-20rem);
   }
@@ -467,13 +467,14 @@ p {
     cursor: pointer;
   }
   .navigator-mobile-container .navigator-mobile .nav-bar {
+    z-index: 99;
     display: flex;
   }
   .navigator-mobile-container .navigator-mobile .nav-bar a {
     color: var(--color-black);
     padding: 1rem;
   }
-  .navigator-mobile-container .navigator-mobile .nav-bar a:after {
+  .navigator-mobile-container .navigator-mobile .nav-bar a::after {
     display: block;
     content: "";
     border-bottom: 1px solid var(--color-black);
@@ -481,12 +482,15 @@ p {
     padding-top: 3px;
     transform: scaleX(0);
     transform-origin: 0 50%;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+  }
+  .navigator-mobile-container .navigator-mobile .nav-bar a:hover:after {
+    transform: scaleX(1);
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease-in-out;
   }
   .navigator-mobile-container .navigator-mobile .nav-bar a:focus:after {
     transform: scaleX(1);
-    transform-origin: 0 50%;
-    transition: all 0.3s ease-in-out;
   }
 
   .header-wrapper {
