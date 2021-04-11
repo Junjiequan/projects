@@ -422,9 +422,11 @@ p {
   position: absolute;
   left: 0;
   bottom: 0;
+  padding: 0 0.7rem;
+  background: rgba(0, 0, 0, 0.4);
 }
 .footer .attribution {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: white;
 }
@@ -610,23 +612,5 @@ p {
   .content-wrapper .content-image-light {
     width: 100%;
     min-height: 280px;
-  }
-
-  .footer {
-    z-index: 99;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 0 0.7rem;
-    background: rgba(0, 0, 0, 0.4);
-  }
-  .footer .attribution {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: white;
-  }
-  .footer .attribution a {
-    -webkit-animation: fontAnimation 5s ease-in-out infinite;
-            animation: fontAnimation 5s ease-in-out infinite;
   }
 }/*# sourceMappingURL=main.css.map */
