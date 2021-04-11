@@ -87,7 +87,6 @@ p{
         display:flex; 
         flex-direction:column;
         height:100vh;
-        height: -webkit-fill-available;
     }
 }
 .hero-container{
@@ -364,8 +363,8 @@ p{
     }
     .hero-text-wrapper{
         position:relative;
-        min-height:55vh;
-        height: -webkit-fill-available;
+        max-height:100vh;
+        min-height:430px;
         width:100%;
     }
     .global-hero-text{
@@ -387,22 +386,21 @@ p{
     .content-wrapper{
         flex-direction:column;
         height:100vh;
-        height: -webkit-fill-available;
         .content-image-dark{
             width:100%;
-            height:30vh;
-            height: -webkit-fill-available;
+            min-height:280px;
+
         }
         .content-text{
             width:100%;
             padding:5rem 3rem;
-            height:40vh;
-            height: -webkit-fill-available;
+            min-height:340px;
+
         }
         .content-image-light{
             width:100%;
-            height:30vh;
-            height: -webkit-fill-available;
+            min-height:280px;
+
         }
     }
     .footer{
