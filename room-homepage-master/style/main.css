@@ -518,15 +518,6 @@ p {
   .hero-image-wrapper .hero-control {
     right: 0;
   }
-
-  .hero-control .icon-left, .hero-image-wrapper .hero-control .icon-right {
-    height: 45px !important;
-    width: 45px !important;
-  }
-  .hero-control .icon-left img, .hero-image-wrapper .hero-control .icon-right img {
-    width: 10px;
-    max-height: 100%;
-  }
 }
 @media screen and (max-width: 765px) {
   h2 {
@@ -565,6 +556,15 @@ p {
 
   .hero-image-wrapper .hero-image-slider {
     height: 300px;
+  }
+
+  .hero-control .icon-left, .hero-image-wrapper .hero-control .icon-right {
+    height: 45px !important;
+    width: 45px !important;
+  }
+  .hero-control .icon-left img, .hero-image-wrapper .hero-control .icon-right img {
+    width: 10px;
+    max-height: 100%;
   }
 
   .hero-text-wrapper {

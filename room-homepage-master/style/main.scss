@@ -309,17 +309,6 @@ p{
             right:0;
         }
     }
-    .hero-control{
-        .icon-left{
-            height:45px  !important;
-            width:45px  !important;
-            img{
-                width:10px;
-                max-height:100%;
-            }
-        }
-
-    }
 }
 @media screen and (max-width:765px){
     h2{
@@ -356,6 +345,17 @@ p{
         .hero-image-slider{
             height:300px;
         }
+    }
+    .hero-control{
+        .icon-left{
+            height:45px  !important;
+            width:45px  !important;
+            img{
+                width:10px;
+                max-height:100%;
+            }
+        }
+
     }
     .hero-text-wrapper{
         position:relative;
