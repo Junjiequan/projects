@@ -1,0 +1,262 @@
+@use './index' as *;
+
+//Font size: 1.5rem;
+//Weights: 500, 700;
+body{
+    min-height:100vh;
+    position:relative;
+    background:rgb(255, 255, 255);
+    color: color(veryDarkViolet);
+}
+.size1440{
+    display:flex;
+    justify-content:center;
+    max-width:1440px;
+    margin:0 auto;
+    background:white;
+
+}
+h2{
+    font-size:8rem;
+    letter-spacing:-0.15rem;
+    line-height:9rem;
+    color:color(veryDarkBlue);
+}
+
+//////////////////////////////////////////
+                //top
+//////////////////////////////////////////
+.top-container{
+    display:flex;
+    flex-direction:column;
+}
+.top-wrapper{
+    margin:5rem 17rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-basis:100%;
+    font-size:1.5rem;
+    .top-logo{
+        flex:12%;
+        img{
+            width:12.1rem;
+            max-height:3.3rem;
+        }
+    }
+    .top-nav{
+        flex:62%;
+        a{
+            color:color(grayishViolet);
+            font-weight:700;
+            padding:0 1.5rem;
+            transition:color 0.2s ease-in-out;
+            &:hover,
+            &:active,
+            &:focus{
+                color:color(veryDarkViolet);
+                transition:color 0.2s ease-in-out;
+            }
+        }
+    }
+    .top-login{
+        @extend .top-nav;
+        flex:20%;
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+        .signup{
+            margin-left:2.5rem;
+            @extend %global-btn;
+        }
+    }
+}
+.hero-wrapper{
+    margin:3rem 0 3rem 17rem;
+    display:flex;
+    flex-wrap:wrap;
+    font-size:2.3rem;
+    justify-content:flex-start;
+    color:color(grayishViolet);
+    height:100%;
+    width:100%;
+    .hero-left{
+        margin:6.5rem 6.5rem 6.5rem 0;
+        max-width:600px;
+        flex-direction:column;
+        .hero-button{
+            margin-top:3rem;
+            a.btn{
+                @extend %global-btn;
+                width:100%;
+                display:flex;
+                padding:1.5rem 3.5rem;
+                font-size: 2rem;
+                font-weight:700;
+                letter-spacing:0.05rem;
+
+            }
+        }
+    }
+    .hero-right{
+        max-width:700px;
+        .hero-image{
+            width:100%;
+            height:100%;
+            img{
+                object-fit:contain;
+                width:100%;
+                max-height:100%;
+            }
+        }
+    }
+}
+//////////////////////////////////////////
+                //main
+//////////////////////////////////////////
+main{
+    margin-top:12rem;
+    background:$bg;
+}
+.main-container{
+    display:flex;
+    flex-direction:column;
+    background:transparent;
+}
+////////////  ul  /////////////
+.urlshorten-wrapper{
+    // transform:translateY(-8rem);
+    width:100%;
+    padding:0 15.5rem;
+    display:flex;
+    flex-wrap:wrap;
+    .before-shorten{
+        min-width:350px;
+        width:100%;
+        min-height:170px;
+        background:color(darkviolet) url(../images/bg-shorten-desktop.svg) no-repeat center/cover;
+        border-radius:10px;
+        .form-shorten{
+            margin:5rem 6.6rem 1rem;
+            display:flex;
+            flex-wrap:wrap;
+            gap:1rem;            
+            justify-content:space-between;
+            .link-input{
+                width:80%;
+                border-radius:10px;
+                outline:none;
+                border:none;
+                padding:0 3rem;
+                height:65px;
+                font-size:2rem;
+                font-family:'Poppins', sans-serif;
+                color:color(veryDarkBlue);
+                &::placeholder{
+                    opacity:0.4;
+                }
+            }
+            .url-btn{
+                @extend %global-btn;
+                border-radius:10px;
+                padding:2rem 4rem;
+                border:1px solid color(cyan);
+                font-size:2rem;
+                font-weight:700;
+                color:white;
+            }
+        }
+        .warning-zone{
+            margin:0 6.6rem;
+            font-size:1.6rem;
+            font-style:italic;
+            color:color(red);
+            transition:all 0.3s ease-in-out;
+            opacity:0;
+            padding-bottom:1rem;
+        }
+    }
+}
+.shorten-list{
+    min-width:350px;
+    width:100%;
+    font-size:1.8rem;
+    transition:all 0.3s ease-in-out;
+    .shorten-link{
+        margin:1.5rem 0;
+        padding:1.5rem 3rem;
+        flex-wrap:wrap;
+        gap:2rem 0;
+        background:white;
+        border-radius:10px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        width:100%;
+        .links{
+            min-width:84%;
+            max-width:84%;
+            display:flex;
+            flex-wrap:wrap;
+            gap:2rem 0;
+            justify-content:space-between;
+            .before{
+                max-width:60%;
+                overflow:auto;
+                margin-right:3rem;
+                &::-webkit-scrollbar{
+                    height:5px;
+                    width:5px;
+                }
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: color(white); 
+                }
+                
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: color(grayishViolet); 
+                }
+                
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: color(cyan); ; 
+                }
+            }
+            .after{
+                max-width:40%;
+                overflow:auto;
+                color:color(cyan);
+                &::-webkit-scrollbar{
+                    height:5px;
+                }
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: color(white); 
+                }
+                
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: color(grayishViolet); 
+                }
+                
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: color(cyan); ; 
+                }
+            }
+        }
+        .buttons{
+            display:flex;
+            justify-content:flex-end;
+            min-width:16%;
+
+        }
+    }
+}
+
+////////////  ad  /////////////
+.ad-wrapper{
+
+
+}

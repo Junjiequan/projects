@@ -1,0 +1,135 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+html{
+    a,li{
+        list-style:none;
+        text-decoration:none;
+    }
+    font-size:62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+//////////////////////////////////////////
+                //color
+//////////////////////////////////////////
+// Primary
+$Cyan: hsl(180, 66%, 49%);
+$button: hsl(180, 66%, 69%);
+$DarkViolet: hsl(257, 27%, 26%);
+$bg: hsl(257, 27%, 95%);
+// Secondary
+$Red: hsl(0, 87%, 67%);
+// Neutral
+$White: hsl(0, 0%, 100%);
+$Gray: hsl(0, 0%, 75%);
+$GrayishViolet: hsl(257, 7%, 63%);
+$VeryDarkBlue: hsl(255, 11%, 22%);
+$VeryDarkViolet: hsl(260, 8%, 14%);
+
+
+$dark:(
+    cyan:$Cyan,
+    button:$button,
+    darkviolet:$DarkViolet,
+    red:$Red,
+    white:$White,
+    gray:$Gray,
+    grayishViolet: $GrayishViolet,
+    veryDarkBlue: $VeryDarkBlue,
+    veryDarkViolet:$VeryDarkViolet
+);
+//////////////////////////////////////////
+                //function
+//////////////////////////////////////////
+:root{
+    @each $name,$color in $dark{
+        --color-#{$name} : #{$color};
+    }
+};
+@function color($getColor){
+    @return var(--color-#{$getColor})
+};
+
+@mixin absolute($t,$r,$b,$l){
+    top:$t;
+    right:$r;
+    bottom:$b;
+    left:$l;
+}
+
+%global-btn{
+    max-width:200px;
+    max-height:70px;
+    text-align:center;
+    padding:1rem 2.5rem;
+    border-radius:50px;
+    background:color(cyan);
+    color:color(white);
+    cursor:pointer;
+    transition:background-color 0.2s ease-in-out;
+    &:hover{
+        color:color(white);
+        background:color(button);
+        transition:background-color 0.2s ease-in-out;
+    }
+    &:active{
+        transform:translateY(2px);
+    }
+    &:focus{
+        outline:2px dotted rgba($color: rgb(35, 187, 167), $alpha: 1)
+    }
+}
+//////////////////////////////////////////
+                //errors
+//////////////////////////////////////////
+.error-border{
+    border:3px solid color(red) !important;
+    &::placeholder{
+        opacity:0.4;
+        color:color(red);
+    }
+}
+.li-copy{
+    border:0;
+    height:40px;
+    width:100px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.4rem;
+    font-weight:bold;
+    color:white;
+    border-radius:10px;
+    background-color:color(cyan);
+    user-select: none;
+    cursor:pointer;
+    transition:background-color 0.2s ease-in-out;
+    &:hover{
+        color:color(white);
+        background-color:color(button);
+        transition:background-color 0.2s ease-in-out;
+    }
+    &:active{
+        transform:translateY(2px);
+    }
+    &:focus{
+        outline:2px dotted rgba($color: rgb(35, 187, 167), $alpha: 1)
+    }
+}
+.li-remove{
+    @extend .li-copy;
+    margin-left:5px;
+    width:40px;
+}
+.li-copied{
+    @extend .li-copy;
+    background:color(darkviolet);
+
+    &:hover{
+        color:none;
+        background:color(darkviolet);
+    }
+}
