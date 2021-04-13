@@ -26,6 +26,10 @@ html a, html li {
   --color-veryDarkViolet: #232127;
 }
 
+.focus:focus, .focus:active {
+  outline: 2px solid var(--color-veryDarkViolet);
+}
+
 .btn {
   width: 100%;
   min-width: 180px;
@@ -227,11 +231,11 @@ h3 {
   color: var(--color-grayishViolet);
   font-weight: 700;
   padding: 0 1.5rem;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.3s ease;
 }
 .top-wrapper .top-nav a:hover, .top-wrapper .top-login a:hover, .top-wrapper .top-nav a:active, .top-wrapper .top-login a:active, .top-wrapper .top-nav a:focus, .top-wrapper .top-login a:focus {
   color: var(--color-veryDarkViolet);
-  transition: color 0.2s ease-in-out;
+  transition: color 0.3s ease;
 }
 .top-wrapper .top-login {
   flex: 20%;

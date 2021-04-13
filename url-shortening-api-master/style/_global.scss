@@ -61,6 +61,12 @@ $dark:(
     left:$l;
 }
 //btn for hero and footer
+.focus{
+    &:focus,
+    &:active{
+        outline:2px solid color(veryDarkViolet);
+    }
+}
 .btn{
     @extend %global-btn;
     width:100%;
