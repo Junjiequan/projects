@@ -8,6 +8,7 @@ html{
         list-style:none;
         text-decoration:none;
     }
+    scroll-behavior:smooth;
     font-size:62.5%;
     font-family: 'Poppins', sans-serif;
 }
@@ -59,7 +60,20 @@ $dark:(
     bottom:$b;
     left:$l;
 }
-
+//btn for hero and footer
+.btn{
+    @extend %global-btn;
+    width:100%;
+    min-width:180px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:60px;
+    padding:2rem 5rem;
+    font-size: 2rem;
+    font-weight:700;
+    letter-spacing:0.05rem;
+}
 %global-btn{
     max-width:200px;
     max-height:70px;

@@ -5,7 +5,7 @@
 body{
     min-height:100vh;
     position:relative;
-    background:rgb(255, 255, 255);
+    background:color(white);
     color: color(veryDarkViolet);
     overflow-x:hidden;
 }
@@ -22,6 +22,10 @@ h2{
     letter-spacing:-0.15rem;
     line-height:9rem;
     color:color(veryDarkBlue);
+}
+h3{
+    font-size:4rem;
+    margin-bottom:1rem;
 }
 
 //////////////////////////////////////////
@@ -87,16 +91,6 @@ h2{
         flex-direction:column;
         .hero-button{
             margin-top:3rem;
-            a.btn{
-                @extend %global-btn;
-                width:100%;
-                display:flex;
-                padding:1.5rem 3.5rem;
-                font-size: 2rem;
-                font-weight:700;
-                letter-spacing:0.05rem;
-
-            }
         }
     }
     .hero-right{
@@ -117,6 +111,7 @@ h2{
 //////////////////////////////////////////
 main{
     margin-top:12rem;
+    padding-bottom:7rem;
     background:$bg;
 }
 .main-container{
@@ -277,10 +272,6 @@ main{
         width:80%;
         background:color(cyan);
     }
-    h3{
-        font-size:4rem;
-        margin-bottom:1rem;
-    }
     p{
         font-size:1.8rem;
         color:color(grayishViolet);
@@ -297,7 +288,7 @@ main{
         column-gap:2.8rem;
         text-align:left;
         h4{
-            font-size:2.4rem;
+            font-size:2.3rem;
             margin-bottom:2rem;
         }
         p{
@@ -350,6 +341,86 @@ main{
                    content:url(../images/icon-fully-customizable.svg);
                }
             }
+        }
+    }
+}
+//////////////////////////////////////////
+                //footer
+//////////////////////////////////////////
+footer{
+    background:linear-gradient(to bottom,hsl(257, 27%, 26%) 42.8%, hsl(260,8%,14%) 30%);
+    // background-size: 50% 44.8%;
+    .footer-container{
+        color:color(white);
+        display:flex;
+        flex-direction:column;
+    }
+}
+.footer-wrapper-event{
+    background: color(darkviolet) url(../images/bg-boost-desktop.png) no-repeat center/cover;
+    padding:5rem 17rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    .footer-button{
+        margin-top:2rem;
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+}
+.footer-wrapper-links{
+    background: color(veryDarkViolet);
+    padding:7rem 17rem;
+    display:flex;
+    flex-wrap:wrap;
+    font-size:1.5rem;
+    justify-content:space-between;
+    a{
+        color:color(white);
+        transition:all 0.3s ease-in-out;
+        &:hover{
+            transition:all 0.3s ease-in-out;
+            color:color(cyan);
+        }
+    }
+    .footer-logo{
+        flex-basis:25%;
+        padding-bottom:2rem;
+        svg > path{
+            fill:white;
+        }
+    }
+    .footer-links{
+        display:flex;
+        font-weight:700;
+        padding-bottom:2rem;
+        ul{
+            padding:0 4rem;
+            p{
+                pointer-events:none;
+            }
+            li{
+                font-weight:500;
+                padding-bottom:1rem;
+                color:color(gray);
+                transition:all 0.3s ease;
+                &:hover{
+                    transition:all 0.3s ease;
+                    color:color(cyan);
+                }
+            }
+            li.space{
+                margin-top:2rem;
+            }
+
+        }
+    }
+    .footer-icons{
+        font-size:2.5rem;
+        a{
+            padding:0 1rem;
         }
     }
 }
