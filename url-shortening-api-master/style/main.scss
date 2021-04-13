@@ -296,7 +296,6 @@ main{
     .content-boxes{
         z-index:10;
         display:flex;
-
         column-gap:2.8rem;
         text-align:left;
         h4{
@@ -314,7 +313,7 @@ main{
             background:color(white);
             padding:7rem 3rem 5rem;
             &:nth-child(1){
-                cursor:pointer;
+                cursor:default;
                 position:relative;
                 &:hover:after,
                 &:hover:before{
@@ -431,6 +430,7 @@ footer{
     }
     .footer-icons{
         font-size:2.5rem;
+        cursor:pointer;
         a{
             padding:0 1rem;
         }

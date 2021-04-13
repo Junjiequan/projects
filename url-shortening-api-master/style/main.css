@@ -481,7 +481,7 @@ main {
   padding: 7rem 3rem 5rem;
 }
 .content-wrapper .content-boxes .col:nth-child(1), .content-wrapper .content-boxes .col:nth-child(3), .content-wrapper .content-boxes .col:nth-child(2) {
-  cursor: pointer;
+  cursor: default;
   position: relative;
 }
 .content-wrapper .content-boxes .col:nth-child(1):hover:after, .content-wrapper .content-boxes .col:hover:nth-child(3):after, .content-wrapper .content-boxes .col:hover:nth-child(2):after, .content-wrapper .content-boxes .col:nth-child(1):hover:before, .content-wrapper .content-boxes .col:hover:nth-child(3):before, .content-wrapper .content-boxes .col:hover:nth-child(2):before {
@@ -594,6 +594,7 @@ footer .footer-container {
 }
 .footer-wrapper-links .footer-icons {
   font-size: 2.5rem;
+  cursor: pointer;
 }
 .footer-wrapper-links .footer-icons a {
   padding: 0 1rem;

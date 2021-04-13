@@ -1,7 +1,8 @@
 const urlRegex =/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-const linkError = document.querySelector('.warning-zone')
+const linkError = document.querySelector('.warning-zone');
 const urlInput = document.querySelector('.link-input');
-const ulContainer = document.querySelector('.shorten-list')
+const ulContainer = document.querySelector('.shorten-list');
+
 
 
 document.querySelector('.url-btn').addEventListener('click', ()=>{    
@@ -24,6 +25,10 @@ document.querySelector('.url-btn').addEventListener('click', ()=>{
         urlAfter.classList.add('after');
         urlAfter.innerText = ('put API here');
 
+        //this/////////////////////////////////////////////////
+        //data part
+        //this/////////////////////////////////////////////////
+        
         //buttons
         const btn = document.createElement('div');
         btn.classList.add('buttons')
@@ -92,3 +97,5 @@ ulContainer.addEventListener('click',(e)=>{
 })
 // history.replaceState(null, null, ' ');
 history.pushState(null, null, ' ')
+
+
