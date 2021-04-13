@@ -430,8 +430,9 @@ footer{
     }
     .footer-icons{
         font-size:2.5rem;
-        cursor:pointer;
+        cursor:default;
         a{
+            cursor:pointer;
             padding:0 1rem;
         }
     }
