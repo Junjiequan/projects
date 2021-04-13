@@ -184,11 +184,11 @@ h2 {
 }
 
 .top-wrapper {
-  margin: 5rem 17rem;
+  padding: 5rem 17rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-basis: 100%;
+  width: 100%;
   font-size: 1.5rem;
 }
 .top-wrapper .top-logo {
@@ -379,7 +379,7 @@ main {
   background: var(--color-cyan);
 }
 .shorten-list .shorten-link .links .after {
-  max-width: 40%;
+  max-width: 35%;
   overflow: auto;
   color: var(--color-cyan);
   /* Track */
@@ -455,6 +455,7 @@ main {
 .content-wrapper .content-boxes .col {
   border-radius: 10px;
   max-width: 340px;
+  min-width: 200px;
   box-shadow: 0px 0px 5px rgba(151, 151, 151, 0.3);
   background: var(--color-white);
   padding: 7rem 3rem 5rem;
