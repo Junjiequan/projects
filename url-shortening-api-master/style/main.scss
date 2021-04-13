@@ -8,6 +8,7 @@ body{
     background:color(white);
     color: color(veryDarkViolet);
     overflow-x:hidden;
+    
 }
 .size1440{
     display:flex;
@@ -113,6 +114,7 @@ main{
     margin-top:12rem;
     padding-bottom:7rem;
     background:$bg;
+
 }
 .main-container{
     display:flex;
@@ -126,6 +128,7 @@ main{
     padding:0 17rem;
     display:flex;
     flex-wrap:wrap;
+
     .before-shorten{
         min-width:350px;
         width:100%;
@@ -177,9 +180,11 @@ main{
     min-width:350px;
     width:100%;
     font-size:1.8rem;
-    transition:all 0.3s ease-in-out;
+    // transition:all 0.3s ease-in-out;
     .shorten-link{
-        margin:2rem 0;
+        transform:scaleX(0);
+        opacity:0;
+        margin: 2rem 0;
         padding:1.5rem 3rem;
         flex-wrap:wrap;
         gap:2rem 0;
@@ -189,6 +194,7 @@ main{
         justify-content:space-between;
         align-items:center;
         width:100%;
+        transition:all 0.5s ease-in-out;
         .links{
             min-width:84%;
             max-width:84%;
@@ -196,7 +202,9 @@ main{
             flex-wrap:wrap;
             gap:2rem 0;
             justify-content:space-between;
+            transition:all 0.5s ease-in-out;
             .before{
+                white-space:nowrap;
                 max-width:60%;
                 overflow:auto;
                 margin-right:3rem;
@@ -220,6 +228,7 @@ main{
                 }
             }
             .after{
+                white-space:nowrap;
                 max-width:35%;
                 overflow:auto;
                 color:color(cyan);
@@ -246,6 +255,9 @@ main{
             display:flex;
             justify-content:flex-end;
             min-width:16%;
+            button i{
+                pointer-events:none;
+            }
         }
     }
 }

@@ -7,24 +7,44 @@ const ulContainer = document.querySelector('.shorten-list')
 document.querySelector('.url-btn').addEventListener('click', ()=>{    
     if(urlInput.value.match(urlRegex)){
         const li = document.createElement('li');
-        li.classList.add('shorten-link');
-
+        //links
         const url = document.createElement('div');
         url.classList.add('links');
 
         const urlBefore = document.createElement('div');
         urlBefore.classList.add('before');
-        urlBefore.innerText = urlInput.value;
-
+        urlBefore.innerText = urlInput.value
+        
         const urlAfter = document.createElement('div');
         urlAfter.classList.add('after');
-        urlAfter.innerText = ('put API here')
+        urlAfter.innerText = ('put API here');
+
+        //buttons
+        const btn = document.createElement('div');
+        btn.classList.add('buttons')
+
+        const btnCopy = document.createElement('button');
+        btnCopy.classList.add('li-copy');
+        btnCopy.innerText = 'Copy'
+
+        const btnRemove = document.createElement('button');
+        btnRemove.innerHTML = `<i class="far fa-trash-alt"></i>`
+        btnRemove.classList.add('li-remove');
+
+
         url.appendChild(urlBefore);
         url.appendChild(urlAfter);
+        btn.appendChild(btnCopy);
+        btn.appendChild(btnRemove);
         li.appendChild(url);
+        li.appendChild(btn);
+        li.classList.add('shorten-link');
         ulContainer.appendChild(li);
         
-
+        setTimeout(()=>{
+            li.style.opacity = 1;
+            li.style.transform = "scaleX(1)"
+        },100)
         //remove text
         urlInput.value = '';
     } else {
@@ -32,3 +52,34 @@ document.querySelector('.url-btn').addEventListener('click', ()=>{
         linkError.style.opacity= 1;
     }
 })
+const isButton = (e) =>{
+    const target = e.target
+    const targetLi = target.closest('.shorten-link')
+    if(target.classList[0] == 'li-remove'){
+        targetLi.style.transform = "scaleY(0)"
+        targetLi.style.opacity = 0;
+        setTimeout(()=>{
+            targetLi.style.transform = "scaleX(0)"
+            targetLi.remove();
+        }, 500)
+    }
+    if(target.classList[0] == 'li-copy'){
+        if(target.innerText == 'Copy'){
+            target.classList.add('li-copied')
+            target.innerText = 'Copied';
+            //Creating copy environment.
+            const textCopy = targetLi.querySelector('.after').innerText;
+            const copyCondition = document.createElement('input');
+            copyCondition.type ="text"
+            copyCondition.value = textCopy;
+            document.body.appendChild(copyCondition);
+            copyCondition.select();
+            document.execCommand("copy")
+            document.body.removeChild(copyCondition);
+        } 
+        
+    }
+}
+
+
+ulContainer.addEventListener('click',isButton)

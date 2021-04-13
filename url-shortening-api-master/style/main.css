@@ -347,9 +347,10 @@ main {
   min-width: 350px;
   width: 100%;
   font-size: 1.8rem;
-  transition: all 0.3s ease-in-out;
 }
 .shorten-list .shorten-link {
+  transform: scaleX(0);
+  opacity: 0;
   margin: 2rem 0;
   padding: 1.5rem 3rem;
   flex-wrap: wrap;
@@ -360,6 +361,7 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  transition: all 0.5s ease-in-out;
 }
 .shorten-list .shorten-link .links {
   min-width: 84%;
@@ -368,8 +370,10 @@ main {
   flex-wrap: wrap;
   gap: 2rem 0;
   justify-content: space-between;
+  transition: all 0.5s ease-in-out;
 }
 .shorten-list .shorten-link .links .before {
+  white-space: nowrap;
   max-width: 60%;
   overflow: auto;
   margin-right: 3rem;
@@ -391,6 +395,7 @@ main {
   background: var(--color-cyan);
 }
 .shorten-list .shorten-link .links .after {
+  white-space: nowrap;
   max-width: 35%;
   overflow: auto;
   color: var(--color-cyan);
@@ -414,6 +419,9 @@ main {
   display: flex;
   justify-content: flex-end;
   min-width: 16%;
+}
+.shorten-list .shorten-link .buttons button i {
+  pointer-events: none;
 }
 
 .content-wrapper {
