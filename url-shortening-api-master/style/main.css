@@ -120,6 +120,10 @@ html a, html li {
   background: var(--color-darkviolet);
   transition: background-color 0.3s ease;
 }
+.li-copied:hover {
+  color: none;
+  background: var(--color-darkviolet);
+}
 
 @-webkit-keyframes jelly {
   0% {
