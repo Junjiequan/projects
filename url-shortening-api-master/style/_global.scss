@@ -97,15 +97,17 @@ $dark:(
     }
 }
 //////////////////////////////////////////
-                //errors
+            //styles for javascript
 //////////////////////////////////////////
 .error-border{
+    transition:all 0.1s ease;
     border:3px solid color(red) !important;
     &::placeholder{
         opacity:0.4;
         color:color(red);
     }
 }
+
 .li-copy{
     border:0;
     height:40px;

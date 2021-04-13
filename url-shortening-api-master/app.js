@@ -6,6 +6,11 @@ const ulContainer = document.querySelector('.shorten-list')
 
 document.querySelector('.url-btn').addEventListener('click', ()=>{    
     if(urlInput.value.match(urlRegex)){
+        //remove error border
+        linkError.innerText = '';
+        linkError.style.opacity= 0;
+        urlInput.classList.remove('error-border')
+
         const li = document.createElement('li');
         //links
         const url = document.createElement('div');
@@ -50,9 +55,11 @@ document.querySelector('.url-btn').addEventListener('click', ()=>{
     } else {
         linkError.innerText = 'Please add a link';
         linkError.style.opacity= 1;
+        urlInput.classList.add("error-border")
     }
 })
-const isButton = (e) =>{
+
+ulContainer.addEventListener('click',(e)=>{
     const target = e.target
     const targetLi = target.closest('.shorten-link')
     if(target.classList[0] == 'li-remove'){
@@ -76,10 +83,11 @@ const isButton = (e) =>{
             copyCondition.select();
             document.execCommand("copy")
             document.body.removeChild(copyCondition);
-        } 
-        
+        } else{
+            target.classList.remove('li-copied');
+            target.innerText = 'Copy';
+        }
     }
-}
-
-
-ulContainer.addEventListener('click',isButton)
+})
+// history.replaceState(null, null, ' ');
+history.pushState(null, null, ' ')
