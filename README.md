@@ -1,4 +1,6 @@
 # 3rd month of self teaching front end :)
+I only make stuff that I feel proud of. 😉
+
 ## Frontend Mentor challenge
 
 | Projects-name | Repo-link |
