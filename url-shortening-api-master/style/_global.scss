@@ -93,7 +93,8 @@ $dark:(
         transform:translateY(2px);
     }
     &:focus{
-        outline:2px dotted rgba($color: rgb(35, 187, 167), $alpha: 1)
+        outline:2px dotted rgba($color: rgb(35, 187, 167), $alpha: 1);
+        color:color(white);
     }
 }
 //////////////////////////////////////////
@@ -143,9 +144,9 @@ $dark:(
 .li-copied{
     @extend .li-copy;
     background:color(darkviolet);
-
-    &:hover{
-        color:none;
-        background:color(darkviolet);
-    }
+    transition:background-color 0.3s ease;
+    // &:hover{
+    //     color:none;
+    //     background:color(darkviolet);
+    // }
 }

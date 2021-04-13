@@ -83,10 +83,11 @@ ulContainer.addEventListener('click',(e)=>{
             copyCondition.select();
             document.execCommand("copy")
             document.body.removeChild(copyCondition);
-        } else{
-            target.classList.remove('li-copied');
-            target.innerText = 'Copy';
-        }
+            setTimeout(()=>{
+                target.classList.remove('li-copied');
+                target.innerText = 'Copy';
+            },1000)
+        } 
     }
 })
 // history.replaceState(null, null, ' ');

@@ -60,6 +60,7 @@ html a, html li {
 }
 .top-wrapper .top-login .signup:focus, .urlshorten-wrapper .before-shorten .form-shorten .url-btn:focus, .btn:focus {
   outline: 2px dotted #23bba7;
+  color: var(--color-white);
 }
 
 .error-border {
@@ -117,10 +118,7 @@ html a, html li {
 
 .li-copied {
   background: var(--color-darkviolet);
-}
-.li-copied:hover {
-  color: none;
-  background: var(--color-darkviolet);
+  transition: background-color 0.3s ease;
 }
 
 @-webkit-keyframes jelly {
