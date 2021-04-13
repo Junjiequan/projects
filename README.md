@@ -1,5 +1,5 @@
 # 3rd month of self teaching front end :)
-My skills & knowledges are maybe limited , but I only make stuff that I feel proud of within my skill level. 😉
+I only make stuff that I feel proud of. 😉
 
 ## Frontend Mentor challenge
 
