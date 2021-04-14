@@ -646,6 +646,10 @@ footer .footer-container {
   flex-basis: 25%;
   padding-bottom: 2rem;
 }
+.footer-wrapper-links .footer-logo svg {
+  width: 100%;
+  height: 100%;
+}
 .footer-wrapper-links .footer-logo svg > path {
   fill: white;
 }
@@ -663,10 +667,12 @@ footer .footer-container {
 .footer-wrapper-links .footer-links ul li {
   font-weight: 500;
   padding-bottom: 1rem;
-  color: var(--color-gray);
   transition: all 0.3s ease;
 }
-.footer-wrapper-links .footer-links ul li:hover {
+.footer-wrapper-links .footer-links ul li a {
+  color: var(--color-gray);
+}
+.footer-wrapper-links .footer-links ul li a:hover {
   transition: all 0.3s ease;
   color: var(--color-cyan);
 }
@@ -680,6 +686,10 @@ footer .footer-container {
 .footer-wrapper-links .footer-icons a {
   cursor: pointer;
   padding: 0 1rem;
+}
+.footer-wrapper-links .footer-icons a i {
+  width: 20px;
+  height: 20px;
 }
 
 @media screen and (max-width: 1388px) {
@@ -850,7 +860,6 @@ footer .footer-container {
 }
 @media screen and (max-width: 840px) {
   .top-wrapper {
-    all: unset;
     padding: 5rem 7rem;
     position: relative;
     display: flex;
