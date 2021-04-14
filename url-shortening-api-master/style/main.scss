@@ -61,6 +61,8 @@ h3{
         flex:87%;
         display:flex;
         justify-content:space-between;
+        transition:transform 0.3s ease;
+        transform: translateX(0);
         .top-nav a{
             color:color(grayishViolet);
             font-weight:700;
@@ -620,7 +622,7 @@ footer{
         }
         .top-nav-wrapper{
             all:unset;  //remove margin paddings fonts;
-            display:none;
+            display:flex;
             background:color(darkviolet);
             border-radius:10px;
             z-index:10;

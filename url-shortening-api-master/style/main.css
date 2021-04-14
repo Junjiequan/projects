@@ -302,6 +302,8 @@ h3 {
   flex: 87%;
   display: flex;
   justify-content: space-between;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
 }
 .top-wrapper .top-nav-wrapper .top-nav a, .top-wrapper .top-nav-wrapper .top-login a {
   color: var(--color-grayishViolet);
@@ -860,7 +862,7 @@ footer .footer-container {
   }
   .top-wrapper .top-nav-wrapper {
     all: unset;
-    display: none;
+    display: flex;
     background: var(--color-darkviolet);
     border-radius: 10px;
     z-index: 10;

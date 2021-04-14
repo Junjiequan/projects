@@ -93,7 +93,6 @@ ulContainer.addEventListener('click',(e)=>{
         targetLi.style.transform = "scaleY(0)"
         targetLi.style.opacity = 0;
         setTimeout(()=>{
-            targetLi.style.transform = "scaleX(0)"
             targetLi.remove();
         }, 500)
     }
@@ -122,42 +121,38 @@ ulContainer.addEventListener('click',(e)=>{
 //onClick for mobile nav menu icon
 let isClick = true;
 document.addEventListener('click',(e)=>{
-    const getDisplay = getComputedStyle(navBox).getPropertyValue('display')
     const target = e.target;
-    //setClick frequency to prevent fast click
+    //set Click frequency to prevent fast click
     if(isClick){
         isClick = false;
         setTimeout(()=>{
             isClick=true;
         },500)
         if( target.classList[0] == 'real-burger'){
+            if(navBox.style.opacity != "1"){
+                navBox.style.opacity = "1"
+            };
+            navBox.style.transform = 'translateX(0)';
             navIcon.classList.add('rotate');
-            setTimeout(()=>{
-                navIcon.classList.remove('rotate')
-            },500)
-            if(getDisplay == 'none'){
-                navBox.style.display = 'flex';
-                setTimeout(()=>{
-                    navBox.style.transform = 'translateX(0)'
-                },100)
-            } else {
-                navBox.style.transform = 'translateX(-140%)'
-                setTimeout(()=>{
-                    navBox.style.display = 'none';
-                },500)
+            navBox.classList.toggle('triggered');
+            setTimeout(()=> navIcon.classList.remove('rotate') ,500);
+            if(!navBox.classList.contains('triggered')){
+                navBox.style.transform = 'translateX(-140%)';
             }
+
         } else {
-            navBox.style.transform = 'translateX(-140%)'
-            setTimeout(()=>{
-                navBox.style.display = 'none';
-            },500)
+            //click anywhere close nav menu
+            navBox.style.transform = 'translateX(-140%)';
+            navBox.classList.toggle('triggered');
         }
     }
 })
-
 window.addEventListener('resize', ()=>{
     if(window.innerWidth >= 841){
-        navBox.style.display = 'flex';
+        navBox.style.opacity = "1";
         navBox.style.transform = 'translateX(0)'
+    } else {
+        navBox.style.opacity = "0";
+        navBox.style.transform = 'translateX(-140%)'
     }
 });
