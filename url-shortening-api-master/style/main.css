@@ -27,6 +27,7 @@ html a, html li {
 }
 
 .jay {
+  transition: opacity 0.7s ease-in-out;
   z-index: 999;
   position: fixed;
   right: 1rem;

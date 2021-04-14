@@ -159,3 +159,10 @@ window.addEventListener('resize', ()=>{
         navBox.style.transform = 'translateX(-140%)'
     }
 });
+
+document.querySelector('.jay').addEventListener('click', ()=>{
+    document.querySelector('.jay').style.opacity = '0';
+    setTimeout(()=>{
+        document.querySelector('.jay').style.display = 'none';
+    },700)
+})
