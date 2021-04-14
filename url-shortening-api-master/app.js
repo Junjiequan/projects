@@ -142,8 +142,11 @@ document.addEventListener('click',(e)=>{
 
         } else {
             //click anywhere close nav menu
-            navBox.style.transform = 'translateX(-140%)';
-            navBox.classList.toggle('triggered');
+            if(window.innerWidth < 841){
+                navBox.style.transform = 'translateX(-140%)';
+                navBox.classList.toggle('triggered');
+            }
+            
         }
     }
 })
