@@ -813,6 +813,7 @@ footer .footer-container {
   .footer-wrapper-links .footer-links ul {
     min-width: 300px;
     padding: 0;
+    margin-bottom: 2rem;
   }
 }
 @media screen and (max-width: 1132px) {
