@@ -19,5 +19,5 @@ I only make stuff that I feel proud of. 😉
 | 12. [clipboard-landing-page-master](https://a331998513.github.io/projects/clipboard-landing-page-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/clipboard-landing-page-master)  |
 | 13. [crowdfunding-product-page-main](https://a331998513.github.io/projects/crowdfunding-product-page-main/)  | [Repo](https://github.com/a331998513/projects/tree/main/crowdfunding-product-page-main)  |
 | 14. [Room homepage](https://a331998513.github.io/projects/room-homepage-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/room-homepage-master)  |
-| WIP. [Shortly URL shortening API Challenge](https://a331998513.github.io/projects/url-shortening-api-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/url-shortening-api-master)  |
+| 15. [Shortly URL shortening API Challenge](https://a331998513.github.io/projects/url-shortening-api-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/url-shortening-api-master)  |
 | 99. []()  | [Repo]()  |
