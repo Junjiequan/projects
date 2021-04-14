@@ -902,7 +902,6 @@ footer .footer-container {
     color: var(--color-white);
     transition: color 0.3s ease;
     outline: 2px solid var(--color-white);
-    width: 150px;
   }
   .top-wrapper .top-nav-wrapper .top-login {
     margin-top: 2rem;
@@ -925,6 +924,7 @@ footer .footer-container {
     min-width: 100%;
   }
   .top-wrapper .top-nav-wrapper .top-login .signup:focus, .top-wrapper .top-nav-wrapper .top-login .signup:hover {
+    width: 100%;
     outline: none;
   }
 }

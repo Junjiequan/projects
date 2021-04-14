@@ -651,6 +651,7 @@ footer{
             transform: translateX(-140%);
             transition: transform 0.5s ease-in-out;
             .top-nav a{
+                
                 color:color(white);
                 display:flex;
                 flex-direction:column;
@@ -662,7 +663,7 @@ footer{
                 color:color(white);
                 transition:color 0.3s ease;
                 outline:2px solid color(white);
-                width:150px;
+
                 }
             }
             .top-login{
@@ -685,6 +686,7 @@ footer{
                     min-width:100%;
                     &:focus,
                     &:hover{
+                        width:100%;
                         outline:none;
                     }
                 }
