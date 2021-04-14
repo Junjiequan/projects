@@ -501,13 +501,14 @@ footer{
         .before-shorten{
             padding-bottom:0rem;
             .form-shorten{
-                margin:2rem 2rem;
+                // margin:2rem 2rem;
+                margin:5rem 6.6rem 1rem;
                 .link-input{
-                    width:100%;
+                    flex:1 1 70%;
                 }
                 .url-btn{
-                    margin-top:2rem;
-                    min-width:100%;
+                    margin-left:2rem;
+                    flex:1 1 30%
                 }
             }
             .warning-zone{
@@ -616,6 +617,26 @@ footer{
                 button{
                     flex:0.5;
                 }
+            }
+        }
+    }
+}
+@media screen and (max-width:990px){
+    .urlshorten-wrapper{
+        .before-shorten{
+            .form-shorten{
+                margin:2rem 2rem;
+                .url-btn{
+                    margin-left:0;
+                    margin-top:2rem;
+                    min-width:100%;
+                }
+            }
+            .warning-zone{
+                position:relative;
+                text-align:center;
+                margin:0 2rem;
+                margin-bottom:2rem;
             }
         }
     }

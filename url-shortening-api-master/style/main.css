@@ -738,14 +738,14 @@ footer .footer-container {
     padding-bottom: 0rem;
   }
   .urlshorten-wrapper .before-shorten .form-shorten {
-    margin: 2rem 2rem;
+    margin: 5rem 6.6rem 1rem;
   }
   .urlshorten-wrapper .before-shorten .form-shorten .link-input {
-    width: 100%;
+    flex: 1 1 70%;
   }
   .urlshorten-wrapper .before-shorten .form-shorten .url-btn {
-    margin-top: 2rem;
-    min-width: 100%;
+    margin-left: 2rem;
+    flex: 1 1 30%;
   }
   .urlshorten-wrapper .before-shorten .warning-zone {
     position: relative;
@@ -858,6 +858,22 @@ footer .footer-container {
   }
   .urlshorten-wrapper .shorten-list .buttons button {
     flex: 0.5;
+  }
+}
+@media screen and (max-width: 990px) {
+  .urlshorten-wrapper .before-shorten .form-shorten {
+    margin: 2rem 2rem;
+  }
+  .urlshorten-wrapper .before-shorten .form-shorten .url-btn {
+    margin-left: 0;
+    margin-top: 2rem;
+    min-width: 100%;
+  }
+  .urlshorten-wrapper .before-shorten .warning-zone {
+    position: relative;
+    text-align: center;
+    margin: 0 2rem;
+    margin-bottom: 2rem;
   }
 }
 @media screen and (max-width: 840px) {
