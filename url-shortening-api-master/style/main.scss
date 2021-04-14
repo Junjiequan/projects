@@ -661,9 +661,7 @@ footer{
                 &:active,
                 &:focus{
                 color:color(white);
-                transition:color 0.3s ease;
                 outline:2px solid color(white);
-
                 }
             }
             .top-login{
@@ -680,6 +678,7 @@ footer{
                 .focus{
                     margin-top:3rem;
                     margin-bottom:1.5rem;
+                    width:100%;
                 }
                 .signup{
                     margin:0;

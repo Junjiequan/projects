@@ -900,7 +900,6 @@ footer .footer-container {
   }
   .top-wrapper .top-nav-wrapper .top-nav a:hover, .top-wrapper .top-nav-wrapper .top-login a:hover, .top-wrapper .top-nav-wrapper .top-nav a:active, .top-wrapper .top-nav-wrapper .top-login a:active, .top-wrapper .top-nav-wrapper .top-nav a:focus, .top-wrapper .top-nav-wrapper .top-login a:focus {
     color: var(--color-white);
-    transition: color 0.3s ease;
     outline: 2px solid var(--color-white);
   }
   .top-wrapper .top-nav-wrapper .top-login {
@@ -918,6 +917,7 @@ footer .footer-container {
   .top-wrapper .top-nav-wrapper .top-login .focus {
     margin-top: 3rem;
     margin-bottom: 1.5rem;
+    width: 100%;
   }
   .top-wrapper .top-nav-wrapper .top-login .signup {
     margin: 0;
