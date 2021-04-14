@@ -60,6 +60,7 @@ h3{
     .top-nav-wrapper{
         flex:87%;
         display:flex;
+        opacity:1;
         justify-content:space-between;
         transition:transform 0.3s ease;
         transform: translateX(0);
@@ -622,7 +623,6 @@ footer{
         }
         .top-nav-wrapper{
             all:unset;  //remove margin paddings fonts;
-            display:flex;
             background:color(darkviolet);
             border-radius:10px;
             z-index:10;

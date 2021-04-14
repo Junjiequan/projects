@@ -301,6 +301,7 @@ h3 {
 .top-wrapper .top-nav-wrapper {
   flex: 87%;
   display: flex;
+  opacity: 1;
   justify-content: space-between;
   transition: transform 0.3s ease;
   transform: translateX(0);
@@ -862,7 +863,6 @@ footer .footer-container {
   }
   .top-wrapper .top-nav-wrapper {
     all: unset;
-    display: flex;
     background: var(--color-darkviolet);
     border-radius: 10px;
     z-index: 10;

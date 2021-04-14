@@ -17,7 +17,7 @@ const getUrl = (url) =>{
             .then (resp => resp.json())
             .then (data => data.result)
 }
-//getButton
+//Create li and output result
 document.querySelector('.url-btn').addEventListener('click', async ()=>{    
     if(urlInput.value.match(urlRegex)){
         //remove error border
@@ -146,7 +146,6 @@ document.addEventListener('click',(e)=>{
                 navBox.style.transform = 'translateX(-140%)';
                 navBox.classList.toggle('triggered');
             }
-            
         }
     }
 })
