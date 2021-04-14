@@ -18,7 +18,8 @@ const getUrl = (url) =>{
             .then (data => data.result)
 }
 //Create li and output result
-document.querySelector('.url-btn').addEventListener('click', async ()=>{    
+document.querySelector('.url-btn').addEventListener('click', async (e)=>{    
+    e.preventDefault();
     if(urlInput.value.match(urlRegex)){
         //remove error border
         linkError.innerText = '';
