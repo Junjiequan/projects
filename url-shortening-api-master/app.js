@@ -1,4 +1,3 @@
-
 //preserve previous position
 history.pushState(null, null, ' ')
 // history.replaceState(null, null, ' ');
@@ -29,7 +28,7 @@ document.querySelector('.url-btn').addEventListener('click', async ()=>{
         //start fetching data
         document.querySelector('.url-btn').innerText = 'Loading...';
         document.querySelector('.url-btn').classList.add('loading');
-        // const getLink =  await getUrl(urlInput.value)
+        const getLink =  await getUrl(urlInput.value)
 
         //create container for generated links
         const li = document.createElement('li');
