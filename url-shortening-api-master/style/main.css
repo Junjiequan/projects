@@ -647,10 +647,6 @@ footer .footer-container {
   flex-basis: 25%;
   padding-bottom: 2rem;
 }
-.footer-wrapper-links .footer-logo svg {
-  width: 100%;
-  height: 100%;
-}
 .footer-wrapper-links .footer-logo svg > path {
   fill: white;
 }
