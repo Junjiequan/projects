@@ -665,6 +665,10 @@ footer .footer-container {
 .footer-wrapper-links .footer-links ul p {
   pointer-events: none;
 }
+.footer-wrapper-links .footer-links ul li:nth-child(1), .footer-wrapper-links .footer-links ul .content-wrapper .content-boxes li.col:nth-child(2), .content-wrapper .content-boxes .footer-wrapper-links .footer-links ul li.col:nth-child(2), .footer-wrapper-links .footer-links ul .content-wrapper .content-boxes li.col:nth-child(3), .content-wrapper .content-boxes .footer-wrapper-links .footer-links ul li.col:nth-child(3) {
+  font-weight: 700;
+  padding: 0;
+}
 .footer-wrapper-links .footer-links ul li {
   font-weight: 500;
   padding-bottom: 1rem;

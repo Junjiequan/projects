@@ -428,6 +428,10 @@ footer{
             p{
                 pointer-events:none;
             }
+            li:nth-child(1){
+                font-weight:700;
+                padding:0;
+            }
             li{
                 font-weight:500;
                 padding-bottom:1rem;
