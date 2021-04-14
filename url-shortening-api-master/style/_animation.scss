@@ -62,3 +62,8 @@
       transform:rotate(60deg);
   }
 }
+@keyframes rotate360{
+  100%{
+    transform:rotate(360deg);
+  }
+}

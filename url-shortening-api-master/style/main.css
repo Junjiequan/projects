@@ -26,6 +26,20 @@ html a, html li {
   --color-veryDarkViolet: #232127;
 }
 
+.jay {
+  z-index: 999;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  background: url(../images/image.jpg) no-repeat center center;
+  background-size: contain;
+  -webkit-animation: rotate360 linear 4s infinite both;
+          animation: rotate360 linear 4s infinite both;
+}
+
 .focus:focus, .focus:active {
   outline: 2px solid var(--color-veryDarkViolet);
 }
@@ -240,6 +254,16 @@ html a, html li {
   }
   70% {
     transform: rotate(60deg);
+  }
+}
+@-webkit-keyframes rotate360 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate360 {
+  100% {
+    transform: rotate(360deg);
   }
 }
 body {
@@ -945,6 +969,20 @@ footer .footer-container {
   }
 }
 @media screen and (max-width: 545px) {
+  .jay {
+    z-index: 999;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    background: url(../images/image.jpg) no-repeat center center;
+    background-size: contain;
+    -webkit-animation: rotate360 linear 4s infinite both;
+            animation: rotate360 linear 4s infinite both;
+  }
+
   h2 {
     font-size: 3.5rem;
     line-height: 4.5rem;
