@@ -28,13 +28,13 @@ h3{
     font-size:4rem;
     margin-bottom:1rem;
 }
-
 //////////////////////////////////////////
                 //top
 //////////////////////////////////////////
 .top-container{
     display:flex;
     flex-direction:column;
+    justify-content:center;
 }
 .top-wrapper{
     padding:5rem 17rem;
@@ -44,15 +44,24 @@ h3{
     width:100%;
     font-size:1.5rem;
     .top-logo{
-        flex:12%;
+        flex:13%;
         img{
             width:12.1rem;
             max-height:3.3rem;
         }
     }
-    .top-nav{
-        flex:62%;
-        a{
+    .real-burger{
+        display:none;
+        cursor:pointer;
+        i{
+            pointer-events:none;
+        }
+    }
+    .top-nav-wrapper{
+        flex:87%;
+        display:flex;
+        justify-content:space-between;
+        .top-nav a{
             color:color(grayishViolet);
             font-weight:700;
             padding:0 1.5rem;
@@ -64,23 +73,22 @@ h3{
                 transition:color 0.3s ease;
             }
         }
-    }
-    .top-login{
-        @extend .top-nav;
-        flex:20%;
-        display:flex;
-        align-items:center;
-        justify-content:flex-end;
-        .signup{
-            margin-left:2.5rem;
-            @extend %global-btn;
+        .top-login{
+            @extend .top-nav;
+            display:flex;
+            align-items:center;
+            justify-content:flex-end;
+            .signup{
+                margin-left:2.5rem;
+                @extend %global-btn;
+            }
         }
     }
+    
 }
 .hero-wrapper{
     margin:3rem 0 3rem 17rem;
     display:flex;
-    flex-wrap:wrap;
     font-size:2.3rem;
     justify-content:flex-start;
     color:color(grayishViolet);
@@ -129,19 +137,19 @@ main{
     display:flex;
     flex-wrap:wrap;
     .before-shorten{
-        min-width:350px;
         width:100%;
+        padding-bottom:3rem;
         min-height:170px;
-        background:color(darkviolet) url(../images/bg-shorten-desktop.svg) no-repeat center/cover;
+        background:color(darkviolet) url(../images/bg-shorten-desktop.svg) no-repeat center /cover;
         border-radius:10px;
+        position:relative;
         .form-shorten{
             margin:5rem 6.6rem 1rem;
             display:flex;
             flex-wrap:wrap;
-            gap:1rem;            
             justify-content:space-between;
             .link-input{
-                width:80%;
+                width:78%;
                 border-radius:10px;
                 outline:none;
                 border:0;
@@ -163,30 +171,30 @@ main{
                 font-size:2rem;
                 font-weight:700;
                 color:white;
+                &:focus{
+                    outline:none;
+                }
             }
         }
         .warning-zone{
+            position:absolute;
             margin:0 6.6rem;
             font-size:1.6rem;
             font-style:italic;
             color:color(red);
             transition:all 0.3s ease-in-out;
             opacity:0;
-            padding-bottom:1rem;
         }
     }
 }
 .shorten-list{
-    min-width:350px;
     width:100%;
     font-size:1.8rem;
-    // transition:all 0.3s ease-in-out;
     .shorten-link{
         transform:scaleX(0);
         opacity:0;
         margin: 2rem 0;
         padding:1.5rem 3rem;
-        flex-wrap:wrap;
         gap:2rem 0;
         background:white;
         border-radius:10px;
@@ -239,12 +247,10 @@ main{
                 &::-webkit-scrollbar-track {
                     background: color(white); 
                 }
-                
                 /* Handle */
                 &::-webkit-scrollbar-thumb {
                     background: color(grayishViolet); 
                 }
-                
                 /* Handle on hover */
                 &::-webkit-scrollbar-thumb:hover {
                     background: color(cyan); ; 
@@ -261,7 +267,6 @@ main{
         }
     }
 }
-
 ////////////  ad  /////////////
 .content-wrapper{
     margin-top:3rem;
@@ -322,10 +327,11 @@ main{
                 &::before{
                     z-index:1;
                     position:absolute;
-                    top:-1.6rem;left:5.5rem;
+                    top:-1.5rem;left:5.5rem;
                     content:url(../images/icon-brand-recognition.svg);
-                    width:70px;
-                    height:70px;
+                    width:45px;
+                    height:45px;
+
                 }
                 &::after{
                     content:'';
@@ -335,6 +341,7 @@ main{
                     border-radius:100%;
                     width:90px;
                     height:90px;
+
                 }
             }
             &:nth-child(2){
@@ -348,7 +355,7 @@ main{
                 transform:translateY(10rem);
                 @extend :nth-child(1);
                &::before{
-                   left:5.1rem;
+                   left:5rem;
                    content:url(../images/icon-fully-customizable.svg);
                }
             }
@@ -385,7 +392,7 @@ footer{
     background: color(veryDarkViolet);
     padding:7rem 17rem;
     display:flex;
-    flex-wrap:wrap;
+    
     font-size:1.5rem;
     justify-content:space-between;
     a{
@@ -435,5 +442,260 @@ footer{
             cursor:pointer;
             padding:0 1rem;
         }
+    }
+}
+@media screen and (max-width:1388px){
+    h2{
+        font-size:6rem;
+        line-height:7rem;
+        margin-bottom:1rem;
+    }
+    .top-wrapper{
+        padding:5rem 15rem;
+    }
+    .hero-wrapper{
+        margin:3rem 0;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column-reverse;
+        text-align:center;
+        font-size:1.8rem;
+        overflow-x:hidden;
+        .hero-left{
+            display:flex;
+            margin:5rem 5rem;
+            .hero-button{
+                display:flex;
+                justify-content:center;
+            }
+        }
+        .hero-right{
+            .hero-image{
+                transform:translateX(13rem);
+                img{
+                    min-height:355px;
+                    min-width:560px;
+                    object-fit:cover;
+                }
+            }
+        }
+    }
+    .urlshorten-wrapper{
+        padding:0 5rem;
+        .before-shorten{
+            padding-bottom:0rem;
+            .form-shorten{
+                margin:2rem 2rem;
+                .link-input{
+                    width:100%;
+                }
+                .url-btn{
+                    margin-top:2rem;
+                    min-width:100%;
+                }
+            }
+            .warning-zone{
+                position:relative;
+                text-align:center;
+                margin:0 2rem;
+                margin-bottom:2rem;
+            }
+        }
+    }
+   
+    .content-wrapper{
+        padding:0 5rem;
+        justify-content:center;
+        .stick{
+            background:color(cyan);
+            position:absolute;
+            height:60%;
+            width:10px;
+            bottom:0;
+        }
+        .content-boxes{
+            justify-content:center;
+            flex-direction:column;
+            text-align:center;
+            .col{
+                margin:2rem 0;
+                max-width:100%;
+                min-width:70%;
+                &:nth-child(1){
+                    &::before{
+                        display:flex;
+                        top:-1.6rem;bottom:0;right:0;left:0;
+                        justify-content:center;
+                        margin:0 auto;
+                    }
+                    &::after{
+                        display:flex;
+                        top:-4rem;bottom:0;right:0;left:0;
+                        justify-content:center;
+                        margin:0 auto;
+                    }
+                }
+            }
+       }
+    }
+    .footer-wrapper-event{
+        padding:5rem 5rem;
+        justify-content:center;
+        text-align:center;
+    }
+    .footer-wrapper-links{
+        padding:5rem 5rem;
+        justify-content:center;
+        text-align:center;
+        flex-wrap:wrap;
+        .footer-links{
+            justify-content:center;
+            flex-wrap:wrap;
+            ul{
+                min-width:300px;
+                padding:0;
+            }
+        }
+    }
+}
+@media screen and (max-width:1132px){
+    .top-wrapper{
+        padding:5rem 7rem;
+    }
+    .urlshorten-wrapper{
+        .shorten-list{
+            flex-direction:column;
+            .shorten-link{
+                display:flex;
+                flex-direction:column;
+                align-items:flex-start;
+                .links{
+                    display:flex;
+                    flex-wrap:unset;
+                    flex-direction:column;
+                    min-width:100%;
+                    &:before{
+                        display:block;
+                        transform:translateY(5.6rem);
+                        content:'';
+                        width:100%;
+                        height:1px;
+                        background:color(gray);
+                    }
+                    .before{
+                        min-width:100%;
+                        max-width:100%;
+                    }
+                    .after{
+                        min-width:100%;
+                        max-width:100%;
+                    }
+                }
+            }
+            .buttons{
+                min-width:100%;
+                width:100%;
+                justify-content:space-between;
+                button{
+                    flex:0.5;
+                }
+            }
+        }
+    }
+}
+//////////////////////////////////////////
+            //mobile nav
+//////////////////////////////////////////
+@media screen and (max-width:840px){
+    .top-wrapper{
+        all:unset;
+        padding:5rem 7rem;
+        position:relative;
+        display:flex;
+        justify-content: space-between;
+        .real-burger{
+            display:flex;
+            font-size:3rem;
+            cursor:pointer;
+        }
+        .top-nav-wrapper{
+            all:unset;  //remove margin paddings fonts;
+            display:none;
+            background:color(darkviolet);
+            border-radius:10px;
+            z-index:10;
+            border:1px solid;
+            position:absolute;
+            top:14rem;left:0;right:0;
+            flex-direction:column;
+            align-items:center;
+            margin:0 3rem;
+            padding:4rem 4rem;
+            font-size:2rem;
+            text-align:center;
+            transform: translateX(-140%);
+            transition: transform 0.5s ease-in-out;
+            .top-nav a{
+                color:color(white);
+                display:flex;
+                flex-direction:column;
+                margin-bottom:2rem;
+                padding:0.5rem;
+                &:hover,
+                &:active,
+                &:focus{
+                color:color(white);
+                transition:color 0.3s ease;
+                outline:2px solid color(white);
+                width:150px;
+                }
+            }
+            .top-login{
+                margin-top:2rem;
+                display:flex;
+                flex-direction:column;
+                width:100%;
+                &::before{
+                    content:'';
+                    background:color(grayishViolet);
+                    width:100%;
+                    height:1px;
+                }
+                .focus{
+                    margin-top:3rem;
+                    margin-bottom:1.5rem;
+                }
+                .signup{
+                    margin:0;
+                    min-width:100%;
+                    &:focus,
+                    &:hover{
+                        outline:none;
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media screen and (max-width:545px){
+    h2{
+        font-size:3.5rem;
+        line-height:4.5rem;
+    }
+    h3{
+        font-size:2.2rem;
+        margin-bottom:1rem;
+    }
+    .top-wrapper{
+        padding:5rem 2rem;
+    }
+    .hero-wrapper{
+        .hero-left{
+            margin:3rem 2rem;
+        }
+    }
+    .urlshorten-wrapper{
+        padding:0 2rem;
     }
 }
