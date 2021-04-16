@@ -47,10 +47,10 @@ header{
         animation: rotate 10s linear infinite both;
         animation-direction: alternate;
         transition:all .3s ease;
-        filter:brightness(1.1);
+        filter:brightness(1.3) blur(0.1rem);
         &:hover{
-            animation: rotate 1s linear infinite both;
-            filter:brightness(1.7);
+            animation: rotate 0.5s linear infinite both;
+            filter:brightness(1.7) blur(0.3rem);
             transition:all .3s ease;
     }
         .color-switcher{
@@ -156,10 +156,19 @@ main{
     display:flex;
     .job-logo{
         margin-right:2rem;
+        img{
+            width:100%;
+            cursor:pointer;
+            &:hover{
+                animation: rotate45deg 0.8s linear both;
+            }
+        }
     }
     .job-desc{
-        h3:hover{
-            color:color(darkCyan);
+        h3{
+            &:hover{
+                color:color(darkCyan);
+            }
         }
         .job-title{
             display:flex;
@@ -170,6 +179,13 @@ main{
                 font-size:1.5rem;
                 margin-right:1rem;
             }
+            // &:hover .new{
+            //     animation: wobble-hor-bottom 0.8s 1 both;
+            // }
+            // &:hover .featured{
+            //     animation: wobble-hor-bottom 0.8s 1 both;
+            //     animation-delay:0.7s;
+            // }
         }
         .job-info{
             margin-top:1rem;

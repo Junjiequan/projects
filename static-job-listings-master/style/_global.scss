@@ -45,24 +45,7 @@ html{
         border-radius: 5px 0 0 5px;
     }
 }
-// .feature-box{
-//     padding:0.6rem 1rem 0.3rem;
-//     margin-right:.8rem;
-//     background:color(darkCyan);
-//     color:$white;
-//     border-radius:50px;
-//     font-size:1.1rem;
-//     text-transform:uppercase;
-//     cursor:pointer;
-//     &:hover{
-//         animation: wobble-hor-bottom 0.8s both;
-//     }
-// }
-// .featured{
-//     background:color(verydarkCyan);
-// }
-
-.new  {
+.new{
     padding:0.6rem 1rem 0.3rem;
     margin-right:.8rem;
     background:color(darkCyan);
@@ -70,27 +53,14 @@ html{
     border-radius:50px;
     font-size:1.1rem;
     text-transform:uppercase;
-    cursor:pointer;
     &::before{
         content:'New!'
     }
-    &:hover{
-        animation: wobble-hor-bottom 0.8s both;
-    }
 }
 .featured{
-    padding:0.6rem 1rem 0.3rem;
-    margin-right:.8rem;
-    background:color(verydarkCyan);
-    color:$white;
-    border-radius:50px;
-    font-size:1.1rem;
-    text-transform:uppercase;
-    cursor:pointer;
+  @extend .new;
+  background:color(verydarkCyan);
     &::before{
-        content:'featured'
-    }
-    &:hover{
-        animation: wobble-hor-bottom 0.8s both;
+        content:'Featured'
     }
 }

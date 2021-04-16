@@ -37,7 +37,7 @@ html a, html li {
   border-radius: 5px 0 0 5px;
 }
 
-.new {
+.new, .featured {
   padding: 0.6rem 1rem 0.3rem;
   margin-right: 0.8rem;
   background: var(--color-darkCyan);
@@ -45,32 +45,16 @@ html a, html li {
   border-radius: 50px;
   font-size: 1.1rem;
   text-transform: uppercase;
-  cursor: pointer;
 }
-.new::before {
+.new::before, .featured::before {
   content: "New!";
-}
-.new:hover {
-  -webkit-animation: wobble-hor-bottom 0.8s both;
-          animation: wobble-hor-bottom 0.8s both;
 }
 
 .featured {
-  padding: 0.6rem 1rem 0.3rem;
-  margin-right: 0.8rem;
   background: var(--color-verydarkCyan);
-  color: white;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  cursor: pointer;
 }
 .featured::before {
-  content: "featured";
-}
-.featured:hover {
-  -webkit-animation: wobble-hor-bottom 0.8s both;
-          animation: wobble-hor-bottom 0.8s both;
+  content: "Featured";
 }
 
 @-webkit-keyframes rotate {
@@ -172,6 +156,34 @@ html a, html li {
     transform: translateX(-1px) rotate(-1.2deg);
   }
 }
+@-webkit-keyframes rotate45deg {
+  40% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  60% {
+    transform: rotate(-20deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes rotate45deg {
+  40% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  60% {
+    transform: rotate(-20deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+}
 body {
   min-height: 100vh;
   font-size: 1.5rem;
@@ -225,12 +237,12 @@ header {
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
   transition: all 0.3s ease;
-  filter: brightness(1.1);
+  filter: brightness(1.3) blur(0.1rem);
 }
 .head-wrapper .color-switch-box:hover {
-  -webkit-animation: rotate 1s linear infinite both;
-          animation: rotate 1s linear infinite both;
-  filter: brightness(1.7);
+  -webkit-animation: rotate 0.5s linear infinite both;
+          animation: rotate 0.5s linear infinite both;
+  filter: brightness(1.7) blur(0.3rem);
   transition: all 0.3s ease;
 }
 .head-wrapper .color-switch-box .color-switcher {
@@ -343,6 +355,14 @@ main {
 }
 .job-info-box .job-logo {
   margin-right: 2rem;
+}
+.job-info-box .job-logo img {
+  width: 100%;
+  cursor: pointer;
+}
+.job-info-box .job-logo img:hover {
+  -webkit-animation: rotate45deg 0.8s linear both;
+          animation: rotate45deg 0.8s linear both;
 }
 .job-info-box .job-desc h3:hover {
   color: var(--color-darkCyan);
