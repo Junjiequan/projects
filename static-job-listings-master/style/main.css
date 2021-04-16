@@ -1,0 +1,402 @@
+:root .light {
+  --color-darkCyan: #5ba4a4;
+  --color-verydarkCyan: #2c3a3a;
+  --color-lightgrayCyan1: #effafa;
+  --color-lightgrayCyan2: #eef6f6;
+  --color-grayCyan: #7b8e8e;
+}
+:root .dark {
+  --color-darkCyan: #430f3f;
+  --color-verydarkCyan: #3a2c39;
+  --color-lightgrayCyan1: #361c36;
+  --color-lightgrayCyan2: #573357;
+  --color-grayCyan: #8e7b8d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+html a, html li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.newfeaturedhot::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: var(--color-darkCyan);
+  left: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.new {
+  padding: 0.6rem 1rem 0.3rem;
+  margin-right: 0.8rem;
+  background: var(--color-darkCyan);
+  color: white;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.new::before {
+  content: "New!";
+}
+.new:hover {
+  -webkit-animation: wobble-hor-bottom 0.8s both;
+          animation: wobble-hor-bottom 0.8s both;
+}
+
+.featured {
+  padding: 0.6rem 1rem 0.3rem;
+  margin-right: 0.8rem;
+  background: var(--color-verydarkCyan);
+  color: white;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.featured::before {
+  content: "featured";
+}
+.featured:hover {
+  -webkit-animation: wobble-hor-bottom 0.8s both;
+          animation: wobble-hor-bottom 0.8s both;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes wobble-hor-bottom {
+  0%, 100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-6px) rotate(-6deg);
+  }
+  30% {
+    transform: translateX(4px) rotate(6deg);
+  }
+  45% {
+    transform: translateX(-4px) rotate(-3.6deg);
+  }
+  60% {
+    transform: translateX(3px) rotate(2.4deg);
+  }
+  75% {
+    transform: translateX(-1px) rotate(-1.2deg);
+  }
+}
+@keyframes wobble-hor-bottom {
+  0%, 100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-6px) rotate(-6deg);
+  }
+  30% {
+    transform: translateX(4px) rotate(6deg);
+  }
+  45% {
+    transform: translateX(-4px) rotate(-3.6deg);
+  }
+  60% {
+    transform: translateX(3px) rotate(2.4deg);
+  }
+  75% {
+    transform: translateX(-1px) rotate(-1.2deg);
+  }
+}
+body {
+  min-height: 100vh;
+  font-size: 1.5rem;
+  background: var(--color-lightgrayCyan1);
+  font-family: "Spartan", sans-serif;
+}
+
+h3 {
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-darkCyan);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background: #63baba;
+}
+
+.head-container {
+  padding: 0 16.5rem;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 15.6rem;
+  transition: background-color 0.3s ease-in-out;
+  background: var(--color-darkCyan) url(../images/bg-header-desktop.svg) no-repeat center/cover;
+}
+
+.head-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.head-wrapper .color-switch-box {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  cursor: pointer;
+  border-radius: 100%;
+  -webkit-animation: rotate 10s linear infinite both;
+          animation: rotate 10s linear infinite both;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  transition: all 0.3s ease;
+  filter: brightness(1.1);
+}
+.head-wrapper .color-switch-box:hover {
+  -webkit-animation: rotate 1s linear infinite both;
+          animation: rotate 1s linear infinite both;
+  filter: brightness(1.7);
+  transition: all 0.3s ease;
+}
+.head-wrapper .color-switch-box .color-switcher {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background: url(../images/color-wheel.png) no-repeat center center;
+  background-size: 300%;
+  box-shadow: 0 0 20px rgba(214, 214, 214, 0.4);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 16.5rem 5rem;
+}
+
+.filter-wrapper {
+  transform: translateY(-3.5rem);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  background: white;
+  min-height: 70px;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(55, 141, 128, 0.2);
+}
+
+.filter-lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.filter-list-box, .job-tag-box .job-tag {
+  background: #ebf5f5;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.8rem 0.8rem;
+  position: relative;
+  cursor: pointer;
+}
+.filter-list-box:hover .filter-remove-icon, .job-tag-box .job-tag:hover .filter-remove-icon {
+  background: var(--color-verydarkCyan);
+}
+.filter-list-box .filter-tag, .job-tag-box .job-tag .filter-tag {
+  margin-right: 3.2rem;
+}
+.filter-list-box .filter-remove-icon, .job-tag-box .job-tag .filter-remove-icon {
+  background: var(--color-darkCyan);
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 100%;
+  border-radius: 0 5px 5px 0;
+  transition: background-color 0.2s ease;
+}
+
+.filter-clear {
+  cursor: pointer;
+  position: relative;
+}
+.filter-clear::after {
+  content: "";
+  position: absolute;
+  transform: scaleX(0);
+  left: 0;
+  transform-origin: 0 50%;
+  background: var(--color-darkCyan);
+  height: 2px;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.filter-clear:hover::after {
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+}
+
+.job-listing-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 4rem;
+  background: white;
+  min-height: 70px;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(55, 141, 128, 0.2);
+  position: relative;
+  margin: 1.2rem 0;
+}
+
+.job-info-box {
+  display: flex;
+}
+.job-info-box .job-logo {
+  margin-right: 2rem;
+}
+.job-info-box .job-desc h3:hover {
+  color: var(--color-darkCyan);
+}
+.job-info-box .job-desc .job-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.job-info-box .job-desc .job-title p {
+  cursor: default;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.job-info-box .job-desc .job-info {
+  margin-top: 1rem;
+  display: flex;
+  cursor: default;
+}
+.job-info-box .job-desc .job-info p {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-grayCyan);
+  padding: 0 2rem;
+}
+.job-info-box .job-desc .job-info p:first-child {
+  padding: 0;
+  padding-right: 2rem;
+}
+.job-info-box .job-desc .job-info p:not(:first-child):before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 30%;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: var(--color-grayCyan);
+  opacity: 0.6;
+}
+
+.job-tag-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.job-tag-box .job-tag {
+  transition: all 0.2s ease-in-out;
+}
+.job-tag-box .job-tag:hover {
+  background: var(--color-darkCyan);
+}
+.job-tag-box .job-tag:hover p {
+  color: white;
+  transition: all 0.2s ease-in-out;
+}/*# sourceMappingURL=main.css.map */

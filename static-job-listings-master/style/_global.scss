@@ -1,0 +1,96 @@
+@use './color.scss' as *;
+
+:root{
+    .light{
+        @each $name, $color in $Light{
+            --color-#{$name}: #{$color};
+        }
+    }
+    .dark{
+        @each $name, $color in $Dark{
+            --color-#{$name}: #{$color};
+        }
+    }
+}
+@function color($getColor){
+    @return var(--color-#{$getColor});
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+html{
+    a,li{
+        text-decoration:none;
+        list-style:none;
+    }
+    font-size:62.5%;
+}
+
+///////////////////////////////////////////////
+            // for Javascript
+///////////////////////////////////////////////
+
+//job-box hight light pseudo border
+.newfeaturedhot{
+    &::before{
+        content:'';
+        position:absolute;
+        width:5px;
+        height:100%;
+        background:color(darkCyan);
+        left:0;
+        border-radius: 5px 0 0 5px;
+    }
+}
+// .feature-box{
+//     padding:0.6rem 1rem 0.3rem;
+//     margin-right:.8rem;
+//     background:color(darkCyan);
+//     color:$white;
+//     border-radius:50px;
+//     font-size:1.1rem;
+//     text-transform:uppercase;
+//     cursor:pointer;
+//     &:hover{
+//         animation: wobble-hor-bottom 0.8s both;
+//     }
+// }
+// .featured{
+//     background:color(verydarkCyan);
+// }
+
+.new  {
+    padding:0.6rem 1rem 0.3rem;
+    margin-right:.8rem;
+    background:color(darkCyan);
+    color:$white;
+    border-radius:50px;
+    font-size:1.1rem;
+    text-transform:uppercase;
+    cursor:pointer;
+    &::before{
+        content:'New!'
+    }
+    &:hover{
+        animation: wobble-hor-bottom 0.8s both;
+    }
+}
+.featured{
+    padding:0.6rem 1rem 0.3rem;
+    margin-right:.8rem;
+    background:color(verydarkCyan);
+    color:$white;
+    border-radius:50px;
+    font-size:1.1rem;
+    text-transform:uppercase;
+    cursor:pointer;
+    &::before{
+        content:'featured'
+    }
+    &:hover{
+        animation: wobble-hor-bottom 0.8s both;
+    }
+}

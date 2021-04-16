@@ -1,0 +1,31 @@
+ //Dark theme
+$d-DesaturatedDarkCyan: hsl(304, 63%, 16%);   // Main color
+$d-LightGrayishCyan1: hsl(300, 32%, 16%);      //Background
+$d-LightGrayishCyan2: hsl(300, 26%, 27%);      //Filter Tablets
+$d-DarkGrayishCyan: hsl(303, 8%, 52%);        //info text
+$d-VeryDarkGrayishCyan: hsl(303, 14%, 20%);   //title text
+$d-white: hsl(0, 0%, 100%);   
+
+//Light theme
+$DesaturatedDarkCyan: hsl(180, 29%, 50%);   // Main color
+$LightGrayishCyan1: hsl(180, 52%, 96%);      //Background
+$LightGrayishCyan2: hsl(180, 31%, 95%);      //Filter Tablets
+$DarkGrayishCyan: hsl(180, 8%, 52%);        //info text
+$VeryDarkGrayishCyan: hsl(180, 14%, 20%);   //title text
+$white: hsl(0, 0%, 100%);   
+
+$Light:(
+    darkCyan: $DesaturatedDarkCyan,
+    verydarkCyan: $VeryDarkGrayishCyan,
+    lightgrayCyan1: $LightGrayishCyan1,
+    lightgrayCyan2: $LightGrayishCyan2,
+    grayCyan: $DarkGrayishCyan
+);
+$Dark:(
+    darkCyan: $d-DesaturatedDarkCyan,
+    verydarkCyan: $d-VeryDarkGrayishCyan,
+    lightgrayCyan1: $d-LightGrayishCyan1,
+    lightgrayCyan2: $d-LightGrayishCyan2,
+    grayCyan: $d-DarkGrayishCyan
+);
+

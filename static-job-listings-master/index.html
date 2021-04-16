@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/main.css">
+  <script defer src="./app.js"></script>
   <title>Frontend Mentor | Job Listings</title>
 </head>
-<body>
+<body class="light">
   <header>
-    <div class="bg head-container">
+    <div class="head-container">
       <div class="head-wrapper">
         <div class="color-switch-box">
           <div class="color-switcher"></div>
@@ -23,45 +24,35 @@
       <!-- filter box -->
       <div class="filter-wrapper">
         <div class="filter-lists">
+          <!-- filter-list-box -->
           <div class="filter-list-box">
-            <div class="filter-tag">Frontend</div>
+            <div class="filter-tag"><p>Frontend</p></div>
             <div class="filter-remove-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
-                <path fill="#000" fill-rule="evenodd" d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"/>
+                <path fill="#fff" fill-rule="evenodd" d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"/>
               </svg>
             </div>
           </div>
+          <!-- /filter-list-box -->
+
+          <!-- remove later -->
+          <div class="filter-list-box">
+            <div class="filter-tag"><p>CSS</p></div>
+            <div class="filter-remove-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                <path fill="#fff" fill-rule="evenodd" d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"/>
+              </svg>
+            </div>
+          </div>
+          <!-- /remove late -->
+
         </div>
-        <div class="filter-clear">Clear</div>
+        <div class="filter-clear"><p>Clear</p></div>
       </div>
       <!-- /filter box-->
-      <!--  -->
-      <div class="job-listing-wrapper">
-        <div class="job-info-box">
-          <div class="job-logo"><img src="./images" alt=""></div>
-          <section class="job-desc">
-            <div class="job-title">
-              <p class="company-name">Photoshop</p>
-              <div class="feature-box new">New!</div>
-              <div class="feature-box Featured">Featured</div>
-            </div>
-            <h3>Senior Frontend Developer</p>
-            <div class="job-info">
-              <p>1d ago</p>
-              <p>Full time</p>
-              <p>USA only </p>
-            </div>
-          </section>
-        </div>
-        <div class="job-tag-box">
-          <div class="filter-tag">Frontend</div>
-          <div class="filter-tag">javascript</div>
-          <div class="filter-tag">html</div>
-          <div class="filter-tag">css</div>
-        </div>
-      </div>
+
+
     </div>
   </main>
-
 </body>
 </html>
