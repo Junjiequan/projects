@@ -137,5 +137,17 @@ window.addEventListener('click', (e)=>{
         joblistingWrapperAll.forEach(index=> index.style.display = 'flex')
         closeFilterbox();
     }
+    if(e.target.classList[0] == 'color-switcher'){        
+        if(document.querySelector('body').classList == 'light'){
+            document.querySelector('body').classList.remove('light')
+            document.querySelector('body').classList.add('dark')
+            document.querySelector('.head-container').style.backgroundImage  = "url('images/bg-header-desktop2.svg')"
+            console.log(document.querySelector('.head-container'))
+        } else {
+            document.querySelector('body').classList.remove('dark')
+            document.querySelector('body').classList.add('light')
+            document.querySelector('.head-container').style.backgroundImage  = "url('images/bg-header-desktop.svg')"
+        }
+    }
 })
 

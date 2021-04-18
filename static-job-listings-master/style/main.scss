@@ -5,7 +5,8 @@
 body{
     min-height:100vh;
     font-size:1.5rem;
-    background:color(lightgrayCyan1);
+    background-color:color(lightgrayCyan1);
+    transition:background-color .3s ease;
     font-family: 'Spartan', sans-serif;
 };
 h3{
@@ -21,7 +22,8 @@ p{
 header{
     display:flex;
     justify-content:center;
-    background:rgb(99,186,186)
+    background:color(headBg);
+    box-shadow:0 2px 9px rgba($color: #000000, $alpha: 0.3)
 }
 .head-container{
     padding:0 16.5rem;
@@ -31,7 +33,7 @@ header{
     width:100%;
     height:15.6rem;
     transition:background-color .3s ease-in-out;
-    background:color(darkCyan) url(../images/bg-header-desktop.svg) no-repeat center/cover;
+    background:color(headBgImg) url(../images/bg-header-desktop.svg) no-repeat center/cover;
 }
 .head-wrapper{
     display:flex;

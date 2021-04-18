@@ -1,12 +1,16 @@
  //Dark theme
-$d-DesaturatedDarkCyan: hsl(304, 63%, 16%);   // Main color
-$d-LightGrayishCyan1: hsl(300, 32%, 16%);      //Background
+$d-HeadBG: hsl(317, 69%, 10%);
+$d-HeadBGimage: hsl(318, 28%, 25%);
+$d-DesaturatedDarkCyan: hsl(305, 43%, 46%);   // Main color
+$d-LightGrayishCyan1: hsl(300, 40%, 18%);      //Background
 $d-LightGrayishCyan2: hsl(300, 26%, 27%);      //Filter Tablets
 $d-DarkGrayishCyan: hsl(303, 8%, 52%);        //info text
 $d-VeryDarkGrayishCyan: hsl(303, 14%, 20%);   //title text
 $d-white: hsl(0, 0%, 100%);   
 
 //Light theme
+$HeadBG: hsl(180, 39%, 56%);
+$HeadBGimage: hsl(180, 29%, 50%);
 $DesaturatedDarkCyan: hsl(180, 29%, 50%);   // Main color
 $LightGrayishCyan1: hsl(180, 52%, 96%);      //Background
 $LightGrayishCyan2: hsl(180, 31%, 95%);      //Filter Tablets
@@ -19,13 +23,17 @@ $Light:(
     verydarkCyan: $VeryDarkGrayishCyan,
     lightgrayCyan1: $LightGrayishCyan1,
     lightgrayCyan2: $LightGrayishCyan2,
-    grayCyan: $DarkGrayishCyan
+    grayCyan: $DarkGrayishCyan,
+    headBg:$HeadBG,
+    headBgImg:$HeadBGimage
 );
 $Dark:(
     darkCyan: $d-DesaturatedDarkCyan,
     verydarkCyan: $d-VeryDarkGrayishCyan,
     lightgrayCyan1: $d-LightGrayishCyan1,
     lightgrayCyan2: $d-LightGrayishCyan2,
-    grayCyan: $d-DarkGrayishCyan
+    grayCyan: $d-DarkGrayishCyan,
+    headBg:$d-HeadBG,
+    headBgImg:$d-HeadBGimage
 );
 
