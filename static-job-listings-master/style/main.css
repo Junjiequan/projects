@@ -445,6 +445,10 @@ main {
   }
 }
 @media screen and (max-width: 650px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+
   .head-container {
     padding: 0 2rem;
   }
@@ -494,6 +498,12 @@ main {
     padding-right: 1rem;
   }
 
+  .job-tag-box {
+    gap: 0;
+  }
+  .job-tag-box .job-tag {
+    margin: 0.5rem 0.5rem 0.5rem 0;
+  }
   .job-tag-box::before {
     top: -18rem;
   }

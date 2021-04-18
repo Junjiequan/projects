@@ -216,7 +216,7 @@ main{
     display:flex;
     flex-wrap:wrap;
     gap:1.5rem;
-    .job-tag{
+    .job-tag{    
         @extend  .filter-list-box;
         transition: all .2s ease;
         &:hover{
@@ -245,6 +245,9 @@ main{
     }
 }
 @media screen and (max-width:650px){
+    h3{
+        font-size:1.5rem;
+    }
     .head-container{
         padding:0 2rem;
     }
@@ -293,6 +296,10 @@ main{
         }
     }
     .job-tag-box{
+        gap:0;
+        .job-tag{
+            margin:0.5rem 0.5rem 0.5rem 0;
+        }
         &::before{
             top:-18rem;
         }
