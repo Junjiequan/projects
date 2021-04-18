@@ -33,6 +33,7 @@ html a, html li {
   width: 5px;
   height: 100%;
   background: var(--color-darkCyan);
+  top: 0;
   left: 0;
   border-radius: 5px 0 0 5px;
 }
@@ -270,18 +271,17 @@ main {
 }
 
 .filter-wrapper {
-  transform: translateY(-3.5rem);
+  transform: translateY(-3.5rem) scaleY(0);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  opacity: 0;
   padding: 2rem 4rem;
   background: white;
   min-height: 74px;
   border-radius: 5px;
   box-shadow: 0 5px 20px rgba(55, 141, 128, 0.2);
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .filter-lists {
@@ -423,4 +423,78 @@ main {
 .job-tag-box .job-tag:hover p {
   color: white;
   transition: all 0.2s ease;
+}
+
+@media screen and (max-width: 1315px) {
+  .head-container {
+    padding: 0 5rem;
+  }
+
+  .main-container {
+    padding: 0 5rem;
+  }
+
+  .job-listing-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .job-tag-box {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .head-container {
+    padding: 0 2rem;
+  }
+
+  .main-container {
+    padding: 0 2rem;
+  }
+
+  .job-listing-wrapper {
+    margin: 2.5rem;
+    padding: 4rem 2rem 3rem;
+  }
+  .job-listing-wrapper::after {
+    position: absolute;
+    content: "";
+    display: flex;
+    justify-content: center;
+    margin: 0 2rem;
+    left: 0;
+    right: 0;
+    top: 13.4rem;
+    width: 89%;
+    height: 1px;
+    background: var(--color-grayCyan);
+  }
+
+  .job-info-box .job-logo {
+    position: absolute;
+    top: -2.5rem;
+    left: 2rem;
+  }
+  .job-info-box .job-logo img {
+    width: 60%;
+  }
+  .job-info-box .job-desc {
+    margin-bottom: 2rem;
+  }
+  .job-info-box .job-desc .job-info p {
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-grayCyan);
+    padding: 0 1rem;
+  }
+  .job-info-box .job-desc .job-info p:first-child {
+    padding: 0;
+    padding-right: 1rem;
+  }
+
+  .job-tag-box::before {
+    top: -18rem;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -77,18 +77,17 @@ main{
     padding:0 16.5rem 5rem;
 }
 .filter-wrapper{
-    transform:translateY(-3.5rem);
+    transform:translateY(-3.5rem) scaleY(0);
     width:100%;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    opacity:0;
     padding:2rem 4rem;    
     background:$white;
     min-height:74px;
     border-radius:5px;
     box-shadow:0 5px 20px rgba($color: #378d80, $alpha: 0.2);
-    transition: all .3s ease-in-out;
+    transition: transform .3s ease-in-out;
 }
 .filter-lists{
     display:flex;
@@ -183,13 +182,6 @@ main{
                 font-size:1.5rem;
                 margin-right:1rem;
             }
-            // &:hover .new{
-            //     animation: wobble-hor-bottom 0.8s 1 both;
-            // }
-            // &:hover .featured{
-            //     animation: wobble-hor-bottom 0.8s 1 both;
-            //     animation-delay:0.7s;
-            // }
         }
         .job-info{
             margin-top:1rem;
@@ -233,6 +225,76 @@ main{
                 color:$white;
                 transition: all .2s ease;
             }
+        }
+    }
+}
+@media screen and (max-width:1315px){
+    .head-container{
+        padding:0 5rem;
+    }
+    .main-container{
+        padding:0 5rem;
+    }
+    .job-listing-wrapper{
+        flex-direction:column;
+        align-items:flex-start;
+        position:relative;
+    }
+    .job-tag-box{
+        margin-top:2rem;
+    }
+}
+@media screen and (max-width:650px){
+    .head-container{
+        padding:0 2rem;
+    }
+    .main-container{
+        padding:0 2rem;
+    }
+    .job-listing-wrapper{
+        margin:2.5rem;
+        padding:4rem 2rem 3rem;
+        &::after{
+            position:absolute;
+            content:'';
+            display:flex;
+            justify-content:center;
+            margin:0 2rem;
+            left:0;right:0;top:13.4rem;
+            width:89%;
+            height:1px;
+            background:color(grayCyan);
+        }
+    }
+    .job-info-box{
+        .job-logo{
+            position:absolute;
+            top:-2.5rem;
+            left:2rem;
+            img{
+                width:60%;
+            }
+        }
+        .job-desc{
+            margin-bottom:2rem;
+            .job-info{
+                p{
+                    position:relative;
+                    font-size:1.2rem;
+                    font-weight:500;
+                    color:color(grayCyan);
+                    padding:0 1rem;
+                    &:first-child{
+                        padding:0;
+                        padding-right:1rem;
+                    }
+                }
+            }
+        }
+    }
+    .job-tag-box{
+        &::before{
+            top:-18rem;
         }
     }
 }

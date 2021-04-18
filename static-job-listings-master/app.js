@@ -1,8 +1,7 @@
 const mainContainer = document.querySelector('.main-container');
 const jobTagBox = mainContainer.querySelector('.job-tag-box');
 const jobTitle = mainContainer.querySelector('.job-title');
-
-
+//fetch data from local json file
 fetch('./data.json')
 .then(resp => resp.json())
 .then(data => data.map(index=>{
@@ -57,14 +56,16 @@ const removeFilterBox = (tag)=>{
         }
     })
 }
+//open and close effect
 function openFilterbox(){
-    document.querySelector('.filter-wrapper').style.opacity = "1"
+    document.querySelector('.filter-wrapper').style.transform = "translateY(-3.5rem) scaleY(1)"
 }
 function closeFilterbox(){
-        document.querySelector('.filter-wrapper').style.opacity ="0"
+    document.querySelector('.filter-wrapper').style.transform = "translateY(-3.5rem) scaleY(0)"
 }
 
 let store = [];     // <<<<<<< job list storage
+
 //job list bar
 window.addEventListener('click', (e)=>{
     const joblistingWrapperAll = document.querySelectorAll('.job-listing-wrapper');
