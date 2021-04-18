@@ -57,6 +57,12 @@ const removeFilterBox = (tag)=>{
         }
     })
 }
+function openFilterbox(){
+    document.querySelector('.filter-wrapper').style.opacity = "1"
+}
+function closeFilterbox(){
+        document.querySelector('.filter-wrapper').style.opacity ="0"
+}
 
 let store = [];     // <<<<<<< job list storage
 //job list bar
@@ -66,6 +72,7 @@ window.addEventListener('click', (e)=>{
     const filterTag = e.target.closest('.filter-list-box');
     //add tag to filter list
     if(e.target.closest('.job-tag')){
+        openFilterbox();
         if(store.indexOf(e.target.textContent.trim()) == -1){
             createFilterBox(e.target.textContent)
             store.push(e.target.textContent.trim())
@@ -80,7 +87,6 @@ window.addEventListener('click', (e)=>{
         removeFilterBox(filterTag.childNodes[1].textContent);
         const storeIndex = store.indexOf(filterTag.childNodes[1].textContent)
         store.splice(storeIndex,1)
-        console.log(store)
     }
     jobTagsGroup.forEach(index=>{
         const jobListingWrapper = index.closest('.job-listing-wrapper')
@@ -114,6 +120,7 @@ window.addEventListener('click', (e)=>{
     if(store.length == 0){
         joblistingWrapperAll.forEach(index=> index.classList.remove('marked'))
         joblistingWrapperAll.forEach(index=> index.style.display = 'flex')
+        closeFilterbox();
     }
 })
 

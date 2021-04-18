@@ -73,6 +73,7 @@ main{
     align-items:center;
     max-width:1440px;
     width:100%;
+    min-height:900px;
     padding:0 16.5rem 5rem;
 }
 .filter-wrapper{
@@ -81,11 +82,13 @@ main{
     display:flex;
     align-items:center;
     justify-content:space-between;
+    opacity:0;
     padding:2rem 4rem;    
     background:$white;
     min-height:74px;
     border-radius:5px;
-    box-shadow:0 5px 20px rgba($color: #378d80, $alpha: 0.2)
+    box-shadow:0 5px 20px rgba($color: #378d80, $alpha: 0.2);
+    transition: all .3s ease-in-out;
 }
 .filter-lists{
     display:flex;
@@ -147,7 +150,7 @@ main{
     justify-content:space-between;
     padding:3rem 4rem;    
     background:$white;
-    min-height:70px;
+    min-height:150px;
     border-radius:5px;
     box-shadow:0 5px 20px rgba($color: #378d80, $alpha: 0.2);
     position:relative;
