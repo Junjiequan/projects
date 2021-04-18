@@ -106,7 +106,7 @@ window.addEventListener('click', (e)=>{
         store.forEach(each=>{       
             const checkValue = tagArrays.includes(each);
             if(checkValue){
-                if(store.length <= tagArrays.length - store.length){      // <<<<<<<<<<< this logic is definitely deficient
+                if(store.length <= 2){      // <<<<<<<<<<< this logic is definitely deficient
                     jobListingWrapper.classList.add('marked')
                 };
             }else if(jobListingWrapper.classList.contains('marked')){
