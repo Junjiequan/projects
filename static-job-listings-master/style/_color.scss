@@ -7,6 +7,7 @@ $d-LightGrayishCyan2: hsl(300, 26%, 27%);      //Filter Tablets
 $d-DarkGrayishCyan: hsl(303, 8%, 52%);        //info text
 $d-VeryDarkGrayishCyan: hsl(303, 14%, 20%);   //title text
 $d-white: hsl(0, 0%, 100%);   
+$d-Button:hsl(303, 33%, 94%);
 
 //Light theme
 $HeadBG: hsl(180, 39%, 56%);
@@ -17,6 +18,7 @@ $LightGrayishCyan2: hsl(180, 31%, 95%);      //Filter Tablets
 $DarkGrayishCyan: hsl(180, 8%, 52%);        //info text
 $VeryDarkGrayishCyan: hsl(180, 14%, 20%);   //title text
 $white: hsl(0, 0%, 100%);   
+$Button:hsl(180, 33%, 94%);
 
 $Light:(
     darkCyan: $DesaturatedDarkCyan,
@@ -25,7 +27,8 @@ $Light:(
     lightgrayCyan2: $LightGrayishCyan2,
     grayCyan: $DarkGrayishCyan,
     headBg:$HeadBG,
-    headBgImg:$HeadBGimage
+    headBgImg:$HeadBGimage,
+    button:$Button
 );
 $Dark:(
     darkCyan: $d-DesaturatedDarkCyan,
@@ -34,6 +37,7 @@ $Dark:(
     lightgrayCyan2: $d-LightGrayishCyan2,
     grayCyan: $d-DarkGrayishCyan,
     headBg:$d-HeadBG,
-    headBgImg:$d-HeadBGimage
+    headBgImg:$d-HeadBGimage,
+    button:$d-Button
 );
 

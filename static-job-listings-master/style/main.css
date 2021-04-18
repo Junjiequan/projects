@@ -6,6 +6,7 @@
   --color-grayCyan: #7b8e8e;
   --color-headBg: #63bbbb;
   --color-headBgImg: #5ba4a4;
+  --color-button: #ebf5f5;
 }
 :root .dark {
   --color-darkCyan: #a8439f;
@@ -15,6 +16,7 @@
   --color-grayCyan: #8e7b8d;
   --color-headBg: #2b0821;
   --color-headBgImg: #522e47;
+  --color-button: #f5ebf4;
 }
 
 * {
@@ -297,7 +299,7 @@ main {
 }
 
 .filter-list-box, .job-tag-box .job-tag {
-  background: #ebf5f5;
+  background: var(--color-button);
   border-radius: 5px;
   display: flex;
   align-items: center;
