@@ -64,22 +64,24 @@ function closeFilterbox(){
     document.querySelector('.filter-wrapper').style.transform = "translateY(-3.5rem) scaleY(0)"
 }
 
-let store = [];     // <<<<<<< job list storage
+//storage
+let store = [];     // <<<<<<< filter list storage
 
 //job list bar
 window.addEventListener('click', (e)=>{
     const joblistingWrapperAll = document.querySelectorAll('.job-listing-wrapper');
     const jobTagsGroup = document.querySelectorAll('.job-tag-box');
     const filterTag = e.target.closest('.filter-list-box');
-    //add tag to filter list
+    const tagText = e.target.textContent.trim()
+    //push tag to  <<<<< store >>>>>  which is filter list
     if(e.target.closest('.job-tag')){
         openFilterbox();
-        if(store.indexOf(e.target.textContent.trim()) == -1){
-            createFilterBox(e.target.textContent)
-            store.push(e.target.textContent.trim())
+        if(store.indexOf(tagText) == -1){
+            createFilterBox(tagText)                  
+            store.push(tagText)
         }else {
-            removeFilterBox(e.target.textContent);
-            const storeIndex = store.indexOf(e.target.textContent)
+            removeFilterBox(tagText);                  
+            const storeIndex = store.indexOf(tagText)  
             store.splice(storeIndex,1)
         }
     }
@@ -89,24 +91,36 @@ window.addEventListener('click', (e)=>{
         const storeIndex = store.indexOf(filterTag.childNodes[1].textContent)
         store.splice(storeIndex,1)
     }
-    jobTagsGroup.forEach(index=>{
+    ////////////////////////////////////////////////////////////////
+                //the logic of this method need to be improved 
+    ////////////////////////////////////////////////////////////////
+    
+    //collect all job-tag-boxes << each of them has list of tags
+    jobTagsGroup.forEach(index=>{   
         const jobListingWrapper = index.closest('.job-listing-wrapper')
-        const tagArrays = index.textContent.replace(/\s+/g, ' ').trim().split(' ')
         jobListingWrapper.style.display = "none";
-        store.forEach(each=>{
+
+        //convert tags list into readable string arrays
+        const tagArrays = index.textContent.replace(/\s+/g, ' ').trim().split(' ') 
+        // store can be found on the first 'if condition' inside eventlistener
+        store.forEach(each=>{       
             const checkValue = tagArrays.includes(each);
             if(checkValue){
-                if(store.length <= 1){
+                if(store.length <= tagArrays.length - store.length){      // <<<<<<<<<<< this logic is definitely deficient
                     jobListingWrapper.classList.add('marked')
                 };
             }else if(jobListingWrapper.classList.contains('marked')){
                 jobListingWrapper.classList.remove('marked')
-            };
+            }
         })
         if(jobListingWrapper.classList.contains('marked')){
             jobListingWrapper.style.display = "flex";
         }
     })
+    ////////////////////////////////////////////////////////////////
+                //above method ends here
+    ////////////////////////////////////////////////////////////////
+
     //clearAll button on filter bar
     if(e.target.closest('.filter-wrapper')){
         const filterLists = document.querySelectorAll('.filter-list-box');

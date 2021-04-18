@@ -462,8 +462,6 @@ main {
   }
 
   .filter-lists {
-    display: flex;
-    flex-wrap: wrap;
     gap: 0;
   }
 
