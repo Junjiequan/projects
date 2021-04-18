@@ -254,6 +254,14 @@ main{
     .main-container{
         padding:0 2rem;
     }
+    .filter-lists{
+        display:flex;
+        flex-wrap:wrap;
+        gap:0;
+    }
+    .filter-list-box{
+        margin:0.5rem 0.5rem 0.5rem 0;
+    }
     .job-listing-wrapper{
         margin:2.5rem;
         padding:4rem 2rem 3rem;
