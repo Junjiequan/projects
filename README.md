@@ -7,7 +7,7 @@
 <br>
 
 ## 3rd month of self teaching front end :)
-I only make stuff that I feel proud of. 
+I only make stuff that I feel proud of 😉 
 
 ## Frontend Mentor challenge
 
