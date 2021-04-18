@@ -142,7 +142,6 @@ window.addEventListener('click', (e)=>{
             document.querySelector('body').classList.remove('light')
             document.querySelector('body').classList.add('dark')
             document.querySelector('.head-container').style.backgroundImage  = "url('images/bg-header-desktop2.svg')"
-            console.log(document.querySelector('.head-container'))
         } else {
             document.querySelector('body').classList.remove('dark')
             document.querySelector('body').classList.add('light')
