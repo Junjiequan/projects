@@ -1,6 +1,8 @@
 const mainContainer = document.querySelector('.main-container');
 const jobTagBox = mainContainer.querySelector('.job-tag-box');
 const jobTitle = mainContainer.querySelector('.job-title');
+
+
 fetch('./data.json')
 .then(resp => resp.json())
 .then(data => data.map(index=>{
@@ -25,16 +27,16 @@ fetch('./data.json')
         <div class="job-tag-box">
         <div class="job-tag" data-value="${index.role}"><p>${index.role}</p></div>
         <div class="job-tag" data-value="${index.level}"><p>${index.level}</p></div>
-        ${index.languages.map(index=>{
-            return `<div class="job-tag" data-value="${index}"><p>${index}</p></div>`
+        ${index.languages.map(language=>{
+            return `<div class="job-tag" data-value="${language}"><p> ${language}</p></div>`
         }).join('')}
-        ${index.tools.map(index=>{
-            return `<div class="job-tag" data-value="${index}"><p>${index}</p></div>`
+        ${index.tools.map(tool=>{
+            return `<div class="job-tag" data-value="${tool}"><p> ${tool}</p></div>`
         }).join('')}
         </div>
     </div>`)
 }))
-//create filter tag
+//create tag on filter bar
 const createFilterBox = (tag)=>{
     document.querySelector('.filter-lists').insertAdjacentHTML("beforeend",`
         <div class="filter-list-box" data-value="${tag}" >
@@ -47,39 +49,71 @@ const createFilterBox = (tag)=>{
         </div>
     `)
 }
-//job list bar
-window.addEventListener('click', (e)=>{
-    const container = e.target.closest('.job-listing-wrapper');
-    
-    //filter bar removal
-    // filterLists.forEach(index=>{
-    //     if(e.target.closest('.filter-list-box').dataset.value == 'Frontend'){
-    //         if('Frontend'.indexOf(index.dataset.value) == 0 ){
-    //             index.remove()
-    //         }
-    //     }
-    // })
-    //add tag to filter list
-    if(e.target.closest('.job-tag')){
-        const filterLists = document.querySelectorAll('.filter-list-box');
-        // const getValue = filterLists.forEach(index=> console.log(index.dataset.value ))
-        console.log(filterLists)
-        if(filterLists.length == 0 || filterLists.forEach(index=> index.dataset.value != e.target.textContent)){
-            createFilterBox(e.target.textContent);
-        } 
-    }
-    //job list bar click
-    const jobTags = document.querySelectorAll('.job-tag-box')
-    jobTags.forEach(index=>{
-        index.querySelectorAll('.job-tag').forEach(tags=>{
-            
-            if(e.target.textContent.indexOf(tags.dataset.value) == 0){
-                tags.closest('.job-listing-wrapper').classList.add("mark");
-            }
-        })
-        if(!index.closest('.job-listing-wrapper').classList.contains('mark')){
-            index.closest('.job-listing-wrapper').style.display = 'none';
+//remove tag from filter bar
+const removeFilterBox = (tag)=>{
+    document.querySelectorAll('.filter-list-box').forEach(index=>{
+        if(index.getAttribute('data-value') == tag){
+            index.remove();
         }
     })
+}
+
+let store = [];     // <<<<<<< job list storage
+//job list bar
+window.addEventListener('click', (e)=>{
+    const joblistingWrapperAll = document.querySelectorAll('.job-listing-wrapper');
+    const jobTagsGroup = document.querySelectorAll('.job-tag-box');
+    const filterTag = e.target.closest('.filter-list-box');
+    //add tag to filter list
+    if(e.target.closest('.job-tag')){
+        if(store.indexOf(e.target.textContent.trim()) == -1){
+            createFilterBox(e.target.textContent)
+            store.push(e.target.textContent.trim())
+        }else {
+            removeFilterBox(e.target.textContent);
+            const storeIndex = store.indexOf(e.target.textContent)
+            store.splice(storeIndex,1)
+        }
+    }
+    //tag removal for filter box
+    if(filterTag){
+        removeFilterBox(filterTag.childNodes[1].textContent);
+        const storeIndex = store.indexOf(filterTag.childNodes[1].textContent)
+        store.splice(storeIndex,1)
+        console.log(store)
+    }
+    jobTagsGroup.forEach(index=>{
+        const jobListingWrapper = index.closest('.job-listing-wrapper')
+        const tagArrays = index.textContent.replace(/\s+/g, ' ').trim().split(' ')
+        jobListingWrapper.style.display = "none";
+        store.forEach(each=>{
+            const checkValue = tagArrays.includes(each);
+            if(checkValue){
+                if(store.length <= 1){
+                    jobListingWrapper.classList.add('marked')
+                };
+            }else if(jobListingWrapper.classList.contains('marked')){
+                jobListingWrapper.classList.remove('marked')
+            };
+        })
+        if(jobListingWrapper.classList.contains('marked')){
+            jobListingWrapper.style.display = "flex";
+        }
+    })
+    //clearAll button on filter bar
+    if(e.target.closest('.filter-wrapper')){
+        const filterLists = document.querySelectorAll('.filter-list-box');
+        if(e.target.textContent == 'Clear'){
+            filterLists.forEach(index => index.remove());
+            store = [];
+            joblistingWrapperAll.forEach(index=> index.classList.remove('marked'))
+            joblistingWrapperAll.forEach(index=> index.style.display = 'flex')
+        }
+    }
+    //check if filter box is empty;
+    if(store.length == 0){
+        joblistingWrapperAll.forEach(index=> index.classList.remove('marked'))
+        joblistingWrapperAll.forEach(index=> index.style.display = 'flex')
+    }
 })
 

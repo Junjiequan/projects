@@ -276,7 +276,7 @@ main {
   justify-content: space-between;
   padding: 2rem 4rem;
   background: white;
-  min-height: 70px;
+  min-height: 74px;
   border-radius: 5px;
   box-shadow: 0 5px 20px rgba(55, 141, 128, 0.2);
 }
@@ -303,6 +303,7 @@ main {
   margin-right: 3.2rem;
 }
 .filter-list-box .filter-remove-icon, .job-tag-box .job-tag .filter-remove-icon {
+  pointer-events: none;
   background: var(--color-darkCyan);
   position: absolute;
   right: 0;
@@ -411,12 +412,12 @@ main {
   gap: 1.5rem;
 }
 .job-tag-box .job-tag {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
 }
 .job-tag-box .job-tag:hover {
   background: var(--color-darkCyan);
 }
 .job-tag-box .job-tag:hover p {
   color: white;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
 }/*# sourceMappingURL=main.css.map */

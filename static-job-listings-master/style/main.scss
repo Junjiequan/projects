@@ -83,7 +83,7 @@ main{
     justify-content:space-between;
     padding:2rem 4rem;    
     background:$white;
-    min-height:70px;
+    min-height:74px;
     border-radius:5px;
     box-shadow:0 5px 20px rgba($color: #378d80, $alpha: 0.2)
 }
@@ -107,6 +107,7 @@ main{
         margin-right:3.2rem;
     }
     .filter-remove-icon{
+        pointer-events: none;
         background:color(darkCyan);
         position:absolute;
         right:0;
@@ -222,12 +223,12 @@ main{
     gap:1.5rem;
     .job-tag{
         @extend  .filter-list-box;
-        transition: all .2s ease-in-out;
+        transition: all .2s ease;
         &:hover{
             background:color(darkCyan);
             p{
                 color:$white;
-                transition: all .2s ease-in-out;
+                transition: all .2s ease;
             }
         }
     }
