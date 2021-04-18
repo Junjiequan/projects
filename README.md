@@ -4,8 +4,8 @@
 
 <p align="center">Not a single code were copy pasted from other's projects or followed any tutorials.</p>
 </p>
-
 <br>
+
 ## 3rd month of self teaching front end :)
 I only make stuff that I feel proud of. 
 
