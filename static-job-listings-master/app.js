@@ -69,6 +69,7 @@ let store = [];
 
 //job list bar
 window.addEventListener('click', (e)=>{
+    const body = document.querySelector('body');
     const joblistingWrapperAll = document.querySelectorAll('.job-listing-wrapper');
     const jobTagsGroup = document.querySelectorAll('.job-tag-box');
     const filterTag = e.target.closest('.filter-list-box');
@@ -91,11 +92,7 @@ window.addEventListener('click', (e)=>{
         const storeIndex = store.indexOf(filterTag.childNodes[1].textContent)
         store.splice(storeIndex,1)
     }
-    ////////////////////////////////////////////////////////////////
-                //the logic of this method need to be improved 
-    ////////////////////////////////////////////////////////////////
-    
-    //collect all job-tag-boxes << each of them has list of tags
+    //joblist display controller
     jobTagsGroup.forEach(index=>{   
         const jobListingWrapper = index.closest('.job-listing-wrapper')
         jobListingWrapper.style.display = "none";
@@ -103,24 +100,13 @@ window.addEventListener('click', (e)=>{
         //convert tags list into readable string arrays
         const tagArrays = index.textContent.replace(/\s+/g, ' ').trim().split(' ') 
         // store can be found on the first 'if condition' inside eventlistener
-        store.forEach(each=>{       
-            const checkValue = tagArrays.includes(each);
-            if(checkValue){
-                if(store.length <= 1){      // <<<<<<<<<<< this logic is definitely deficient
-                    jobListingWrapper.classList.add('marked')
-                };
-            }else if(jobListingWrapper.classList.contains('marked')){
-                jobListingWrapper.classList.remove('marked')
-            }
-        })
-        if(jobListingWrapper.classList.contains('marked')){
+        if(store.every(each => tagArrays.includes(each))){
+            jobListingWrapper.classList.add('marked');
             jobListingWrapper.style.display = "flex";
+        } else {
+            jobListingWrapper.classList.remove('marked')
         }
     })
-    ////////////////////////////////////////////////////////////////
-                //above method ends here
-    ////////////////////////////////////////////////////////////////
-
     //clearAll button on filter bar
     if(e.target.closest('.filter-wrapper')){
         const filterLists = document.querySelectorAll('.filter-list-box');
@@ -138,13 +124,13 @@ window.addEventListener('click', (e)=>{
         closeFilterbox();
     }
     if(e.target.classList[0] == 'color-switcher'){        
-        if(document.querySelector('body').classList == 'light'){
-            document.querySelector('body').classList.remove('light')
-            document.querySelector('body').classList.add('dark')
+        if(body.classList == 'light'){
+            body.classList.remove('light')
+            body.classList.add('dark')
             document.querySelector('.head-container').style.backgroundImage  = "url('images/bg-header-desktop2.svg')"
         } else {
-            document.querySelector('body').classList.remove('dark')
-            document.querySelector('body').classList.add('light')
+            body.classList.remove('dark')
+            body.classList.add('light')
             document.querySelector('.head-container').style.backgroundImage  = "url('images/bg-header-desktop.svg')"
         }
     }
