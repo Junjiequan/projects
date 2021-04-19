@@ -65,7 +65,7 @@ function closeFilterbox(){
 }
 
 //storage
-let store = [];     // <<<<<<< filter list storage
+let store = [];    
 
 //job list bar
 window.addEventListener('click', (e)=>{
