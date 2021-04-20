@@ -316,7 +316,7 @@ main {
 }
 
 .leaflet-top {
-  top: 18rem;
+  top: 26rem;
 }
 
 footer {
@@ -327,7 +327,7 @@ footer {
   z-index: 9999;
 }
 footer .attribution {
-  padding: 0.5rem;
+  padding: 0.3rem;
   background: rgba(255, 255, 255, 0.3);
   font-size: 1rem;
 }
@@ -391,7 +391,7 @@ footer .attribution a {
   footer {
     justify-content: center;
     margin: 0 auto;
-    bottom: 3rem;
+    bottom: 2rem;
     left: 0;
     right: 0;
   }
