@@ -3,32 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+  <script defer src="./main.js"></script>
   <title>Frontend Mentor | IP Address Tracker</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<body class="light">
 
-  IP Address Tracker
+  <main>
+    <section class="hero__cotainer">
+        <div class="hero__wrapper">
+            <h1>IP Address Tracker</h1>
+            <form class="hero__search" >
+              <input type="text" aria-label="searchIP" value="" name="searchIP" placeholder="Search for any IP address or domain" />
+              <button type="submit"><img src="./images/icon-arrow.svg" alt="icon"></button>
+            </form>
+            <div class="hero__data__wrapper">
+              <article class="hero__data__block" data-id ="ip" >
+                <h5>IP Address</h5>
+                <p>192.212.174.101</p>
+              </article>
+              <article class="hero__data__block" data-id ="location">
+                <h5>Location</h5>
+                <p>Brooklyn, Ny</p>
+                <p>10001</p>
+              </article>
+              <article class="hero__data__block" data-id ="timezone">
+                <h5>Timezone</h5>
+                <p>UTC-05:00</p>
+              </article>
+              <article class="hero__data__block" data-id ="isp">
+                <h5>ISP</h5>
+                <p>SpaceX<br>Starlink</p>
+              </article>
+            </div>
+        </div>
+    </section>
+    <section class="map__container">
+      <div class="map__wrapper"></div>
+    </section>
+  </main>
 
-  Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>

@@ -1,0 +1,68 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+};
+html{
+    a,li{
+        list-style:none;
+        text-decoration:none;
+    }
+    font-size:62.5%;
+    font-family: 'Rubik', sans-serif;
+};
+/////////////////////////////////////////////////
+                //font weight
+/////////////////////////////////////////////////
+@mixin font-weight($weight){
+    $weights:(
+        thin: 400,
+        normal:500,
+        bold: 700
+    );
+    $output: $weight;
+    @if map-has-key($weights, $weight){
+        $output: map-get($weights, $weight);
+    };
+    font-weight:$output;
+};
+%b-0{
+    @include font-weight(thin)
+};
+%b-1{
+    @include font-weight(normal)
+};
+%b-2{
+    @include font-weight(bold)
+};
+/////////////////////////////////////////////////
+                    //color
+/////////////////////////////////////////////////
+$Black: hsl(0, 0%, 5%);
+$VeryDarkGray: hsl(0, 0%, 17%);
+$DarkGray: hsl(0, 0%, 59%);
+$Pink: hsl(350, 100%, 88%);
+$light:(
+    black:$Black,
+    darkGray:$VeryDarkGray,
+    gray:$DarkGray,
+    pink:$Pink
+);
+:root{
+    .light{
+        @each $name, $color in $light{
+            --color-#{$name}: #{$color};
+        };
+    };
+};
+@function color($getColor){
+    @return var(--color-#{$getColor})
+};
+
+/////////////////////////////////////////////////
+                //for javascript
+/////////////////////////////////////////////////
+.invalid{
+    color:rgb(187, 34, 34);
+    @extend %b-2;
+}
