@@ -1,7 +1,6 @@
 //selectors
 const ipOutput = document.querySelector('[data-id = "ip"]').childNodes[3];
 const cityOutput = document.querySelector('[data-id = "location"]').childNodes[3];
-console.log(cityOutput)
 const timeOutput = document.querySelector('[data-id = "timezone"]').childNodes[3];
 const ispOutput = document.querySelector('[data-id = "isp"]').childNodes[3];
 const loading = document.querySelector('.map__loading');
