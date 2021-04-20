@@ -42,7 +42,7 @@ let mymap = null;
 
 const displayData = (data)=>{
     ipOutput.innerText = data.ip;
-    cityOutput.innerHTML = `<p>${data.location.city} <br>${data.location.postalCode}</p>`;
+    cityOutput.innerHTML = `${data.location.city} <br>${data.location.postalCode}`;
     timeOutput.innerText = data.location.timezone;
     ispOutput.innerText = data.isp;
     if(mymap != undefined && mymap != null){
