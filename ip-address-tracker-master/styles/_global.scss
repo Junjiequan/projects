@@ -10,6 +10,7 @@ html{
     }
     font-size:62.5%;
     font-family: 'Rubik', sans-serif;
+    height:100%;
 };
 /////////////////////////////////////////////////
                 //font weight
@@ -62,7 +63,31 @@ $light:(
 /////////////////////////////////////////////////
                 //for javascript
 /////////////////////////////////////////////////
-.invalid{
+#invalid{
     color:rgb(187, 34, 34);
+    border:2px solid red;
+    font-size:1.5rem;
     @extend %b-2;
 }
+
+/////////////////////////////////////////////////
+                //animation
+/////////////////////////////////////////////////
+.animation{
+    -webkit-animation: jello-horizontal 0.9s infinite both;
+            animation: jello-horizontal 0.9s infinite both;
+}
+@keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+  
