@@ -64,11 +64,11 @@ const displayMap = (x,y) =>{
         zoomOffset: -1
     }).addTo(mymap);
 
-    let greenIcon = L.icon({
+    let Icon = L.icon({
         iconUrl: './images/icon-location.svg',
         iconSize: [36, 46],
     });
-    L.marker([x, y], {icon: greenIcon}).addTo(mymap);
+    L.marker([x, y], {icon: Icon}).addTo(mymap);
     L.control.zoom({ position: 'bottomright'}).addTo(mymap);
 }
 //eventListener
