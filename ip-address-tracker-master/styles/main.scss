@@ -178,6 +178,13 @@ main{
     top:-3rem;bottom:0;left:0;right:0;
     transition:opacity .3s ease;
     cursor:pointer;
+    &:hover .map__loading__animation::after{
+        border: 32px solid color(darkGray);
+        border-color: color(darkGray) transparent color(darkGray) transparent;
+    }
+    &:hover h2{
+        color:color(darkGray);
+    }
     .map__loading__animation{
         display: inline-block;
         position: relative;
@@ -191,26 +198,19 @@ main{
             height: 0;
             margin: 8px;
             box-sizing: border-box;
-            border: 32px solid color(gray);
-            border-color: color(gray) transparent color(gray) transparent;
+            border: 32px solid #366aca;
+            border-color: #366aca transparent #366aca transparent;
             animation: lds-hourglass 1.2s infinite;
             transition:all .3s ease;
         }
     }
     h2{
-        color:color(gray);
+        color:#366aca;
         font-size:2rem;
         margin-top:1.5rem;
         text-transform:uppercase;
         transition:all .3s ease;
         letter-spacing: 0.1rem;
-    }
-    &:hover .loading__animation:after{
-        border: 32px solid color(darkGray);
-        border-color: color(darkGray) transparent color(darkGray) transparent;
-    }
-    &:hover h2{
-        color:color(darkGray);
     }
     
 };

@@ -278,6 +278,13 @@ main {
   transition: opacity 0.3s ease;
   cursor: pointer;
 }
+.map__loading:hover .map__loading__animation::after {
+  border: 32px solid var(--color-darkGray);
+  border-color: var(--color-darkGray) transparent var(--color-darkGray) transparent;
+}
+.map__loading:hover h2 {
+  color: var(--color-darkGray);
+}
 .map__loading .map__loading__animation {
   display: inline-block;
   position: relative;
@@ -292,26 +299,19 @@ main {
   height: 0;
   margin: 8px;
   box-sizing: border-box;
-  border: 32px solid var(--color-gray);
-  border-color: var(--color-gray) transparent var(--color-gray) transparent;
+  border: 32px solid #366aca;
+  border-color: #366aca transparent #366aca transparent;
   -webkit-animation: lds-hourglass 1.2s infinite;
           animation: lds-hourglass 1.2s infinite;
   transition: all 0.3s ease;
 }
 .map__loading h2 {
-  color: var(--color-gray);
+  color: #366aca;
   font-size: 2rem;
   margin-top: 1.5rem;
   text-transform: uppercase;
   transition: all 0.3s ease;
   letter-spacing: 0.1rem;
-}
-.map__loading:hover .loading__animation:after {
-  border: 32px solid var(--color-darkGray);
-  border-color: var(--color-darkGray) transparent var(--color-darkGray) transparent;
-}
-.map__loading:hover h2 {
-  color: var(--color-darkGray);
 }
 
 .leaflet-top {
