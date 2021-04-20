@@ -147,6 +147,9 @@ main {
   flex: 1 1 25%;
   position: relative;
 }
+.hero__data__block p {
+  max-width: 190px;
+}
 .hero__data__block:not(:first-child) {
   padding-left: 3.2rem;
 }
