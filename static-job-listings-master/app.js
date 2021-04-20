@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const mainContainer = document.querySelector('.main-container');
 const jobTagBox = mainContainer.querySelector('.job-tag-box');
 const jobTitle = mainContainer.querySelector('.job-title');
@@ -51,9 +52,7 @@ const createFilterBox = (tag)=>{
 //remove tag from filter bar
 const removeFilterBox = (tag)=>{
     document.querySelectorAll('.filter-list-box').forEach(index=>{
-        if(index.getAttribute('data-value') == tag){
-            index.remove();
-        }
+        if(index.getAttribute('data-value') == tag) index.remove();
     })
 }
 //open and close effect
@@ -63,14 +62,30 @@ function openFilterbox(){
 function closeFilterbox(){
     document.querySelector('.filter-wrapper').style.transform = "translateY(-3.5rem) scaleY(0)"
 }
-
+//clear all
+function clearAll(){
+    document.querySelectorAll('.job-listing-wrapper')
+        .forEach(index=> index.classList.remove('marked'));
+    document.querySelectorAll('.job-listing-wrapper')
+        .forEach(index=> index.style.display = 'flex');
+}
+//color theme switch
+function colorThemeChanger(){
+    if(body.classList == 'light'){
+        body.classList.remove('light')
+        body.classList.add('dark')
+        document.querySelector('.head-container').style.backgroundImage  = "url('images/bg-header-desktop2.svg')"
+    } else {
+        body.classList.remove('dark')
+        body.classList.add('light')
+        document.querySelector('.head-container').style.backgroundImage  = "url('images/bg-header-desktop.svg')"
+    }
+}
 //storage
 let store = [];    
 
 //job list bar
 window.addEventListener('click', (e)=>{
-    const body = document.querySelector('body');
-    const joblistingWrapperAll = document.querySelectorAll('.job-listing-wrapper');
     const jobTagsGroup = document.querySelectorAll('.job-tag-box');
     const filterTag = e.target.closest('.filter-list-box');
     const tagText = e.target.textContent.trim()
@@ -96,9 +111,8 @@ window.addEventListener('click', (e)=>{
     jobTagsGroup.forEach(index=>{   
         const jobListingWrapper = index.closest('.job-listing-wrapper')
         jobListingWrapper.style.display = "none";
-
         //convert tags list into readable string arrays
-        const tagArrays = index.textContent.replace(/\s+/g, ' ').trim().split(' ') 
+        const tagArrays = index.textContent.replace(/\s+/g, ' ').trim().split(' ');
         // store can be found on the first 'if condition' inside eventlistener
         if(store.every(each => tagArrays.includes(each))){
             jobListingWrapper.classList.add('marked');
@@ -113,26 +127,17 @@ window.addEventListener('click', (e)=>{
         if(e.target.textContent == 'Clear'){
             filterLists.forEach(index => index.remove());
             store = [];
-            joblistingWrapperAll.forEach(index=> index.classList.remove('marked'))
-            joblistingWrapperAll.forEach(index=> index.style.display = 'flex')
+            clearAll();
         }
     }
     //check if filter box is empty;
     if(store.length == 0){
-        joblistingWrapperAll.forEach(index=> index.classList.remove('marked'))
-        joblistingWrapperAll.forEach(index=> index.style.display = 'flex')
+        clearAll();
         closeFilterbox();
     }
+    //color theme changer
     if(e.target.classList[0] == 'color-switcher'){        
-        if(body.classList == 'light'){
-            body.classList.remove('light')
-            body.classList.add('dark')
-            document.querySelector('.head-container').style.backgroundImage  = "url('images/bg-header-desktop2.svg')"
-        } else {
-            body.classList.remove('dark')
-            body.classList.add('light')
-            document.querySelector('.head-container').style.backgroundImage  = "url('images/bg-header-desktop.svg')"
-        }
+        colorThemeChanger();
     }
 })
 
