@@ -1,7 +1,7 @@
 //selectors
 const ipOutput = document.querySelector('[data-id = "ip"]').childNodes[3];
 const cityOutput = document.querySelector('[data-id = "location"]').childNodes[3];
-const postOutput = document.querySelector('[data-id = "location"]').childNodes[3].childNodes[1];
+console.log(cityOutput)
 const timeOutput = document.querySelector('[data-id = "timezone"]').childNodes[3];
 const ispOutput = document.querySelector('[data-id = "isp"]').childNodes[3];
 const loading = document.querySelector('.map__loading');
@@ -43,8 +43,7 @@ let mymap = null;
 
 const displayData = (data)=>{
     ipOutput.innerText = data.ip;
-    cityOutput.innerText = data.location.city;
-    postOutput.innerText = data.location.postalCode;
+    cityOutput.innerHTML = `<p>${data.location.city} <br>${data.location.postalCode}</p>`;
     timeOutput.innerText = data.location.timezone;
     ispOutput.innerText = data.isp;
     if(mymap != undefined && mymap != null){

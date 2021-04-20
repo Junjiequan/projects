@@ -383,11 +383,8 @@ footer .attribution a {
   .hero__data__block:not(:last-child):after {
     display: none;
   }
-  .hero__data__block:nth-child(2) p {
-    display: flex;
-  }
-  .hero__data__block:nth-child(2) p span {
-    margin-left: 1rem;
+  .hero__data__block:nth-child(2) p br {
+    display: none;
   }
 }
 @media screen and (max-width: 650px) {

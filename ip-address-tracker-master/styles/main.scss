@@ -277,9 +277,8 @@ footer{
             display:none;
         }
         &:nth-child(2) p{
-            display:flex;
-            span{
-                margin-left:1rem;
+            br{
+                display:none;
             }
         }
     }
