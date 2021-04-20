@@ -7,6 +7,7 @@ const loading = document.querySelector('.map__loading');
 const form = document.querySelector('form');
 const input = document.querySelector('input[type=text]');
 const ipReg = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+isLoading();
 //functions
 async function init(ip) {
     try{
@@ -15,7 +16,6 @@ async function init(ip) {
             throw new Error('Invalid IP address');
         data = await res.json();
         displayData(data);
-        isLoading();
     } catch(err){
         input.setAttribute('id', 'invalid');
         input.value = `${err}`
@@ -24,7 +24,7 @@ async function init(ip) {
 init('');  // <<<<<<<<<<init
 
 // loading animation
-const isLoading =()=>{
+function isLoading(){
     if(loading.style.display != 'flex'){
         loading.style.display = 'flex'
         setTimeout(()=>{
