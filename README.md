@@ -1,15 +1,5 @@
-<h1 align="center"> Sworn statement </h1>
-
-<p align="center">All the solutions listed here were created by myself from scratch ORIGINALLY. </p>
-
-<p align="center">Not a single code were copy pasted from other's projects or followed any tutorials.</p>
-</p>
-<br>
-
-## 3rd month of self teaching front end :)
+## 4th month of self teaching front end :)
 I only make stuff that I feel proud of 😉 
-
-## 21/4 Now its 4th month of self teaching :D
 
 ## Frontend Mentor challenge
 
