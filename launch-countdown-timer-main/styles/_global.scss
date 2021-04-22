@@ -1,0 +1,51 @@
+@use '../styles/color' as *;
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+html{
+    a,li{
+        text-decoration:none;
+        list-style:none;
+    }
+    font-size:62.5%;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+//color function
+:root{
+    .dark{
+        @each $name, $color in $Dark{
+            --color-#{$name}: #{$color};
+        }
+    }
+}
+@function color($getColor){
+    @return var(--color-#{$getColor})
+};
+
+//animation
+.animation{
+    -webkit-animation: flip-horizontal-bottom 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+	        animation: flip-horizontal-bottom 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+}
+.fold{
+    animation: fold 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+}
+  @keyframes fold{
+    0%{
+      transform: rotateX(0deg);
+      };
+    100%{
+      transform: rotateX(-180deg);
+      }
+  };
+  @keyframes unfold{
+    0%{
+      transform: rotateX(180deg)
+      }
+    100%{
+      transform: rotateX(0deg)
+      }
+  }

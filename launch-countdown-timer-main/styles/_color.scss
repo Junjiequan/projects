@@ -1,0 +1,20 @@
+//darktheme
+$Grayishblue: hsl(237, 18%, 59%);
+$Softred: hsl(345, 95%, 68%);
+$DarkRed:rgb(66, 43, 64);
+$White: hsl(0, 0%, 100%);
+$Darkdesaturatedblue: hsl(236, 21%, 26%);
+$Verydarkblue: hsl(235, 16%, 14%);
+$Verydarkblue2: hsl(234, 17%, 12%);
+$Dot: hsl(251, 19%, 12%);
+
+$Dark:(
+    gray:$Grayishblue,
+    red:$Softred,
+    darkred:$DarkRed,
+    white:$White,
+    darkblue: $Darkdesaturatedblue,
+    verydarkblue:$Verydarkblue,
+    verydarkblue2:$Verydarkblue2,
+    dot:$Dot,
+)

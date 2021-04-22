@@ -3,29 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
   <title>Frontend Mentor | Launch countdown timer</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
-
-  We're launching soon
-
-  Days
-  Hours
-  Minutes
-  Seconds
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<body class="dark">
+  <main class="hero__container">
+    <section class="hero__wrapper">
+      <h1>We<i>'</i>re launching soon</h1>
+      <div class="hero__timer">
+        <!-- days -->
+        <div class="hero__timer__wrap">
+          <div class="hero__timer__box">
+            <span id="days">08</span>
+          </div>
+          <div class="hero__timer__desc">Days</div>
+        </div>
+        <!-- hours -->
+        <div class="hero__timer__wrap">
+          <div class="hero__timer__box">
+            <span id="hours">23</span>
+          </div>
+          <div class="hero__timer__desc">Hours</div>
+        </div>
+        <!-- minutes -->
+        <div class="hero__timer__wrap">
+          <div class="hero__timer__box">
+            <span id="mins">55</span>
+          </div>
+          <div class="hero__timer__desc">Minutes</div>
+        </div>
+        <!-- seconds -->
+        <div class="hero__timer__wrap">
+          <div class="hero__timer__box">
+            <div class="hero__timer__hole1"></div>
+            <div class="hero__timer__hole2"></div>
+            <div class="hero__timer__flip__top">
+              <span id="secs">41</span>
+            </div>
+            <div class="hero__timer__flip__bottom">
+              <span id="secs">41</span>
+            </div>
+          </div>
+          <div class="hero__timer__desc">Seconds</div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
