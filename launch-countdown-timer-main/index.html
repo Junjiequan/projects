@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/main.css">
+  <script defer src="./main.js"></script>
   <title>Frontend Mentor | Launch countdown timer</title>
 </head>
 <body class="dark">
@@ -36,14 +37,15 @@
         <!-- seconds -->
         <div class="hero__timer__wrap">
           <div class="hero__timer__box">
-            <div class="hero__timer__hole1"></div>
-            <div class="hero__timer__hole2"></div>
-            <div class="hero__timer__flip__top">
-              <span id="secs">41</span>
+            <div class="hero__timer__number" data-number-before = "10" data-number-after = "10">
+              <!-- before -->
+              <div class="hero__timer__number__bg" onclick="this.classList.toggle('flipped')">
+                <div class="number number__front"></div>
+                <div class="number number__behind"></div>
+              </div>
+              <!-- after -->
             </div>
-            <div class="hero__timer__flip__bottom">
-              <span id="secs">41</span>
-            </div>
+            <div class="hero__timer__hole"></div>
           </div>
           <div class="hero__timer__desc">Seconds</div>
         </div>

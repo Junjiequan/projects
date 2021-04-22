@@ -24,31 +24,26 @@ html a, html li {
   --color-dot: #1b1924;
 }
 
-.animation {
-  -webkit-animation: flip-horizontal-bottom 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
-  animation: flip-horizontal-bottom 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
-}
-
 .fold {
-  -webkit-animation: fold 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-          animation: fold 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation: fold 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+          animation: fold 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
 }
 
 @-webkit-keyframes fold {
   0% {
-    transform: rotateX(0deg);
+    transform: rotateY(0deg);
   }
   100% {
-    transform: rotateX(-180deg);
+    transform: rotateY(-180deg);
   }
 }
 
 @keyframes fold {
   0% {
-    transform: rotateX(0deg);
+    transform: rotateY(0deg);
   }
   100% {
-    transform: rotateX(-180deg);
+    transform: rotateY(-180deg);
   }
 }
 @-webkit-keyframes unfold {
@@ -123,72 +118,122 @@ h1 i {
 
 .hero__timer__box {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 10px 0 var(--color-dot);
+  color: var(--color-red);
+  font-size: 8rem;
+  line-height: 0;
+  perspective: 28rem;
+}
+
+.hero__timer__number {
   height: 16rem;
   width: 16rem;
   position: relative;
-  border-radius: 10px;
-  box-shadow: 0 10px 0 var(--color-dot);
 }
-.hero__timer__box .hero__timer__hole1 {
+.hero__timer__number::before, .hero__timer__number::after {
   position: absolute;
-  background: var(--color-dot);
-  left: -0.75em;
-  bottom: 0;
-  top: 0;
-  margin: auto 0;
-  height: 1.5em;
-  width: 1.5em;
-  border-radius: 100%;
-  z-index: 9;
-}
-.hero__timer__box .hero__timer__hole2 {
-  position: absolute;
-  background: var(--color-dot);
-  right: -0.75em;
-  bottom: 0;
-  top: 0;
-  margin: auto 0;
-  height: 1.5em;
-  width: 1.5em;
-  z-index: 9;
-  border-radius: 100%;
-}
-
-.hero__timer__flip__top {
-  overflow: hidden;
-  width: 100%;
-  height: 50%;
-  bottom: 0;
-  padding: 3rem;
-  text-align: center;
-  border-radius: 10px 10px 0 0;
-  background: var(--color-darkblue);
-  filter: brightness(0.6);
-}
-
-.hero__timer__flip__bottom {
-  overflow: hidden;
-  width: 100%;
-  height: 50%;
-  top: 0;
-  padding: 3rem;
-  text-align: center;
-  border-radius: 0 0 10px 10px;
-  background: var(--color-darkblue);
-}
-.hero__timer__flip__bottom span {
+  z-index: -1;
   display: flex;
   justify-content: center;
-  transform: translateY(-8rem);
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  background: var(--color-darkblue);
+}
+.hero__timer__number::before {
+  border-radius: 10px 10px 0 0;
+  top: -1px;
+  align-items: flex-end;
+  filter: brightness(0.6);
+  content: attr(data-number-before);
+}
+.hero__timer__number::after {
+  border-top: 1px solid var(--color-verydarkblue2);
+  border-radius: 0 0 10px 10px;
+  bottom: 0;
+  align-items: flex-start;
+  content: attr(data-number-after);
 }
 
-span {
+.hero__timer__number__bg {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  transform: rotateX(0);
+  transition: transform 0.8s ease-in-out;
   color: var(--color-red);
-  font-size: 8rem;
-  z-index: 1;
+}
+.hero__timer__number__bg .number {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background: var(--color-darkblue);
+}
+.hero__timer__number__bg .number__front {
+  border-bottom: 1px solid var(--color-dot);
+  border-radius: 10px 10px 0 0;
+  align-items: flex-end;
+  filter: brightness(0.6);
+}
+.hero__timer__number__bg .number__behind {
+  border-radius: 0 0 10px 10px;
+  align-items: flex-start;
+  transform: rotateX(-180deg);
+}
+
+.unflip {
+  transform: rotateX(0);
+}
+
+.flipped {
+  transform: rotateX(-180deg);
+}
+
+.hero__timer__hole {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.hero__timer__hole::before {
+  position: absolute;
+  content: "";
+  background: var(--color-dot);
+  left: -0.75rem;
+  bottom: 0;
+  top: 0;
+  margin: auto 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+}
+.hero__timer__hole::after {
+  position: absolute;
+  content: "";
+  background: var(--color-dot);
+  right: -0.75rem;
+  bottom: 0;
+  top: 0;
+  margin: auto 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
 }
 
 .hero__timer__desc {
