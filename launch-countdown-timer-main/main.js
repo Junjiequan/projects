@@ -19,8 +19,6 @@ function countSecond(){
         numberFlip.classList.toggle('flipped')
         numberPrev.textContent = number.dataset.numberBefore;
         numberNext.textContent = number.dataset.numberAfter;
-        
-
 }
 
 
