@@ -22,5 +22,5 @@ I only make stuff that I feel proud of 😉
 | 15. [Shortly URL shortening API Challenge](https://a331998513.github.io/projects/url-shortening-api-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/url-shortening-api-master)  |
 | 16. [static-job-listings-master](https://a331998513.github.io/projects/static-job-listings-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/static-job-listings-master)  |
 | 17. [IP Address Tracker](https://a331998513.github.io/projects/ip-address-tracker-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/ip-address-tracker-master)  |
-| WIP. [launch-countdown-timer-main](https://a331998513.github.io/projects/launch-countdown-timer-main/)  | [Repo](https://github.com/a331998513/projects/tree/main/launch-countdown-timer-main)  |
+| 18. []()  | [Repo]()  |
 | 99. []()  | [Repo]()  |
