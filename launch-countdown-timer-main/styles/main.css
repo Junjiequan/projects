@@ -123,6 +123,7 @@ h1 i {
 
 .hero__timer__box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 16rem;
@@ -163,9 +164,9 @@ h1 i {
   bottom: 0;
   padding: 3rem;
   text-align: center;
-  position: absolute;
   border-radius: 10px 10px 0 0;
-  background: var(--color-verydarkblue2);
+  background: var(--color-darkblue);
+  filter: brightness(0.6);
 }
 
 .hero__timer__flip__bottom {
@@ -175,9 +176,13 @@ h1 i {
   top: 0;
   padding: 3rem;
   text-align: center;
-  position: absolute;
   border-radius: 0 0 10px 10px;
-  background: var(--color-gray);
+  background: var(--color-darkblue);
+}
+.hero__timer__flip__bottom span {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-8rem);
 }
 
 span {
