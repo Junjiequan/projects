@@ -103,7 +103,7 @@ h1{
     transform-style: preserve-3d;
     transform-origin:bottom;
     transform:rotateX(0);
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.7s ease-in-out;
     color:color(red);
     .number{
         position:absolute;
@@ -132,6 +132,9 @@ h1{
 }
 .flipped{
     transform:rotateX(-180deg);
+}
+.no-animation{
+    transition: none !important
 }
 .hero__timer__hole{
     position:absolute;

@@ -171,7 +171,7 @@ h1 i {
   transform-style: preserve-3d;
   transform-origin: bottom;
   transform: rotateX(0);
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.7s ease-in-out;
   color: var(--color-red);
 }
 .hero__timer__number__bg .number {
@@ -203,6 +203,10 @@ h1 i {
 
 .flipped {
   transform: rotateX(-180deg);
+}
+
+.no-animation {
+  transition: none !important;
 }
 
 .hero__timer__hole {
