@@ -8,6 +8,7 @@ body{
     color(verydarkblue2) 50%, color(darkred)100%) ;
     display:flex;
     position:relative;
+    justify-content:center;
     &::after{
         position:absolute;
         content:'';
@@ -17,6 +18,82 @@ body{
         background:url(../images/pattern-hills.svg) no-repeat bottom/contain;
     }
 }
-.hero__container{
-    $root : &;
+.timer__container{
+    display:flex;
+    max-width:1440px;
+    width:100%;
+    color:color(white);
+    justify-content:center;
+    align-items:center;
+}
+.timer__number{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    line-height:0;
+}
+.number{
+    font-size:8rem;
+    width:15rem;
+    height:15rem;
+    color:color(red);
+    position:relative;
+    &::before,
+    &::after{
+        position:absolute;
+        z-index:0;
+        display:flex;
+        justify-content:center;
+        width:100%;
+        height:50%;
+        overflow:hidden;
+        background:color(darkblue);
+
+    }
+    &::before{  //bottom half
+        content:attr(data-number-before);
+        bottom:0;
+        align-items:flex-start;
+        border-radius:0 0 10px 10px;
+    }
+    &::after{   //top half
+        content:attr(data-number-after);
+        top:0;
+        align-items:flex-end;
+        filter:brightness(0.6);
+        border-radius:10px 10px 0 0;
+    }
+}
+.card{
+    position:relative;
+    z-index:1;
+    width:100%;
+    height:50%;
+    transform-style:preserve-3d;
+    transform-origin:bottom;
+    transform:rotateX(0);
+    transition:transform 0.7s ease-in-out;
+}
+.flipped{
+    transform:rotateX(-180deg);
+}
+.card__face{
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    backface-visibility:hidden;
+    background:color(darkblue);
+}
+.card__face__front{     //top-half
+    border-radius:10px 10px 0 0;
+    align-items:flex-end;
+    filter:brightness(0.6);
+}
+.card__face__back{      //bottom-half after flip
+    border-radius:0 0 10px 10px;
+    align-items:flex-start;
+    transform:rotateX(-180deg);
 }

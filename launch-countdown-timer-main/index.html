@@ -12,15 +12,19 @@
   <main class="timer__container">
     <div class="timer__wrapper">
       <div class="timer__number timer__number-s">
-        <div class="number">
+        <div class="number" data-number-before="10" data-number-after="11">
           <!-- ::before -->
-          <div class="card">
-            <div class="card__face card__face__front"></div>
-            <div class="card__face card__face__back"></div>
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card__face card__face__front">10</div>
+            <div class="card__face card__face__back">11</div>
           </div>
           <!-- ::after -->
         </div>
+        <div class="desc">
+          Second
+        </div>
       </div>
+
     </div>
   </main>
 </body>
