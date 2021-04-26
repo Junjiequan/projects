@@ -72,6 +72,7 @@ body {
   justify-content: center;
 }
 body::after {
+  z-index: -10;
   position: absolute;
   content: "";
   bottom: 0;
@@ -90,11 +91,24 @@ body::after {
   align-items: center;
 }
 
+.timer__wrapper {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  margin: 35rem;
+  justify-content: space-between;
+}
+
 .timer__number {
   display: flex;
   flex-direction: column;
   align-items: center;
   line-height: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  perspective: 350px;
 }
 
 .number {
@@ -141,6 +155,10 @@ body::after {
 
 .flipped {
   transform: rotateX(-180deg);
+}
+
+.unflip {
+  transition: none !important;
 }
 
 .card__face {
