@@ -16,6 +16,7 @@ const openNav = (target)=>{
     },50);
     navBox.style.height = "25rem";
     navBox.style.opacity = "1";
+    document.body.style.overflowY = "hidden"
 }
 
 const closeNav = (target)=>{
@@ -31,6 +32,7 @@ const closeNav = (target)=>{
     },450);
     navBox.style.height = "0";
     navBox.style.opacity = "0";
+    document.body.style.overflowY = "visible"
 }
 
 document.addEventListener('click', (e)=>{
@@ -49,5 +51,3 @@ document.addEventListener('click', (e)=>{
     }
 })
 
-
-//////////////////signiture////////////////

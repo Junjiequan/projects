@@ -508,6 +508,9 @@ footer{
     .content-box-wrapper{
         margin-top:3rem;
     }
+    .content-box:not(:last-child){
+        padding:0;
+    }
     .content-box{
         min-width:30rem;
     }

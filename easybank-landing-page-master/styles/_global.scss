@@ -9,9 +9,8 @@
     margin:0;
     box-sizing:border-box;
 }
-a:not(.no-default-focus):focus,
-a:not(.no-default-focus):active{
-    outline:2px dotted rgba($color: #4f8a63, $alpha: 0.7)
+a:not(.no-default-focus):focus-visible{
+    outline:3px dotted rgba($color: #d6371b, $alpha: 1)
 }
 html{
     font-size:62.5%;

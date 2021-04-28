@@ -30,9 +30,8 @@ h1, h3, p, .header-nav, .header-btn, .hero-left-desc .hero-btn, .footer-copyrigh
   box-sizing: border-box;
 }
 
-a:not(.no-default-focus):focus,
-a:not(.no-default-focus):active {
-  outline: 2px dotted rgba(79, 138, 99, 0.7);
+a:not(.no-default-focus):focus-visible {
+  outline: 3px dotted #d6371b;
 }
 
 html {
@@ -633,6 +632,10 @@ footer {
 
   .content-box-wrapper {
     margin-top: 3rem;
+  }
+
+  .content-box:not(:last-child) {
+    padding: 0;
   }
 
   .content-box {
