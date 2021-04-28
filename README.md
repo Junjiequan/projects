@@ -23,5 +23,6 @@ I only make stuff that I feel proud of 😉
 | 16. [static-job-listings-master](https://a331998513.github.io/projects/static-job-listings-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/static-job-listings-master)  |
 | 17. [IP Address Tracker](https://a331998513.github.io/projects/ip-address-tracker-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/ip-address-tracker-master)  |
 |_Failed._ [launch-countdown-timer-main](https://a331998513.github.io/projects/launch-countdown-timer-main/) |[Repo](https://github.com/a331998513/projects/tree/main/launch-countdown-timer-main)|
-| WIP. [easybank-landing-page-master](https://a331998513.github.io/projects/easybank-landing-page-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/easybank-landing-page-master)  |
+| 18. [easybank-landing-page-master](https://a331998513.github.io/projects/easybank-landing-page-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/easybank-landing-page-master)  |
+| WIP. []()  | [Repo]()  |
 | 99. []()  | [Repo]()  |
