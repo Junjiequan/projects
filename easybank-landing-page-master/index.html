@@ -156,5 +156,33 @@
     </div>
   </footer>
 
+  <div class="jay"></div>
+  <div class="jay-signiture">
+    <div class="jay-box" >Jay, 到此一游. 📌 </div>
+  </div>
+
+  <script>
+    const jayImg = document.querySelector('.jay')
+    const jay = document.querySelector('.jay-signiture')
+    document.querySelector('.jay').addEventListener('mouseenter', ()=>{
+      jayImg.style.opacity = "1";
+      jayImg.style.right = "0rem"
+
+    })
+    document.querySelector('.jay').addEventListener('click', ()=>{
+      jay.style.opacity = "1";
+      jay.style.maxWidth = "500px";
+      jay.style.paddingRight = "6rem";
+    })
+    document.querySelector('.jay').addEventListener('mouseleave', ()=>{
+      setTimeout(()=>{
+        jayImg.style.opacity = "0.5";
+      },100)
+      jay.style.paddingRight = "0";
+      jay.style.maxWidth = "0";
+      jay.style.opacity = "0";
+      jayImg.style.right = "-2.5rem"
+    })
+  </script>
 </body>
 </html>

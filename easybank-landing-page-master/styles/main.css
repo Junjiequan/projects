@@ -667,4 +667,40 @@ footer {
     align-items: center;
     min-height: 9rem;
   }
+}
+.jay {
+  z-index: 99999;
+  background: url("../images/jay-image.jpg") no-repeat center/cover;
+  border-radius: 5px;
+  position: fixed;
+  right: -2.5rem;
+  bottom: 2rem;
+  width: 6rem;
+  height: 6rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.jay-signiture {
+  overflow: hidden;
+  z-index: 1;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  color: white;
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 1.3rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  background: #453c46;
+  border-radius: 5px;
+  opacity: 0;
+  max-width: 0;
+  transition: all 0.3s ease-in-out;
+}
+.jay-signiture .jay-box {
+  padding-left: 2rem;
 }/*# sourceMappingURL=main.css.map */
