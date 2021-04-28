@@ -1,0 +1,40 @@
+@use "./color" as *;
+
+//////////////////////////////////////////
+        //color function 
+//////////////////////////////////////////
+//color var compiler for css  //color theme pre-setting
+:root{
+    @each $name, $color in $light{
+        --color-#{$name}: #{$color};
+    }
+};
+@function color($getColor){
+    @return var(--color-#{$getColor})
+};
+
+//////////////////////////////////////////
+        //font-weight function 
+//////////////////////////////////////////
+// this function is not really useful, I use it just for practice
+@mixin font-weight($weight){
+    $weights:(
+        thin:300,
+        normal:400,
+        bold:700,
+    );
+    $output:$weight;
+    @if map-has-key($weights, $weight){
+        $output: map-get($weights, $weight);
+    };
+    font-weight:$output;
+};
+%b-300{
+    @include font-weight(thin)
+};
+%b-400{
+    @include font-weight(normal)
+};
+%b-700{
+    @include font-weight(bold)
+};  

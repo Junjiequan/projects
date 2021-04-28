@@ -1,0 +1,296 @@
+@use "../styles/" as *;
+body{ 
+    min-height:100vh;
+    font-family: 'Public Sans', sans-serif;
+    font-size:1.8rem;
+    background:color(verylightGray);
+    overflow-X:hidden;
+}
+h1{
+    font-size:5.5rem;
+    color:color(darkBlue);
+    @extend %b-400;
+}
+h2{
+    font-size:4rem;
+    color:color(darkBlue);
+    letter-spacing:-.09rem;
+    @extend %b-300;
+}
+h3{
+    font-size:2.4rem;
+    color:color(darkBlue);
+    letter-spacing:-.07rem;
+    @extend %b-400;
+}
+p{
+    font-size:1.8rem;
+    color:color(grayishBlue);
+    line-height:2.8rem;
+    @extend %b-400;
+}
+header{
+    position:fixed;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    background:color(white);
+    z-index:99;
+}
+.header-wrapper{
+    padding:0 16.5rem;
+    max-width:1440px;
+    min-height:80px;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.header-logo{
+    display:flex;
+    min-width:139px;
+    height:20px;
+    img{
+        width:100%;
+    }
+}
+.header-nav{
+    display:flex;
+    align-items:center;
+    font-size:1.5rem;
+    font-stretch:ultra-condensed;
+    @extend %b-400;
+    height:100%;
+    a{
+        position:relative;
+        display:flex;
+        align-items:center;
+        height:100%;
+        margin:0 1.5rem;
+        color:color(grayishBlue);
+        outline:none;
+        transition: color .2s ease;
+        &::after{
+            position:absolute;
+            content:'';
+            left:0;bottom:0;
+            width:100%;
+            height:0;
+            background:linear-gradient(to right, color(limeGreen), color(brightCyan));
+            transition: height .2s ease;
+        }
+        &:hover,
+        &:focus{
+            color:color(darkBlue);
+            &::after{
+                height:4px;
+            }
+        }
+    }
+}
+.header-btn{
+    @extend %global-btn;
+}
+
+.hero-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    background:url('../images/bg-intro-desktop.svg') no-repeat;
+    background-size:80% ;
+    background-position: center right -38rem;
+    opacity:1;
+}
+.hero-wrapper{
+    padding:0 16.5rem;
+    max-width:1440px;
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+}
+.hero-left-desc{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    padding:18rem 0;
+    max-width:45rem;
+    h1{
+        margin-bottom:2rem;
+    }
+    p{
+        margin-bottom:3rem;
+    }
+    .hero-btn{
+        @extend %global-btn;
+        max-width:17rem;
+    }
+}
+.hero-right-image{
+    width:50%;
+    z-index:1;
+    transform:translateX(8rem) translateY(-12rem);
+    .hero-image{
+        position:absolute;
+    }
+}
+main{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+
+}
+.content-easybank-wrapper{
+    background:color(lightgrayishBlue);
+    display:flex;
+    justify-content:center;
+}
+.content-easybank{
+    padding:0 16.5rem;
+    margin: 10rem 0;
+    width:100%;
+    max-width:1440px;
+    h2{
+        margin-bottom:3rem;
+    }
+    p{
+        max-width:65rem;
+    }
+}
+.content-box-wrapper{
+    display:flex;
+    flex-wrap:wrap;
+    margin-top:8rem;
+    p{
+        font-size:1.6rem;
+    }
+}
+.content-box:not(:last-child){
+    padding-right:2rem;
+}
+.content-box{
+    flex:1 1 20%;
+    min-width:22rem;
+    h3{
+        margin:3.5rem 0 3rem;
+    }
+}
+.content-article-wrapper{
+    display:flex;
+    justify-content:center;
+}
+.content-article{
+    padding:0 16.5rem;
+    margin:10rem 0;
+    width:100%;
+    max-width:1440px;
+    h2{
+        margin-bottom:5rem;
+    }
+}
+.content-article-box-wrapper{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    column-gap: 2rem;
+    .cash{
+        background:url('../images/image-currency.jpg');
+        &::after{
+            transition: all .3s ease;
+            position:absolute;
+            bottom:0;
+            z-index:5;
+            font-size:1.5rem;
+            content:'';
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            width:100%;
+            height:0;   
+            background:linear-gradient(to right, color(limeGreen),  color(brightCyan));
+            opacity:0;
+        }
+        &:hover:after{
+            content:'Money 😆';
+            opacity:0.8;
+            color:color(white);
+            @extend %b-700;
+            text-shadow: 0 0 2px black;
+            height:35px;
+        }
+    }
+    .restaurant{
+        @extend .cash;
+        background:url('../images/image-restaurant.jpg');
+        &:hover:after{
+            content:'Restaurant 😛';
+        }
+    }
+    .plane{
+        @extend .cash;
+        background:url('../images/image-plane.jpg');
+        &:hover:after{
+            content:'Plane 😬';
+        }
+    }
+    .confetti{
+        @extend .cash;
+        background:url('../images/image-confetti.jpg');
+        &:hover:after{
+            content:'Confetti 😒';
+        }
+    }
+}
+.content-article-col{
+    border-radius:5px;
+    display:flex;
+    flex:1 1 20%;
+    min-height:100%;
+    flex-direction:column;
+    background:color(white);
+    position:relative;
+    min-width:22rem;
+    margin-bottom:2rem;
+    .content-article-image{
+        border-radius:5px 5px 0 0;
+        width:100%;
+        height:20rem;
+        display:flex;
+        cursor:pointer;
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:120%;
+        transition:background-size .5s ease-in-out;
+        position:relative;
+        
+        &:hover{
+            background-size:130%;
+        }
+    }
+    .content-article-text{
+        padding:2.5rem;
+        .author p{
+            margin-top:1rem;
+            font-size:1.1rem;
+            line-height:0;
+            color:color(grayishBlue);
+        }
+        h3{
+            font-size:1.8rem;
+            margin:1.5rem 0;
+            cursor:pointer;
+            transition:color .2s ease;
+            &:hover{
+                color:color(limeGreen);
+            }
+        }
+        p{
+            font-size:1.3rem;
+            line-height:2rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+    }
+}
