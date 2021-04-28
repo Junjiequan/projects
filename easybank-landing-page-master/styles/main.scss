@@ -107,8 +107,6 @@ header{
 .header-wrapper-mobile{
     display:none;
 }
-
-
 .hero-container{
     padding-top:8rem;  /// height of nav bar
     display:flex;
@@ -452,8 +450,8 @@ footer{
         position:fixed;
         background:color(white);
         top:10rem;
-        width:90%;
-        margin:0 5rem;
+        min-width:90%;
+        max-width:90%;
         transition: all .3s ease;
         height:0;
         opacity:0;

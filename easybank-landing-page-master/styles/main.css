@@ -565,8 +565,8 @@ footer {
     position: fixed;
     background: var(--color-white);
     top: 10rem;
-    width: 90%;
-    margin: 0 5rem;
+    min-width: 90%;
+    max-width: 90%;
     transition: all 0.3s ease;
     height: 0;
     opacity: 0;
