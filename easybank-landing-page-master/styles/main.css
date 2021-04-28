@@ -178,14 +178,11 @@ header {
 }
 
 .hero-container {
+  padding-top: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  background: url("../images/bg-intro-desktop.svg") no-repeat;
-  background-size: 80%;
-  background-position: center right -38rem;
-  opacity: 1;
 }
 
 .hero-wrapper {
@@ -215,11 +212,22 @@ header {
 
 .hero-right-image {
   width: 50%;
-  z-index: 1;
-  transform: translateX(8rem) translateY(-12rem);
+  position: relative;
 }
 .hero-right-image .hero-image {
   position: absolute;
+  left: 8.4rem;
+  top: -12.2rem;
+}
+.hero-right-image .hero-bg {
+  position: absolute;
+  top: -26rem;
+  left: -17%;
+  z-index: -1;
+  width: 127.1rem;
+  height: 103.4rem;
+  background: url("../images/bg-intro-desktop.svg") no-repeat;
+  background-size: cover;
 }
 
 main {
