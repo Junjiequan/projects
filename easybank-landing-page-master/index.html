@@ -6,9 +6,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <script defer src="./app.js"></script>
   <title>Frontend Mentor | Easybank landing page</title>
 </head>
 <body>
+  <div class="popup-bg"></div>
   <header>
     <div class="header-wrapper">
       <a href="#" class="header-logo"><img src="./images/logo.svg" alt="logo"></a>
@@ -19,7 +21,17 @@
         <a href="#" class="no-default-focus">Blog</a>
         <a href="#" class="no-default-focus">Careers</a>
       </nav>
-        <a href="#" class="header-btn">Request invite</a>
+      <a href="#" class="header-btn">Request invite</a>
+      <div class="header-mobile-icon">
+        <img id="nav-icon" src="./images/icon-hamburger.svg" alt="hamburger-icon">
+      </div>
+    </div>
+    <div class="header-wrapper-mobile">
+      <a href="#" class="no-default-focus">Home</a>
+      <a href="#" class="no-default-focus">About</a>
+      <a href="#" class="no-default-focus">Contact</a>
+      <a href="#" class="no-default-focus">Blog</a>
+      <a href="#" class="no-default-focus">Careers</a>
     </div>
   </header>
 
@@ -32,8 +44,8 @@
         <a href="#" class="hero-btn">Request invite</a>
       </div>
       <div class="hero-right-image">
-          <div class="hero-bg"></div>
-          <img class="hero-image" src="./images/image-mockups.png" alt="mockups-image">
+        <img class="hero-image" src="./images/image-mockups.png" alt="mockups-image">
+        <div class="hero-bg"></div>
       </div>
     </div>
   </section>
@@ -81,7 +93,7 @@
             <div class="content-article-text">
               <p class="author">By Claire Robinson</p>
               <h3>Receive money in any currency with no fees</h3>
-              <p>The world is getting smaller and we’re becoming more mobile. So why should you be 
+              <p class="info">The world is getting smaller and we’re becoming more mobile. So why should you be 
                 forced to only receive money in a single... </p>
             </div>
           </article>
@@ -90,7 +102,7 @@
             <div class="content-article-text">
               <p class="author">By Wilson Hutton</p>
               <h3>Treat yourself without worrying about money</h3>
-              <p>Our simple budgeting feature allows you to separate out your spending and set 
+              <p class="info">Our simple budgeting feature allows you to separate out your spending and set 
                 realistic limits each month. That means you …</p>
             </div>
           </article>
@@ -99,7 +111,7 @@
             <div class="content-article-text">
               <p class="author">By Wilson Hutton</p>
               <h3>Take your Easybank card wherever you go</h3>
-              <p>We want you to enjoy your travels. This is why we don’t charge any fees on purchases 
+              <p class="info">We want you to enjoy your travels. This is why we don’t charge any fees on purchases 
                 while you’re abroad. We’ll even show you …</p>
             </div>
           </article>
@@ -108,7 +120,7 @@
             <div class="content-article-text">
               <p class="author">By Claire Robinson</p>
               <h3>Our invite-only Beta accounts are now live!</h3>
-              <p>After a lot of hard work by the whole team, we’re excited to launch our closed beta. 
+              <p class="info">After a lot of hard work by the whole team, we’re excited to launch our closed beta. 
                 It’s easy to request an invite through the site ...</p>
             </div>
           </article>

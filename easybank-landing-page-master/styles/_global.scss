@@ -43,6 +43,7 @@ h1,h2,h3,p,span{
             //global style
 //////////////////////////////////////////
 %global-btn{
+    min-width:17rem;
     border-radius:50px;
     background:linear-gradient(to right, color(limeGreen), color(brightCyan));
     padding:1.3rem 3.3rem;
