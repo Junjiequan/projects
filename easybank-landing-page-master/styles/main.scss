@@ -348,10 +348,10 @@ footer{
     display:flex;
     li{
         padding-right:1.2rem;
-        & a > svg > path{
+        & a > span > svg > path{
             transition:all .3s ease;
         }
-        &:hover  a > svg > path{
+        &:hover  a > span > svg > path{
             fill:color(darkGreen);
         }
     }
