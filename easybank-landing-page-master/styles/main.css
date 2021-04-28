@@ -455,10 +455,10 @@ footer {
 .footer-icons li {
   padding-right: 1.2rem;
 }
-.footer-icons li a > span > svg > path {
+.footer-icons li a > svg > path {
   transition: all 0.3s ease;
 }
-.footer-icons li:hover a > span > svg > path {
+.footer-icons li:hover a > svg > path {
   fill: var(--color-darkGreen);
 }
 
