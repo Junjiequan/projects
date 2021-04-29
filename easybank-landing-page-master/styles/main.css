@@ -699,7 +699,7 @@ footer {
   display: flex;
   align-items: center;
   background: #69496d;
-  border-radius: 5px;
+  border-radius: 5px 50px 50px 5px;
   opacity: 0;
   max-width: 0;
   transition: all 0.3s ease-in-out;
