@@ -1,4 +1,4 @@
-@use '../utilities/mixin' as *;
+@use '../1-utilities' as *;
 html{
     font-size:62.5%;
 };
@@ -8,3 +8,4 @@ html{
 %b-700{
     @include font-weight(bold)
 }
+

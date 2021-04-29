@@ -1,14 +1,18 @@
-//base
-@use './base/reset';
-@use './base/typography';
-
-//components
-@use './components/buttons';
-
-//layout
-@use './layout/hero';
+//import every scss to indicates the entire scss structure.
 
 //utilities
-@use './utilities/functions';
-@use './utilities/variables';
-@use './utilities/animations';
+@use './1-utilities/functions';
+@use './1-utilities/variables';
+@use './1-utilities/animations';
+@use './1-utilities/mixin';
+
+//components
+@use './2-components/buttons';
+
+//base
+@use './3-base/reset';
+@use './3-base/typography';
+
+//layout
+@use './4-layout/hero';
+

@@ -1,3 +1,23 @@
+.dark {
+  --color-main: #161722;
+  --color-main-light: #25273c;
+  --color-lightblue: #cacde8;
+  --color-lightblue2: #e4e5f1;
+  --color-grayishblue: #777a92;
+  --color-darkgrayishblue: #4d5066;
+  --color-darkgrayishblue2: #393a4c;
+}
+
+.light {
+  --color-main: #fafafa;
+  --color-main-light: #e4e5f1;
+  --color-lightblue: #d2d3db;
+  --color-lightblue2: #e4e5f1;
+  --color-grayishblue: #9394a5;
+  --color-darkgrayishblue: #484b6a;
+  --color-darkgrayishblue2: #393a4c;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -74,22 +94,10 @@ html {
   font-size: 62.5%;
 }
 
-.dark {
-  --color-main: #161722;
-  --color-main-light: #25273c;
-  --color-lightblue: #cacde8;
-  --color-lightblue2: #e4e5f1;
-  --color-grayishblue: #777a92;
-  --color-darkgrayishblue: #4d5066;
-  --color-darkgrayishblue2: #393a4c;
+p {
+  font-weight: 400;
 }
 
-.light {
-  --color-main: #fafafa;
-  --color-main-light: #e4e5f1;
-  --color-lightblue: #d2d3db;
-  --color-lightblue2: #e4e5f1;
-  --color-grayishblue: #9394a5;
-  --color-darkgrayishblue: #484b6a;
-  --color-darkgrayishblue2: #393a4c;
+p {
+  font-size: 10rem;
 }/*# sourceMappingURL=main.css.map */
