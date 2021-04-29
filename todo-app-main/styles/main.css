@@ -20,8 +20,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
 
@@ -38,10 +38,6 @@ body {
 }
 
 /* A elements that don't have a class get default styles */
-// a:not([class]) {
-//   text-decoration-skip-ink: auto;
-// }
-
 /* Make images easier to work with */
 img,
 picture {
@@ -60,15 +56,40 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
+html {
+  font-size: 62.5%;
+}
+
+.dark {
+  --color-main: #161722;
+  --color-main-light: #25273c;
+  --color-lightblue: #cacde8;
+  --color-lightblue2: #e4e5f1;
+  --color-grayishblue: #777a92;
+  --color-darkgrayishblue: #4d5066;
+  --color-darkgrayishblue2: #393a4c;
+}
+
+.light {
+  --color-main: #fafafa;
+  --color-main-light: #e4e5f1;
+  --color-lightblue: #d2d3db;
+  --color-lightblue2: #e4e5f1;
+  --color-grayishblue: #9394a5;
+  --color-darkgrayishblue: #484b6a;
+  --color-darkgrayishblue2: #393a4c;
+}/*# sourceMappingURL=main.css.map */

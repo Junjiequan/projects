@@ -1,0 +1,10 @@
+@use '../utilities/mixin' as *;
+html{
+    font-size:62.5%;
+};
+%b-400{
+    @include font-weight(thin)
+}
+%b-700{
+    @include font-weight(bold)
+}
