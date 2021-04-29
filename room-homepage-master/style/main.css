@@ -438,11 +438,16 @@ p {
 @media screen and (max-width: 1245px) {
   h2 {
     font-weight: 700;
-    font-size: 4rem;
-    line-height: 4.2rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
   }
 }
 @media screen and (max-width: 1010px) {
+  p {
+    font-size: 1.2rem;
+    line-height: 2.3rem;
+  }
+
   .navigator-mobile-container {
     z-index: 999;
     position: fixed;
@@ -521,12 +526,8 @@ p {
     right: 0;
     cursor: pointer;
   }
-
-  .hero-image-wrapper .hero-control {
-    right: 0;
-  }
 }
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 768px) {
   h2 {
     font-size: 3rem;
     letter-spacing: -0.15rem;
@@ -534,6 +535,7 @@ p {
 
   p {
     font-size: 1.2rem;
+    line-height: 2.5rem;
   }
 
   .main-container .main-wrapper {
@@ -561,6 +563,9 @@ p {
     width: 100%;
   }
 
+  .hero-image-wrapper .hero-control {
+    right: 0;
+  }
   .hero-image-wrapper .hero-image-slider {
     height: 300px;
   }
