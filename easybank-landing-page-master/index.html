@@ -166,22 +166,24 @@
     const jay = document.querySelector('.jay-signiture')
     document.querySelector('.jay').addEventListener('mouseenter', ()=>{
       jayImg.style.opacity = "1";
-      jayImg.style.right = "0rem"
+      jayImg.style.right = "0.5rem"
+      jayImg.style.transform = "rotate(360deg)"
 
     })
     document.querySelector('.jay').addEventListener('click', ()=>{
       jay.style.opacity = "1";
-      jay.style.maxWidth = "500px";
+      jay.style.maxWidth = "180px";
       jay.style.paddingRight = "6rem";
     })
     document.querySelector('.jay').addEventListener('mouseleave', ()=>{
       setTimeout(()=>{
         jayImg.style.opacity = "0.5";
-      },100)
+        jayImg.style.right = "-3rem"
+        jayImg.style.transform = "rotate(0)"
+      },300)
       jay.style.paddingRight = "0";
       jay.style.maxWidth = "0";
-      jay.style.opacity = "0";
-      jayImg.style.right = "-2.5rem"
+      
     })
   </script>
 </body>

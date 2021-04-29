@@ -674,9 +674,9 @@ footer {
 .jay {
   z-index: 99999;
   background: url("../images/jay-image.jpg") no-repeat center/cover;
-  border-radius: 5px;
+  border-radius: 100%;
   position: fixed;
-  right: -2.5rem;
+  right: -3rem;
   bottom: 2rem;
   width: 6rem;
   height: 6rem;
