@@ -30,11 +30,13 @@ const getMenu = () =>{
     if(mobileMenu.style.display= "none"){
         iconIMG.src = './images/icon-close-menu.svg';
         mobileMenu.style.display= "flex"
+        document.body.style.overflowY = "hidden"
     }
 }
 const closeMenu = () => {
     mobileMenu.style.display= "none"
     iconIMG.src = './images/icon-hamburger.svg';
+    document.body.style.overflowY = "auto"
 }
 const getNumberbox = (e) =>{
     const target = e.target;

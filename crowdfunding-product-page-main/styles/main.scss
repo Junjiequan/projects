@@ -630,12 +630,12 @@ main{
             @include flexCenter();
             width:83%;
             max-height:20rem;
-            transform:translateY(10rem);
-            top:0;bottom:0;left:0; right:0;
+            transform:translateY(12rem);
             margin:0 auto;
             border-radius:10px;
             background:color(white);
             display:flex;
+            text-align:center;
             flex-direction:column;
             align-items:space-between;
             cursor:pointer;
