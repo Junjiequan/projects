@@ -7,8 +7,7 @@ const openNav = (target)=>{
     target.classList.toggle('toggle');
     setTimeout(()=>{
         navIcon.src = "./images/icon-close.svg"
-        navBlock.style.height = "100%";
-        navBlock.style.opacity = "1";
+        navBlock.style.height = "100vh";
     },100);
     navBlock.style.display = "block";
     navBox.style.transform = "scaleY(1)"
@@ -21,7 +20,6 @@ const closeNav = (target)=>{
         navIcon.src = "./images/icon-hamburger.svg"
         navBlock.style.display = "none";
     },400);
-    navBlock.style.opacity = "0";
     navBlock.style.height = "0";
     navBox.style.transform = "scaleY(0)"
     document.body.style.overflowY = "visible"
