@@ -331,6 +331,7 @@ main{
     height:100%;
     background:rgba(0,0,0,0.4);
     z-index:20;
+    transition:opacity .5s ease;
 }
 
 .success-container{
@@ -372,37 +373,58 @@ main{
     display:none;
     opacity:0;
     z-index:30;
-    position:absolute;
-    top:-20vh;bottom:0;left:0;right:0;
-    margin:0 auto;
+    position:fixed;
+    height:90vh;
+    top:0;bottom:0;left:0;right:0;
+    margin:auto;
     min-width:330px;
     max-width:880px;
     justify-content:center;
     align-items:center;
     transition:all 0.5s ease-in-out;
     transform: translateY(40%);
+    border:1px solid color(lightgray);
+    padding:3rem 1rem;
+    border-radius:10px;
+    background:white;
+
 }
 .animation{
     transform:translateY(0);
 }
 .popup-project{
+
+    display:block;
+    overflow-y:auto;
+    border-radius:10px;
     position:relative;
-    border:1px solid color(lightgray);
-    padding:5rem;
-    margin:1rem;
+    padding:2.5rem 5rem;
+    height:100%;
     max-width:100%;
     background:white;
-    border-radius:10px;
     text-align:left;
-    img{
+    #close{
         cursor:pointer;
-        position:absolute;
-        right:3rem;
-        top:3rem;
-        transform:scale(1.2);
-        opacity:.4;
-        transition:0.2s ease-in-out;
-        &:hover{
+        position:fixed;
+        width:5rem;
+        height:5rem;
+        border-radius:100%;
+        background:rgba($color: #e6e6e6, $alpha: 1);
+        display:flex;
+        margin:0 auto;
+        top:-2.5rem;bottom:0;left:0;right:0;
+        justify-content:center;
+        align-items:center;
+        img{
+            pointer-events:none;
+            display:block;
+            align-items:center;
+            justify-content:center;
+            transform:scale(1.4);
+            opacity:0.3;
+            transition:0.2s ease-in-out;
+        }
+        &:hover img{
             opacity:1;
             transition:0.2s ease-in-out;
         }
@@ -576,12 +598,12 @@ main{
         top:-10vh;
     }
     .popup{
-        top:-10vh;
+        margin:auto 1rem;
     }
 }
-@media screen and (max-width:650px){
+@media screen and (max-width:785px){
     .header-container{
-        padding:5rem 2rem 0;
+
         .links{
             display:none;
         }
@@ -629,129 +651,128 @@ main{
             }
        }
     }
+    .popup-project{
+        padding:5rem 2rem;
+        h2{
+            font-size:2rem;
+        }
+        p{
+            font-size:1.4rem;
+        }
+        .popup-box{
+            padding:4rem 2rem 0; 
+            input[type=radio]{
+    
+                width:20px;
+                height:20px;
+            }
+            .wrapper{
+                .radio{
+                    padding-right:1rem;
+                }
+                .text-box{
+                    position:relative;
+                    .title{
+                        flex-direction:column;
+                        margin-bottom:1.1rem;
+                        h5{
+                            justify-content:center;
+                            flex-direction:column;
+                            font-size:1.6rem;
+                            p{
+                                font-size:1.6rem;
+                            }
+                        }
+                        .relocate{
+                            position:absolute;
+                            bottom:-3.2rem;
+                        }
+                    }
+                }
+            }
+        }
+        .input-box{
+            text-align:center;
+            flex-direction:column;
+            .check{
+                .forDollar{
+                    input{
+                        padding:1rem;
+                    }
+                }
+                .btn{
+                    padding:1rem 2rem;
+                    font-size:1.3rem;
+                }
+            }
+        }
+    }
+    .section-container{
+        .project-title{
+            padding:5rem 2rem;
+            .button-section{
+                justify-content:center;
+                flex-direction:column;
+                .bookmark{
+                    margin-top:1rem;
+                }
+            }
+        }
+        .data{
+            .data-wrapper{
+                display:block;
+                align-items:center;
+                justify-content:center;
+                text-align:center;
+                .col{
+                    margin:0;
+                    &:nth-child(1){
+                        margin:0;
+                    }
+                    &:nth-child(2){
+                        margin:2rem 0 0 0;
+                    }
+                }
+                .ver-line{
+                    padding:2rem 0;
+                    &:before{
+                        border-left:none;
+                        border-top:1px solid color(gray);
+                        left:0;right:0;top:0;bottom:0;
+                        display:flex;
+                        justify-content:center;
+                        align-items:center;
+                        margin:auto;
+                        width:40%;
+                    }
+                }
+            }
+        }
+        .about{
+           .inner-box{
+               .desc{
+                   p{
+                       font-size:1.4rem;
+                       text-align:left;
+                   }
+               }
+               .stock{
+                   flex-direction:column;
+                   .btn{
+                       text-align:center;
+                       max-width:180px;
+                   }
+               }
+           }
+        }
+    }
 };
 
 @media screen and (max-width:450px){
-.section-container{
-    .project-title{
-        padding:5rem 2rem;
-        .button-section{
-            justify-content:center;
-            flex-direction:column;
-            .bookmark{
-                margin-top:1rem;
-            }
-        }
+    .show{
+        margin:4rem 0;
+        padding:1rem;
     }
-    .data{
-        .data-wrapper{
-            display:block;
-            align-items:center;
-            justify-content:center;
-            text-align:center;
-            .col{
-                margin:0;
-                &:nth-child(1){
-                    margin:0;
-                }
-                &:nth-child(2){
-                    margin:2rem 0 0 0;
-                }
-            }
-            .ver-line{
-                padding:2rem 0;
-                &:before{
-                    border-left:none;
-                    border-top:1px solid color(gray);
-                    left:0;right:0;top:0;bottom:0;
-                    display:flex;
-                    justify-content:center;
-                    align-items:center;
-                    margin:auto;
-                    width:40%;
-                }
-            }
-        }
-    }
-    .about{
-       .inner-box{
-           .desc{
-               p{
-                   font-size:1.4rem;
-                   text-align:left;
-               }
-           }
-           .stock{
-               flex-direction:column;
-               .btn{
-                   text-align:center;
-                   max-width:180px;
-               }
-           }
-       }
-    }
-}
-
-.popup-project{
-    padding:5rem 2rem;
-    h2{
-        font-size:2rem;
-    }
-    p{
-        font-size:1.4rem;
-    }
-    .popup-box{
-        padding:4rem 2rem 0; 
-        input[type=radio]{
-
-            width:20px;
-            height:20px;
-        }
-        .wrapper{
-            .radio{
-                padding-right:1rem;
-            }
-            .text-box{
-                position:relative;
-                .title{
-                    flex-direction:column;
-                    margin-bottom:1.1rem;
-                    h5{
-                        justify-content:center;
-                        flex-direction:column;
-                        font-size:1.6rem;
-                        p{
-                            font-size:1.6rem;
-                        }
-                    }
-                    .relocate{
-                        position:absolute;
-                        bottom:-3.2rem;
-                    }
-                }
-            }
-        }
-    }
-    .input-box{
-        text-align:center;
-        flex-direction:column;
-        .check{
-            .forDollar{
-                input{
-                    padding:1rem;
-                }
-            }
-            .btn{
-                padding:1rem 2rem;
-                font-size:1.3rem;
-            }
-        }
-    }
-}
-.show{
-    margin:4rem 0;
-    padding:1rem;
-}
 }
 
 ///////////////////////////////////////////////////////////

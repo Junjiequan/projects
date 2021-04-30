@@ -105,27 +105,36 @@ const getNumberbox = (e) =>{
             }
         } else return;
     }
-
-    if(target.id == 'close'){
-        const popup = target.closest('.popup');
-        block.style.display = "none";
-        popup.style.opacity= "0";
-        popup.style.display = "none";
-        popup.classList.remove('animation')
-    }
+    closeProject(target);
+    
 }
 const openProject = () =>{
     const popup = document.querySelector('.popup');
     const block = document.querySelector('.block');
     popup.style.display= "block";
+    document.body.style.overflowY = "hidden";
     block.style.zIndex = "20"
     block.style.display = "flex"
+    
     setTimeout(()=>{
+        block.style.opacity = "1";
         popup.style.opacity= "1";
         popup.classList.add('animation')
     },100 )
 }
-
+const closeProject = (target) =>{
+    if(target.id == 'close'){
+        const popup = target.closest('.popup');
+        popup.style.opacity= "0";
+        block.style.opacity = "0";
+        document.body.style.overflowY = "visible";
+        setTimeout(()=>{
+            block.style.display = "none";
+            popup.style.display = "none";
+        },700)
+        popup.classList.remove('animation')
+    }    
+}
 const removeWarning = () =>{
     textWarning.setAttribute('data-before', '')
 }
