@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 .dark {
   --color-main: #161722;
   --color-main-light: #25273c;
@@ -16,6 +17,19 @@
   --color-grayishblue: #9394a5;
   --color-darkgrayishblue: #484b6a;
   --color-darkgrayishblue2: #393a4c;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+}
+
+p {
+  font-weight: 700;
 }
 
 /* Box sizing rules */
@@ -90,14 +104,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
-html {
-  font-size: 62.5%;
-}
-
 p {
-  font-weight: 400;
-}
-
-p {
-  font-size: 10rem;
+  font-size: 5rem;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

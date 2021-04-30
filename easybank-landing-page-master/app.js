@@ -1,37 +1,29 @@
 const navIcon = document.getElementById('nav-icon');
 const navBox = document.querySelector('.header-wrapper-mobile');
-const navBlock = document.querySelector('.popup-bg')
+const navBlock = document.querySelector('.overlay')
 
 
 const openNav = (target)=>{
     target.classList.toggle('toggle');
-    navIcon.style.transform = "rotate(360deg)"
     setTimeout(()=>{
         navIcon.src = "./images/icon-close.svg"
-    },100);
-    navBlock.style.display = "flex";
-    setTimeout(()=>{
         navBlock.style.height = "100%";
         navBlock.style.opacity = "1";
-    },50);
-    navBox.style.height = "25rem";
-    navBox.style.opacity = "1";
+    },100);
+    navBlock.style.display = "block";
+    navBox.style.transform = "scaleY(1)"
     document.body.style.overflowY = "hidden"
 }
 
 const closeNav = (target)=>{
     target.classList.toggle('toggle');
-    navIcon.style.transform = "rotate(0deg)"
     setTimeout(()=>{
         navIcon.src = "./images/icon-hamburger.svg"
+        navBlock.style.display = "none";
     },400);
     navBlock.style.opacity = "0";
     navBlock.style.height = "0";
-    setTimeout(()=>{
-        navBlock.style.display = "none";
-    },450);
-    navBox.style.height = "0";
-    navBox.style.opacity = "0";
+    navBox.style.transform = "scaleY(0)"
     document.body.style.overflowY = "visible"
 }
 

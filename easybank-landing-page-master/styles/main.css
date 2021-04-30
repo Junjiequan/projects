@@ -85,6 +85,10 @@ h1, h2, h3, p, span {
   transform: translateY(2px);
 }
 
+.toggle {
+  transform: rotate(360deg);
+}
+
 body {
   min-height: 100vh;
   font-family: "Public Sans", sans-serif;
@@ -116,12 +120,12 @@ p {
   line-height: 2.8rem;
 }
 
-.popup-bg {
+.overlay {
   z-index: 9;
   position: fixed;
   display: none;
   opacity: 0;
-  transition: all 0.7s ease;
+  transition: all 0.4s ease;
   height: 0;
   width: 100%;
   background: linear-gradient(to bottom, var(--color-darkBlue), rgba(255, 255, 255, 0.2));
@@ -567,8 +571,9 @@ footer {
     min-width: 90%;
     max-width: 90%;
     transition: all 0.3s ease;
-    height: 0;
-    opacity: 0;
+    height: 25rem;
+    transform: scaleY(0);
+    transform-origin: 0 0;
   }
   .header-wrapper-mobile a {
     padding: 1rem;
