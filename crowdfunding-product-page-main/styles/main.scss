@@ -346,6 +346,9 @@ main{
     align-items:center;
     transform:scale(0);
     transition:all 0.4s ease-in-out;
+    .icon-wrapper{
+        margin-bottom:2rem;
+    }
     .popup-success{
         position:relative;
         border:1px solid color(lightgray);
@@ -361,7 +364,8 @@ main{
             color:color(gray)
         }
         .btn{
-            @extend %global-btn
+            @extend %global-btn;
+            padding:1.6rem 4rem;
         }
     }
 };

@@ -379,6 +379,9 @@ main {
   transform: scale(0);
   transition: all 0.4s ease-in-out;
 }
+.success-container .icon-wrapper {
+  margin-bottom: 2rem;
+}
 .success-container .popup-success {
   position: relative;
   border: 1px solid var(--color-lightgray);
@@ -394,6 +397,10 @@ main {
   line-height: 2.5rem;
   color: var(--color-gray);
 }
+.success-container .popup-success .btn {
+  padding: 1.6rem 4rem;
+}
+
 .popup {
   display: none;
   opacity: 0;

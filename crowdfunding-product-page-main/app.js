@@ -5,9 +5,9 @@ const iconIMG = menuIcon.childNodes[0];
 const selectBox = document.querySelector('.popup');
 const isProject = document.querySelector('#project');
 const textWarning = document.querySelector('.check');
-const block = document.querySelector('.block')
-const success = document.querySelector('.success-container')
-
+const block = document.querySelector('.block');
+const success = document.querySelector('.success-container');
+let isClick = true;
 
 const getMark = () =>{
     if(bookMark.innerText == 'Bookmark'){
@@ -37,7 +37,6 @@ const closeMenu = () => {
     iconIMG.src = './images/icon-hamburger.svg';
 }
 const getNumberbox = (e) =>{
-    
     const target = e.target;
     const parent = target.closest('.popup-project');
     const radio = parent.querySelectorAll('input[type=radio]');
@@ -57,7 +56,6 @@ const getNumberbox = (e) =>{
             popupBox.querySelector('.input-box').classList.add('show');
             popupBox.classList.remove('border');
             popupBox.classList.add('selected');
-            
         };
         if(target.id == 'radio2' || target.classList.contains('radio-text2')){
             radio[0].checked = false;
@@ -77,8 +75,16 @@ const getNumberbox = (e) =>{
             popupBox.classList.remove('border');
             popupBox.classList.add('selected');
         };
-    };
-
+    }else if(target.id === 'close'){
+            parent.querySelectorAll('.input-box').forEach((index)=> index.classList.remove('show'));
+            parent.querySelectorAll('.input-box').forEach((index)=> index.style.opacity = 0);
+            document.querySelectorAll('.popup-box').forEach(index=>{
+                index.classList.remove('selected');
+            })
+            radio[0].checked = false;
+            radio[1].checked = false;
+            radio[2].checked = false;
+    }
     if(target.type == 'submit'){
         const containerParent = target.closest('.popup-box');
         const amount=containerParent.querySelector('input[type=number]');
@@ -97,16 +103,18 @@ const getNumberbox = (e) =>{
                 containerParent.querySelector('.left').innerText = getLeft - 1;
             } 
         } else if(amount.value < minimum){
-            if( minimumSign != null){
+            
+            if( minimumSign != null && isClick === true){
                 minimumSign.classList.add('animated')
+                isClick = false;
                 setTimeout(()=>{
                     minimumSign.classList.remove('animated')
+                    isClick = true;
                 },900);
             }
         } else return;
     }
     closeProject(target);
-    
 }
 const openProject = () =>{
     const popup = document.querySelector('.popup');
@@ -131,7 +139,7 @@ const closeProject = (target) =>{
         setTimeout(()=>{
             block.style.display = "none";
             popup.style.display = "none";
-        },700)
+        },400)
         popup.classList.remove('animation')
     }    
 }
