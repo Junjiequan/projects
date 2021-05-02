@@ -1,8 +1,0 @@
-@use '../1-utilities' as *;
-@use '../3-base' as *;
-
-p{
-    @extend %b-700 ;
-    font-size:5rem;
-    text-align:center;
-}

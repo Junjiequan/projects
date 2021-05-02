@@ -28,10 +28,6 @@ body {
   font-size: 1.8rem;
 }
 
-p {
-  font-weight: 700;
-}
-
 /* Box sizing rules */
 *,
 *::before,
@@ -49,13 +45,16 @@ p,
 figure,
 blockquote,
 dl,
-dd {
+dd,
+ul {
   margin: 0;
+  padding: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role=list],
-ol[role=list] {
+ol[role=list],
+li {
   list-style: none;
 }
 
@@ -103,8 +102,4 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-p {
-  font-size: 5rem;
-  text-align: center;
 }/*# sourceMappingURL=main.css.map */
