@@ -9,13 +9,6 @@ const form = document.querySelector('.todo__form')
 const list = document.querySelector('.todo__list');
 const meme = document.querySelector('.meme');
 const bgm = new Audio('./songs/omaewa.mp3')
-const playAudio = ()=>{
-   bgm.volume = 0.5;
-   bgm.loop = true;
-   bgm.autoplay = true;
-   bgm.load();
-}
-playAudio();
 let todoLeft = 0;
 
 //functions
@@ -102,6 +95,11 @@ function createMeme(){
    } else if(list.querySelectorAll('li').length > 1){
       document.querySelector('.meme__removal').style.height = "0";
       document.querySelector('.meme__removal').style.margin = "0 auto";
-      // document.querySelector('.meme').remove();
    }
 }
+document.addEventListener('DOMContentLoaded', ()=>{
+      bgm.volume = 0.5;
+      bgm.loop = true;
+      bgm.autoplay = true;
+      bgm.load();
+})
