@@ -7,10 +7,14 @@ body{
     font-family: 'Josefin Sans', sans-serif;
     font-size:1.8rem;
 }
-%b-400{
-    @include font-weight(thin)
-}
-%b-700{
-    @include font-weight(bold)
-}
+h1{
+    font-size:4rem;
+    color:$white;
+    text-transform:uppercase;
+    letter-spacing:2rem;
+};
+p{
+    font-size:1.1rem;
+    color:color(info);
 
+}

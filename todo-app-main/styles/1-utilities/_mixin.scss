@@ -9,3 +9,13 @@
     };
     font-weight: $output;
 }
+%b-400{
+    @include font-weight(thin)
+}
+%b-700{
+    @include font-weight(bold)
+}
+
+@mixin transition($type, $duration){
+    transition : $type $duration ease-in-out;
+}

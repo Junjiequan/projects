@@ -1,9 +1,10 @@
 //colors
-//primary
+//default
 $BrightBlue: hsl(220, 98%, 61%);
-$CheckBackground: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
-
+$CheckBackground: linear-gradient(120deg,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+$white:white;
 // Light theme
+$l-white: hsl(0, 0%, 100%);
 $l-VeryLightGray: hsl(0, 0%, 98%);
 $l-VeryLightGrayishBlue: hsl(236, 33%, 92%);
 $l-LightGrayishBlue: hsl(233, 11%, 84%);
@@ -11,8 +12,10 @@ $l-LightGrayishBlue2: hsl(236, 33%, 92%);    //(hover)
 $l-DarkGrayishBlue: hsl(236, 9%, 61%);
 $l-VeryDarkGrayishBlue: hsl(235, 19%, 35%);
 $l-VeryDarkGrayishBlue2: hsl(237, 14%, 26%);
+$l-shadow:rgba(83, 83, 83, 0.1);
 
 // Dark theme
+$d-white: hsl(0, 0%, 100%);
 $d-VeryDarkBlue: hsl(235, 21%, 11%);
 $d-VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
 $d-LightGrayishBlue: hsl(234, 39%, 85%);
@@ -20,22 +23,30 @@ $d-LightGrayishBlue2: hsl(236, 33%, 92%);    //(hover)
 $d-DarkGrayishBlue: hsl(234, 11%, 52%);
 $d-VeryDarkGrayishBlue: hsl(233, 14%, 35%);
 $d-VeryDarkGrayishBlue2: hsl(237, 14%, 26%);
+$d-shadow:rgba(11,12,13,1);
 
 $light:(
     main: $l-VeryLightGray,
-    main-light: $l-VeryLightGrayishBlue,
-    lightblue: $l-LightGrayishBlue,
-    lightblue2: $l-LightGrayishBlue2,
-    grayishblue: $l-DarkGrayishBlue,
-    darkgrayishblue: $l-VeryDarkGrayishBlue,
-    darkgrayishblue2: $l-VeryDarkGrayishBlue2
+    h1:$l-LightGrayishBlue2,
+    border:$l-VeryLightGrayishBlue,
+    font: $l-VeryDarkGrayishBlue2,
+    input:$l-white,
+    circle:$d-LightGrayishBlue,
+    focus:$l-VeryDarkGrayishBlue2,
+    info:$l-DarkGrayishBlue,
+    hover:$l-VeryDarkGrayishBlue2,
+    shadow:$l-shadow,
 );
 $dark:(
     main: $d-VeryDarkBlue,
-    main-light: $d-VeryDarkDesaturatedBlue,
-    lightblue: $d-LightGrayishBlue,
-    lightblue2: $d-LightGrayishBlue2,
-    grayishblue: $d-DarkGrayishBlue,
-    darkgrayishblue: $d-VeryDarkGrayishBlue,
-    darkgrayishblue2: $d-VeryDarkGrayishBlue2
+    h1:$d-LightGrayishBlue2,
+    border:$d-VeryDarkGrayishBlue2,
+    font: $d-LightGrayishBlue,
+    input:$d-VeryDarkDesaturatedBlue,
+    circle:$d-VeryDarkGrayishBlue2,
+    focus:$d-DarkGrayishBlue,
+    info:$d-DarkGrayishBlue,
+    hover:$d-LightGrayishBlue2,
+    shadow:$d-shadow,
 )
+

@@ -1,2 +1,93 @@
 @use '../1-utilities' as *;
 @use '../3-base/typography' as *;
+
+.check{
+    position:absolute;
+    left:2rem;
+    display:flex;
+    align-items:center;
+    width:2.5rem;
+    height:2.5rem;
+    border-radius:100%;
+    cursor:pointer;
+    border:2px solid color(circle);
+    transition:border-color .5s ease-in;
+    &::before{
+        content:url(../images/icon-check.svg);
+        border-radius:100%;
+        display:flex;
+        position:absolute;
+        margin:auto;
+        justify-content:center;
+        align-items:center;
+        color:white;
+        background:$CheckBackground no-repeat; 
+        width:100%;
+        height:100%;
+        bordeR:none;
+        transform:scale(1.2);
+        opacity:0;
+        @include transition(opacity, .3s);
+    }
+    &:hover:before{
+        opacity:1;
+    }
+}
+.delete{
+    opacity:0;
+    position:absolute;
+    right:2rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:2.5rem;
+    height:2.5rem;
+    background: url(../images/icon-cross.svg) no-repeat center center;
+    @include transition(all, .3s);
+    cursor:pointer;
+    &:hover{
+        filter:drop-shadow(0 0 15px color(shadow)) invert(95%);
+    }
+}
+
+.check-mark{
+    position:absolute;
+    left:2rem;
+    display:block;
+    align-items:center;
+    width:2.5rem;
+    height:2.5rem;
+    border-radius:100%;
+    cursor:pointer;
+    border:2px solid color(circle);
+    @include transition(all, .5s); 
+    &:hover{
+        border:2px double transparent;
+        background-image:linear-gradient(color(input), color(input)), $CheckBackground;
+        background-origin:border-box;
+        background-clip: content-box, border-box;
+        animation: rotate 1s linear infinite;
+    }
+}
+.checked{
+    & div:first-child{
+        background:$CheckBackground;
+        border:none;
+        &::before{
+            content:url(../images/icon-check.svg);
+            display:flex;
+            position:absolute;
+            width:100%;
+            height:100%;
+            justify-content:center;
+            align-items:center;
+        }
+    }
+    & input[type=text]{
+        opacity:.3;
+        text-decoration: line-through;
+    }
+}
+.no-animation{
+    animation:none !important;
+}

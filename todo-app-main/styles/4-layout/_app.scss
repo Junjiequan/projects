@@ -1,3 +1,147 @@
 @use '../1-utilities' as *;
 @use '../3-base' as *;
 
+.app{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    height:100%;
+    margin:8rem auto 0;
+    padding:0 1rem;
+    &__wrapper{
+        max-width:56rem;
+        width:100%;
+    }
+    &__top{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    &__switch{
+        cursor:pointer;
+        img{
+            pointer-events:none;
+            min-width:100%;
+            transition:transform 1s ease;
+        }
+        &:hover img{
+            transform:rotate(220deg)
+        }
+    }
+}
+.todo{
+    display:block;
+    margin-top:2.5rem;
+    input{
+        max-width:41rem;
+        width:100%;
+        align-items:center;
+        border:none;
+        outline:none;
+        color:color(font);
+        background:transparent;
+        margin:0 6.5rem;
+        white-space: nowrap;
+        caret-color:$BrightBlue;
+        // set global focus-visible latter/////////////////////////////////
+
+    }
+    &__form{
+        width:100%;
+    }
+    &__initial{
+        display:flex;
+        align-items:center;
+        border-radius:5px;
+        margin-bottom:2.5rem;
+        background-color:color(input);
+        box-shadow:0 5px 15px rgba($color: color(shadow), $alpha: 0.1);
+        position:relative;
+        width:100%;
+        white-space:nowrap;
+        min-height:6.5rem;
+        @include transition(all, .5s); 
+        transition-delay:.2s;
+    }
+    &__list{
+        border-radius:5px;
+        box-shadow:0 10px 30px color(shadow);
+        @include transition(box-shadow, .5s);
+        & > li:first-child {
+            border-radius:5px 5px 0 0;
+        }
+    }
+    &__item{
+        position:relative;
+        min-width:100%;
+        @extend .todo__initial;
+        box-shadow:none;
+        margin:0;
+        border-radius:0;
+        cursor:grab;
+        border-bottom:1px solid color(border);
+        & input[type=text]{
+            pointer-events:none;
+        }
+        &:hover .delete{
+            opacity:1;
+        }
+    }
+    &__bottom{
+        @extend .todo__initial;
+        justify-content:space-between;
+        min-height:5.5rem;
+        margin:0;
+        padding:0 2rem;
+        border-radius:0 0 5px 5px;
+        color:color(info);
+        font-size:1.3rem;
+        box-shadow:none;
+        &-stock{
+            pointer-events:none;
+        }
+        &-actions{
+            max-width:15rem;
+            width:100%;
+            display:flex;
+            justify-content:space-between;
+            cursor:pointer;
+            @extend %b-700;
+            &--all{
+                color: $BrightBlue;
+            }
+            &--active,
+            &--completed{
+                @include transition(color, .2s);
+            }
+            &--active:hover,
+            &--completed:hover{
+                color:color(hover);
+            }
+        }
+        &-clear{
+            cursor:pointer;
+            &--complete{
+                @include transition(color, .2s);
+            }
+            &--complete:hover{
+                color:color(hover);
+            }
+        }
+    }
+    &__info{
+        display:flex;
+        justify-content:center;
+        margin:4rem 0;
+        p{
+            cursor:help;
+        }
+    }
+    @media screen and (max-width:600px){
+        &__bottom{
+            &-actions{
+                display:none;
+            }
+        }
+    }
+}

@@ -4,51 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+  <script defer src="./app.js"></script>
   <title>Frontend Mentor | Todo app</title>
 </head>
-<body>
-  <div class="bg">
-    <div class="bg__head"></div>
-    <div class="bg__body"></div>
-  </div>
+<body class="dark">
+
+  <div class="intro"></div>
+
+  <div class="bg"></div>
+
   <section class="app">
     <div class="app__wrapper">
       <div class="app__top">
         <h1>Todo</h1>
-        <div class="app__top__switch">
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="#fff" fill-rule="evenodd" d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="#FFF" fill-rule="evenodd" d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"/></svg>
+        <div class="app__switch">
+          <img src="./images/icon-sun.svg" alt="color-theme-changer-icon">
         </div>
       </div>
-      <div class="app__todo">
-        <form>
-          <div class="app__todo__initial check">
-            <!-- before circle-->
-            <input type="text" value="" />
+      <div class="todo">
+        <form class="todo__form">
+          <div class="todo__initial">
+            <div class="check" aria-label="add-todo-list-button"></div>
+            <input type="text" value="" data-id="todo-content"autofocus placeholder="Create todo list here"/>
           </div>
-          <ul class="app__todo__list">
-            <li class="app__todo__list--item check delete inactive">
-              <input type="text" aria-label="todo-item" name="todo-item" disabled/>
+          <ul class="todo__list">
+            <!-- <li class="todo__item checked">
+              <div class="check-mark no-animation" data-id="check"></div>
+              <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" >
+              <div class="delete"></div>
             </li>
-            <li class="app__todo__list--item check delete inactive">
-              <input type="text" aria-label="todo-item" name="todo-item" disabled/>
-            </li>
-            <li class="app__todo__bottom">
-              <div class="app__todo__bottom--stock">
-                <span class="app__todo__bottom--number">5</span> items left
-              </div>
-              <div class="app__todo__actions action-hover">
-                <a class="app__todo__actions--all" role="button" aria-label="all" data-id="all"></a>
-                <a class="app__todo__actions--active" role="button" aria-label="active" data-id="active"></a>
-                <a class="app__todo__actions--completed" role="button" aria-label="completed" data-id="completed"></a>
-              </div>
-              <div class="app__todo__clear action-hover">
-                <a class="app__todo__clear--complete" role="button" aria-label="clear-complete" data-id="clear-complete"></a>
-              </div>
-            </li>
+            <li class="todo__item ">
+              <div class="check-mark"></div>
+              <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" >
+              <div class="delete"></div>
+            </li> -->
           </ul>
+          <div class="todo__bottom">
+            <div class="todo__bottom-stock">
+              <span class="todo__bottom-stock--number">5</span> items left
+            </div>
+            <div class="todo__bottom-actions">
+              <a class="todo__bottom-actions--all" role="button" aria-label="all" data-id="all">All</a>
+              <a class="todo__bottom-actions--active" role="button" aria-label="active" data-id="active">Active</a>
+              <a class="todo__bottom-actions--completed" role="button" aria-label="completed" data-id="completed">Completed</a>
+            </div>
+            <div class="todo__bottom-clear">
+              <a class="todo__bottom-clear--complete" role="button" aria-label="clear-complete" data-id="clear-complete">Clear Completed</a>
+            </div>
+          </div>
         </form>
+        <div class="todo__info"><p>Drag and drop to reorder list</p></div>
       </div>
     </div>
   </section>
