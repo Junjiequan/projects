@@ -11,6 +11,7 @@
     width:100%;
     background:color(input);
     transform-origin: 0 0;
+    border-bottom:1px solid color(border);
     @include transition(all, .3s);
     &__removal{
         display:flex;
