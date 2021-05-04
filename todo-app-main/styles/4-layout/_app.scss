@@ -43,11 +43,12 @@
         margin:0 6.5rem;
         white-space: nowrap;
         caret-color:$BrightBlue;
+        transition: all .3s ease;
         // set global focus-visible latter/////////////////////////////////
-
     }
     &__form{
         width:100%;
+        border-radius:5px;
     }
     &__initial{
         display:flex;
@@ -60,16 +61,14 @@
         width:100%;
         white-space:nowrap;
         min-height:6.5rem;
-        @include transition(all, .5s); 
-        transition-delay:.2s;
+        @include transition(all, .3s); 
     }
     &__list{
-        border-radius:5px;
+        border-radius:5px 5px 0 0;
         box-shadow:0 10px 30px color(shadow);
-        @include transition(box-shadow, .5s);
-        & > li:first-child {
-            border-radius:5px 5px 0 0;
-        }
+        padding-top:0.5rem;
+        @include transition(all, .3s); 
+        background-color:color(input);
     }
     &__item{
         position:relative;
@@ -78,10 +77,12 @@
         box-shadow:none;
         margin:0;
         border-radius:0;
+        min-height:0;
+        height:0;
         cursor:grab;
         border-bottom:1px solid color(border);
         & input[type=text]{
-            @include transition(all, .5s); 
+            @include transition(all, .3s); 
             pointer-events:none;
         }
         &:hover .delete{
@@ -90,6 +91,7 @@
     }
     &__bottom{
         @extend .todo__initial;
+        box-shadow:0 17px 25px color(shadow);
         justify-content:space-between;
         min-height:5.5rem;
         margin:0;
@@ -97,7 +99,6 @@
         border-radius:0 0 5px 5px;
         color:color(info);
         font-size:1.3rem;
-        box-shadow:none;
         &-stock{
             pointer-events:none;
         }
@@ -136,15 +137,6 @@
         margin:4rem 0;
         p{
             cursor:help;
-        }
-    }
-    &__removal{
-        display:flex;
-        margin:1.5rem auto;
-        img{
-            border-radius:5px;
-            width:100px;
-            height:100px;
         }
     }
     @media screen and (max-width:600px){

@@ -1,0 +1,30 @@
+@use '../1-utilities' as *;
+@use '../3-base' as *;
+@use '../4-layout' as *;
+.meme{
+    border-radius:5px 5px 0 0;
+    display:flex;
+    position:relative;
+    overflow-x:hidden;
+    align-items:center;
+    background-color:color(input);
+    width:100%;
+    background:color(input);
+    transform-origin: 0 0;
+    @include transition(all, .3s);
+    &__removal{
+        display:flex;
+        justify-content:center;
+        height:13.5rem;
+        margin:1rem auto 1.5rem;
+        transition: height .5s ease-in-out;
+        animation:dance 25s linear infinite;
+        img{
+            border-radius:5px;
+        }
+        @media screen and(max-width:590px){
+            animation:dance2 25s linear infinite;
+        }
+    }
+    
+}

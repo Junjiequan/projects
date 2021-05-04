@@ -2,4 +2,26 @@
     100%{
         transform:rotate(360deg);
     }
+};
+@keyframes dance{
+    0%{
+        transform:translateX(-70%);
+    }
+    50%{
+        transform:translateX(70%);
+    }
+    100%{
+        transform:translateX(-70%);
+    }
+}
+@keyframes dance2{
+    0%{
+        transform:translateX(-35%);
+    }
+    35%{
+        transform:translateX(35%);
+    }
+    100%{
+        transform:translateX(-35%);
+    }
 }

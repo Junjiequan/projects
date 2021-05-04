@@ -36,6 +36,50 @@
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes dance {
+  0% {
+    transform: translateX(-70%);
+  }
+  50% {
+    transform: translateX(70%);
+  }
+  100% {
+    transform: translateX(-70%);
+  }
+}
+@keyframes dance {
+  0% {
+    transform: translateX(-70%);
+  }
+  50% {
+    transform: translateX(70%);
+  }
+  100% {
+    transform: translateX(-70%);
+  }
+}
+@-webkit-keyframes dance2 {
+  0% {
+    transform: translateX(-35%);
+  }
+  35% {
+    transform: translateX(35%);
+  }
+  100% {
+    transform: translateX(-35%);
+  }
+}
+@keyframes dance2 {
+  0% {
+    transform: translateX(-35%);
+  }
+  35% {
+    transform: translateX(35%);
+  }
+  100% {
+    transform: translateX(-35%);
+  }
+}
 .todo__bottom-actions {
   font-weight: 700;
 }
@@ -64,10 +108,10 @@ p {
 .check {
   position: absolute;
   left: 2rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   width: 2.5rem;
-  height: 2.5rem;
+  min-height: 2.5rem;
   border-radius: 100%;
   cursor: pointer;
   border: 2px solid var(--color-circle);
@@ -98,11 +142,11 @@ p {
   opacity: 0;
   position: absolute;
   right: 2rem;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   width: 2.5rem;
-  height: 2.5rem;
+  min-height: 2.5rem;
   background: url(../images/icon-cross.svg) no-repeat center center;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -117,10 +161,11 @@ p {
   display: block;
   align-items: center;
   width: 2.5rem;
-  height: 2.5rem;
+  min-height: 2.5rem;
   border-radius: 100%;
   cursor: pointer;
   border: 2px solid var(--color-circle);
+  transition: border 0.5s ease-in-out;
 }
 .check-mark::before {
   content: "";
@@ -131,7 +176,7 @@ p {
   height: 100%;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   opacity: 0;
 }
 .check-mark:hover {
@@ -251,7 +296,7 @@ body {
   width: 100%;
   height: 100%;
   max-height: 30rem;
-  background: url(../images/bg-desktop-dark.jpg) no-repeat center/cover;
+  background: url(../images/bg-desktop-light.jpg) no-repeat center/cover;
   transition: background-image 0.5s ease-in-out;
 }
 
@@ -299,9 +344,11 @@ body {
   margin: 0 6.5rem;
   white-space: nowrap;
   caret-color: #3a7bfd;
+  transition: all 0.3s ease;
 }
 .todo__form {
   width: 100%;
+  border-radius: 5px;
 }
 .todo__initial, .todo__bottom, .todo__item {
   display: flex;
@@ -314,16 +361,14 @@ body {
   width: 100%;
   white-space: nowrap;
   min-height: 6.5rem;
-  transition: all 0.5s ease-in-out;
-  transition-delay: 0.2s;
+  transition: all 0.3s ease-in-out;
 }
 .todo__list {
-  border-radius: 5px;
-  box-shadow: 0 10px 30px var(--color-shadow);
-  transition: box-shadow 0.5s ease-in-out;
-}
-.todo__list > li:first-child {
   border-radius: 5px 5px 0 0;
+  box-shadow: 0 10px 30px var(--color-shadow);
+  padding-top: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color-input);
 }
 .todo__item {
   position: relative;
@@ -331,18 +376,21 @@ body {
   box-shadow: none;
   margin: 0;
   border-radius: 0;
+  min-height: 0;
+  height: 0;
   cursor: -webkit-grab;
   cursor: grab;
   border-bottom: 1px solid var(--color-border);
 }
 .todo__item input[type=text] {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   pointer-events: none;
 }
 .todo__item:hover .delete {
   opacity: 1;
 }
 .todo__bottom {
+  box-shadow: 0 17px 25px var(--color-shadow);
   justify-content: space-between;
   min-height: 5.5rem;
   margin: 0;
@@ -350,7 +398,6 @@ body {
   border-radius: 0 0 5px 5px;
   color: var(--color-info);
   font-size: 1.3rem;
-  box-shadow: none;
 }
 .todo__bottom-stock {
   pointer-events: none;
@@ -388,17 +435,39 @@ body {
 .todo__info p {
   cursor: help;
 }
-.todo__removal {
-  display: flex;
-  margin: 1.5rem auto;
-}
-.todo__removal img {
-  border-radius: 5px;
-  width: 100px;
-  height: 100px;
-}
 @media screen and (max-width: 600px) {
   .todo__bottom-actions {
     display: none;
+  }
+}
+
+.meme {
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+  align-items: center;
+  background-color: var(--color-input);
+  width: 100%;
+  background: var(--color-input);
+  transform-origin: 0 0;
+  transition: all 0.3s ease-in-out;
+}
+.meme__removal {
+  display: flex;
+  justify-content: center;
+  height: 13.5rem;
+  margin: 1rem auto 1.5rem;
+  transition: height 0.5s ease-in-out;
+  -webkit-animation: dance 25s linear infinite;
+          animation: dance 25s linear infinite;
+}
+.meme__removal img {
+  border-radius: 5px;
+}
+@media screen and (max-width: 590px) {
+  .meme__removal {
+    -webkit-animation: dance2 25s linear infinite;
+            animation: dance2 25s linear infinite;
   }
 }/*# sourceMappingURL=main.css.map */
