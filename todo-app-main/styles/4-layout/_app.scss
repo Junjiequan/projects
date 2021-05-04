@@ -81,6 +81,7 @@
         cursor:grab;
         border-bottom:1px solid color(border);
         & input[type=text]{
+            @include transition(all, .5s); 
             pointer-events:none;
         }
         &:hover .delete{
@@ -135,6 +136,15 @@
         margin:4rem 0;
         p{
             cursor:help;
+        }
+    }
+    &__removal{
+        display:flex;
+        margin:1.5rem auto;
+        img{
+            border-radius:5px;
+            width:100px;
+            height:100px;
         }
     }
     @media screen and (max-width:600px){

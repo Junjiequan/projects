@@ -60,30 +60,37 @@
     border-radius:100%;
     cursor:pointer;
     border:2px solid color(circle);
-    @include transition(all, .5s); 
+    &::before{
+        content:'';
+        background:url(../images/icon-check.svg) no-repeat center;
+        display:block;
+        position:absolute;
+        width:100%;
+        height:100%;
+        justify-content:center;
+        align-items:center;
+        @include transition(opacity, .4s);
+        opacity:0;
+    }
     &:hover{
         border:2px double transparent;
         background-image:linear-gradient(color(input), color(input)), $CheckBackground;
         background-origin:border-box;
         background-clip: content-box, border-box;
-        animation: rotate 1s linear infinite;
+        animation: rotate 1.5s linear infinite;
     }
 }
 .checked{
     & div:first-child{
+        opacity:1;
         background:$CheckBackground;
         border:none;
         &::before{
-            content:url(../images/icon-check.svg);
-            display:flex;
-            position:absolute;
-            width:100%;
-            height:100%;
-            justify-content:center;
-            align-items:center;
+            opacity:1;
         }
     }
     & input[type=text]{
+        @include transition(all, .3s); 
         opacity:.3;
         text-decoration: line-through;
     }

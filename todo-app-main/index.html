@@ -23,26 +23,31 @@
         </div>
       </div>
       <div class="todo">
-        <form class="todo__form">
+        <form class="todo__form" onSubmit="return false;">
           <div class="todo__initial">
-            <div class="check" aria-label="add-todo-list-button"></div>
-            <input type="text" value="" data-id="todo-content"autofocus placeholder="Create todo list here"/>
+            <div class="check" role="submit" aria-label="add-todo-list-button" ></div>
+            <input class="shit" type="text" value="" aria-label="todo-input" name="todo-input" data-id="todo-content" autofocus placeholder="Create todo list here"/>
           </div>
           <ul class="todo__list">
+            <li class="todo__item">
+               <div class="todo__removal">
+                 <img src="https://steamuserimages-a.akamaihd.net/ugc/1168069610703765689/DAD6C3BFFAC44165E9F7CC0DE93CC51A09C676A4/" alt="dancing-meme">
+               </div>
+            </li>
             <!-- <li class="todo__item checked">
               <div class="check-mark no-animation" data-id="check"></div>
-              <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" >
+              <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" disabled>
               <div class="delete"></div>
             </li>
             <li class="todo__item ">
               <div class="check-mark"></div>
-              <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" >
+              <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" disabled>
               <div class="delete"></div>
             </li> -->
           </ul>
           <div class="todo__bottom">
             <div class="todo__bottom-stock">
-              <span class="todo__bottom-stock--number">5</span> items left
+              <span id="amount">0</span> items left
             </div>
             <div class="todo__bottom-actions">
               <a class="todo__bottom-actions--all" role="button" aria-label="all" data-id="all">All</a>
