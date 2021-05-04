@@ -8,9 +8,14 @@ const todoInput = document.querySelector('[data-id = "todo-content"]')
 const form = document.querySelector('.todo__form')
 const list = document.querySelector('.todo__list');
 const meme = document.querySelector('.meme');
-const bgm = new Audio('./songs/omaewa.mp3')
+const bgm = new Audio('songs/omaewa.mp3')
 let todoLeft = 0;
-
+const playBGM = ()=>{
+   bgm.volume = 0.5;
+   bgm.loop = true;
+   bgm.autoplay = true;
+   bgm.load();
+}
 //functions
 const createItem = ()=>{
    let text = todoInput.value.trim();
@@ -98,8 +103,5 @@ function createMeme(){
    }
 }
 document.addEventListener('DOMContentLoaded', ()=>{
-      bgm.volume = 0.5;
-      bgm.loop = true;
-      bgm.autoplay = true;
-      bgm.load();
+   playBGM()
 })
