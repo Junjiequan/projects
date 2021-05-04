@@ -19,6 +19,7 @@
         transition: height .5s ease-in-out;
         animation:dance 25s linear infinite;
         img{
+            max-width:100%;
             border-radius:5px;
         }
         @media screen and(max-width:590px){

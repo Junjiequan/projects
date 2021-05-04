@@ -462,6 +462,7 @@ body {
           animation: dance 25s linear infinite;
 }
 .meme__removal img {
+  max-width: 100%;
   border-radius: 5px;
 }
 @media screen and (max-width: 590px) {
