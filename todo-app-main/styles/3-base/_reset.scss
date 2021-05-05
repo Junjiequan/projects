@@ -30,10 +30,19 @@ ol[role='list'],
 li {
   list-style: none;
 }
-
+/*reset button*/
 button{
   all:unset;
+  /*for IE*/
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
+
 
 /* remove input autofill color settings*/
 input:-webkit-autofill,
