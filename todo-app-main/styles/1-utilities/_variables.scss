@@ -26,6 +26,7 @@ $d-VeryDarkGrayishBlue2: hsl(237, 14%, 26%);
 $d-shadow:rgba(11,12,13,1);
 
 $light:(
+    reverse-main: $d-VeryDarkBlue,
     main: $l-VeryLightGray,
     h1:$l-LightGrayishBlue2,
     border:$l-VeryLightGrayishBlue,
@@ -38,6 +39,7 @@ $light:(
     shadow:$l-shadow,
 );
 $dark:(
+    reverse-main: $l-VeryLightGray,
     main: $d-VeryDarkBlue,
     h1:$d-LightGrayishBlue2,
     border:$d-VeryDarkGrayishBlue2,

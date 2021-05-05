@@ -6,6 +6,9 @@ html{
 body{
     font-family: 'Josefin Sans', sans-serif;
     font-size:1.8rem;
+    @media screen and (max-width:600px){
+        font-size:1.6rem;
+    }
 }
 h1{
     font-size:4rem;
@@ -14,7 +17,7 @@ h1{
     letter-spacing:2rem;
 };
 p{
-    font-size:1.1rem;
+    font-size:1.3rem;
     color:color(info);
 
 }

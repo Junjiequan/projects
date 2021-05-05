@@ -43,9 +43,12 @@
         margin:0 6.5rem;
         white-space: nowrap;
         caret-color:$BrightBlue;
-        transition: all .3s ease;
         // set global focus-visible latter/////////////////////////////////
     }
+    ::-webkit-input-placeholder{
+        opacity:.7;
+    }
+
     &__form{
         width:100%;
         border-radius:5px;
@@ -79,7 +82,7 @@
         border-radius:0;
         min-height:0;
         height:0;
-        cursor:grab;
+        cursor:move;
         border-bottom:1px solid color(border);
         & input[type=text]{
             @include transition(all, .3s); 
@@ -123,10 +126,8 @@
         }
         &-clear{
             cursor:pointer;
-            &--complete{
-                @include transition(color, .2s);
-            }
-            &--complete:hover{
+            @include transition(color, .2s);
+            &:hover{
                 color:color(hover);
             }
         }
@@ -142,8 +143,27 @@
     @media screen and (max-width:600px){
         &__bottom{
             &-actions{
-                display:none;
+                background-color:color(input);
+                margin:0;
+                border-radius:5px;
+                position:absolute;
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                min-width:100%;
+                height:4rem;
+                bottom:-6rem;left:0;
+                box-shadow:0 17px 25px color(shadow);
+                & :first-child{
+                    margin-left:20%;
+                }
+                & :last-child{
+                    margin-right:20%;
+                }
             }
+        }
+        &__info{
+            margin:12rem 0 4rem;
         }
     }
 }

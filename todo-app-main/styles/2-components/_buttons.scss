@@ -48,6 +48,9 @@
     &:hover{
         filter:drop-shadow(0 0 15px color(shadow)) invert(95%);
     }
+    @media screen and (max-width:600px){
+        opacity:1;
+    }
 }
 
 .check-mark{
@@ -98,4 +101,29 @@
 }
 .no-animation{
     animation:none !important;
+}
+
+.volume{
+    position:absolute;
+    display:flex;
+    top:1rem;left:1rem;
+    font-size:3rem;
+    cursor:pointer;
+    color:color;
+    &__mute,
+    &__unmute{
+        position:absolute;
+        color: $white;
+        opacity:.6;
+    }
+    &__mute{
+        display:none;
+    }
+    &:hover &__mute,
+    &:hover &__unmute{
+        color:$BrightBlue;
+    }
+    i{
+        pointer-events:none;
+    }
 }

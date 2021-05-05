@@ -1,9 +1,11 @@
+@use '../1-utilities/' as *;
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
 
 /* Remove default margin */
 body,
@@ -28,6 +30,14 @@ li {
   list-style: none;
 }
 
+/* remove input autofill color settings*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px color(input) inset !important;
+    -webkit-text-fill-color: color(font) !important;
+}
 
 /* Set core root defaults */
 html:focus-within {

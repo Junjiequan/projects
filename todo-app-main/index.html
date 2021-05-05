@@ -5,12 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="./styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <script defer src="app.js"></script>
   <title>Frontend Mentor | Todo app</title>
 </head>
-<body class="light">
+<body class="dark">
 
   <div class="intro"></div>
+
+  <div class="volume">
+    <div class="volume__mute" role="button" aria-label="mute" data-id="mute"><i class="fas fa-volume-mute"></i></div>
+    <div class="volume__unmute" role="button" aria-label="unmute" data-id="unmute"><i class="fas fa-volume-up"></i></div>
+  </div>
 
   <div class="bg"></div>
 
@@ -26,7 +32,7 @@
         <form class="todo__form" onSubmit="return false;">
           <div class="todo__initial">
             <div class="check" role="submit" aria-label="add-todo-list-button" ></div>
-            <input class="shit" type="text" value="" aria-label="todo-input" name="todo-input" data-id="todo-content" autofocus placeholder="Create todo list here"/>
+            <input type="text" value="" aria-label="todo-input" name="todo-input" data-id="todo-content" autofocus placeholder="Create todo list here"/>
           </div>
           <ul class="todo__list">
             <li class="meme">
@@ -54,9 +60,7 @@
               <a class="todo__bottom-actions--active" role="button" aria-label="active" data-id="active">Active</a>
               <a class="todo__bottom-actions--completed" role="button" aria-label="completed" data-id="completed">Completed</a>
             </div>
-            <div class="todo__bottom-clear">
-              <a class="todo__bottom-clear--complete" role="button" aria-label="clear-complete" data-id="clear-complete">Clear Completed</a>
-            </div>
+            <a class="todo__bottom-clear" role="button" aria-label="clear-complete" data-id="clear-complete">Clear Completed</a>
           </div>
         </form>
         <div class="todo__info"><p>Drag and drop to reorder list</p></div>
