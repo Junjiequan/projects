@@ -133,12 +133,12 @@ list.addEventListener('dragover', (e)=>{
    e.preventDefault();
 }, false);
 list.addEventListener('dragenter', (e)=>{
-   if(e.target.className == 'todo__item'){
+   if(e.target.classList.contains('todo__item')){
       e.target.style.filter = "drop-shadow(1px 10px 10px gray) invert(10%)";
    }
 }, false);
 list.addEventListener('dragleave', (e)=>{
-   if(e.target.className == 'todo__item'){
+   if(e.target.classList.contains('todo__item')){
       e.target.style.filter = "";
    }
 }, false);
@@ -147,7 +147,7 @@ list.addEventListener('drop', (e)=>{
    const parent = e.target.parentNode;
    const targetPosition = Array.from(parent.children).indexOf(e.target);
    const draggedPosition = Array.from(parent.children).indexOf(dragged)
-   if(e.target.className == 'todo__item'){
+   if(e.target.classList.contains('todo__item')){
       e.target.style.filter = "";
       if(draggedPosition < targetPosition  ){
          dragged.parentNode.insertBefore(dragged,e.target.nextSibling)
