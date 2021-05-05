@@ -80,8 +80,7 @@ const todoFilter = (target) =>{
                updateTodoLeft(todoLeft);
             }
             break;
-         }
-          
+      }
    })
 }
 
@@ -161,11 +160,8 @@ list.addEventListener('drop', (e)=>{
    }
 }, false);
 
-
 //eventListeners
 filterBox.addEventListener('click', (e) => todoFilter(e.target));
-
-
 
 form.addEventListener('click',(e)=>{
    const target = e.target;
@@ -215,7 +211,6 @@ const playBGM = ()=>{
    bgm.load();
    bgm.pause();
 }
-
 function createMeme(){
    if(dancingMeme.style !== null ){
       if(todoLeft < 1){
