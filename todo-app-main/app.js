@@ -57,7 +57,6 @@ const toggleCheck = (todo)=>{
 const todoFilter = (target) =>{
    const todos = document.querySelectorAll('.todo__item');
    const filter = target.dataset.id;
-   console.log(target)
    todos.forEach(item =>{
       switch (filter){
          case 'all':
@@ -75,11 +74,14 @@ const todoFilter = (target) =>{
             break;
          case 'clear-complete':
             if(item.classList.contains('checked')){
-               todoLeft--;
                item.remove();
-               deleteLocalTodo(item)
+               todoLeft--;
+               deleteLocalTodo(item);
+               updateTodoLeft(todoLeft);
             }
+            break;
          }
+          
    })
 }
 
