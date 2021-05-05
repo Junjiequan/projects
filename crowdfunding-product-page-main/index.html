@@ -56,7 +56,7 @@
           <div id ="close"><img src="./images/icon-close-modal.svg" alt="close"></div>
           <h2>Back this project</h2>
           <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
-          <form class="popup-box border" >
+          <form class="popup-box border" onsubmit="return false">
             <div class="wrapper ">
               <div class="radio">
                 <input type="radio" name="options" id="radio1" value="" aria-label="radio1" />
@@ -74,13 +74,13 @@
               <p>Enter your pledge</p>
               <div class="check">
                 <div class="forDollar">
-                  <input type="number" aria-label="price" id="price1" min="1" max="201" placeholder="1" class="btn no-hover" />
+                  <input type="number" aria-label="price" id="price1" min="1"  placeholder="1" class="btn no-hover" required/>
                 </div>
-                <button type="submit" onclick="return false"class="btn">Continue</button>
+                <button type="submit" class="btn">Continue</button>
               </div>
             </div>
           </form>
-          <form class="popup-box border" >
+          <form class="popup-box border" onsubmit="return false">
             <div class="wrapper ">
               <div class="radio">
                 <input type="radio" name="options" id="radio2" value="" aria-label="radio2" />
@@ -98,13 +98,13 @@
               <p>Enter your pledge</p>
               <div class="check">
                 <div class="forDollar">
-                  <input type="number" aria-label="price" id="price2" min="1" max="201" placeholder="25"class="btn no-hover" />
+                  <input type="number" aria-label="price" id="price2" min="25"  placeholder="25" class="btn no-hover" required/>
                 </div>
-                <button type="submit" onclick="return false"class="btn">Continue</button>
+                <button type="submit" class="btn">Continue</button>
               </div>
             </div>
           </form>
-          <form class="popup-box border" >
+          <form class="popup-box border" onsubmit="return false">
             <div class="wrapper ">
               <div class="radio">
                 <input type="radio" name="options" id="radio3" value="" aria-label="radio3"/>
@@ -122,13 +122,13 @@
               <p>Enter your pledge</p>
               <div class="check">
                 <div class="forDollar">
-                  <input type="number" aria-label="price" id="price3" min="1" max="201" placeholder="75" class="btn no-hover" />
+                  <input type="number" aria-label="price" id="price3" min="75" placeholder="75" class="btn no-hover" required/>
                 </div>
-                <button type="submit" onclick="return false"class="btn">Continue</button>
+                <button type="submit" class="btn">Continue</button>
               </div>
             </div>
           </form>
-          <form class="popup-box border out-of-stock" >
+          <form class="popup-box border out-of-stock" onsubmit="return false">
             <div class="wrapper ">
               <div class="radio">
                 <input type="radio" name="options" id="radio4" value="" aria-label="radio3" disabled/>
@@ -146,9 +146,9 @@
               <p>Enter your pledge</p>
               <div class="check">
                 <div class="forDollar">
-                  <input type="number" aria-label="price" id="price4" min="1" max="201" placeholder="200" class="btn no-hover"  disabled />
+                  <input type="number" aria-label="price" id="price4" min="200" placeholder="200" class="btn no-hover"  required disabled />
                 </div>
-                <button type="submit" onclick="return false"class="btn">Continue</button>
+                <button type="submit" class="btn">Continue</button>
               </div>
             </div>
           </form>
