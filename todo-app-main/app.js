@@ -91,7 +91,6 @@ const setLocalTodo = (data) =>{
    else storage = JSON.parse(localStorage.getItem('storage'));
    
    storage.push(data);
-   console.log(storage)
    localStorage.setItem('storage', JSON.stringify(storage));
 }
 
