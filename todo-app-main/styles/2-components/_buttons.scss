@@ -7,7 +7,7 @@
     display:inline-flex;
     align-items:center;
     width:2.5rem;
-    min-height:2.5rem;
+    height:2.5rem;
     border-radius:100%;
     cursor:pointer;
     border:2px solid color(circle);
@@ -51,6 +51,9 @@
     @media screen and (max-width:600px){
         opacity:1;
     }
+    &:focus{
+        opacity:1;
+    }
 }
 
 .check-mark{
@@ -66,9 +69,10 @@
     @include transition(border, .5s);
     &::before{
         content:'';
-        background:url(../images/icon-check.svg) no-repeat center;
+        background:url(../images/icon-check.svg) no-repeat center center;
         display:block;
         position:absolute;
+        top:0;left:0;right:0;bottom:0;
         width:100%;
         height:100%;
         justify-content:center;
@@ -81,14 +85,13 @@
         background-image:linear-gradient(color(input), color(input)), $CheckBackground;
         background-origin:border-box;
         background-clip: content-box, border-box;
-        animation: rotate 1.5s linear infinite;
     }
 }
 .checked{
-    & div:first-child{
+    & button:first-child{
         opacity:1;
         background:$CheckBackground;
-        border:none;
+        border-color:color(input);
         &::before{
             opacity:1;
         }

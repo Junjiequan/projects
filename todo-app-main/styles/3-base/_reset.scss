@@ -5,7 +5,9 @@
 *::after {
   box-sizing: border-box;
 }
-
+*:focus{
+  outline: 2px dotted color(reverse-main);
+}
 /* Remove default margin */
 body,
 h1,
@@ -27,6 +29,10 @@ ul[role='list'],
 ol[role='list'],
 li {
   list-style: none;
+}
+
+button{
+  all:unset;
 }
 
 /* remove input autofill color settings*/

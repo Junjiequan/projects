@@ -11,11 +11,11 @@
 </head>
 <body class="dark">
 
-  <div class="intro"></div>
+  <!-- <div class="intro"></div> -->
 
   <div class="volume">
-    <div class="volume__mute" role="button" aria-label="mute" data-id="mute"><i class="fas fa-volume-mute"></i></div>
-    <div class="volume__unmute" role="button" aria-label="unmute" data-id="unmute"><i class="fas fa-volume-up"></i></div>
+    <button class="volume__mute" aria-label="mute" data-id="mute"><i class="fas fa-volume-mute"></i></button>
+    <button class="volume__unmute"  aria-label="unmute" data-id="unmute"><i class="fas fa-volume-up"></i></button>
   </div>
 
   <div class="bg"></div>
@@ -24,14 +24,14 @@
     <div class="app__wrapper">
       <div class="app__top">
         <h1>Todo</h1>
-        <div class="app__switch">
+        <button class="app__switch" aria-label="color-theme-switch">
           <img src="./images/icon-sun.svg" alt="color-theme-changer-icon">
-        </div>
+        </button>
       </div>
       <div class="todo">
         <form class="todo__form" onSubmit="return false;">
           <div class="todo__initial">
-            <a class="check" role="button" aria-label="add-todo-list-button" ></a>
+            <button class="check" aria-label="add-todo-list-button" ></button>
             <input type="text" value="" aria-label="todo-input" name="todo-input" data-id="todo-content" autofocus placeholder="Create todo list here"/>
           </div>
           <ul class="todo__list">
@@ -56,11 +56,11 @@
               <span id="amount">0</span> items left
             </div>
             <div class="todo__bottom-actions">
-              <a class="todo__bottom-actions--all" role="button" aria-label="all" data-id="all">All</a>
-              <a class="todo__bottom-actions--active" role="button" aria-label="active" data-id="active">Active</a>
-              <a class="todo__bottom-actions--completed" role="button" aria-label="completed" data-id="completed">Completed</a>
+              <button class="todo__bottom-actions--all"  aria-label="all" data-id="all">All</button>
+              <button class="todo__bottom-actions--active"  aria-label="active" data-id="active">Active</button>
+              <button class="todo__bottom-actions--completed"  aria-label="completed" data-id="completed">Completed</button>
             </div>
-            <a class="todo__bottom-clear" role="button" aria-label="clear-complete" data-id="clear-complete">Clear Completed</a>
+            <button class="todo__bottom-clear"  aria-label="clear-complete" data-id="clear-complete">Clear Completed</button>
           </div>
         </form>
         <div class="todo__info"><p>Drag and drop to reorder list</p></div>

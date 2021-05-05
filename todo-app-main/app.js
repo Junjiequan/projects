@@ -15,9 +15,9 @@ let todoLeft = 0;
 const createItem = (todoText)=>{
    list.insertAdjacentHTML('beforeend',`
    <li class="todo__item" draggable="true" style="transform:scaleY(0); height:0; id="${todoLeft}" ">
-   <div class="check-mark " data-id="check" ></div>
+   <button class="check-mark " data-id="check" ></button>
    <input class="active " placholder="created" type="text" aria-label="todo-item" name="todo-item" value="${todoText}" disabled>
-   <div class="delete " data-id="delete"></div>
+   <button class="delete "  data-id="delete"></button>
    </li>
    `)
    todoInput.value = '';
@@ -101,9 +101,9 @@ const getLocalTodo = () =>{
    storage.forEach(data=>{
       list.insertAdjacentHTML('beforeend',`
       <li class="todo__item" draggable="true" style="transform: scaleY(1); height:6.5rem; id="${todoLeft}" ">
-      <div class="check-mark " data-id="check" ></div>
-      <input class="active " placholder="created" type="text" aria-label="todo-item" name="todo-item" value="${data}" disabled>
-      <div class="delete " data-id="delete"></div>
+      <button class="check-mark" data-id="check" ></button>
+      <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" value="${data}" disabled>
+      <button class="delete" data-id="delete"></button>
       </li>
       `)
       todoLeft++;
