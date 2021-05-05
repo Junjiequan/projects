@@ -189,7 +189,7 @@ colorTrigger.addEventListener('click',()=>{
         body.classList.add('dark')
         bodyBg.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
         img.src="./images/icon-sun.svg"
-     } else{
+     } else if(body.classList[0] == 'dark'){
         body.classList.remove('dark')
         body.classList.add('light')
         bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';

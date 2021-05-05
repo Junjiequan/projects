@@ -10,6 +10,7 @@
     background:color(input);
     @include transition(all, .3s);
     &__removal{
+        position:relative;
         cursor:pointer;
         display:flex;
         justify-content:center;
