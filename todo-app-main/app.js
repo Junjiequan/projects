@@ -125,7 +125,6 @@ let dragged;
 
 list.addEventListener('drag', (e)=>{}, false);
 list.addEventListener('dragstart', (e)=>{
-   e.target.style.transition = "";
    dragged = e.target;
 }, false);
 list.addEventListener('dragend', (e)=>{
@@ -145,7 +144,6 @@ list.addEventListener('dragleave', (e)=>{
 }, false);
 list.addEventListener('drop', (e)=>{
    e.preventDefault();
-   e.target.style.transition = "none";
    const parent = e.target.parentNode;
    const targetPosition = Array.from(parent.children).indexOf(e.target);
    const draggedPosition = Array.from(parent.children).indexOf(dragged)
