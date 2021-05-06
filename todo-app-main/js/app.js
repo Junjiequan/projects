@@ -166,6 +166,7 @@ list.addEventListener('drop', (e)=>{
 }, false);
 
 //eventListeners
+document.addEventListener('DOMContentLoaded', getLocalTodo)
 filterBox.addEventListener('click', (e) => todoFilter(e.target));
 
 form.addEventListener('click',(e)=>{
@@ -220,7 +221,3 @@ function createMeme(){
       }
    }
 }
-function removeMeme(target){
-   target.parentElement.remove();
-}
-dancingMeme.addEventListener('click', (e) => removeMeme(e.target))
