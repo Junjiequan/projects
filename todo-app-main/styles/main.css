@@ -550,7 +550,7 @@ body {
   justify-content: center;
   max-height: 13.5rem;
   margin: 1rem auto 1.5rem;
-  transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out, margin 0.5s ease-in-out;
   -webkit-animation: dance 25s linear infinite;
           animation: dance 25s linear infinite;
 }
@@ -570,14 +570,14 @@ body {
   content: "";
   width: 0;
   height: 0;
-  top: -2.3rem;
+  top: -2.1rem;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 8px solid var(--color-reverse-main);
 }
 .meme__removal::after {
   position: absolute;
-  content: "click to remove";
+  content: "List is empty.";
   font-size: 1.5rem;
   width: 100%;
   top: -5.1rem;
@@ -590,11 +590,9 @@ body {
   justify-content: center;
   text-align: center;
 }
-.meme__removal::before, .meme__removal::after {
+.meme__hide::before, .meme__hide::after {
+  display: none;
   pointer-events: none;
   transition: opacity 0.4s ease-in-out;
-  opacity: 0;
-}
-.meme__removal:hover:before, .meme__removal:hover:after {
   opacity: 1;
 }/*# sourceMappingURL=main.css.map */

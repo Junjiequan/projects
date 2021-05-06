@@ -12,6 +12,7 @@ const filterBox = document.querySelector('.todo__bottom');
 const filterAll = document.querySelector('[data-id=all]');
 const filterActive = document.querySelector('[data-id=active]');
 const filterCompleted = document.querySelector('[data-id=completed]');
+const dancingMeme = document.querySelector('.meme__removal');
 
 let todoLeft = 0;
 
@@ -204,48 +205,22 @@ colorTrigger.addEventListener('click',()=>{
      }
 });
 
-
-//some personal stuff
-const dancingMeme = document.querySelector('.meme__removal');
-const bgm = new Audio('songs/omaewa.mp3')
-
-const playBGM = ()=>{
-   bgm.volume = 0.5;
-   bgm.loop = true;
-   bgm.autoplay = true;
-   bgm.load();
-   bgm.pause();
-}
+// meme igonore it
 function createMeme(){
    if(dancingMeme.style !== null ){
-      if(todoLeft < 1){
+      if(todoLeft === 0){
          dancingMeme.style.height = "13.5rem";
          dancingMeme.style.margin = "1rem auto 1.5rem";
-      } else if(list.querySelectorAll('li').length > 1){
+         dancingMeme.classList.remove('meme__hide')
+         console.log(dancingMeme)
+      } else{
          dancingMeme.style.height = "0";
-         dancingMeme.style.margin = "0 auto";
+         dancingMeme.style.margin = "0 auto"
+         dancingMeme.classList.add('meme__hide')
       }
-   }
-}
-function isVolume(target){
-   if(target.dataset.id === 'mute'){
-      target.style.display = "none"
-      target.nextElementSibling.style.display = "block"
-      bgm.volume = 0;
-      bgm.pause();
-   } else {
-      target.style.display = "none"
-      target.previousElementSibling.style.display = "block"
-      bgm.volume = 0.5;
-      bgm.play();
    }
 }
 function removeMeme(target){
    target.parentElement.remove();
 }
-document.addEventListener('DOMContentLoaded', () => {
-   playBGM();
-   getLocalTodo();
-})
-document.querySelector('.volume').addEventListener('click', (e) => isVolume(e.target))
 dancingMeme.addEventListener('click', (e) => removeMeme(e.target))

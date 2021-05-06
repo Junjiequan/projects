@@ -17,7 +17,7 @@
         // height:13.5rem;
         max-height:13.5rem;
         margin:1rem auto 1.5rem;
-        transition: height .5s ease-in-out;
+        transition: height .5s ease-in-out, margin .5s ease-in-out;
         animation:dance 25s linear infinite;
         img{
             max-height:13.5rem;
@@ -32,15 +32,14 @@
             content:'';
             width:0;
             height:0;
-            top:-2.3rem;
+            top:-2.1rem;
             border-left:10px solid transparent;
             border-right:10px solid transparent;
             border-top:8px solid color(reverse-main);
-
         }
         &::after{
             position:absolute;
-            content:'click to remove';
+            content:'List is empty.';
             font-size:1.5rem;
             width:100%;
             top:-5.1rem; 
@@ -53,16 +52,16 @@
             justify-content:center;
             text-align:center;
         }
+    }
+    &__hide{
         &::before,
         &::after{
+            display:none;
             pointer-events:none;
             @include transition(opacity, .4s);
-            opacity:0;
-        }
-        &:hover:before,
-        &:hover:after{
             opacity:1;
         }
+
     }
     
 }
