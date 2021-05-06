@@ -52,6 +52,9 @@
             justify-content:center;
             text-align:center;
         }
+        &:hover:after{
+            content:"Create List !!!";
+        }
     }
     &__hide{
         &::before,

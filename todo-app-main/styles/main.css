@@ -590,6 +590,9 @@ body {
   justify-content: center;
   text-align: center;
 }
+.meme__removal:hover:after {
+  content: "Create List !!!";
+}
 .meme__hide::before, .meme__hide::after {
   display: none;
   pointer-events: none;
