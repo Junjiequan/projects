@@ -25,7 +25,6 @@ function isVolume(target){
 
 document.addEventListener('DOMContentLoaded', () => {
    playBGM();
-   getLocalTodo();
 })
 document.querySelector('.volume').addEventListener('click', (e) => isVolume(e.target))
 

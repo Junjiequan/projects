@@ -81,7 +81,7 @@
         border-radius:0;
         min-height:0;
         height:0;
-        cursor:move;
+        cursor:pointer;
         border-bottom:1px solid color(border);
         & input[type=text]{
             @include transition(all, .3s); 
@@ -89,6 +89,9 @@
         }
         &:hover .delete{
             opacity:1;
+        }
+        &:hover{
+            filter:drop-shadow(0 10px 10px gray) invert(5%);
         }
     }
     &__bottom{

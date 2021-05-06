@@ -184,7 +184,7 @@ p {
   border-radius: 100%;
   cursor: pointer;
   border: 2px solid var(--color-circle);
-  transition: border 0.5s ease-in-out;
+  transition: border 0.3s ease-in-out;
 }
 .check-mark::before {
   content: "";
@@ -199,7 +199,6 @@ p {
   height: 100%;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.3s ease-in-out;
   opacity: 0;
 }
 .check-mark:hover {
@@ -221,11 +220,6 @@ p {
   transition: all 0.3s ease-in-out;
   opacity: 0.3;
   text-decoration: line-through;
-}
-
-.no-animation {
-  -webkit-animation: none !important;
-          animation: none !important;
 }
 
 .volume {
@@ -451,7 +445,7 @@ body {
   border-radius: 0;
   min-height: 0;
   height: 0;
-  cursor: move;
+  cursor: pointer;
   border-bottom: 1px solid var(--color-border);
 }
 .todo__item input[type=text] {
@@ -460,6 +454,9 @@ body {
 }
 .todo__item:hover .delete {
   opacity: 1;
+}
+.todo__item:hover {
+  filter: drop-shadow(0 10px 10px gray) invert(5%);
 }
 .todo__bottom {
   box-shadow: 0 17px 25px var(--color-shadow);
