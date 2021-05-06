@@ -78,7 +78,6 @@ const todoFilter = (target) =>{
             if(item.classList.contains('checked')){
                item.remove();
                todoLeft--;
-               deleteLocalTodo(item);
                updateTodoLeft(todoLeft);
             }
             break;
@@ -93,10 +92,9 @@ const setLocalTodo = (data,style) =>{
    let storage;
    if (localStorage.getItem('storage') === null) storage = [];
    else storage = JSON.parse(localStorage.getItem('storage'));
-   storage.push([data,style]);
+   storage.push([data, style]);
    localStorage.setItem('storage', JSON.stringify(storage));
 }
-
 const getLocalTodo = () =>{
    let storage;
    if (localStorage.getItem('storage') === null) storage = [];
@@ -119,10 +117,13 @@ const deleteLocalTodo = (target) =>{
    if (localStorage.getItem('storage') === null) storage = [];
    else storage = JSON.parse(localStorage.getItem('storage'));
    const item = target.children[1].value
-   storage.splice(storage.indexOf(item), 1)
+   storage.forEach((elem,index,object)=>{
+      if(elem.includes(item)){
+        object.splice(index,1)
+      }
+   })
    localStorage.setItem('storage',JSON.stringify(storage))
 }
-
 //dragevents
 let dragged;
 
@@ -174,6 +175,7 @@ filterBox.addEventListener('click', (e) => todoFilter(e.target));
 form.addEventListener('click',(e)=>{
    const target = e.target;
    const todos = document.querySelectorAll('.todo__item')
+  
    if(target === createTodo){
       if(todoInput.value.match(/\w+/g) ){
         let todoText = todoInput.value.trim();
@@ -190,6 +192,7 @@ form.addEventListener('click',(e)=>{
       }
       if(target.dataset.id === 'delete'){
          deleteItem(target);
+         deleteLocalTodo(target.previousElementSibling.value)
       }
    };
    localStorage.clear();
