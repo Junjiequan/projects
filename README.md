@@ -21,7 +21,7 @@ I only make stuff that makes me feel proud of 😉
 | 14. [Room homepage](https://a331998513.github.io/projects/room-homepage-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/room-homepage-master)  |
 | 15. [Shortly URL shortening API Challenge](https://a331998513.github.io/projects/url-shortening-api-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/url-shortening-api-master)  |
 | 16. [static-job-listings-master](https://a331998513.github.io/projects/static-job-listings-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/static-job-listings-master)  |
-| 17. [IP Address Tracker](https://a331998513.github.io/projects/ip-address-tracker-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/ip-address-tracker-master)  |
+| 17. [IP Address Tracker](https://a331998513.github.io/projects/ip-address-tracker-master/)  bug with locating isLoading() need to be fixed in the future  | [Repo](https://github.com/a331998513/projects/tree/main/ip-address-tracker-master)  |
 |_Failed._ [launch-countdown-timer-main](https://a331998513.github.io/projects/launch-countdown-timer-main/) |[Repo](https://github.com/a331998513/projects/tree/main/launch-countdown-timer-main)|
 | 18. [easybank-landing-page-master](https://a331998513.github.io/projects/easybank-landing-page-master/)  | [Repo](https://github.com/a331998513/projects/tree/main/easybank-landing-page-master)  |
 | 19. [todo-app-main](https://a331998513.github.io/projects/todo-app-main/)  | [Repo](https://github.com/a331998513/projects/tree/main/todo-app-main)  |
