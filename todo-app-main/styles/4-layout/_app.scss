@@ -112,14 +112,23 @@
             cursor:pointer;
             @extend %b-700;
             &--all{
+                @include transition(color, .2s);
+            }
+            &--all:hover,
+            &--all:focus{
                 color: $BrightBlue;
             }
+
             &--active,
             &--completed{
                 @include transition(color, .2s);
             }
             &--active:hover,
-            &--completed:hover{
+            &--completed:hover,
+            &--active:focus,
+            &--completed:focus,
+            &--active:active,
+            &--completed:active{
                 color:color(hover);
             }
         }

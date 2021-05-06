@@ -1,3 +1,4 @@
+
 //selectors
 const body = document.body;
 const bodyBg = document.querySelector('.bg')
@@ -8,6 +9,9 @@ const todoInput = document.querySelector('[data-id = "todo-content"]')
 const form = document.querySelector('.todo__form')
 const list = document.querySelector('.todo__list');
 const filterBox = document.querySelector('.todo__bottom');
+const filterAll = document.querySelector('[data-id=all]');
+const filterActive = document.querySelector('[data-id=active]');
+const filterCompleted = document.querySelector('[data-id=completed]');
 
 let todoLeft = 0;
 
@@ -80,10 +84,13 @@ const todoFilter = (target) =>{
                updateTodoLeft(todoLeft);
             }
             break;
+         default:
+            document.querySelector('[data-id=all]').focus()
+            item.style.display = "flex";
       }
    })
 }
-
+document.querySelector('[data-id=all]').focus()
 //localStorage 
 const setLocalTodo = (data) =>{
    let storage;
@@ -197,6 +204,7 @@ colorTrigger.addEventListener('click',()=>{
      }
 });
 
+
 //some personal stuff
 const dancingMeme = document.querySelector('.meme__removal');
 const bgm = new Audio('songs/omaewa.mp3')
@@ -241,4 +249,3 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 document.querySelector('.volume').addEventListener('click', (e) => isVolume(e.target))
 dancingMeme.addEventListener('click', (e) => removeMeme(e.target))
-

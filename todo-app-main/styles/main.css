@@ -482,12 +482,15 @@ body {
   cursor: pointer;
 }
 .todo__bottom-actions--all {
+  transition: color 0.2s ease-in-out;
+}
+.todo__bottom-actions--all:hover, .todo__bottom-actions--all:focus {
   color: #3a7bfd;
 }
 .todo__bottom-actions--active, .todo__bottom-actions--completed {
   transition: color 0.2s ease-in-out;
 }
-.todo__bottom-actions--active:hover, .todo__bottom-actions--completed:hover {
+.todo__bottom-actions--active:hover, .todo__bottom-actions--completed:hover, .todo__bottom-actions--active:focus, .todo__bottom-actions--completed:focus, .todo__bottom-actions--active:active, .todo__bottom-actions--completed:active {
   color: var(--color-hover);
 }
 .todo__bottom-clear {
