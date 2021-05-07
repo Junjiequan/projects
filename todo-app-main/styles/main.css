@@ -257,8 +257,14 @@ p {
   box-sizing: border-box;
 }
 
-*:focus {
-  outline: 2px dotted var(--color-reverse-main);
+*:focus-visible {
+  outline: 2px dashed var(--color-reverse-main);
+  outline-offset: 2px;
+  transition: outline 0.3s ease-in-out;
+}
+
+*:active {
+  outline-offset: 4px;
 }
 
 /* Remove default margin */
@@ -394,7 +400,7 @@ body {
   min-width: 100%;
   transition: transform 1s ease;
 }
-.app__switch:hover img {
+.app__switch:hover img, .app__switch:focus img, .app__switch:active img {
   transform: rotate(220deg);
 }
 
@@ -484,12 +490,14 @@ body {
 }
 .todo__bottom-actions--all {
   transition: color 0.2s ease-in-out;
+  transition: outline 0.3s ease-in-out;
 }
 .todo__bottom-actions--all:hover, .todo__bottom-actions--all:focus {
   color: #3a7bfd;
 }
 .todo__bottom-actions--active, .todo__bottom-actions--completed {
   transition: color 0.2s ease-in-out;
+  transition: outline 0.2s ease-in-out;
 }
 .todo__bottom-actions--active:hover, .todo__bottom-actions--completed:hover, .todo__bottom-actions--active:focus, .todo__bottom-actions--completed:focus, .todo__bottom-actions--active:active, .todo__bottom-actions--completed:active {
   color: var(--color-hover);
@@ -497,6 +505,7 @@ body {
 .todo__bottom-clear {
   cursor: pointer;
   transition: color 0.2s ease-in-out;
+  transition: outline 0.2s ease-in-out;
 }
 .todo__bottom-clear:hover {
   color: var(--color-hover);

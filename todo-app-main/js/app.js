@@ -1,3 +1,4 @@
+import {preData} from './data.js';
 //selectors
 const body = document.body;
 const bodyBg = document.querySelector('.bg')
@@ -12,7 +13,6 @@ const filterAll = document.querySelector('[data-id=all]');
 const filterActive = document.querySelector('[data-id=active]');
 const filterCompleted = document.querySelector('[data-id=completed]');
 const dancingMeme = document.querySelector('.meme__removal');
-const data = ['1','2','3','4','5']
 let todoLeft = 0;
 
 
@@ -35,7 +35,7 @@ const createItem = (todoText)=>{
    },10)
 }
 
-data.map(data =>{
+preData.map(data =>{
    list.insertAdjacentHTML('beforeend',`
    <li class="todo__item" draggable="true" ondragstart="dragstart(event)" ondragenter="dragenter(event)" ondragend="dragend(event)" style="transform:scaleY(1); height:6.5rem;" id="${todoLeft}" >
    <button class="check-mark" aria-label="todo-check" data-id="check" ></button>
@@ -105,13 +105,11 @@ const setLocalTodo = (data, style) =>{
    let storage;
 
 }
-setLocalTodo();
 
 const updateLocalTodo = () =>{
 
 }
 const getLocalTodo = () =>{
-
 }
 const deleteLocalTodo = (target) =>{
 
@@ -129,15 +127,14 @@ const deleteLocalTodo = (target) =>{
 
 // isDrag();
 let draggedItem;
-//draggg data
-function dragstart(event){
-   
+window.dragstart = function dragstart(event){
+   event.dataTransfer.effectAllowed = "copy";
    event.target.className += ' dragged';
    event.dataTransfer.setData('text/html', event.target.id);
    draggedItem = event.target;
 }
 
-function dragenter(event){
+window.dragenter = function dragenter(event){
    let sourceId = event.dataTransfer.getData('text/html') || draggedItem.id;
    let targetId = event.target.id;
    if(targetId === sourceId){
@@ -153,22 +150,25 @@ function dragenter(event){
       targetNode.parentNode.insertBefore(sourceNode, targetNode);
    }
 }
-function dragend(event){
-   event.dataTransfer.effectAllowed = "copy";
+ window.dragend = function dragend(event){
    event.dataTransfer.dropEffect = "copy"
    event.target.className = event.target.className.replace(' dragged', '');
 }
 
-list.addEventListener('dragover', (e)=>{
-   e.preventDefault();
-}, false);
-list.addEventListener('dragleave', (e)=>{
-   e.preventDefault();
-}, false);
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//This part is highlighted as I have no idea why 
+//list.addEventListener(dragevents) cause errors with HTML, although it works..
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+// list.addEventListener('dragstart', dragstart)
+// list.addEventListener('dragenter', dragenter)
+// list.addEventListener('dragend',dragend)
+list.addEventListener('dragover', (e)=>{ e.preventDefault();}, false);
+list.addEventListener('dragleave', (e)=>{ e.preventDefault();}, false);
 
 
 //eventListeners
-document.addEventListener('DOMContentLoaded', getLocalTodo)
+// document.addEventListener('DOMContentLoaded', getLocalTodo)
 filterBox.addEventListener('click', (e) => todoFilter(e.target));
 
 form.addEventListener('click',(e)=>{

@@ -5,8 +5,13 @@
 *::after {
   box-sizing: border-box;
 }
-*:focus{
-  outline: 2px dotted color(reverse-main);
+*:focus-visible{
+  outline: 2px dashed color(reverse-main);
+  outline-offset: 2px;
+  transition:outline .3s ease-in-out;
+}
+*:active{
+  outline-offset: 4px;
 }
 /* Remove default margin */
 body,

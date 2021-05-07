@@ -24,8 +24,10 @@
             min-width:100%;
             transition:transform 1s ease;
         }
-        &:hover img{
-            transform:rotate(220deg)
+        &:hover img,
+        &:focus img,
+        &:active img{
+            transform:rotate(220deg);
         }
     }
 }
@@ -116,6 +118,7 @@
             @extend %b-700;
             &--all{
                 @include transition(color, .2s);
+                transition:outline .3s ease-in-out;
             }
             &--all:hover,
             &--all:focus{
@@ -125,6 +128,7 @@
             &--active,
             &--completed{
                 @include transition(color, .2s);
+                @include transition(outline, .2s);
             }
             &--active:hover,
             &--completed:hover,
@@ -138,6 +142,7 @@
         &-clear{
             cursor:pointer;
             @include transition(color, .2s);
+            @include transition(outline, .2s);
             &:hover{
                 color:color(hover);
             }
