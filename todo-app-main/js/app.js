@@ -8,18 +8,21 @@ const deleteTodo = document.querySelector('.delete');
 const todoInput = document.querySelector('[data-id = "todo-content"]')
 const form = document.querySelector('.todo__form')
 const list = document.querySelector('.todo__list');
+const items = document.querySelectorAll('.todo__item');
 const filterBox = document.querySelector('.todo__bottom');
 const filterAll = document.querySelector('[data-id=all]');
 const filterActive = document.querySelector('[data-id=active]');
 const filterCompleted = document.querySelector('[data-id=completed]');
 const dancingMeme = document.querySelector('.meme__removal');
+const hasTodo = Array.from(list.children).slice(1,list.children.length).length
 let todoLeft = 0;
 
 
 //functions
-const createItem = (todoText)=>{
+const createItem = (todoText,scale,height)=>{
+   const uniqueId = Math.floor(Math.random() * 100000)
    list.insertAdjacentHTML('beforeend',`
-   <li class="todo__item" draggable="true" ondragstart="dragstart(event)" ondragenter="dragenter(event)" ondragend="dragend(event)" style="transform:scaleY(0); height:0;" id="${todoLeft}" >
+   <li class="todo__item" draggable="true" ondragstart="dragstart(event)" ondragenter="dragenter(event)" ondragend="dragend(event)" style="transform:scaleY(${scale}); height:${height};" id="${uniqueId}" >
    <button class="check-mark" aria-label="todo-check" data-id="check" ></button>
    <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" value="${todoText}" disabled>
    <button class="delete" aria-label="todo-delete" data-id="delete"></button>
@@ -34,21 +37,26 @@ const createItem = (todoText)=>{
       createMeme(todoLeft);
    },10)
 }
+if(hasTodo === 0){
+   preData.forEach(data=>{
+      createItem(data,'1',' 6.5rem')
+   })
+}
+// preData.map(data =>{
+//    list.insertAdjacentHTML('beforeend',`
+//    <li class="todo__item" draggable="true" ondragstart="dragstart(event)" ondragenter="dragenter(event)" ondragend="dragend(event)" style="transform:scaleY(1); height:6.5rem;" id="${todoLeft}" >
+//    <button class="check-mark" aria-label="todo-check" data-id="check" ></button>
+//    <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" value="${data}" disabled>
+//    <button class="delete" aria-label="todo-delete" data-id="delete"></button>
+//    </li>
+//    `)
+//    todoInput.value = '';
+//    todoLeft++;
+//    updateTodoLeft(todoLeft);
+//    createMeme(todoLeft);
+// })
 
-preData.map(data =>{
-   list.insertAdjacentHTML('beforeend',`
-   <li class="todo__item" draggable="true" ondragstart="dragstart(event)" ondragenter="dragenter(event)" ondragend="dragend(event)" style="transform:scaleY(1); height:6.5rem;" id="${todoLeft}" >
-   <button class="check-mark" aria-label="todo-check" data-id="check" ></button>
-   <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" value="${data}" disabled>
-   <button class="delete" aria-label="todo-delete" data-id="delete"></button>
-   </li>
-   `)
-   todoInput.value = '';
-   todoLeft++;
-   updateTodoLeft(todoLeft);
-   createMeme(todoLeft);
-})
-
+console.log()
 const deleteItem = (todo)=>{
    const targetTodo = todo.closest('.todo__item')
    targetTodo.style.transform = "scaleY(0)";
