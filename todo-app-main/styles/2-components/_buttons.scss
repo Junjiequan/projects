@@ -106,9 +106,9 @@
         text-decoration: line-through;
     }
 }
-// .no-animation{
-//     animation:none !important;
-// }
+.dragged{
+    filter:drop-shadow(5px 10px 15px rgb(71, 33, 87)) invert(20%);
+}
 
 .volume{
     position:absolute;

@@ -222,6 +222,10 @@ p {
   text-decoration: line-through;
 }
 
+.dragged {
+  filter: drop-shadow(5px 10px 15px #472157) invert(20%);
+}
+
 .volume {
   position: absolute;
   display: flex;

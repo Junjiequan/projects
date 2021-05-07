@@ -12,13 +12,14 @@ const filterAll = document.querySelector('[data-id=all]');
 const filterActive = document.querySelector('[data-id=active]');
 const filterCompleted = document.querySelector('[data-id=completed]');
 const dancingMeme = document.querySelector('.meme__removal');
-
+const data = ['1','2','3','4','5']
 let todoLeft = 0;
+
 
 //functions
 const createItem = (todoText)=>{
    list.insertAdjacentHTML('beforeend',`
-   <li class="todo__item" draggable="true" style="transform:scaleY(0); height:0; aria-label="todo-item-${todoLeft}" ">
+   <li class="todo__item" draggable="true" ondragstart="dragstart(event)" ondragenter="dragenter(event)" ondragend="dragend(event)" style="transform:scaleY(0); height:0;" id="${todoLeft}" >
    <button class="check-mark" aria-label="todo-check" data-id="check" ></button>
    <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" value="${todoText}" disabled>
    <button class="delete" aria-label="todo-delete" data-id="delete"></button>
@@ -34,6 +35,20 @@ const createItem = (todoText)=>{
    },10)
 }
 
+data.map(data =>{
+   list.insertAdjacentHTML('beforeend',`
+   <li class="todo__item" draggable="true" ondragstart="dragstart(event)" ondragenter="dragenter(event)" ondragend="dragend(event)" style="transform:scaleY(1); height:6.5rem;" id="${todoLeft}" >
+   <button class="check-mark" aria-label="todo-check" data-id="check" ></button>
+   <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" value="${data}" disabled>
+   <button class="delete" aria-label="todo-delete" data-id="delete"></button>
+   </li>
+   `)
+   todoInput.value = '';
+   todoLeft++;
+   updateTodoLeft(todoLeft);
+   createMeme(todoLeft);
+})
+
 const deleteItem = (todo)=>{
    const targetTodo = todo.closest('.todo__item')
    targetTodo.style.transform = "scaleY(0)";
@@ -46,7 +61,7 @@ const deleteItem = (todo)=>{
    createMeme(todoLeft);
 }
 
-const updateTodoLeft = (amount)=>{
+function updateTodoLeft(amount){
    document.getElementById('amount').innerText = `${amount}`;
 }
 
@@ -87,6 +102,12 @@ const todoFilter = (target) =>{
 }
 //localStorage 
 const setLocalTodo = (data, style) =>{
+   let storage;
+
+}
+setLocalTodo();
+
+const updateLocalTodo = () =>{
 
 }
 const getLocalTodo = () =>{
@@ -96,41 +117,55 @@ const deleteLocalTodo = (target) =>{
 
 }
 //dragevents
-let dragged;
+// const isDrag = () =>{
+//    const todos = document.querySelectorAll('.todo__item')
+//    todos.forEach(index=>{
+//       index.setAttribute('draggable',true);
+//       index.setAttribute('ondragstart',"dragstart(event)");
+//       index.setAttribute('ondragenter','dragenter(event)');
+//       index.setAttribute('ondragend','dragend(event)');
+//    })
+// }
 
-list.addEventListener('drag', (e)=>{}, false);
-list.addEventListener('dragstart', (e)=>{
-   dragged = e.target;
-}, false);
-list.addEventListener('dragend', (e)=>{
-}, false);
+// isDrag();
+let draggedItem;
+//draggg data
+function dragstart(event){
+   
+   event.target.className += ' dragged';
+   event.dataTransfer.setData('text/html', event.target.id);
+   draggedItem = event.target;
+}
+
+function dragenter(event){
+   let sourceId = event.dataTransfer.getData('text/html') || draggedItem.id;
+   let targetId = event.target.id;
+   if(targetId === sourceId){
+      return true;
+   }
+   let sourceNode = document.getElementById(sourceId);
+   let targetNode = document.getElementById(targetId);
+   let sourceIndex = Array.prototype.indexOf.call(sourceNode.parentNode.childNodes, sourceNode);
+   let targetIndex = Array.prototype.indexOf.call(targetNode.parentNode.childNodes, targetNode);
+   if(targetIndex > sourceIndex){
+      targetNode.parentNode.insertBefore(targetNode, sourceNode);
+   } else {
+      targetNode.parentNode.insertBefore(sourceNode, targetNode);
+   }
+}
+function dragend(event){
+   event.dataTransfer.effectAllowed = "copy";
+   event.dataTransfer.dropEffect = "copy"
+   event.target.className = event.target.className.replace(' dragged', '');
+}
+
 list.addEventListener('dragover', (e)=>{
    e.preventDefault();
 }, false);
-list.addEventListener('dragenter', (e)=>{
-   if(e.target.classList.contains('todo__item')){
-      e.target.style.filter = "drop-shadow(0px 5px 10px lightblue) invert(20%)";
-   }
-}, false);
 list.addEventListener('dragleave', (e)=>{
-   if(e.target.classList.contains('todo__item')){
-      e.target.style.filter = "";
-   }
-}, false);
-list.addEventListener('drop', (e)=>{
    e.preventDefault();
-   const parent = e.target.parentNode;
-   const targetPosition = Array.from(parent.children).indexOf(e.target);
-   const draggedPosition = Array.from(parent.children).indexOf(dragged)
-   if(e.target.classList.contains('todo__item')){
-      e.target.style.filter = "";
-      if(draggedPosition < targetPosition  ){
-         dragged.parentNode.insertBefore(dragged,e.target.nextSibling)
-      } else {
-         dragged.parentNode.insertBefore(dragged,e.target)
-      }
-   }
 }, false);
+
 
 //eventListeners
 document.addEventListener('DOMContentLoaded', getLocalTodo)
