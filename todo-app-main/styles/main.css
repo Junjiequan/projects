@@ -460,7 +460,7 @@ body {
   opacity: 1;
 }
 .todo__item:hover {
-  filter: drop-shadow(0 10px 10px gray) invert(5%);
+  filter: drop-shadow(0 10px 5px gray) invert(5%);
 }
 .todo__bottom {
   box-shadow: 0 17px 25px var(--color-shadow);
