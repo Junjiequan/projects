@@ -1,4 +1,3 @@
-
 //selectors
 const body = document.body;
 const bodyBg = document.querySelector('.bg')
@@ -45,7 +44,6 @@ const deleteItem = (todo)=>{
    todoLeft--;
    updateTodoLeft(todoLeft);
    createMeme(todoLeft);
-   deleteLocalTodo(targetTodo);
 }
 
 const updateTodoLeft = (amount)=>{
@@ -88,41 +86,14 @@ const todoFilter = (target) =>{
    })
 }
 //localStorage 
-const setLocalTodo = (data,style) =>{
-   let storage;
-   if (localStorage.getItem('storage') === null) storage = [];
-   else storage = JSON.parse(localStorage.getItem('storage'));
-   storage.push([data, style]);
-   localStorage.setItem('storage', JSON.stringify(storage));
+const setLocalTodo = (data, style) =>{
+
 }
 const getLocalTodo = () =>{
-   let storage;
-   if (localStorage.getItem('storage') === null) storage = [];
-   else storage = JSON.parse(localStorage.getItem('storage'));
-   storage.forEach((data)=>{
-      list.insertAdjacentHTML('beforeend',`
-      <li class="todo__item ${data[1]}" draggable="true" style="transform: scaleY(1); height:6.5rem; aria-label="todo-item-${todoLeft}" ">
-      <button class="check-mark" aria-label="todo-check" data-id="check" ></button>
-      <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" value="${data[0]}" disabled>
-      <button class="delete" aria-label="todo-delete" data-id="delete"></button>
-      </li>
-      `)
-      todoLeft++;
-      updateTodoLeft(todoLeft);
-      createMeme(todoLeft);
-   })
+
 }
 const deleteLocalTodo = (target) =>{
-   let storage;
-   if (localStorage.getItem('storage') === null) storage = [];
-   else storage = JSON.parse(localStorage.getItem('storage'));
-   const item = target.children[1].value
-   storage.forEach((elem,index,object)=>{
-      if(elem.includes(item)){
-        object.splice(index,1)
-      }
-   })
-   localStorage.setItem('storage',JSON.stringify(storage))
+
 }
 //dragevents
 let dragged;
@@ -160,27 +131,17 @@ list.addEventListener('drop', (e)=>{
       }
    }
 }, false);
-list.addEventListener('drop', ()=>{
-   const todos = document.querySelectorAll('.todo__item')
-   localStorage.clear();
-   todos.forEach(item => {
-      const text = item.children[1].value;
-      setLocalTodo(text, item.classList[1])
-   })
-})
+
 //eventListeners
 document.addEventListener('DOMContentLoaded', getLocalTodo)
 filterBox.addEventListener('click', (e) => todoFilter(e.target));
 
 form.addEventListener('click',(e)=>{
    const target = e.target;
-   const todos = document.querySelectorAll('.todo__item')
-  
    if(target === createTodo){
       if(todoInput.value.match(/\w+/g) ){
         let todoText = todoInput.value.trim();
          createItem(todoText);
-         setLocalTodo(todoText)
       }
    };
    if(list){
@@ -192,14 +153,8 @@ form.addEventListener('click',(e)=>{
       }
       if(target.dataset.id === 'delete'){
          deleteItem(target);
-         deleteLocalTodo(target.previousElementSibling.value)
       }
    };
-   localStorage.clear();
-   todos.forEach(item => {
-      const text = item.children[1].value;
-      setLocalTodo(text, item.classList[1])
-   })
    createMeme();
 });
 todoInput.addEventListener('keyup',(e)=>{
