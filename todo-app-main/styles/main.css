@@ -372,7 +372,7 @@ body {
   height: 100%;
   max-height: 30rem;
   background: url(../images/bg-desktop-dark.jpg) no-repeat center/cover;
-  transition: background-image 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .app {

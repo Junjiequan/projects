@@ -232,6 +232,16 @@ list.addEventListener('mousedown', (e)=>{
 document.addEventListener('DOMContentLoaded', ()=>{
    getLocalTodo();
    document.querySelector('.todo__bottom-actions--all').style.color = "hsl(220, 98%, 61%)"
+   const img = colorTrigger.children[0];
+   body.className = `${localStorage.getItem('theme')}`
+   if(localStorage.getItem('theme') === 'dark'){
+      bodyBg.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
+      img.src="./images/icon-sun.svg"
+   }else{
+      bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
+      img.src="./images/icon-moon.svg"
+   }
+
 })
 filterBox.addEventListener('click', (e) => todoFilter(e.target));
 
@@ -277,11 +287,13 @@ colorTrigger.addEventListener('click',()=>{
       body.classList.remove('light')
       body.classList.add('dark')
       img.src="./images/icon-sun.svg"
+      localStorage.setItem('theme', 'dark')
      } else if(body.className === 'dark'){
       bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
       body.classList.remove('dark')
       body.classList.add('light')
       img.src="./images/icon-moon.svg"
+      localStorage.setItem('theme', 'light')
      }
 });
 
@@ -299,3 +311,5 @@ function createMeme(){
       }
    }
 }
+
+// color theme local storage

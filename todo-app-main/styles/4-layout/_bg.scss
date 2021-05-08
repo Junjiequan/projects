@@ -14,5 +14,5 @@ body{
     height:100%;
     max-height:30rem;
     background:url(../images/bg-desktop-dark.jpg) no-repeat center/cover;
-    @include transition(background-image, .5s)
+    @include transition(all, .5s)
 }
