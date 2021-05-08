@@ -272,16 +272,16 @@ todoInput.addEventListener('keyup',(e)=>{
 });
 colorTrigger.addEventListener('click',()=>{
    const img = colorTrigger.children[0];
-    if(body.classList[0] == 'light'){
-        body.classList.remove('light')
-        body.classList.add('dark')
-        bodyBg.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
-        img.src="./images/icon-sun.svg"
-     } else if(body.classList[0] == 'dark'){
-        body.classList.remove('dark')
-        body.classList.add('light')
-        bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
-        img.src="./images/icon-moon.svg"
+    if(body.className === 'light'){
+      bodyBg.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
+      body.classList.remove('light')
+      body.classList.add('dark')
+      img.src="./images/icon-sun.svg"
+     } else if(body.className === 'dark'){
+      bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
+      body.classList.remove('dark')
+      body.classList.add('light')
+      img.src="./images/icon-moon.svg"
      }
 });
 
