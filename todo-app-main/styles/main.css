@@ -555,7 +555,7 @@ body {
 }
 .meme__removal {
   position: relative;
-  cursor: pointer;
+  cursor: help;
   display: flex;
   justify-content: center;
   max-height: 13.5rem;
@@ -576,6 +576,7 @@ body {
   }
 }
 .meme__removal::before {
+  pointer-events: none;
   position: absolute;
   content: "";
   width: 0;
@@ -586,6 +587,7 @@ body {
   border-top: 8px solid var(--color-reverse-main);
 }
 .meme__removal::after {
+  pointer-events: none;
   position: absolute;
   content: "List is empty.";
   font-size: 1.5rem;

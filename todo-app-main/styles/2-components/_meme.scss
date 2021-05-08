@@ -11,7 +11,7 @@
     @include transition(all, .3s);
     &__removal{
         position:relative;
-        cursor:pointer;
+        cursor:help;
         display:flex;
         justify-content:center;
         // height:13.5rem;
@@ -28,6 +28,7 @@
             animation:dance2 25s linear infinite;
         }
         &::before{
+            pointer-events:none;
             position:absolute;
             content:'';
             width:0;
@@ -38,6 +39,7 @@
             border-top:8px solid color(reverse-main);
         }
         &::after{
+            pointer-events:none;
             position:absolute;
             content:'List is empty.';
             font-size:1.5rem;
