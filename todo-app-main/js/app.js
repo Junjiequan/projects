@@ -311,5 +311,3 @@ function createMeme(){
       }
    }
 }
-
-// color theme local storage
