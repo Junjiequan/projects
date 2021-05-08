@@ -283,7 +283,7 @@ colorTrigger.addEventListener('click',()=>{
      }
 });
 
-// meme igonore it
+// meme ignore it
 function createMeme(){
    if(dancingMeme.style !== null ){
       if(todoLeft === 0){
