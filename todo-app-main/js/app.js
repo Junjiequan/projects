@@ -302,11 +302,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
    getLocalTodo();
    document.querySelector('.todo__bottom-actions--all').style.color = "hsl(220, 98%, 61%)"
    const img = colorTrigger.children[0];
-   body.className = `${localStorage.getItem('theme')}`
+   const checkStyle = localStorage.getItem('theme')? localStorage.getItem('theme') : 'dark';
+   body.className = `${checkStyle}`
    if(localStorage.getItem('theme') === 'dark'){
       bodyBg.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
       img.src="./images/icon-sun.svg"
-   }else{
+   }else if(localStorage.getItem('theme') === 'light'){
       bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
       img.src="./images/icon-moon.svg"
    }
