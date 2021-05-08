@@ -3,10 +3,9 @@ const body = document.body;
 const bodyBg = document.querySelector('.bg')
 const colorTrigger = document.querySelector('.app__switch');
 const createTodo = document.querySelector('.check');
-const todoInput = document.querySelector('[data-id = "todo-content"]')
-const form = document.querySelector('.todo__form')
+const todoInput = document.querySelector('[data-id = "todo-content"]');
+const form = document.querySelector('.todo__form');
 const list = document.querySelector('.todo__list');
-
 const filterBox = document.querySelector('.todo__bottom');
 const dancingMeme = document.querySelector('.meme__removal');
 
@@ -14,7 +13,7 @@ let todoLeft = 0;
 
 
 //functions
-const createItem = (todoText,scale,height,index)=>{
+const createItem = (todoText,scale,height)=>{
    const uniqueId = Math.floor(Math.random() * 100000)
    list.insertAdjacentHTML('beforeend',`
    <li class="todo__item" draggable="true" ondragstart="dragstart(event)" ondragenter="dragenter(event)" ondragend="dragend(event)" style="transform:scaleY(${scale || '0'}); height:${height || '0'};" id="${uniqueId}" >
@@ -203,12 +202,17 @@ window.dragenter = function dragenter(event){
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-//This part is highlighted as I have no idea why list.addEventListener(dragevents) cause errors with HTML, although it works..
+//This part is highlighted, as I have no idea why using list eventlisterner causes error. So, I called function from window instead.
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 // list.addEventListener('dragstart', dragstart)
 // list.addEventListener('dragenter', dragenter)
 // list.addEventListener('dragend',dragend)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//That part end
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
 list.addEventListener('dragover', (e)=>{ e.preventDefault();}, false);
 list.addEventListener('dragleave', (e)=>{ e.preventDefault();}, false);
 
