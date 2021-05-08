@@ -304,10 +304,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
    const img = colorTrigger.children[0];
    const checkStyle = localStorage.getItem('theme')? localStorage.getItem('theme') : 'dark';
    body.className = `${checkStyle}`
-   if(localStorage.getItem('theme') === 'dark'){
+   if(checkStyle === 'dark'){
       bodyBg.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
       img.src="./images/icon-sun.svg"
-   }else if(localStorage.getItem('theme') === 'light'){
+   }else{
       bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
       img.src="./images/icon-moon.svg"
    }
