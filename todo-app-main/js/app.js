@@ -201,6 +201,8 @@ window.dragenter = function dragenter(event){
    updateLocalTodo(changedTargetText,changedTargetStyle,changedIndex)
 }
 
+//eventListeners
+
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //This part is highlighted, as I have no idea why using list eventlisterner causes error. So, I called function from window instead.
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -212,6 +214,7 @@ window.dragenter = function dragenter(event){
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //That part end
 //////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 list.addEventListener('dragover', (e)=>{ e.preventDefault();}, false);
 list.addEventListener('dragleave', (e)=>{ e.preventDefault();}, false);
@@ -226,23 +229,6 @@ list.addEventListener('mousedown', (e)=>{
    }
 });
 
-
-
-//eventListeners
-document.addEventListener('DOMContentLoaded', ()=>{
-   getLocalTodo();
-   document.querySelector('.todo__bottom-actions--all').style.color = "hsl(220, 98%, 61%)"
-   const img = colorTrigger.children[0];
-   body.className = `${localStorage.getItem('theme')}`
-   if(localStorage.getItem('theme') === 'dark'){
-      bodyBg.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
-      img.src="./images/icon-sun.svg"
-   }else{
-      bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
-      img.src="./images/icon-moon.svg"
-   }
-
-})
 filterBox.addEventListener('click', (e) => todoFilter(e.target));
 
 form.addEventListener('click',(e)=>{
@@ -311,3 +297,17 @@ function createMeme(){
       }
    }
 }
+
+document.addEventListener('DOMContentLoaded', ()=>{
+   getLocalTodo();
+   document.querySelector('.todo__bottom-actions--all').style.color = "hsl(220, 98%, 61%)"
+   const img = colorTrigger.children[0];
+   body.className = `${localStorage.getItem('theme')}`
+   if(localStorage.getItem('theme') === 'dark'){
+      bodyBg.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
+      img.src="./images/icon-sun.svg"
+   }else{
+      bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
+      img.src="./images/icon-moon.svg"
+   }
+})
