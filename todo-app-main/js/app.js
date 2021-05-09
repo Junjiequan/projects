@@ -16,7 +16,7 @@ let todoLeft = 0;
 const createItem = (todoText,scale,height)=>{
    const uniqueId = Math.floor(Math.random() * 100000)
    list.insertAdjacentHTML('beforeend',`
-   <li class="todo__item" draggable="true" style="transform:scaleY(${scale || '0'}); height:${height || '0'};" id="${uniqueId}" >
+   <li class="todo__item todo__item-hover" draggable="true" style="transform:scaleY(${scale || '0'}); height:${height || '0'};" id="${uniqueId}" >
    <button class="check-mark" aria-label="todo-check" data-id="check" ></button>
    <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" value="${todoText}" disabled>
    <button class="delete" aria-label="todo-delete" data-id="delete"></button>
@@ -35,6 +35,7 @@ const createItem = (todoText,scale,height)=>{
 const deleteItem = (todo)=>{
    const targetTodo = todo.closest('.todo__item')
    const targetTodoText = targetTodo.children[1].value
+   targetTodo.classList.remove('todo__item-hover')
    targetTodo.style.transform = "scaleY(0)";
    targetTodo.style.height = "0";
    setTimeout(()=>{
@@ -53,7 +54,7 @@ function updateTodoLeft(amount){
 const toggleCheck = (todo)=>{
    todo.classList.toggle('checked');
    const text = todo.children[1].value;
-   const style = todo.classList[1] ? todo.classList[1] : '';
+   const style = todo.classList[2] ? todo.classList[2] : '';
    updateLocalTodo(text,style,null)
 }
 function filterButtonColor(filterCheck){
@@ -144,7 +145,7 @@ function getLocalTodo(){
       const style = data[1];
       const uniqueId = Math.floor(Math.random() * 100000)
       list.insertAdjacentHTML('beforeend',`
-      <li class="todo__item ${style}" draggable="true" style="transform:scaleY(1); height:6.5rem;" id="${uniqueId}" >
+      <li class="todo__item todo__item-hover ${style}" draggable="true" style="transform:scaleY(1); height:6.5rem;" id="${uniqueId}" >
       <button class="check-mark" aria-label="todo-check" data-id="check" ></button>
       <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" value="${text}" disabled>
       <button class="delete" aria-label="todo-delete" data-id="delete"></button>

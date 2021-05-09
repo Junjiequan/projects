@@ -87,6 +87,8 @@
         height:0;
         border-radius:0;
         cursor:pointer;
+        @include transition(transform, .3s);
+        @include transition(height, .3s);
         &::after{
             @include transition(all, .3s);
             position:absolute;
@@ -103,8 +105,10 @@
         &:hover .delete{
             opacity:1;
         }
+    }
+    &__item-hover{
         &:hover{
-            filter:drop-shadow(0 10px 5px gray) invert(5%);
+            filter:drop-shadow(0 8px 10px gray) invert(5%);
         }
     }
     &__bottom{

@@ -462,6 +462,8 @@ body {
   height: 0;
   border-radius: 0;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 .todo__item::after {
   transition: all 0.3s ease-in-out;
@@ -479,8 +481,8 @@ body {
 .todo__item:hover .delete {
   opacity: 1;
 }
-.todo__item:hover {
-  filter: drop-shadow(0 10px 5px gray) invert(5%);
+.todo__item-hover:hover {
+  filter: drop-shadow(0 8px 10px gray) invert(5%);
 }
 .todo__bottom {
   box-shadow: 0 17px 25px var(--color-shadow);
