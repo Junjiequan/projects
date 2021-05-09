@@ -220,9 +220,13 @@ function deleteLocalTodo(text){
 
 //Tried SortableJS and this is stupidly easy to use-_-!
 let sortable = new Sortable(list,{
-   onChange:function(evt){
-      const targetIndex = evt.newIndex - 1;
-      const itemElText = evt.item.children[1].value;
+   onStart:function(e){
+      e.item.className += ' dragged';
+   },
+   onChange:function(e){
+      e.item.className.replace(' dragged', '');
+      const targetIndex = e.newIndex - 1;
+      const itemElText = e.item.children[1].value;
       updateLocalTodo(itemElText,null, targetIndex)
    }
 });
