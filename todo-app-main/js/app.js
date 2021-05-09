@@ -56,7 +56,7 @@ const toggleCheck = (todo)=>{
    const style = todo.classList[1] ? todo.classList[1] : '';
    updateLocalTodo(text,style,null)
 }
-function filterCheck(filterCheck){
+function filterButtonColor(filterCheck){
    const filter = document.querySelector('.todo__bottom-actions').children
    const filters = [filter[0],filter[1],filter[2]]
    filters.forEach((elem)=>{
@@ -272,13 +272,13 @@ form.addEventListener('click',(e)=>{
    };
    if(target.parentNode.className === 'todo__bottom-actions'){
       if(target.dataset.id === 'all'){
-         filterCheck(target.dataset.id)
+         filterButtonColor(target.dataset.id)
       }
       if(target.dataset.id === 'active'){
-         filterCheck(target.dataset.id)
+         filterButtonColor(target.dataset.id)
       }
       if(target.dataset.id === 'completed'){
-         filterCheck(target.dataset.id)
+         filterButtonColor(target.dataset.id)
       }
    }
    createMeme();
