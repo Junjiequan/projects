@@ -398,10 +398,14 @@ body {
 .app__switch img {
   pointer-events: none;
   min-width: 100%;
-  transition: transform 1s ease;
+  transition: transform 2s ease;
 }
-.app__switch:hover img, .app__switch:focus img, .app__switch:active img {
+.app__switch:hover img {
   transform: rotate(220deg);
+}
+.app__switch:focus-visible img {
+  -webkit-animation: rotate 3s linear infinite;
+          animation: rotate 3s linear infinite;
 }
 
 .todo {
@@ -443,20 +447,30 @@ body {
 .todo__list {
   border-radius: 5px 5px 0 0;
   box-shadow: 0 10px 30px var(--color-shadow);
-  padding-top: 0.5rem;
   transition: all 0.3s ease-in-out;
   background-color: var(--color-input);
 }
+.todo__list li:nth-child(2) {
+  border-radius: 5px 5px 0 0;
+}
 .todo__item {
   position: relative;
-  min-width: 100%;
+  width: 100%;
   box-shadow: none;
   margin: 0;
-  border-radius: 0;
   min-height: 0;
   height: 0;
+  border-radius: 0;
   cursor: pointer;
-  border-bottom: 1px solid var(--color-border);
+}
+.todo__item::after {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  content: "";
+  background: var(--color-border);
+  width: 100%;
+  height: 1px;
+  bottom: 0;
 }
 .todo__item input[type=text] {
   transition: all 0.3s ease-in-out;

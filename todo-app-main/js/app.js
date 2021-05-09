@@ -16,7 +16,7 @@ let todoLeft = 0;
 const createItem = (todoText,scale,height)=>{
    const uniqueId = Math.floor(Math.random() * 100000)
    list.insertAdjacentHTML('beforeend',`
-   <li class="todo__item" draggable="true" ondragstart="dragstart(event)" ondragenter="dragenter(event)" ondragend="dragend(event)" style="transform:scaleY(${scale || '0'}); height:${height || '0'};" id="${uniqueId}" >
+   <li class="todo__item" draggable="true" style="transform:scaleY(${scale || '0'}); height:${height || '0'};" id="${uniqueId}" >
    <button class="check-mark" aria-label="todo-check" data-id="check" ></button>
    <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" value="${todoText}" disabled>
    <button class="delete" aria-label="todo-delete" data-id="delete"></button>
@@ -54,7 +54,7 @@ const toggleCheck = (todo)=>{
    todo.classList.toggle('checked');
    const text = todo.children[1].value;
    const style = todo.classList[1] ? todo.classList[1] : '';
-   updateLocalTodo(text,style)
+   updateLocalTodo(text,style,null)
 }
 function filterCheck(filterCheck){
    const filter = document.querySelector('.todo__bottom-actions').children
@@ -126,12 +126,14 @@ const updateLocalTodo = (data,style,target) =>{
    }
    let todos = JSON.parse(localStorage.getItem('todos'))
    todos.forEach((item,index,arrays)=>{
-      if(item[0] === data){
-         item[1] = style;
+      if(item[0] === data && target !== null){
          arrays.move(index,target)
-         localStorage.setItem('todos', JSON.stringify(todos));
+      };
+      if(item[0] === data && target === null){
+         item[1] = style;
       }
    })
+   localStorage.setItem('todos', JSON.stringify(todos));
 }
 function getLocalTodo(){
    let todos ;
@@ -142,7 +144,7 @@ function getLocalTodo(){
       const style = data[1];
       const uniqueId = Math.floor(Math.random() * 100000)
       list.insertAdjacentHTML('beforeend',`
-      <li class="todo__item ${style}" draggable="true" ondragstart="dragstart(event)" ondragenter="dragenter(event)" ondragend="dragend(event)" style="transform:scaleY(1); height:6.5rem;" id="${uniqueId}" >
+      <li class="todo__item ${style}" draggable="true" style="transform:scaleY(1); height:6.5rem;" id="${uniqueId}" >
       <button class="check-mark" aria-label="todo-check" data-id="check" ></button>
       <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" value="${text}" disabled>
       <button class="delete" aria-label="todo-delete" data-id="delete"></button>
@@ -164,70 +166,81 @@ function deleteLocalTodo(text){
       }
    })
 }
+/***********************************************************************************************/
+/********************dragevents practice.  the code below is fully functioning******************/
+/***********************************************************************************************/
 
-//dragevents
-let draggedItem;
-window.dragstart = function dragstart(event){
-   event.dataTransfer.effectAllowed = "copy";
-   event.target.className += ' dragged';
-   event.dataTransfer.setData('text/html', event.target.id);
-   draggedItem = event.target;
-}
-
-window.dragenter = function dragenter(event){
-   let sourceId = event.dataTransfer.getData('text/html') || draggedItem.id;
-   let targetId = event.target.id;
-   if(targetId === sourceId){
-      return true;
-   }
-   let sourceNode = document.getElementById(sourceId);
-   let targetNode = document.getElementById(targetId);
-   let sourceIndex = Array.prototype.indexOf.call(sourceNode.parentNode.childNodes, sourceNode);
-   let targetIndex = Array.prototype.indexOf.call(targetNode.parentNode.childNodes, targetNode);
-   if(targetIndex > sourceIndex){
-      targetNode.parentNode.insertBefore(targetNode, sourceNode);
-   } else {
-      targetNode.parentNode.insertBefore(sourceNode, targetNode);
-   }
-}
- window.dragend = function dragend(event){
-   event.dataTransfer.dropEffect = "copy"
-   event.target.className = event.target.className.replace(' dragged', '');
-   const target = event.target
-   const todoArrays = Array.from(list.querySelectorAll('.todo__item'))
-   const changedIndex = todoArrays.indexOf(target)
-   const changedTargetText = target.children[1].value
-   const changedTargetStyle = target.classList[1] ? target.classList[1] : '';
-   updateLocalTodo(changedTargetText,changedTargetStyle,changedIndex)
-}
-
-//eventListeners
-
-//////////////////////////////////////////////////////////////////////////////////////////////////
-//This part is highlighted, as I have no idea why using list eventlisterner causes error. So, I called function from window instead.
-//////////////////////////////////////////////////////////////////////////////////////////////////
-
-// list.addEventListener('dragstart', dragstart)
-// list.addEventListener('dragenter', dragenter)
-// list.addEventListener('dragend',dragend)
-
-//////////////////////////////////////////////////////////////////////////////////////////////////
-//That part end
-//////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-list.addEventListener('dragover', (e)=>{ e.preventDefault();}, false);
-list.addEventListener('dragleave', (e)=>{ e.preventDefault();}, false);
-
+// let draggedItem;
+// list.addEventListener('dragstart', function dragstart(event){
+//    event.preventDefault;
+//    event.dataTransfer.effectAllowed = "move";
+//    event.target.className += ' dragged';
+//    event.dataTransfer.setData('text/html', event.target.id);
+//    draggedItem = event.target;
+// },false)
+// list.addEventListener('dragenter', function dragenter(event){
+//    event.preventDefault;
+//    let sourceId = event.dataTransfer.getData('text/html') || draggedItem.id;
+//    let targetId = event.target.id;
+//    if(targetId === sourceId){
+//       return true;
+//    }
+//    let sourceNode = document.getElementById(sourceId);
+//    let targetNode = document.getElementById(targetId);
+//    let sourceIndex = Array.prototype.indexOf.call(sourceNode.parentNode.childNodes, sourceNode);
+//    let targetIndex = Array.prototype.indexOf.call(targetNode.parentNode.childNodes, targetNode);
+//    if(targetIndex > sourceIndex){
+//       targetNode.parentNode.insertBefore(targetNode, sourceNode);
+//    } else {
+//       targetNode.parentNode.insertBefore(sourceNode, targetNode);
+//    }
+// },false)
+// list.addEventListener('dragend',  function dragend(event){
+//    event.preventDefault;
+//    event.dataTransfer.dropEffect = "move"
+//    event.target.className = event.target.className.replace(' dragged', '');
+//    const target = event.target
+//    const todoArrays = Array.from(list.querySelectorAll('.todo__item'))
+//    const changedIndex = todoArrays.indexOf(target)
+//    const changedTargetText = target.children[1].value
+//    const changedTargetStyle = target.classList[1] ? target.classList[1] : '';
+//    updateLocalTodo(changedTargetText,changedTargetStyle,changedIndex)
+// },false)
+// list.addEventListener('dragover', (e)=>{ e.preventDefault();}, false);
+// list.addEventListener('dragleave', (e)=>{ e.preventDefault();}, false);
 //preventing drag buttons!
-list.addEventListener('mousedown', (e)=>{
-   if(e.target.type === 'submit'){
-     e.target.parentNode.setAttribute('draggable', false)
-     setTimeout(()=>{
-      e.target.parentNode.setAttribute('draggable', true)
-     },300)
+// list.addEventListener('mousedown', (e)=>{
+//    if(e.target.type === 'submit'){
+//      e.target.parentNode.setAttribute('draggable', false)
+//      setTimeout(()=>{
+//       e.target.parentNode.setAttribute('draggable', true)
+//      },300)
+//    }
+// });
+
+//Tried SortableJS and this is stupidly easy to use-_-!
+let sortable = new Sortable(list,{
+   onChange:function(evt){
+      const targetIndex = evt.newIndex - 1;
+      const itemElText = evt.item.children[1].value;
+      updateLocalTodo(itemElText,null, targetIndex)
    }
 });
+
+// meme ignore this
+function createMeme(){
+   if(dancingMeme.style !== null ){
+      if(todoLeft === 0){
+         dancingMeme.style.height = "13.5rem";
+         dancingMeme.style.margin = "1rem auto 1.5rem";
+         dancingMeme.classList.remove('meme__hide')
+      } else{
+         dancingMeme.style.height = "0";
+         dancingMeme.style.margin = "0 auto"
+         dancingMeme.classList.add('meme__hide')
+      }
+   }
+}
 
 filterBox.addEventListener('click', (e) => todoFilter(e.target));
 
@@ -270,34 +283,18 @@ colorTrigger.addEventListener('click',()=>{
    const img = colorTrigger.children[0];
     if(body.className === 'light'){
       bodyBg.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
-      body.classList.remove('light')
-      body.classList.add('dark')
-      img.src="./images/icon-sun.svg"
-      localStorage.setItem('theme', 'dark')
+      body.classList.remove('light');
+      body.classList.add('dark');
+      img.src="./images/icon-sun.svg";
+      localStorage.setItem('theme', 'dark');
      } else if(body.className === 'dark'){
       bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
-      body.classList.remove('dark')
-      body.classList.add('light')
-      img.src="./images/icon-moon.svg"
-      localStorage.setItem('theme', 'light')
+      body.classList.remove('dark');
+      body.classList.add('light');
+      img.src="./images/icon-moon.svg";
+      localStorage.setItem('theme', 'light');
      }
 });
-
-// meme ignore it
-function createMeme(){
-   if(dancingMeme.style !== null ){
-      if(todoLeft === 0){
-         dancingMeme.style.height = "13.5rem";
-         dancingMeme.style.margin = "1rem auto 1.5rem";
-         dancingMeme.classList.remove('meme__hide')
-      } else{
-         dancingMeme.style.height = "0";
-         dancingMeme.style.margin = "0 auto"
-         dancingMeme.classList.add('meme__hide')
-      }
-   }
-}
-
 document.addEventListener('DOMContentLoaded', ()=>{
    getLocalTodo();
    document.querySelector('.todo__bottom-actions--all').style.color = "hsl(220, 98%, 61%)"
