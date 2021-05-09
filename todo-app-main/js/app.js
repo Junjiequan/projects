@@ -224,10 +224,13 @@ let sortable = new Sortable(list,{
       e.item.className += ' dragged';
    },
    onChange:function(e){
-      e.item.className.replace(' dragged', '');
       const targetIndex = e.newIndex - 1;
       const itemElText = e.item.children[1].value;
       updateLocalTodo(itemElText,null, targetIndex)
+   },
+   onEnd:function(e){
+      e.item.className.replace(' dragged','');
+      e.item.classList.remove('dragged');
    }
 });
 
