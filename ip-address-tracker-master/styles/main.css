@@ -276,14 +276,7 @@ main {
   left: 0;
   right: 0;
   transition: opacity 0.3s ease;
-  cursor: pointer;
-}
-.map__loading:hover .map__loading__animation::after {
-  border: 32px solid var(--color-darkGray);
-  border-color: var(--color-darkGray) transparent var(--color-darkGray) transparent;
-}
-.map__loading:hover h2 {
-  color: var(--color-darkGray);
+  pointer-events: none;
 }
 .map__loading .map__loading__animation {
   display: inline-block;

@@ -177,14 +177,7 @@ main{
     margin:auto;
     top:-3rem;bottom:0;left:0;right:0;
     transition:opacity .3s ease;
-    cursor:pointer;
-    &:hover .map__loading__animation::after{
-        border: 32px solid color(darkGray);
-        border-color: color(darkGray) transparent color(darkGray) transparent;
-    }
-    &:hover h2{
-        color:color(darkGray);
-    }
+    pointer-events:none;
     .map__loading__animation{
         display: inline-block;
         position: relative;

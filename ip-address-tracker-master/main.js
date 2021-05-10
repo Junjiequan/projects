@@ -7,36 +7,39 @@ const loading = document.querySelector('.map__loading');
 const form = document.querySelector('form');
 const input = document.querySelector('input[type=text]');
 const ipReg = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-isLoading();
+const loadingIcon = {
+    open:function(){
+        loading.style.display = 'flex'
+        setTimeout(()=>{
+            loading.style.opacity = '1'
+        },100);
+    },
+    close:function(){
+        setTimeout(()=>{
+            loading.style.opacity = '0';
+            setTimeout(()=> loading.style.display = 'none',500)
+        },500)
+    }
+}
 //functions
 async function init(ip) {
+    loadingIcon.open();
     try{
         const res = await fetch(`https://geo.ipify.org/api/v1?apiKey=at_UTDYv4fFYO4pdElyoGoCeSGOn1FB2&ipAddress=${ip}`);
         if(!res.ok)
             throw new Error('Invalid IP address');
         data = await res.json();
         displayData(data);
+        loadingIcon.close();
     } catch(err){
         input.setAttribute('id', 'invalid');
         input.value = `${err}`
+        loadingIcon.close();
     }
 }
 init('');  // <<<<<<<<<<init
 
-// loading animation
-function isLoading(){
-    if(loading.style.display != 'flex'){
-        loading.style.display = 'flex'
-        setTimeout(()=>{
-            loading.style.opacity = '1'
-        },100);
-    }else{
-        setTimeout(()=>{
-            loading.style.opacity = '0';
-            setTimeout(()=> loading.style.display = 'none',500)
-        },1000)
-    };
-}
+
 
 let mymap = null;
 
@@ -49,7 +52,7 @@ const displayData = (data)=>{
         mymap.remove();
     }
     displayMap(data.location.lat, data.location.lng);
-    isLoading();
+
 }
 
 // map API
@@ -76,7 +79,7 @@ form.addEventListener('submit', (e)=>{
     e.preventDefault();
     const formData = new FormData(e.target)
     init(formData.get('searchIP'));
-    isLoading();
+
 })
 input.addEventListener('click', ()=>{
     if(!ipReg.test(input.value)){
