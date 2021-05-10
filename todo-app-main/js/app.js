@@ -13,10 +13,10 @@ let todoLeft = 0;
 
 
 //functions
-const createItem = (todoText,scale,height)=>{
+const createItem = (todoText)=>{
    const uniqueId = Math.floor(Math.random() * 100000)
    list.insertAdjacentHTML('beforeend',`
-   <li class="todo__item todo__item-hover" draggable="true" style="transform:scaleY(${scale || '0'}); height:${height || '0'};" id="${uniqueId}" >
+   <li class="todo__item todo__item-hover" draggable="true" style="transform:scaleY(0); height:0;" id="${uniqueId}" >
    <button class="check-mark" aria-label="todo-check" data-id="check" ></button>
    <input class="active" placholder="created" type="text" aria-label="todo-item" name="todo-item" value="${todoText}" disabled>
    <button class="delete" aria-label="todo-delete" data-id="delete"></button>

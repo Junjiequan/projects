@@ -462,9 +462,7 @@ body {
   height: 0;
   border-radius: 0;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  transition: height 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out margin 0.3s ease-in-out background-color 0.3s ease-in-out;
 }
 .todo__item::after {
   transition: background-color 0.3s ease-in-out;
