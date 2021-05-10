@@ -226,15 +226,13 @@ let sortable = new Sortable(list,{
    onChange:function(e){
       const targetIndex = e.newIndex - 1;
       const itemElText = e.item.children[1].value;
-      updateLocalTodo(itemElText,null, targetIndex)
+      updateLocalTodo(itemElText,null, targetIndex);
    },
    onEnd:function(e){
       e.item.className.replace(' dragged','');
       e.item.classList.remove('dragged');
    }
 });
-
-
 
 // meme ignore this
 function createMeme(todoLeft){
