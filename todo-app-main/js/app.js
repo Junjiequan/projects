@@ -105,7 +105,6 @@ const todoFilter = (target) =>{
          case 'clear-complete':
             if(item.classList.contains('checked')){
                item.remove();
-               todoLeft--;
                updateTodoLeft(todoLeft);
                deleteLocalTodo(item.children[1].value)
             }
@@ -285,13 +284,27 @@ todoInput.addEventListener('keyup',(e)=>{
 });
 colorTrigger.addEventListener('click',()=>{
    const img = colorTrigger.children[0];
+   const filter = document.querySelector('.todo__bottom-actions').children
+   const filters = [filter[0],filter[1],filter[2]]
     if(body.className === 'light'){
+      filters.forEach((elem)=>{
+         console.log((elem.style.color))
+         if(elem.style.color == 'rgb(57, 58, 76)'){
+            elem.style.color = "hsl(236, 33%, 92%)"
+         }
+      })
       bodyBg.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
       body.classList.remove('light');
       body.classList.add('dark');
       img.src="./images/icon-sun.svg";
       localStorage.setItem('theme', 'dark');
      } else if(body.className === 'dark'){
+      filters.forEach((elem)=>{
+         console.log((elem.style.color))
+         if(elem.style.color == 'rgb(228, 229, 241)'){
+            elem.style.color = "hsl(237, 14%, 26%)"
+         }
+      })
       bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
       body.classList.remove('dark');
       body.classList.add('light');
