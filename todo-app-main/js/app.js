@@ -296,7 +296,7 @@ colorTrigger.addEventListener('click',()=>{
       filters.forEach((elem)=>{
          if(elem.style.color == 'rgb(57, 58, 76)') elem.style.color = "hsl(236, 33%, 92%)"
       })
-      bodyBg.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
+      bodyBg.style.backgroundImage = "url('./images/bg-desktop-dark.jpg')";
       body.classList.remove('light');
       body.classList.add('dark');
       img.src="./images/icon-sun.svg";
@@ -305,7 +305,7 @@ colorTrigger.addEventListener('click',()=>{
       filters.forEach((elem)=>{
          if(elem.style.color == 'rgb(228, 229, 241)') elem.style.color = "hsl(237, 14%, 26%)"
       })
-      bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
+      bodyBg.style.backgroundImage = "url('./images/bg-desktop-light.jpg')";
       body.classList.remove('dark');
       body.classList.add('light');
       img.src="./images/icon-moon.svg";
