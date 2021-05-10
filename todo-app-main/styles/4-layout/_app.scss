@@ -89,8 +89,9 @@
         cursor:pointer;
         @include transition(transform, .3s);
         @include transition(height, .3s);
+        @include transition(background-color, .3s);
         &::after{
-            @include transition(all, .3s);
+            @include transition(background-color, .3s);
             position:absolute;
             content:'';
             background:color(border);

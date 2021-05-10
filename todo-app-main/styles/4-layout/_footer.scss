@@ -1,0 +1,18 @@
+@use '../1-utilities' as *;
+@use '../3-base' as *;
+
+footer{
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    margin:0 auto;
+    left:0;right:0;
+    bottom:1rem;
+    font-size:1.1rem;
+}
+.attribution{
+    color:color(info);
+    a {
+        color:$BrightBlue;
+    }
+}

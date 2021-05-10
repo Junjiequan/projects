@@ -464,9 +464,10 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   transition: height 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 .todo__item::after {
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   position: absolute;
   content: "";
   background: var(--color-border);
@@ -558,6 +559,24 @@ body {
   .todo__info {
     margin: 12rem 0 4rem;
   }
+}
+
+footer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.attribution {
+  color: var(--color-info);
+}
+.attribution a {
+  color: #3a7bfd;
 }
 
 .meme {
