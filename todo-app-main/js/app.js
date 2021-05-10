@@ -8,7 +8,6 @@ const form = document.querySelector('.todo__form');
 const list = document.querySelector('.todo__list');
 const filterBox = document.querySelector('.todo__bottom');
 const dancingMeme = document.querySelector('.meme__removal');
-
 let todoLeft = 0;
 
 //functions
@@ -27,6 +26,7 @@ const createItem = (todoText)=>{
       list.lastElementChild.style.height = "6.5rem";
       todoLeft++;
       updateTodoLeft(todoLeft);
+      createMeme(todoLeft);
    },10)
    setLocalTodo(todoText,'')
 }
@@ -42,12 +42,11 @@ const deleteItem = (todo)=>{
    if(!targetTodo.classList.contains('checked')){
       todoLeft--;
       updateTodoLeft(todoLeft);
+      createMeme(todoLeft);
    }
    deleteLocalTodo(targetTodoText);
-}
-
+} 
 function updateTodoLeft(count){
-   createMeme(count)
    document.getElementById('amount').innerText = `${count}`;
 }
 
@@ -233,13 +232,16 @@ let sortable = new Sortable(list,{
       e.item.classList.remove('dragged');
    }
 });
+
+
+
 // meme ignore this
-function createMeme(number){
-   if(number === 0 ){
+function createMeme(todoLeft){
+   if(todoLeft < 1 ){
       dancingMeme.style.height = "13.5rem";
       dancingMeme.style.margin = "1rem auto 1.5rem";
       dancingMeme.classList.remove('meme__hide')
-   }else {
+   } else if (todoLeft >= 1) {
       dancingMeme.style.height = "0";
       dancingMeme.style.margin = "0 auto"
       dancingMeme.classList.add('meme__hide')
@@ -250,6 +252,7 @@ filterBox.addEventListener('click', (e) => todoFilter(e.target));
 
 form.addEventListener('click',(e)=>{
    const target = e.target;
+   
    if(target === createTodo){
       if(todoInput.value.match(/\w+/g) ){
         let todoText = todoInput.value.trim();
@@ -257,6 +260,7 @@ form.addEventListener('click',(e)=>{
       }
    };
    if(list){
+      
       if(target.classList.contains('todo__item')){
          toggleCheck(target);
       }
@@ -288,10 +292,7 @@ colorTrigger.addEventListener('click',()=>{
    const filters = [filter[0],filter[1],filter[2]]
     if(body.className === 'light'){
       filters.forEach((elem)=>{
-         console.log((elem.style.color))
-         if(elem.style.color == 'rgb(57, 58, 76)'){
-            elem.style.color = "hsl(236, 33%, 92%)"
-         }
+         if(elem.style.color == 'rgb(57, 58, 76)') elem.style.color = "hsl(236, 33%, 92%)"
       })
       bodyBg.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
       body.classList.remove('light');
@@ -300,10 +301,7 @@ colorTrigger.addEventListener('click',()=>{
       localStorage.setItem('theme', 'dark');
      } else if(body.className === 'dark'){
       filters.forEach((elem)=>{
-         console.log((elem.style.color))
-         if(elem.style.color == 'rgb(228, 229, 241)'){
-            elem.style.color = "hsl(237, 14%, 26%)"
-         }
+         if(elem.style.color == 'rgb(228, 229, 241)') elem.style.color = "hsl(237, 14%, 26%)"
       })
       bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
       body.classList.remove('dark');
@@ -333,5 +331,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
       }
    }) 
    updateTodoLeft(todoLeft);
+   createMeme(todoLeft);
 })
 
