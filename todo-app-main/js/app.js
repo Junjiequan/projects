@@ -53,6 +53,12 @@ function updateTodoLeft(amount){
 
 const toggleCheck = (todo)=>{
    todo.classList.toggle('checked');
+   if(todo.classList.contains('checked')){
+      todoLeft--;
+   } else {
+      todoLeft++;
+   }
+   updateTodoLeft(todoLeft);
    const text = todo.children[1].value;
    const style = todo.classList[2] ? todo.classList[2] : '';
    updateLocalTodo(text,style,null)
