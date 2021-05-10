@@ -105,6 +105,7 @@ const todoFilter = (target) =>{
             if(item.classList.contains('checked')){
                item.remove();
                updateTodoLeft(todoLeft);
+               createMeme(todoLeft);
                deleteLocalTodo(item.children[1].value)
             }
             break;
