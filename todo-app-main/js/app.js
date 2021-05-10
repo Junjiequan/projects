@@ -220,6 +220,7 @@ function deleteLocalTodo(text){
 
 //Tried SortableJS and this is stupidly easy to use-_-!
 let sortable = new Sortable(list,{
+   direction: 'vertical',
    onStart:function(e){
       e.item.className += ' dragged';
    },
