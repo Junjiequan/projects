@@ -11,7 +11,6 @@ const dancingMeme = document.querySelector('.meme__removal');
 
 let todoLeft = 0;
 
-
 //functions
 const createItem = (todoText)=>{
    const uniqueId = Math.floor(Math.random() * 100000)
@@ -28,7 +27,6 @@ const createItem = (todoText)=>{
       list.lastElementChild.style.height = "6.5rem";
       todoLeft++;
       updateTodoLeft(todoLeft);
-      createMeme(todoLeft);
    },10)
    setLocalTodo(todoText,'')
 }
@@ -41,23 +39,26 @@ const deleteItem = (todo)=>{
    setTimeout(()=>{
       targetTodo.remove();
    },460)
-   todoLeft--;
-   updateTodoLeft(todoLeft);
-   createMeme(todoLeft);
+   if(!targetTodo.classList.contains('checked')){
+      todoLeft--;
+      updateTodoLeft(todoLeft);
+   }
    deleteLocalTodo(targetTodoText);
 }
 
-function updateTodoLeft(amount){
-   document.getElementById('amount').innerText = `${amount}`;
+function updateTodoLeft(count){
+   createMeme(count)
+   document.getElementById('amount').innerText = `${count}`;
 }
 
 const toggleCheck = (todo)=>{
-   todo.classList.toggle('checked');
    if(todo.classList.contains('checked')){
-      todoLeft--;
-   } else {
       todoLeft++;
    }
+   if(!todo.classList.contains('checked')){
+      todoLeft--;
+   }
+   todo.classList.toggle('checked');
    updateTodoLeft(todoLeft);
    const text = todo.children[1].value;
    const style = todo.classList[2] ? todo.classList[2] : '';
@@ -69,21 +70,15 @@ function filterButtonColor(filterCheck){
    filters.forEach((elem)=>{
       elem.style.color = '';
       if(elem.dataset.id === filterCheck){
-         if(elem.dataset.id  === 'all') {
-            elem.style.color = "hsl(220, 98%, 61%)"
-         }
+         if(elem.dataset.id  === 'all') elem.style.color = "hsl(220, 98%, 61%)";
+
          if(elem.dataset.id  === 'active'){
-            if(body.classList.contains('dark')){
-               elem.style.color = "hsl(236, 33%, 92%)"
-            } else {
-               elem.style.color = "hsl(237, 14%, 26%)";
-            }
+            if(body.classList.contains('dark')) elem.style.color = "hsl(236, 33%, 92%)";
+            else elem.style.color = "hsl(237, 14%, 26%)";
          }
          if(elem.dataset.id  === 'completed'){
-            
-            if(body.classList.contains('dark')){
-               elem.style.color = "hsl(236, 33%, 92%)"
-            } else elem.style.color = "hsl(237, 14%, 26%)"
+            if(body.classList.contains('dark')) elem.style.color = "hsl(236, 33%, 92%)";
+            else elem.style.color = "hsl(237, 14%, 26%)"
          } 
       }
    })
@@ -159,7 +154,6 @@ function getLocalTodo(){
       `)
       todoLeft++;
       updateTodoLeft(todoLeft);
-      createMeme(todoLeft);
    })
 }
 function deleteLocalTodo(text){
@@ -240,19 +234,16 @@ let sortable = new Sortable(list,{
       e.item.classList.remove('dragged');
    }
 });
-
 // meme ignore this
-function createMeme(){
-   if(dancingMeme.style !== null ){
-      if(todoLeft === 0){
-         dancingMeme.style.height = "13.5rem";
-         dancingMeme.style.margin = "1rem auto 1.5rem";
-         dancingMeme.classList.remove('meme__hide')
-      } else{
-         dancingMeme.style.height = "0";
-         dancingMeme.style.margin = "0 auto"
-         dancingMeme.classList.add('meme__hide')
-      }
+function createMeme(number){
+   if(number === 0 ){
+      dancingMeme.style.height = "13.5rem";
+      dancingMeme.style.margin = "1rem auto 1.5rem";
+      dancingMeme.classList.remove('meme__hide')
+   }else {
+      dancingMeme.style.height = "0";
+      dancingMeme.style.margin = "0 auto"
+      dancingMeme.classList.add('meme__hide')
    }
 }
 
@@ -288,7 +279,6 @@ form.addEventListener('click',(e)=>{
          filterButtonColor(target.dataset.id)
       }
    }
-   createMeme();
 });
 todoInput.addEventListener('keyup',(e)=>{
       if(e.keyCode === 13) createTodo.click();
@@ -322,4 +312,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
       bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
       img.src="./images/icon-moon.svg"
    }
+   
+   todoLeft = Array.from(list.children).length - 1;
+   list.querySelectorAll('.todo__item').forEach(index=>{
+      if(index.classList.contains('checked')){
+         todoLeft --;
+      }
+   }) 
+   updateTodoLeft(todoLeft);
 })
+
