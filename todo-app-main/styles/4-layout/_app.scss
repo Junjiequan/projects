@@ -121,6 +121,7 @@
         border-radius:0 0 5px 5px;
         color:color(info);
         font-size:1.3rem;
+        transition: all .3s ease-in-out;
         &-stock{
             pointer-events:none;
         }
