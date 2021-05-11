@@ -2,7 +2,7 @@
 @use '../3-base' as *;
 body{
     background:color(main);
-    @include transition(background-color, .4s);
+    @include transition(background-color, .5s);
     position:relative;
     display:flex;
 }
@@ -14,5 +14,5 @@ body{
     height:100%;
     max-height:30rem;
     background:url(../images/bg-desktop-dark.jpg) no-repeat center/cover;
-    @include transition(all, .5s)
+    @include transition(background-image, .4s)
 }

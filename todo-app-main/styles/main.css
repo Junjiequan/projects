@@ -123,7 +123,7 @@ p {
   cursor: pointer;
   outline: none;
   border: 2px solid var(--color-circle);
-  transition: border-color 0.5s ease-in;
+  transition: border-color 0.3s ease-in-out;
 }
 .check::before {
   content: url(../images/icon-check.svg);
@@ -250,6 +250,10 @@ p {
   pointer-events: none;
 }
 
+.ghost {
+  filter: blur(10px);
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -359,7 +363,7 @@ select {
 }
 body {
   background: var(--color-main);
-  transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
   position: relative;
   display: flex;
 }
@@ -372,7 +376,7 @@ body {
   height: 100%;
   max-height: 30rem;
   background: url(../images/bg-desktop-dark.jpg) no-repeat center/cover;
-  transition: all 0.5s ease-in-out;
+  transition: background-image 0.4s ease-in-out;
 }
 
 .app {
@@ -436,19 +440,16 @@ body {
   align-items: center;
   border-radius: 5px;
   margin-bottom: 2.5rem;
-  background-color: var(--color-input);
-  box-shadow: 0 5px 15px rgba(var(--color-shadow), 0.1);
+  background: var(--color-input);
   position: relative;
   width: 100%;
   white-space: nowrap;
   min-height: 6.5rem;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 .todo__list {
   border-radius: 5px 5px 0 0;
   box-shadow: 0 10px 30px var(--color-shadow);
-  transition: all 0.3s ease-in-out;
-  background-color: var(--color-input);
 }
 .todo__list li:nth-child(2) {
   border-radius: 5px 5px 0 0;
@@ -456,16 +457,18 @@ body {
 .todo__item {
   position: relative;
   width: 100%;
-  box-shadow: none;
   margin: 0;
   min-height: 0;
   height: 0;
   border-radius: 0;
   cursor: pointer;
-  transition: height 0.3s ease margin 0.3s ease background-color 0.3s ease-in-out;
+  background: var(--color-input);
+  transition: height 0.3s ease-in-out;
+  transition: margin 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 .todo__item::after {
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
   position: absolute;
   content: "";
   background: var(--color-border);
@@ -474,17 +477,13 @@ body {
   bottom: 0;
 }
 .todo__item input[type=text] {
-  transition: all 0.3s ease-in-out;
   pointer-events: none;
 }
 .todo__item:hover .delete {
   opacity: 1;
 }
-.todo__item-hover {
-  transition: all 0.1s;
-}
-.todo__item-hover:hover {
-  filter: drop-shadow(0 8px 10px gray) invert(5%);
+.todo__item:hover {
+  box-shadow: inset 0 0 100px var(--color-main);
 }
 .todo__bottom {
   box-shadow: 0 17px 25px var(--color-shadow);

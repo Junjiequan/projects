@@ -12,7 +12,7 @@
     cursor:pointer;
     outline:none;
     border:2px solid color(circle);
-    transition:border-color .5s ease-in;
+    transition:border-color .3s ease-in-out;
     &::before{
         content:url(../images/icon-check.svg);
         border-radius:100%;
@@ -47,7 +47,7 @@
     width:2.5rem;
     min-height:2.5rem;
     background: url(../images/icon-cross.svg) no-repeat center center;
-    @include transition(all, .3s);
+    @include transition(all, .1s);
     cursor:pointer;
     &:hover{
         filter:drop-shadow(0 0 15px color(shadow)) invert(95%);
@@ -133,4 +133,7 @@
     i{
         pointer-events:none;
     }
+}
+.ghost{
+    filter:blur(10px)
 }

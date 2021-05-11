@@ -60,36 +60,37 @@
         align-items:center;
         border-radius:5px;
         margin-bottom:2.5rem;
-        background-color:color(input);
-        box-shadow:0 5px 15px rgba($color: color(shadow), $alpha: 0.1);
+        background:color(input);
         position:relative;
         width:100%;
         white-space:nowrap;
         min-height:6.5rem;
-        transition: all .3s ease-in-out;
+        @include transition(background-color, .3s); 
     }
     &__list{
         border-radius:5px 5px 0 0;
         box-shadow:0 10px 30px color(shadow);
-        @include transition(all, .3s); 
-        background-color:color(input);
+
         & li:nth-child(2){
             border-radius:5px 5px 0 0;
         }
     }
     &__item{
+        @extend .todo__initial;
         position:relative;
         width:100%;
-        @extend .todo__initial;
-        box-shadow:none;
         margin:0;
         min-height:0;
         height:0;
         border-radius:0;
         cursor:pointer;
-        transition: height .3s ease margin .3s ease background-color .3s ease-in-out;
+        background:color(input);
+        @include transition(box-shadow .1s);
+        @include transition(height, .3s); 
+        @include transition(margin, .3s); 
+        @include transition(background-color, .3s); 
         &::after{
-            @include transition(background-color, .3s);
+            @include transition(background-color, .5s);
             position:absolute;
             content:'';
             background:color(border);
@@ -98,17 +99,13 @@
             bottom:0;
         }
         & input[type=text]{
-            @include transition(all, .3s); 
             pointer-events:none;
         }
         &:hover .delete{
             opacity:1;
         }
-    }
-    &__item-hover{
-        transition:all .1s;
         &:hover{
-            filter:drop-shadow(0 8px 10px gray) invert(5%);
+            box-shadow:inset 0 0 100px color(main)
         }
     }
     &__bottom{
