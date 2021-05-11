@@ -70,7 +70,6 @@
     &__list{
         border-radius:5px 5px 0 0;
         box-shadow:0 10px 30px color(shadow);
-
         & li:nth-child(2){
             border-radius:5px 5px 0 0;
         }
@@ -85,12 +84,12 @@
         border-radius:0;
         cursor:pointer;
         background:color(input);
-        @include transition(box-shadow .1s);
+        @include transition(box-shadow, .1s); 
         @include transition(height, .3s); 
         @include transition(margin, .3s); 
         @include transition(background-color, .3s); 
         &::after{
-            @include transition(background-color, .5s);
+            @include transition(background-color, .3s);
             position:absolute;
             content:'';
             background:color(border);
@@ -105,7 +104,7 @@
             opacity:1;
         }
         &:hover{
-            box-shadow:inset 0 0 100px color(main)
+            box-shadow:inset 0 0 100px color(shadow)
         }
     }
     &__bottom{
