@@ -478,7 +478,10 @@ body {
   bottom: 0;
 }
 .todo__item input[type=text] {
-  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .todo__item:hover .delete {
   opacity: 1;

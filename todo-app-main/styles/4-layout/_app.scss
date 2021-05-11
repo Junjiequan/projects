@@ -98,7 +98,7 @@
             bottom:0;
         }
         & input[type=text]{
-            pointer-events:none;
+            user-select: none;
         }
         &:hover .delete{
             opacity:1;
