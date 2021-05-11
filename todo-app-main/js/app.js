@@ -259,23 +259,16 @@ form.addEventListener('click',(e)=>{
       }
    };
    if(list){
-      
-      if(target.classList.contains('todo__item')){
-         toggleCheck(target);
-      }
-      if(target.dataset.id === 'check'){
-         toggleCheck(target.parentElement);
-      }
-      if(target.dataset.id === 'delete'){
-         deleteItem(target);
-      }
+      if(target.classList.contains('todo__item')) toggleCheck(target);
+      if(target.dataset.id === 'check') toggleCheck(target.parentElement);
+      if(target.dataset.id === 'delete') deleteItem(target);
    };
    if(target.parentNode.className === 'todo__bottom-actions'){
       if(target.dataset.id) filterButtonColor(target.dataset.id)
    };
 });
 todoInput.addEventListener('keyup',(e)=>{
-      if(e.keyCode === 13) createTodo.click();
+if(e.keyCode === 13) createTodo.click();
 });
 colorTrigger.addEventListener('click',()=>{
    const img = colorTrigger.children[0];
