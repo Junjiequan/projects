@@ -271,16 +271,8 @@ form.addEventListener('click',(e)=>{
       }
    };
    if(target.parentNode.className === 'todo__bottom-actions'){
-      if(target.dataset.id === 'all'){
-         filterButtonColor(target.dataset.id)
-      }
-      if(target.dataset.id === 'active'){
-         filterButtonColor(target.dataset.id)
-      }
-      if(target.dataset.id === 'completed'){
-         filterButtonColor(target.dataset.id)
-      }
-   }
+      if(target.dataset.id) filterButtonColor(target.dataset.id)
+   };
 });
 todoInput.addEventListener('keyup',(e)=>{
       if(e.keyCode === 13) createTodo.click();
