@@ -448,6 +448,7 @@ body {
   transition: background-color 0.3s ease-in-out;
 }
 .todo__list {
+  background: var(--color-input);
   border-radius: 5px 5px 0 0;
   box-shadow: 0 10px 30px var(--color-shadow);
 }
@@ -463,10 +464,7 @@ body {
   border-radius: 0;
   cursor: pointer;
   background: var(--color-input);
-  transition: box-shadow 0.1s ease-in-out;
-  transition: height 0.3s ease-in-out;
-  transition: margin 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  transition: box-shadow 0.1s ease, height 0.3s ease-in-out, background-color 0.3s ease-in-out, margin 0.3s ease-in-out;
 }
 .todo__item::after {
   transition: background-color 0.3s ease-in-out;
