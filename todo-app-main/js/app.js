@@ -33,8 +33,9 @@ const createItem = (todoText)=>{
 const deleteItem = (todo)=>{
    const targetTodo = todo.closest('.todo__item')
    const targetTodoText = targetTodo.children[1].value
-   targetTodo.style.transform = "scaleY(0)";
-   targetTodo.style.height = "0";
+   targetTodo.style.opacity = "0";
+   targetTodo.style.transform = "";
+   targetTodo.style.height = "";
    setTimeout(()=>{
       targetTodo.remove();
    },460)

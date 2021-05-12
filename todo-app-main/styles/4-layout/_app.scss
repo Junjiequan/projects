@@ -88,6 +88,7 @@
         transition: box-shadow .1s ease,  
                     height .3s ease-in-out, 
                     background-color .3s ease-in-out, 
+                    opacity .2s ease,
                     margin .3s ease-in-out;
         &::after{
             @include transition(background-color, .3s);
