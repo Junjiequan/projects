@@ -9,7 +9,7 @@ const list = document.querySelector('.todo__list');
 const filterBox = document.querySelector('.todo__bottom');
 const dancingMeme = document.querySelector('.meme__removal');
 let todoLeft = 0;
-
+let checkedLeft = 0;
 //functions
 const createItem = (todoText)=>{
    const uniqueId = Math.floor(Math.random() * 100000)
@@ -42,8 +42,11 @@ const deleteItem = (todo)=>{
    if(!targetTodo.classList.contains('checked')){
       todoLeft--;
       updateTodoLeft(todoLeft);
-      createMeme(todoLeft);
    }
+   if(targetTodo.classList.contains('checked')){
+      checkedLeft--;
+   }
+   createMeme(todoLeft, checkedLeft);
    deleteLocalTodo(targetTodoText);
 } 
 function updateTodoLeft(count){
@@ -53,9 +56,11 @@ function updateTodoLeft(count){
 const toggleCheck = (todo)=>{
    if(todo.classList.contains('checked')){
       todoLeft++;
+      checkedLeft--;
    }
    if(!todo.classList.contains('checked')){
       todoLeft--;
+      checkedLeft++;
    }
    todo.classList.toggle('checked');
    updateTodoLeft(todoLeft);
@@ -166,57 +171,6 @@ function deleteLocalTodo(text){
       }
    })
 }
-/***********************************************************************************************/
-/********************dragevents practice.  the code below is fully functioning******************/
-/***********************************************************************************************/
-
-// let draggedItem;
-// list.addEventListener('dragstart', function dragstart(event){
-//    event.preventDefault;
-//    event.dataTransfer.effectAllowed = "move";
-//    event.target.className += ' dragged';
-//    event.dataTransfer.setData('text/html', event.target.id);
-//    draggedItem = event.target;
-// },false)
-// list.addEventListener('dragenter', function dragenter(event){
-//    event.preventDefault;
-//    let sourceId = event.dataTransfer.getData('text/html') || draggedItem.id;
-//    let targetId = event.target.id;
-//    if(targetId === sourceId){
-//       return true;
-//    }
-//    let sourceNode = document.getElementById(sourceId);
-//    let targetNode = document.getElementById(targetId);
-//    let sourceIndex = Array.prototype.indexOf.call(sourceNode.parentNode.childNodes, sourceNode);
-//    let targetIndex = Array.prototype.indexOf.call(targetNode.parentNode.childNodes, targetNode);
-//    if(targetIndex > sourceIndex){
-//       targetNode.parentNode.insertBefore(targetNode, sourceNode);
-//    } else {
-//       targetNode.parentNode.insertBefore(sourceNode, targetNode);
-//    }
-// },false)
-// list.addEventListener('dragend',  function dragend(event){
-//    event.preventDefault;
-//    event.dataTransfer.dropEffect = "move"
-//    event.target.className = event.target.className.replace(' dragged', '');
-//    const target = event.target
-//    const todoArrays = Array.from(list.querySelectorAll('.todo__item'))
-//    const changedIndex = todoArrays.indexOf(target)
-//    const changedTargetText = target.children[1].value
-//    const changedTargetStyle = target.classList[1] ? target.classList[1] : '';
-//    updateLocalTodo(changedTargetText,changedTargetStyle,changedIndex)
-// },false)
-// list.addEventListener('dragover', (e)=>{ e.preventDefault();}, false);
-// list.addEventListener('dragleave', (e)=>{ e.preventDefault();}, false);
-//preventing drag buttons!
-// list.addEventListener('mousedown', (e)=>{
-//    if(e.target.type === 'submit'){
-//      e.target.parentNode.setAttribute('draggable', false)
-//      setTimeout(()=>{
-//       e.target.parentNode.setAttribute('draggable', true)
-//      },300)
-//    }
-// });
 
 //Tried SortableJS and this is stupidly easy to use-_-!
 let sortable = new Sortable(list,{
@@ -237,12 +191,13 @@ let sortable = new Sortable(list,{
 });
 
 // meme ignore this
-function createMeme(todoLeft){
-   if(todoLeft < 1 ){
+function createMeme(todoLeft, checkedLeft){
+
+   if(todoLeft < 1 && checkedLeft === 0){
       dancingMeme.style.height = "13.5rem";
       dancingMeme.style.margin = "1rem auto 1.5rem";
       dancingMeme.classList.remove('meme__hide')
-   } else if (todoLeft >= 1) {
+   } else if (todoLeft >= 1 || checkedLeft > 0) {
       dancingMeme.style.height = "0";
       dancingMeme.style.margin = "0 auto"
       dancingMeme.classList.add('meme__hide')
@@ -314,9 +269,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
    list.querySelectorAll('.todo__item').forEach(index=>{
       if(index.classList.contains('checked')){
          todoLeft --;
-      }
+         checkedLeft ++;
+      };
    }) 
    updateTodoLeft(todoLeft);
-   createMeme(todoLeft);
+   createMeme(todoLeft, checkedLeft);
 })
-
