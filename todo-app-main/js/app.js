@@ -109,8 +109,9 @@ const todoFilter = (target) =>{
          case 'clear-complete':
             if(item.classList.contains('checked')){
                item.remove();
+               checkedLeft = 0;
                updateTodoLeft(todoLeft);
-               createMeme(todoLeft);
+               createMeme(todoLeft, checkedLeft);
                deleteLocalTodo(item.children[1].value)
             }
             break;
@@ -192,7 +193,6 @@ let sortable = new Sortable(list,{
 
 // meme ignore this
 function createMeme(todoLeft, checkedLeft){
-
    if(todoLeft < 1 && checkedLeft === 0){
       dancingMeme.style.height = "13.5rem";
       dancingMeme.style.margin = "1rem auto 1.5rem";
