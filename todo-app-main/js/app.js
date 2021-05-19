@@ -11,6 +11,7 @@ const dancingMeme = document.querySelector('.meme__removal');
 let todoLeft = 0;
 let checkedLeft = 0;
 //functions
+
 const createItem = (todoText)=>{
    const uniqueId = Math.floor(Math.random() * 100000)
    list.insertAdjacentHTML('beforeend',`
@@ -229,13 +230,15 @@ if(e.keyCode === 13) createTodo.click();
 });
 colorTrigger.addEventListener('click',()=>{
    const img = colorTrigger.children[0];
+   const DarkBg = "url('./images/bg-desktop-dark.jpg')";
+   const LightBg = "url('./images/bg-desktop-light.jpg')";
    const filter = document.querySelector('.todo__bottom-actions').children
    const filters = [filter[0],filter[1],filter[2]]
     if(body.className === 'light'){
       filters.forEach((elem)=>{
          if(elem.style.color == 'rgb(57, 58, 76)') elem.style.color = "hsl(236, 33%, 92%)"
       })
-      bodyBg.style.backgroundImage = "url('./images/bg-desktop-dark.jpg')";
+      bodyBg.style.backgroundImage = "url('images/bg-desktop-dark.jpg')";
       body.classList.remove('light');
       body.classList.add('dark');
       img.src="./images/icon-sun.svg";
@@ -244,7 +247,7 @@ colorTrigger.addEventListener('click',()=>{
       filters.forEach((elem)=>{
          if(elem.style.color == 'rgb(228, 229, 241)') elem.style.color = "hsl(237, 14%, 26%)"
       })
-      bodyBg.style.backgroundImage = "url('./images/bg-desktop-light.jpg')";
+      bodyBg.style.backgroundImage = "url('images/bg-desktop-light.jpg')";
       body.classList.remove('dark');
       body.classList.add('light');
       img.src="./images/icon-moon.svg";
@@ -258,10 +261,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
    const checkStyle = localStorage.getItem('theme')? localStorage.getItem('theme') : 'dark';
    body.className = `${checkStyle}`
    if(checkStyle === 'dark'){
-      bodyBg.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
+      bodyBg.style.backgroundImage = 'url(images/bg-desktop-dark.jpg)';
       img.src="./images/icon-sun.svg"
    }else{
-      bodyBg.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
+      bodyBg.style.backgroundImage = 'url(images/bg-desktop-light.jpg)';
       img.src="./images/icon-moon.svg"
    }
    
