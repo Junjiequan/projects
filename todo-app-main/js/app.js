@@ -230,8 +230,6 @@ if(e.keyCode === 13) createTodo.click();
 });
 colorTrigger.addEventListener('click',()=>{
    const img = colorTrigger.children[0];
-   const DarkBg = "url('./images/bg-desktop-dark.jpg')";
-   const LightBg = "url('./images/bg-desktop-light.jpg')";
    const filter = document.querySelector('.todo__bottom-actions').children
    const filters = [filter[0],filter[1],filter[2]]
     if(body.className === 'light'){
