@@ -1,4 +1,4 @@
-## 4th month of 'self teaching' front end :)
+## 5th month of 'self teaching' front end :)
 Probably not self teaching? as I received tremendous help from [frontend mentor commmunity](https://www.frontendmentor.io/activity)
 
 
