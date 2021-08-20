@@ -1,4 +1,4 @@
-## 6th month of 'self learning' front end :)
+## 7th month of 'self learning' front end :)
 
 ## Frontend Mentor challenge
 I only make stuff that makes me feel proud of 😉 
