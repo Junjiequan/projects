@@ -27,6 +27,6 @@ I only make stuff that makes me feel proud of 😉
 | 19. [todo-app-main](https://a331998513.github.io/projects/todo-app-main/)  | [Repo](https://github.com/a331998513/projects/tree/main/todo-app-main)  |
 | 20. [photosnap-multi-page-website [REACT]](https://a331998513.github.io/photosnap-frontend-challenge/) | [Repo](https://github.com/a331998513/photosnap-frontend-challenge) |
 | 21. [audiophile-ecommerce-website [REACT]](https://a331998513.github.io/audiophile-ecommerce-website/)|[Repo](https://github.com/a331998513/audiophile-ecommerce-website)|
-| WIP. [product-feedback-app [REACT]](https://product-feedback-app-jay.netlify.app)|[Repo](https://github.com/a331998513/product-feedback-app/)|
+| 22. [product-feedback-app [REACT]](https://product-feedback-app.herokuapp.com/)|[Repo](https://github.com/a331998513/product-feedback-app/)|
 
 | 99. []()  | [Repo]()  |
