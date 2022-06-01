@@ -1,7 +1,4 @@
-## 9th month of 'self learning' front end :)
-
-## Frontend Mentor challenge
-I only make stuff that makes me feel proud of 😉 
+## Portfolio - Front end projects
 
 | Projects-name | Repo-link |
 | ------------- | ------------- |
