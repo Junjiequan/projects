@@ -26,5 +26,5 @@
 | 21. [audiophile-ecommerce-website [REACT]](https://a331998513.github.io/audiophile-ecommerce-website/)|[Repo](https://github.com/a331998513/audiophile-ecommerce-website)|
 | 22. [product-feedback-app [REACT]](https://product-feedback-app.herokuapp.com/)|[Repo](https://github.com/a331998513/product-feedback-app/)|
 | 23. [product-feedback-app [MERN - fullstack]](https://fullstack-product-feedback-app.herokuapp.com/)  | [Repo](https://github.com/a331998513/fullstack)  |
-| 24. [WIP@kanban-task-management-app [REACT]]([kanban-app-jay.netlify.app/](https://kanban-app-jay.netlify.app/))  | [Repo](https://github.com/a331998513/kanban_)
+| 24. [<work in progress>kanban-task-management-app [REACT]]([kanban-app-jay.netlify.app/](https://kanban-app-jay.netlify.app/))  | [Repo](https://github.com/a331998513/kanban_)
 | 99. []()  | [Repo]()  |
