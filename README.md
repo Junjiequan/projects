@@ -1,4 +1,4 @@
-## Portfolio - Front end projects
+## Portfolio - Solutions to the front end mentor challenges
 
 | Projects-name | Repo-link |
 | ------------- | ------------- |
