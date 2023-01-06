@@ -1,4 +1,4 @@
-## Portfolio - Solutions to the front end mentor challenges - A record of my front end learning journey.
+## Portfolio - Solutions to the front end mentor challenges <br/>Record of my front end learning journey.
 
 | Projects-name | Repo-link |
 | ------------- | ------------- |
